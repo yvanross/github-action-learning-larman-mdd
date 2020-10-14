@@ -1,5 +1,6 @@
 # comment
 name: 'Comment with Benchmark Result'
+description: 'Comment with Benchmark Result'
 # Here we define the inputs, which can be set
 # from the workflow file and are consumed in our code
 inputs:
