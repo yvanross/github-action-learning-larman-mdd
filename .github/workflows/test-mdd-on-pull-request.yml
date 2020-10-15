@@ -4,7 +4,7 @@ name: Benchmark pull requests and compare
 on:
   pull_request:
     branches:
-      - "test-mdd-on-pull-request" # again, replace if needed
+      - "master" # again, replace if needed
 
 jobs:
   benchmark:
