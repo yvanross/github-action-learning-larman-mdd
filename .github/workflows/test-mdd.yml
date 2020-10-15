@@ -1,5 +1,5 @@
 # Workflow to benchmark pull requests and compare with the default branch.
-name: Benchmark pull requests and compare
+name: Benchmark pull requests and compare2
 # This time, run on pull requests against your default branch
 on:
   pull_request:
