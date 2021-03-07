@@ -1,0 +1,604 @@
+$CATEGORY: $course$/Final
+
+// [tag:Final]
+::Etat - Classe Activé::[html]<h1>Diagramme d'état</h1><p>Le système d'alarme démarre désactivé.&nbsp; Il peut être activé par l'opérateur en rentrant un code valide, seulement si la porte est fermée.&nbsp; Une fois activé, le système est désactivé lorsque l'opérateur entre un code valide. Si le système est activé et que la porte s'ouvre, alors l'alarme sonne jusqu'à ce que l'opérateur désactive l'alarme avec un code valide.&nbsp;</p><p>Identifiez la ou les méthodes de la classe <b>Activé</b> et la ou les conditions, si applicable,&nbsp;issue du diagramme d'état représentant le fonctionnement d'un système d'alarme de garage.</p><p><br></p><p><br></p>{
+	~%-50%<p>désactivé</p>
+	~%-50%<p>activé</p>
+	~%-50%<p>sonnant</p>
+	~%-50%<p>activé [codeValide &amp; porteFermé]</p>
+	~%50%<p>désactivé [codeValide]</p>
+	~%-50%<p>désactivé [porteFermé]</p>
+	~%-50%<p>activé [codeValide]<br></p>
+	~%-50%<p>activé [porteFerme]<br></p>
+	~%-50%<p>sonnant [codeValide]<br></p>
+	~%-50%<p>sonnant [porteFermé]<br></p>
+	~%50%<p>ouvrirPorte</p>
+	~%-50%<p>&nbsp;ouvrirPorte [codeValide]<br></p>
+	~%-50%<p>ouvrirPorte [porteFermé]<br></p>
+}
+// [tag:Final]
+::"Élément d'un diagramme d'activité"::[html]<p>Associé l'élément et sa description</p>{
+	=<p><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5KeBgdCIGMIHPd9O1cm4Yw7rBmK80y0"/>.&nbsp;</p> -> Début du diagramme d'activité
+	=<p><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5KeBgdCIGMIHPd949cI_08kXzIy52070000"/>.&nbsp;</p> -> Fin du diagramme d'activité
+	=<p><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5KeBgdCIGMIHPd9O1chejJaaiIyTA1WOb5HVbvAfZMNGsfU2b0E0000"/>.&nbsp;</p> -> Activité
+	=<p><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5KeBgdCIGMIHPd9O1chejJaaiIyz9pKM2w7rBmKe1W0"/>.&nbsp;</p> -> Noeud d'objet
+	=<p><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5KeBgdCIGMIHPd9O9dCD0KDJIw7rBmK80y0"/>.&nbsp;</p> -> Décision/fusion
+	=<p><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5KeBgdCIGMIHPd9O9cq_A9ihjIy533j06G01G40"/>.&nbsp;</p> -> Débranchement/jointure
+}
+// [tag:Final]
+::Avantage de la représentation de la composition::[html]<p>Est-ce que chaque énoncé est un avantage de la représentation de la composition ou pas?</p>{
+	=<p>Une composition rend plus claires les obligations du domaine relatives à l'existence d'une partie indépendante du tout.&nbsp;</p> -> un avantage de la représentation de la composition
+	=<p>Il peut être plus facile d'identifier le contrôleur d'une opération système, grâce au principe GRASP Contrôleur.&nbsp;</p> -> pas un avantage de la représentation de la composition
+	=<p>Il peut être plus facile d'identifier le créateur (le composite) des parties, grâce au principe GRASP Créateur.&nbsp;</p> -> un avantage de la représentation de la composition
+	=<p>Une opération qui s'applique au tout, comme une duplication ou une suppression, se propage souvent aux parties.&nbsp;</p> -> un avantage de la représentation de la composition
+	=<p>Une opération qui s'applique à une partie se propage à toutes les parties.&nbsp;</p> -> pas un avantage de la représentation de la composition
+}
+// [tag:Final]
+::Activité vers le code::[html]<p>Pour convertir un diagramme d'activité en code nous avons besoin des appariements suivant\:</p>{
+	=<p>Activité dans le diagramme d'activité</p> -> Opération
+	=<p>Objet dans le diagramme d'activité</p> -> Classe
+	=<p>Une partition dans le diagramme d'activité</p> -> Classe
+	=<p>Regroupement d'activité</p> -> Classe abstraite
+}
+// [tag:Final]
+::Définitions faute, erreur, défaillance::[html]<p>Choisissez le bon mot pour chaque définition concernant la gestion des erreurs (fiabilité).</p>{
+	=<p>La cause première du problème.</p> -> faute
+	=<p>La manifestation de la cause première (du problème) lors de l'exécution. </p> -> erreur
+	=<p>Déni de service causé par une manifestation de la cause première (du problème).</p> -> échec
+}
+// [tag:Final]
+::Activité - Choix activité::[html]<p>Quels sont les activités du diagramme d'activité nécessaire pour démontrer qu'un Client passe une commande au Restaurant pour un plat qui est ensuite préparé par le Restaurant et livré par un Livreur ? Le Client doit payer le Livreur après avoir reçu son plat.&nbsp;<br><br></p>{
+	~%-12.5%<p>Client</p>
+	~%-12.5%<p>Restaurant</p>
+	~%-12.5%<p>Livreur</p>
+	~%25%<p>Commander plat</p>
+	~%-12.5%<p>Plat</p>
+	~%-12.5%<p>Commande</p>
+	~%25%<p>Préparer plat</p>
+	~%25%Livrer plat
+	~%25%<p>Payer</p>
+	~%-12.5%<p>Facture</p>
+}
+// [tag:Final]
+::Activité - Choix object::[html]<p>Quels sont les objets du diagramme d'activité nécessaire pour démontrer qu'un Client passe une commande au Restaurant pour un plat qui est ensuite préparé par le Restaurant et livré par un Livreur ? Le Client doit payer le Livreur après avoir reçu son plat.&nbsp;<br><br></p>{
+	~%-16.66667%<p>Client</p>
+	~%-16.66667%<p>Restaurant</p>
+	~%-16.66667%<p>Livreur</p>
+	~%-16.66667%<p>Commander plat</p>
+	~%50%<p>Plat</p>
+	~%50%<p>Commande</p>
+	~%-16.66667%<p>Préparer plat</p>
+	~%-16.66667%Livrer plat
+	~%-16.66667%<p>Payer</p>
+	~%-16.66667%<p>Début</p>
+	~%-16.66667%<p>Fin</p>
+	~%-16.66667%<p>Facture</p>
+}
+// [tag:Final]
+::Activité - Choix partitions::[html]<p>Quelles sont les partitions du diagramme d'activité nécessaire pour démontrer qu'un Client passe une commande au Restaurant pour un plat qui est ensuite préparé par le Restaurant et livré par un Livreur ? Le Client doit payer le Livreur après avoir reçu son plat.&nbsp;<br><br></p>{
+	~%33.33333%<p>Client</p>
+	~%33.33333%<p>Restaurant</p>
+	~%33.33333%<p>Livreur</p>
+	~%-16.66667%<p>Commander plat</p>
+	~%-16.66667%<p>Plat</p>
+	~%-16.66667%<p>Commande</p>
+	~%-16.66667%<p>Préparer plat</p>
+	~%-16.66667%Livrer plat
+	~%-16.66667%<p>Payer</p>
+	~%-16.66667%<p>Début</p>
+	~%-16.66667%<p>Fin</p>
+}
+// [tag:Final]
+::Adaptateur contexte ChF23::[html]<p>Pourquoi Larman propose-t-il le patron Adaptateur pour le système POS NextGen? </p>{
+	~<p>Adaptateur permet de protéger les services externes des changements éventuels dans les classes clients.</p>#<p>Adaptateur ne permet pas une protection de variations dans ce sens. </p>
+	~%50%<p>Adaptateur permet de protéger les classes utilisant les services externes des changements éventuels de ces derniers. </p>#<p>Adaptateur fournit aux classes clients une Protection des variations (GRASP) des services externes. </p>
+	~<p>Adaptateur permet de modifier la fonctionnalité des services externes.</p>#<p>Le context des services externes POS NextGen est que l'on ne peut modifier le code source des services externes. </p>
+	~%50%<p>Adaptateur permet d'accéder à plusieurs systèmes externes (dont leur API est immuable) comme s'ils avaient tous une même API.  </p>#<p>Adaptateur "adapte" l'API des services externes afin que cela fonctionne avec une API commune. </p>
+}
+// [tag:Final]
+::Basculement sur services locaux (patrons GoF)::[html]<p>Quels patrons (GoF ou autres) sont impliqués dans la solution de basculement sur les services locaux dans le système NextGen POS?</p>{
+	~%25%<p>Singleton</p>#<p>La <em>FabriqueDeServices</em> est un Singleton.</p>
+	~%25%<p>Adaptateur</p>#<p>Les services locaux sont gérés par un adaptateur de service local, en cas de défaillance du service fourni par l'adaptateur de service distant.</p>
+	~%25%<p>Fabrique Concrète</p>#<p>La <em>FabriqueDeServices</em> est une fabrique concrète.</p>
+	~%-25%<p>Stratégie</p>#<p>Il n'y a pas l'application de ce patron dans ce contexte.</p>
+	~%25%<p>Procuration (Proxy)</p>#<p>Une Procuration de redirection est utilisée pour améliorer la performance du système lors de l'accès aux services de comptabilité.</p>
+	~%-25%<p>Visiteur</p>#<p>Il n'y a pas l'application de ce patron dans ce contexte.</p>
+	~%-25%<p>Itérateur</p>#<p>Il n'y a pas l'application de ce patron dans ce contexte.</p>
+}
+// [tag:Final]
+::Cohésion relationnelle::[html]<p>Qu'est-ce que la cohésion relationnelle?</p>{
+	~%100%<p>$$CR\= \\frac\{NombreDeRelationsInternes\}\{NombreDeTypes\} $$</p>
+	~<p>$$CR\= \\frac\{NombreDeRelationsExternes\}\{NombreDeTypes\} $$</p>
+	~<p>$$CR\= \\frac\{NombreDeMethodes\}\{NombreDeTypes\} $$</p>
+}
+// [tag:Final]
+::Basculement sur services locaux (patterns GoF)::[html]<p>Quels patterns (GoF ou autres) sont impliqués dans la solution de basculement sur les services locaux dans le système NextGen POS?</p>{
+	~%25%<p>Singleton</p>#<p>La <em>FabriqueDeServices</em> est un Singleton.</p>
+	~%25%<p>Adaptateur</p>#<p>Les services locaux sont gérés par un adaptateur de service local, en cas de défaillance du service fourni par l'adaptateur de service distant.</p>
+	~%25%<p>Fabrique Concrète</p>#<p>La <em>FabriqueDeServices</em> est une fabrique concrète.</p>
+	~%-25%<p>Stratégie</p>#<p>Il n'y a pas l'application de ce patron dans ce contexte.</p>
+	~%25%<p>Procuration (Proxy)</p>#<p>Une Procuration de redirection est utilisée pour améliorer la performance du système lors de l'accès aux services de comptabilité.</p>
+	~%-25%<p>Visiteur</p>#<p>Il n'y a pas l'application de ce patron dans ce contexte.</p>
+	~%-25%<p>Itérateur</p>#<p>Il n'y a pas l'application de ce patron dans ce contexte.</p>
+}
+// [tag:Final]
+::Déploiement - cheminope.jar::[html]<p></p><div id\="magicparlabel-1777"><em></em></div><em>Dans le cadre d'une application d'inscription en ligne pour les cours universitaires, il y a un logiciel Cheminope.jar qui roule sur une instance de la machine virtuelle Java 1.7 d'un client générique. Pour faire les inscriptions, Cheminope communique par http à un serveur Web (Apache v.2.099) roulant sur le système d'exploitation MS-DOS 3.1 d'une machine BCMP BleedingEdge 429. La partie serveur de l'application d'inscription est Cheminope.phar et nécessite un moteur PHP 8.3 et une base de données Oracle.</em><br><br><p></p><p>Cheminope.jar est déployé sur quel noeud d'exécution d'environnement?</p>{
+	~<p>\:GenericPc</p>
+	=<p>\:JVM 1.7</p>
+	~<p>\:BMPCX BleedingEdge 429</p>
+	~<p>\:MS-DOS 3.1</p>
+	~<p>\:Oracle</p>
+	~<p>\:PHP 8.3 engine<br></p>
+	~<p>\:Apache 2.999</p>
+}
+// [tag:Final]
+::Déploiement - cheminope.phar::[html]<p></p><div id\="magicparlabel-1777"><em>Dans le cadre d'une application d'inscription en ligne pour les cours universitaires, il y a un logiciel Cheminope.jar qui roule sur une instance de la machine virtuelle Java 1.7 d'un client générique. Pour faire les inscriptions, Cheminope communique par http à un serveur Web (Apache v.2.099) roulant sur le système d'exploitation MS-DOS 3.1 d'une machine BCMP BleedingEdge 429. La partie serveur de l'application d'inscription est Cheminope.phar et nécessite un moteur PHP 8.3 et une base de données Oracle.</em> </div><br><p></p><p>Cheminope.phar est déployé sur quel noeud d'exécution d'environnement?</p>{
+	~<p>\:GenericPc</p>
+	~<p>\:JVM 1.7</p>
+	~<p>\:BMPCX BleedingEdge 429</p>
+	~<p>\:MS-DOS 3.1</p>
+	~<p>\:Oracle</p>
+	=<p>\:PHP 8.3 engine<br></p>
+	~<p>\:Apache 2.999</p>
+}
+// [tag:Final]
+::Déploiement - nombre de composant::[html]<p></p><div id\="magicparlabel-1777"><em>Dans le cadre d'une application d'inscription en ligne pour les cours universitaires, il y a un logiciel Cheminope.jar qui roule sur une instance de la machine virtuelle Java 1.7 d'un client générique. Pour faire les inscriptions, Cheminope communique par http à un serveur Web (Apache v.2.099) roulant sur le système d'exploitation MS-DOS 2.7 d'une machine BCMP BleedingEdge 429. La partie serveur de l'application d'inscription est Cheminope.phar et nécessite un moteur PHP 1.2 et une base de données Hercule.</em> </div><br><p></p><p>Combien y a-t-il de composants dans le diagramme de déploiement nécessaire pour représenter ce système?</p>{
+	=<p>2</p>
+	~<p>4</p>
+	~<p>5</p>
+	~<p>7</p>
+	~<p>8</p>
+}
+// [tag:Final]
+::Déploiement - nombre de noeud d'environnement d'exécution::[html]<p></p><div id\="magicparlabel-1777"><em>Dans le cadre d'une application d'inscription en ligne pour les cours universitaires, il y a un logiciel Cheminope.jar qui roule sur une instance de la machine virtuelle Java 1.7 d'un client générique. Pour faire les inscriptions, Cheminope communique par http à un serveur Web (Apache v.2.099) roulant sur le système d'exploitation MS-DOS 2.7 d'une machine BCMP BleedingEdge 429. La partie serveur de l'application d'inscription est Cheminope.phar et nécessite un moteur PHP 1.2 et une base de données Hercule.</em> </div><br><p></p><p>Combien y a-t-il de noeuds d'environnement d'exécution dans le diagramme de déploiement nécessaire pour représenter ce système?</p>{
+	~<p>3</p>
+	~<p>4</p>
+	=<p>5</p>
+	~<p>6</p>
+}
+// [tag:Final]
+::Échec (scénario pneu)::[html]<p>Aujourd'hui en conduisant sa voiture, Jean a roulé sur un clou et ce clou est malheureusement resté dans un pneu de la voiture sans qu'il le sache. Le résultat est que le pneu perdait de la pression d'air et se dégonflait lentement. Le lendemain, Jean a aperçu que le pneu était crevé. Puisqu'il n'avait pas de pneu de secours, Jean n'a pu se rendre à son travail. </p><p>Si on considère que la voiture offre à Jean un <em>service de transport</em>, quelle est l'<em>échec</em> (selon la définition donnée dans le cours) dans ce scénario?</p>{
+	~<p>L'échec est quand Jean a roulé sur le clou qui est rentré dans le pneu.</p>#<p>Selon la définition, un échec est un déni de service causé par une erreur.</p>
+	~<p>L échec est que Jean n'a pas de pneu de secours.</p>#<p>Selon la définition, un échec est un déni de service causé par une erreur.</p>
+	~<p>L'échec est que Jean n'a pas aperçu le clou dans le pneu.</p>#<p>Selon la définition, un échec est un déni de service causé par une erreur.</p>
+	~<p>L'échec est que Jean n'a pu travailler.</p>#<p>Selon la définition, un échec est un déni de service causé par une erreur. Jean aurait pu employer un autre service pour se rendre au travail (marcher, taxi, autobus). </p>
+	=<p>L'échec est que Jean n'a pu utiliser sa voiture pour se rendre au travail.</p>#<p>Selon la définition, un échec est un déni de service causé par une erreur. Le service de transport (par la voiture) a effectivement été impossible à cause du pneu crevé. </p>
+}
+// [tag:Final]
+::Equivalent en diagramme de séquence::[html]<p>Quel diagramme de séquence est l'équivalent du diagramme de communication suivant\:</p><p><img src\="data\:image/png;base64,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FStW8OGHH5Kens6aNWuIiYnhxhtv5Pjx4/7zr1u3ji1btvDOO+/w0ksvFelzERGR6BUfH8+gQYNo3769v+z++++nfv363HDDDVx11VWMHj2azz//nKysLOLj46levbq/7ty5cxk9ejSPPPIIx44d4+TJk8yePZvvvvuOp59+Os9rZmRk0K1bN3bu3MmyZctIT0/nyy+/ZMeOHfTs2ZPs7OwSf99hVVaTm/N7NG/e3H388cf++osWLXKAe/PNN4POs2zZMge4WbNmOeeca968uevcuXNQndTUVFe5cuV8e3x+97vfuRo1arjt27cHtW/evHn+ZOYnn3zSAf7nvutOmTIl6FqrV692gJs6dapzznp8ALds2bLT/sxOhXp8RERylLcen/zs3r3b/eEPf3DNmjXz3y/r1Knj7rjjDrdjxw5/vXnz5rkHHnjAZWdnBx1/5ZVXuuuvv97/PLDH5+2333aAe//994OOee+99xwQdE8u65KSklLK3HR2n9tuu42ePXuSnp5OcnIykyZN4oYbbuDNN9+katWq/npffGFb/6xevTpoDDMzM5OYmBiWL1/Oddddx7fffkv//v2DrnH++edz0UUX5duGfv368eKLL9KkSRM6depEz549ufnmm+nevXu+x/jas3btWsaPH+8vd84RGxvL8uXLGTRokL/8kksuKeInEh5paWkJwKhSvaiISBnlfSeWe/Xq1WPcuHGMGzeOb7/9lgULFjB//nxee+01Fi9ezKpVq6hVqxbdu3ene/fubN68meTkZFavXs3XX3/N+vXrSUxMzPPcvvvaF198wTfffOMvP3LkCADLly+nS5cuJf8mw6TMBj6XXnopffv2BWDgwIFcc801/OpXv2LgwIHMnj3bn8B1+PBhAFauXBmU1AXQpUsXGjRo4E86rlatWq7r1KxZM982dOjQga+++orXX3+duXPn8v777zNs2DD69evH66+/TuXKlXMd42vP119/TcWKwR9v586dg4az4uPjqVGjRqGfRTjFxcX9BIwvtKKISBSIi4u7PtJtOB0ZGRmsWrWKhg0bcu655wLQvHlzmjdvzogRI5g2bRqDBw/mzTffZNiwYezZs4c+ffqwdOlSqlWrRrt27ejQoQPfffddvtc4fPgwFSpU4LPPPsv1WteuXUlIKF+xY5kNfELddNNNPPDAAzzzzDOMHTvWn0/j+8BffPFFmjZtGnRMeno6lStXxjlHtWrV2Lp1a9DrzjlSUlI4//zz871u8+bNmTRpEpMmTWLFihU8//zzTJ06lR49ejBgwIBc9X3tmThxIq1atQp67eTJk1SpUuXU37yIiEge0tLSaN++Pffdd59/1nOgPn36MHjwYHbs2AHAnXfeyerVq/noo4/o1KmT/3/Q586dGzRrOVBCQgJZWVlMnz49KMhxzpGZmUmlSpVK4J2VnDK7jk9exo4dy8UXX8y4ceNYu3YtYNEmwKuvvhpUd968ecTFxTFz5kxiYmLo3bs306dPZ8+ePf46M2bMYOfOnfler1evXrRv396fuNWmTRt/wHXgwAEA/4qYviTqLl26EBMTk6s9CxcuJC4ujjfeeKPY719ERCRQjRo1uPbaa5kyZYp/SCrQ1KlTAWjXrh0Aa9asITExka5du/qDni1btrBu3bpcS7L45Hef/de//kVcXBwffvhh2N5PqSjN5OYpU6a4WrVquQULFuRbp7Dp7EuWLHExMTGuXbt2Lisryznn3JAhQ1xMTIy755573LvvvusmTJjg6tSp46644gqXlpbmnHNu69atrm7duq5hw4buoYcecrfffrurXr26i4+Pd/3793fO5U5unjNnjouJiXG33HKLmzNnjpsxY4br0KGDq1Wrln8K38yZMx3g+vfv7+bMmeOcc2748OEuJibGDRkyxM2ZM8c999xzLiEhwbVs2dIdPXrUOWfJzfHx8WH4VE+NkptFRHKUt+TmHTt2uFq1arkRI0b4yzZs2OASEhJchQoVXLdu3dzo0aPdn/70J/8yLzfffLP/fjl48GBXsWJFN2nSJLd06VL36quvuvPPP98lJCS4Jk2a+M8ZOp29V69erkKFCm7EiBFu7ty5bvz48a5atWquY8eOLjMzs/Q+gNOUlJSUUqqBz+zZs1379u3dZ599lm+dlJQUl5iY6N54441864waNcolJib619PJyspyzz77rGvZsqWrWbOmu/DCC919993n9u7dG3Tc1q1b3fDhw13nzp3dwIED3cqVK139+vX96yEcPXrUJSYmBs0QmzFjhmvfvr2rW7euq1+/vrv55ptdcnKy//UjR464/v37uwsuuMA9+OCDzjlbM+j55593rVq1cjVr1nQXXHCBu/fee93u3bv9x02aNMl16NDhFD698FDgIyKSo7wFPj/99JNr3769e+qpp4LKd+3a5UaOHOkuvfRSV6tWLVerVi3Xtm1bN3ny5KDA5MCBA+7OO+905513nqtdu7br3Lmze//999306dNdmzZt3E8//eScc+7nP/+5mzBhgv+49PR0N3bsWNe8eXNXs2ZN17RpU/fwww+7Q4cOlc4bD5NSD3wiacaMGe7LL78MKjt+/LirUqVK0GKIZzoFPiIiOcpb4COnp0zv1RVu//nPf+jVq5d/me20tDRGjRpFRkYGPXv2jHDrREREpDSUm1ldp+vPf/4zycnJNG3alHr16nHw4EEqVqzISy+9ROvWrSPdPBERESkFURP4NGnShG+++YaVK1eybds2qlatytVXXx20lLeIiIic2aIm8AGIiYmhTZs2tGnTJtJNERERkQiImhwfEREREQU+IiIiEjUU+IiIiEjUUOAjIiIiUUOBj4iIiESNqJrVJRJhTYHewExgc4TbAnAVkIS1aw/wGvDvUzzHOCAOeDC8TSs1NwB35FG+Ehhfym0RkVKgHh+RknUBcD/wKbAReAKoHdEWmWuBz7C2vApsBaYBfzmFc9wNPAIkhL11pacH0B37dwp8nB3JRolIyVGPj0j4tQD6YjfVxAi3JT9/BVZjPR5ZXlkG8BDwNHCkgGNrAU8C9wQcW161Bj4EekW6ISJSOhT4iIRHHWy4pw/QrJC6vwG6hOGa7wFrinFcLDAF6+UJDFw2AmdhPTgFBT7/Axpiw3b5DQf1AC4Cnif/4KiHd71PgbuA87D38zLgsCGoK4BtwIvAvoBjmwD9vWMOAu8Cn4ecvwkwGKiPBXnTgHu9uhuxz+GyAt6DiJyBFPiIhMd+7Ib9E9bb06GAunOAr8NwzYKCk4JkAy+FlNUCbscCgtRCjn8eeBs4RP5Bwx1YL8qL5B/49AMuxQKTzV69u4CrvbKzgR1Y8DIAaIX1Sl0DfAx8A6wDfo71VN0PPOeduxvwjnf8cuBhYAgWSG3y3udFQDXs32ws0Bj4Hhv6+7GQz0BEyinl+IiEzzZgEnZjbgE8BmzIo95h4EAYHplhaPPZwAdYsFMbuInCh6+mYEFPQcYA1wPphdRrhX1O1wC/AF7HenK2Ay2BrsAIoDlwpXfMfVjQ0w4LsNoB/yUnSbkK8AoW8LT0ztcyj7Zc7v18Dkv0rgOMxHqdflFIu0WknFLgI1Iy1mM3/+bYTfcxrKehrInHAoQZwDnAZCAcO/cmAx9hQ1YFScMCKZ+vvJ+TsZ4pgC+8nw29nw64GBgI1PDKfkVOIHMt0AB43Ds/wFHveSAHLMWCruuxXqJLgRPAG0CFQtouIuWQAh+RkrcOC4KaYkNg2yLammBbgNHYDK3uWA9LaU5N34MNX/n4emV2BpQd9376vq8ew3q8pmHDVAuwITJfwNbE+7kx5FrrQ57PwobJlgeUpWJDeY2w/B8ROcNUXLJkyZ6hQ4fuiHRDpHSyDKIZAAAB/UlEQVSkpqbuLLyWlBBH7gTcsmQR8AMF5yeFW0Y+5QX1FK0HLgQ6Yj09vbCcpQexWVrHvHpnhRxXuYht8gWmcUWsL+XY1q1bdw8dOnRZpNshpSM5OVkdPiJRqD6wC3ggpDwW60mZcwrn+h7reSmOad7xgYZgQc95AWVNvbL+3vObCQ7OYrCgxwG/BNp6v98acu5bvfLe3vMXyBlaCzQWG2arW/S3IiLlhSIfkeizGwt8fkfwYop/wmZ3zQgo64L1rJyqRGy6ekl8x4zCenjivecOy8sBGyL7EutZ+wu2GCHez9DFGTdgCdMDA8ouBoZhn8HecDdcREREIuNSLPjZhd3kV2IBxHMh9X7E1sDJT349PrO981Up4Nji9vi0x/J+tmN5Oh9hM9FeCTimOZavk4UN32UC873z9PTqVAD+g/XufAzMxZKg16KVm0XOWDGRboCIREwtYBC24OIxLAj4LKTOIKw3ZVY+5+iP9SAtDin/JdbL8g9yZmeFuhYbdnsroKwZNpV8OhaEANTE1vxZSM4eZw28azfGgqCPvUegOKzHqh42pHU2FiR1ApYE1OuODZ1VB1Zh+5WdQERERKQcSMBWl+4UUv4Q1gNUnvcWExEREcllAzZV/3as9+kRrGeouInYIiIiImVWI+A1LA/oBLamz2igUiQbJSKR9/8BKsENsysb1YIAAAAASUVORK5CYII\=" alt\="Diagramme de communication UML" /></p>{
+	=<p><img src\="https\://www.plantuml.com/plantuml/png/ZOwnRW8n38RtF8N5pacqmC30WbHrwb2axhwBBqJaufFZIrkUdaX89LGWCVh_ljzsEleuek00bdgSWhvnr0yS2DufP5BVeKdtdBq_4IpM3w3-1eAMWwruEg3bRnyTz1WILQJ5xkY4fsXt75X01MCgYAAQWxS4FREs_6DALZxo8qQ5sGO-oVcaGZF01FAVVfNw1MKptmfiO4XkOR1Jdr6f56I-pPVuvHfdOwaQhixh4ywoTlBVrLLzjQhAxPuRqZJD6G00" alt\="PlantUML Image" width\="193" height\="334" /></p>#<p>Cette notation est l'équivalente (voir la <span style\="line-height\: 1.231;">fig A15.7/</span><span style\="line-height\: 1.231;">F14.7 pour plus de détails)</span><span style\="line-height\: 1.231;">. Notez que les boîtes d'activation sont facultatives dans les diagrammes "agiles".</span></p>
+	~<p><img src\="https\://www.plantuml.com/plantuml/img/ZOwnRi9038RtUmehEv4eXO611Qdgr85AtPsS4qwvd97F7ALFtvCYaQCg4gE_x_zjny654mgEOAd3izSt3lg18y4x-KJgMZJnlyod-o5ORXv8lNg2XhqjV3oYvOiBFNJe8nMcmNReXS_1xjcpW0g6c1K5DKTd2JfcRVZRP9O_SYSC2jKM3jIxg48LO0JvQxzoVLB9o68di8Knzak3hRg4IhcHSPhmouoJiLGCSsRrHEQrpAJRrNLvjQZA_PuxKzVrBm00" alt\="PlantUML Image" /></p>#<p>Dans ce diagramme, le <em>msg1</em> est envoyé et reçu par le même objet, tandis que dans la question, <em>msg1</em> vient d'une source qui n'est pas spécifiée.</p>
+	~<p><img src\="https\://www.plantuml.com/plantuml/img/ZOxB2i8m44Nt-Oh1lGMV2nTk177bGi7zj9dMO9efoHWVNs-WO8CekBptd0itN8phq6CBccgyMjcoapss13koaSHKgC8tvsYU19Fb3oWFIr2orHaFPzHyCww16csWZ9HONHhFLwStRDc3U7GX8NAYpaOJrCnIybsbBZqo7Jg1qGeEr9WWdaQ00VmdFQLvZw8Qhpsie0tDH64b9g9G6lZnElRrTAYZqfI5mPdzuSn_El5zOP5Vo9oFK1J52m00" alt\="PlantUML Image" width\="193" height\="364" /></p>#<p>Dans ce diagramme, l'opération du<span style\="line-height\: 1.231;"> </span><em style\="line-height\: 1.231;">msg4</em><span style\="line-height\: 1.231;"> est terminée avant que <em>msg5</em> soit envoyé, tandis que dans la question, </span><em style\="line-height\: 1.231;">msg5</em><span style\="line-height\: 1.231;"> est envoyé avant que l'opération du <em>msg4</em> se termine. C'est le sens de la numérotation <em>3\: msg4</em> et <em>3.1\: msg5</em>.</span></p>
+	~<p><img src\="https\://www.plantuml.com/plantuml/img/ZOxB2i8m44Nt-Oh1lGMVYoxS2EBAXOBxQJEjmJHJaZ4-ljv0GOCekBptd0itd8thqMC7cXgyMDcmanrs15koaSJKgC8tvs0U19Fb3oXtIr2nrHaF9zHyDQw51csWZ5HOdrlF5wVNRDc3U7GX8NAYJaOJDCnIyKsbBZqoFJg1KGbxQaqGJoF00FwJ7jDyG57vySf32Lre9mfhCH65qYBLSQYdxpegJLbuExC_dFbF9xukBF8BcVCHYg9u0W00" alt\="PlantUML Image" /></p>#<p>Dans ce diagramme, il y a deux incohérences par rapport au diagramme dans la question. 1) Le <em>msg1</em> est envoyé et reçu par le même objet, tandis que dans la question, <em>msg1</em> vient d'une source qui n'est pas spécifiée. 2) L'opération du<span> </span><em>msg4</em><span> est terminée avant que <em>msg5</em> soit envoyé, tandis que dans la question, </span><em>msg5</em><span> est envoyé avant que l'opération du <em>msg4</em> se termine. C'est le sens de la numérotation <em>3\: msg4</em> et <em>3.1\: msg5</em>.</span></p>
+}
+// [tag:Final]
+::Erreur (scénario pneu)::[html]<p>Aujourd'hui en conduisant sa voiture, Jean a roulé sur un clou et ce clou est malheureusement resté dans un pneu de la voiture sans qu'il le sache. Le résultat est que le pneu perdait de la pression d'air et se dégonflait lentement. Le lendemain, Jean a aperçu que le pneu était crevé. Puisqu'il n'avait pas de pneu de secours, Jean n'a pu se rendre à son travail. </p><p>Si on considère que la voiture offre à Jean un <em>service de transport</em>, quelle est l'<em>erreur</em> (selon la définition donnée dans le cours) dans ce scénario?</p>{
+	=<p>L'erreur est quand Jean aperçoit que le pneu est crevé.</p>#<p>C'est la manifestation de la faute. </p>
+	~<p>L'erreur est que la voiture de Jean a roulé sur un clou.</p>#<p>Selon la définition, une erreur est une manifestation d'une faute. </p>
+	~<p>L'erreur est que Jean n'a pas de pneu de secours.</p>#<p>Selon la définition, une erreur est une manifestation d'une faute. </p>
+	~<p>L'erreur est que Jean n'a pas aperçu le clou dans le pneu.</p>#<p>Selon la définition, une erreur est une manifestation d'une faute. </p>
+}
+// [tag:Final]
+::Etat - Classe Sonnant::[html]<p>Identifiez la ou les méthodes de la classe <b>Sonnant</b>&nbsp;et la ou les conditions si applicable issue du diagramme d'état représentant le fonctionnement d'un système d'alarme de garage.</p><p>Le système d'alarme démarre désactivé.&nbsp; Il peut être activé par l'opérateur en rentrant un code valide, seulement si la porte est fermée.&nbsp; Une fois activé, le système est désactivé lorsque l'opérateur entre un code valide. Si le système est activé et que la porte s'ouvre, alors l'alarme sonne jusqu'à ce que l'opérateur désactive l'alarme avec un code valide.&nbsp;</p><p><br></p><p><br></p>{
+	~%-50%<p>désactivé</p>
+	~%-50%<p>activé</p>
+	~%-50%<p>sonnant</p>
+	~%-50%<p>activé [codeValide &amp; porteFermé]</p>
+	~%100%<p>désactivé [codeValide]</p>
+	~%-50%<p>désactivé [porteFermé]</p>
+	~%-50%<p>activé [codeValide]<br></p>
+	~%-50%<p>activé [porteFerme]<br></p>
+	~%-50%<p>sonnant [codeValide]<br></p>
+	~%-50%<p>sonnant [porteFermé]<br></p>
+	~%-50%<p>ouvrirPorte</p>
+	~%-50%<p>&nbsp;ouvrirPorte [codeValide]<br></p>
+	~%-50%<p>ouvrirPorte [porteFermé]<br></p>
+}
+// [tag:Final]
+::État définition::[html]<p>Un(e) __________________ est la condition d'un objet à un moment donné -- il y demeure jusqu'à l'arrivée d'un nouvel événement.</p>{
+	~<p>événement</p>#<p>Un événement est une occurence d'un fait signifactif ou remarquable. </p>
+	=<p>état</p>#<p>Un état est la condition d'un objet à un moment donné -- il y demeure jusqu'à l'arrivée d'un nouvel événement.</p>
+	~<p>transition</p>#<p>Une transition est une relation entre deux états qui indique que l'objet change d'état lorsqu'un événement se produit. </p>
+	~<p>Aucune de ces réponses.</p>
+}
+// [tag:Final]
+::Événement définition::[html]<p>Un(e) __________________ est une occurrence d’un fait significatif ou remarquable. </p>{
+	=<p>événement</p>#<p>Un événement est une occurence d'un fait signifactif ou remarquable. </p>
+	~<p>état</p>#<p>Un état est la condition d'un objet à un moment donné -- il y demeure jusqu'à l'arrivée d'un nouvel événement.</p>
+	~<p>transition</p>#<p>Une transition est une relation entre deux états qui indique que l'objet change d'état lorsqu'un événement se produit. </p>
+	~<p>Aucune de ces réponses.</p>
+}
+// [tag:Final]
+::Exigences motivant basculement sur service locaux et mise en cache::[html]<p>Quels types d'exigences sont la motivation principale pour le basculement sur les services locaux et la mise en cache locale du système NextGen POS?</p>{
+	~%-25%<p>Fonctionnalités</p>
+	~%-25%<p>Facilité d'utilisation (<em>Usability</em>)</p>
+	~%50%<p>Fiabilité (<em>Reliability</em>)</p>#<p>Le basculement sur les services locaux est une façon de rendre le système plus fiable, puisque les pannes de services externes pourraient être tolérées.</p>
+	~%50%<p>Performance</p>#<p>La mise en cache locale a été suggérée par l'architecte du projet pour améliorer la performance, puisque chaque demande de prix prend plus de temps et de ressources si elle va toujours à la base de données à distant. </p>
+	~%-25%<p>Possibilités de prise en charge (<em>Supportability</em>)</p>
+}
+// [tag:Final]
+::Fabrique concrète ChF23::[html]<p>Dans quel contexte est utilisée la fabrique concrète dans le système POS NextGen mentionnée dans le chapitre F23/A26?</p>{
+	~%50%<p>Elle s'occupe de la tâche de créer les différents adaptateurs, selon la configuration du système.</p>
+	~<p>Elle s'occupe de la tâche de créer les différents instances de LigneTaxes, selon la configuration du système.</p>
+	~%50%<p>Elle s'occupe de la tâche de créer les différents stratégies de tarification, selon la configuration du système.</p>
+	~<p>Elle s'occupe de la tâche de créer les différents Singletons utilisés dans le système.</p>
+}
+// [tag:Final]
+::Faute (scénario pneu)::[html]<p>Aujourd'hui en conduisant sa voiture, Jean a roulé sur un clou et ce clou est malheureusement resté dans un pneu de la voiture sans qu'il le sache. Le résultat est que le pneu perdait de la pression d'air et se dégonflait lentement. Le lendemain, Jean a aperçu que le pneu était crevé. Puisqu'il n'avait pas de pneu de secours, Jean n'a pu se rendre à son travail. </p><p>Si on considère que la voiture offre à Jean un <em>service de transport</em>, quelle est la <em>faute</em> (selon la définition donnée dans le cours) dans ce scénario?</p>{
+	=<p>La faute est quand Jean a roulé sur le clou qui est rentré dans le pneu.</p>#<p>C'est la cause première du problème. </p>
+	~<p>La faute est que Jean n'a pas de pneu de secours.</p>#<p>Selon la définition, une faute est la cause première du problème.</p>
+	~<p>La faute est que Jean n'a pas aperçu le clou dans le pneu.</p>#<p>Selon la définition, une faute est la cause première du problème.</p>
+	~<p>La faute est que Jean n'a pas appelé un taxi pour se rendre au travail.</p>#<p>Selon la définition, une faute est la cause première du problème.</p>
+}
+// [tag:Final]
+::Justification de sous-classes::[html]<p>Dans le diagramme suivant, quelle serait la justification des sous classes de Paiement?</p><p><img src\="https\://www.plantuml.com/plantuml/img/TP1B2i8m48RtESNGfP25soA2L9U2A_VJTBJ19gt9L2ZgVUevSZ53fJvnav3lVp0JVz2sGOS6F7SLnTDfnQsfHAaB0Z8DTs38vEJy9-AoBhpOacM2P9g0bCErGKqcGaZ1XNuVA-S2yrYBYa5LwFtBSXQcjeo3ULrR6xcuYgSykyJEyRMoAz-4Nf7_OrXaBjmApN_a3Rgi3Fsn9V6TW6Jo73z3nxIaKKaXhcnPxpH9zM0IJwJ4R-tx9umeXGQxS1iYTm00" alt\="Image PlantUML" width\="570" height\="514" /></p>{
+	~<p>Des sous-classes ont des attributs supplémentaires pertinents.</p>#<p>Aucune des sous-classes de Paiement ne spécifie des attributs supplémentaires.</p>
+	~%50%<p>Des sous-classes ont des associations supplémentaires pertinents.</p>#<p>En effet. Il y a des associations à CarteDeCrédit et à Chèque et elles sont propres à les sous-classes de Paiement respectives.</p>
+	~%50%<p>Par rapport à la super-classe Paiement, des sous-classes doivent être gérées différemment et cette distinction est pertinente.</p>#<p>En effet. Des paiements par carte de crédit et à chèque doivent être traités différemment.</p>
+	~<p>Des sous-classes représentent des entités animées qui ont un comportement différent de celui de Paiement et cette différence est pertinente.</p>#<p>Les paiements ne sont pas des entités animés (humain, animal ou robot).</p>
+}
+// [tag:Final]
+::Limiter dépendances avec fabrications::[html]<p>Quel est le problème avec le couplage entre les packages dans la figure suivante\:</p><p><img src\="https\://www.plantuml.com/plantuml/img/LOqn3i8m34Ltdy8dw16G43CIOc1YCUbNiHf7KHA62d6WdeEBuO52ktYmt_EhewOiHOnhco9y5WtjOP7kseDXkKrii1jAfInXb05yGMge_2Jc4ALMFcDGDq4l-a4dKPY3QsxPxG_bFVVQDhmN_8caW9Lnb9nHhcantVZMksxtRz3Qtbm-" alt\="Image PlantUML" width\="370" height\="304" /></p>{
+	=<p>Les implémentations de Paiements (classes concrètes) devraient être masquées des packages Ventes et Persistance pour respecter le principe GRASP de Protection des variations.</p>
+	~<p>Le couplage est dans le mauvais sens. Le package Paiements devrait dépendre de Ventes et de Persistance. </p>
+	~<p>Il manque les classes PaiementParChèque et PaiementEnEspèces dans le package Paiements.</p>
+	~<p>Il devrait y avoir une dépendance cyclique entre les packages. Il manque les liens de couplage de Paiements vers Ventes et vers Persistance.</p>
+}
+// [tag:Final]
+::Limiter dépendances avec fabrications (objets de domaine)::[html]<p>Quel est la <em>solution</em> à ce problème avec le couplage entre les packages dans la figure suivante\:</p><p><img src\="https\://www.plantuml.com/plantuml/img/LOqn3i8m34Ltdy8dw16G43CIOc1YCUbNiHf7KHA62d6WdeEBuO52ktYmt_EhewOiHOnhco9y5WtjOP7kseDXkKrii1jAfInXb05yGMge_2Jc4ALMFcDGDq4l-a4dKPY3QsxPxG_bFVVQDhmN_8caW9Lnb9nHhcantVZMksxtRz3Qtbm-" alt\="Image PlantUML" width\="370" height\="304" /></p>{
+	=<p>Introduire un nouveau package CréationObjetsDuDomaine avec les interfaces et les fabriques. Ainsi, Ventes et Persistance ignorent les détails de Paiements.</p>
+	~<p>Factoriser Ventes et Persistance dans un même package. Ainsi on élimine un lien de couplage entre packages. </p>
+	~<p>On doit calculer la <em>cohesion relationnelle</em> de chaque package pour décider s'il devraient y avoir de la dépendance cyclique. </p>
+	~<p>On applique le patron MVC pour régler le problème de couplage dans le mauvais sens.</p>
+}
+// [tag:Final]
+::Machines à états - application::[html]<p>Quelles sont les deux manières dont les machines à états s'appliquent en règle générale?</p>{
+	~%50%<p>Pour la modélisation du comportement des objets tels que les équipement physiques contrôlés par des logiciels (téléphone, voiture, four à micro-ondes). </p>
+	~%50%<p>Pour la modélisation des séquences d'opérations légales -- p.ex. le fait qu'une requête TCP "close" est normalement acceptée quand le gestionnaire de protocole n'est pas dans un état "fermé".</p>
+	~<p>Pour la modélisation de transactions et objets métier qui ne réagissent pas aux événements.</p>
+	~<p>Pour la modélisation d'objets physiques qui ne sont pas automatisés, comme un simple marteau, un tourne-vis, etc.</p>
+}
+// [tag:Final]
+::Monopoly - méthodes polymorphes::[html]<p>Quelles méthodes sont polymorphes dans l'application des GoF dans la conception de Monopoly?</p>{
+	~%50%<p>Case.atterrirSur()</p>#<p>Cette méthode est implémentée différemment selon la case qui reçoit le message.</p>
+	~%-50%<p>Joueur.tenterAchat()</p>#<p>Joeur n'a pas de sous-classes, alors la méthode ne peut être polymorphe.</p>
+	~%-50%<p>CasePropriété.payerLoyer()</p>#<p>Cette méthode est toujours implémentée de la même façon, bien qu'elle appelle à des méthodes polymorphes. Sa définition est dans la classe abstraite CasePropriété.&nbsp;</p>
+	~%50%<p>CasePropriété.getLoyer()</p>#<p>Chaque sous-classe de CasePropriété implémente cette méthode de façon différente. D'ailleurs, elle est définie "abstraite" dans CasePropriété.</p>
+}
+// [tag:Final]
+::Numérotation du premier message::[html]<p>Pourquoi le premier message d'un diagramme de communication n'est-il pas habituellement numéroté?</p>{
+	~<p>Le premier message n'est pas numéroté parce que l'on ne connaît pas son origine.</p>#<p>Il est possible de numéroté le premier message, mais cela complique le reste du schéma de numérotation en créant un niveau d'imbrication plus profond que nécessaire. </p>
+	=<p>Le premier message n'est pas numéroté pour simplifier la numérotation du diagramme.</p>#<p>Il est possible de numéroté le premier message, mais cela complique le reste du schéma de numérotation en créant un niveau d'imbrication plus profond que nécessaire. </p>
+	~<p>Le premier message n'est pas numéroté parce que la notation UML spécifie qu'il n'y a jamais de numéro pour le premier message.</p>#<p>Il est possible de numéroté le premier message, mais cela complique le reste du schéma de numérotation en créant un niveau d'imbrication plus profond que nécessaire. </p>
+	~<p>Le premier message n'est pas numéroté parce que dans les diagrammes de séquence, il n'y a jamais de numéro pour le premier message et on peut représenter la même dynamique dans les deux types de diagramme (séquence et communication).</p>#<p>Il est possible de numéroté le premier message, mais cela complique le reste du schéma de numérotation en créant un niveau d'imbrication plus profond que nécessaire. </p>
+}
+// [tag:Final]
+::Observateur et GRASP context ChF23::[html]<p>L'utilisation du patron Observateur dans le système POS NextGen (chapitre F23/A26) fait en sorte que la classe Vente ne connaisse pas les classes FrameVente, JFrame, etc. Cependant, Vente peut informer tout de même ces classes de ces changements. Quels sont les deux principes GRASP les plus importants dans cette conception?</p>{
+	~%50%<p>Protection des variations</p>#<p>Le diffuseur n'a pas à connaître la classe spécifique et le nombre des objets avec lesquels il communique lorsqu'il génère un événement. Ces classes peuvent donc varier, sans affecter Vente, pour autant qu'elles implémentent l'interface <em>AuditeurDePropriétés</em>.</p>
+	~%50%<p>Polymorphisme</p>#<p>Lorsque le diffuseur appelle à la méthode <em>événementSurPropriété()</em>, il n'a pas à connaître la classe spécifique. C'est un message polymorphe. </p>
+	~<p>Créateur</p>#<p>Créateur est un principe GRASP qui s'applique lorsqu'on doit instancier des objets. Cela ne s'applique pas dans ce cas.</p>
+	~<p>Fabrication pure</p>#<p>Il est vrai que l'interface <em>AuditeurDePropriétés</em> est une Fabrication Pure, mais ce principe est moins important que les deux autres principes GRASP recherchés par cette question.</p>
+}
+// [tag:Final]
+::Patron Composite::[html]<p>On applique certains services sur un ensemble d’objets individuels. Mais on aimerait également appliquer ces services sur une ou plusieurs sortes agrégation de ces objets, comme si une agrégation était un objet individuel.</p>{
+	=<p>Composite</p>#<p>Correct! </p>
+	~<p>Décorateur</p>#<p>Incorrect.</p>
+	~<p>Itérateur</p>#<p>Incorrect.</p>
+	~<p>Visiteur</p>#<p>Incorrect.</p>
+	~<p>Commande</p>#<p>Incorrect.</p>
+}
+// [tag:Final]
+::Patron de méthode (Template method)::[html]<p>On trouve qu’il existe un algorithme ayant des parties fixes et des parties variantes, avec du code complexe pour traiter tous les cas variants. Il y a des sous-classes ayant des responsabilités communes et dupliquées dans le code. On veut contrôler les extensions permises dans les sous-classes pour une certaine classe.</p>{
+	=<p>Patron de méthode (<em>Template method</em>)</p>#<p>Correct! </p>
+	~<p>Méthode fabrique</p>#<p>Incorrect.</p>
+	~<p>Stratégie</p>#<p>Incorrect.</p>
+	~<p>Visiteur</p>#<p>Incorrect.</p>
+	~<p>Mandataire (<em>Proxy</em>)</p>#<p>Incorrect.</p>
+}
+// [tag:Final]
+::Patron Décorateur::[html]<p>On veut pouvoir ajouter (ou enlever) des responsabilités (comportements, fonctionnalités) aux objets d’une façon dynamique et transparente, sans affecter d’autres objets. Le nombre de combinaisons possibles de ces responsabilités est important. Alors, il est complexe de faire une sous-classe pour chaque combinaison.</p><p> </p>{
+	=<p>Décorateur</p>#<p>Correct! </p>
+	~<p>Chaîne des responsabilités</p>#<p>Incorrect.</p>
+	~<p>Adaptateur</p>#<p>Incorrect.</p>
+	~<p>Composite</p>#<p>Incorrect.</p>
+	~<p>Stratégie</p>#<p>Incorrect.</p>
+}
+// [tag:Final]
+::Patron Fabrique Abstraite::[html]<p>On veut instancier un objet faisant partie d’une hiérarchie de classes, mais on n’est pas toujours sûr de quelle classe il s’agit.</p><p> </p>{
+	=<p>Fabrique abstraite</p>#<p>Correct! </p>
+	~<p>Méthode fabrique</p>#<p>Incorrect.</p>
+	~<p>Composite</p>#<p>Incorrect.</p>
+	~<p>Visiteur</p>#<p>Incorrect.</p>
+	~<p>Patron de méthode (<em>Template methode</em>)</p>#<p>Incorrect.</p>
+}
+// [tag:Final]
+::Patron Mandataire (Proxy)::[html]<p>On a besoin d’accéder à des objets à distance, comme s’ils étaient locaux. On trouve que l’instanciation de certains objets a un impact négatif sur la performance du système. On veut limiter l’accès à certains objets pour la sécurité. On a des besoins particuliers concernant l’accès à certains objets, p.ex. charger en mémoire vive pour la première fois un objet persistant.</p>{
+	=<p>Proxy (Mandataire)</p>#<p>Correct! </p>
+	~<p>Strategie</p>#<p>Incorrect.</p>
+	~<p>Flyweight</p>#<p>Incorrect.</p>
+	~<p>Bridge</p>#<p>Incorrect.</p>
+	~<p>Observateur</p>#<p>Incorrect.</p>
+}
+::Patron Observateur::[html]<p>Une abstraction comporte deux aspects et l’un dépend de l’autre. Un changement d’état dans un objet engendre des changements d’état dans d’autres objets, et on ne sait pas a priori lesquels. Un objet devrait pouvoir avertir d’autres objets des événements importants, sans un couplage fort avec ces derniers (sans les connaître concrètement).</p>{
+	=<p>Observateur</p>#<p>Correct! </p>
+	~<p>État (State)</p>#<p>Incorrect.</p>
+	~<p>Visiteur</p>#<p>Incorrect.</p>
+	~<p>Médiateur</p>#<p>Incorrect.</p>
+	~<p>Singleton</p>#<p>Incorrect.</p>
+}
+// [tag:Final]
+::Patron Visiteur::[html]<p>On a une structure d’objets ayant plusieurs classes avec des interfaces différentes. On veut effectuer des opérations sur ces objets et&nbsp;les opérations dépendent des classes concrètes. On trouve que les classes de la structure d’objets ont du code spécifique pour les&nbsp;opérations et ce code n’est pas très cohésif. Les classes définissant la structure d’objets évoluent rarement, mais il est plus fréquent&nbsp;d’ajouter ou de modifier une opération effectuée sur la structure d’objets.</p>{
+	=<p>Visiteur</p>#<p>Correct!&nbsp;</p>
+	~<p>Décorateur</p>#<p>Incorrect.</p>
+	~<p>Interpreteur</p>#<p>Incorrect.</p>
+	~<p>Composite</p>#<p>Incorrect.</p>
+	~<p>Chaîne des responsabilités</p>#<p>Incorrect.</p>
+}
+// [tag:Final]
+::Pourquoi le patron Fabrique Concrète est-il proposé dans la solution avec les adaptateurs?::[html]Pourquoi le patron Fabrique Concrète est-il proposé dans la solution avec les adaptateurs?{
+	=Lors de l’exécution du logiciel, dans chacune des hiérarchies d’adaptateurs (calculateurs de taxe, système de comptabilité, gestion de stock), il faudra déterminer la bonne classe d’adaptateur concret à utiliser et à instancier.#Ce patron aide aussi à gérer la complexité qui est introduite lorsqu’on propose les hiérarchies des adaptateurs différents.
+	~C’est pour encapsuler la logique de création des objets de Vente (Sale), de LigneArticles (SalesLineItem) et de LigneTaxes (TaxLineItem).#Les adaptateurs concrets eux-mêmes doivent être créés et la logique pour les créer est complexe. La Fabrique Concrète prend la responsabilité de déterminer quels adaptateurs à utiliser ainsi que de créer (instancier) ces adaptateurs.
+	~Le patron Fabrique Concrète n’a pas été proposé dans la solution avec les adaptateurs. Il résout le problème de déterminer quelle classe dans la couche domaine reçoit une opération système.#Les adaptateurs concrets doivent être créés et la logique pour les créer est complexe. La Fabrique Concrète prend la responsabilité de déterminer quels adaptateurs à utiliser ainsi que de créer (instancier) ces adaptateurs.
+}
+// [tag:Final]
+::Principes d'organisation de packages::[html]<p>Quels sont les principes d’organisation de packages présentés dans les lectures?</p>{
+	~%16.66667%<p>Organiser les packages en partitions verticales et horizontales fonctionnellement cohésives</p>
+	~%16.66667%<p>Packager une famille d’interfaces</p>
+	~%16.66667%<p>Créer un package par tâche et par groupe de classes instables</p>
+	~%16.66667%<p>Factoriser les types indépendants</p>
+	~%16.66667%<p>Utiliser les Fabrications pour limiter la dépendance aux packages concrets</p>
+	~%16.66667%<p>Pas de cycles dans les packages</p>
+	~%-25%<p>Packager les classes par cas d’utilisation</p>
+	~%-25%<p>Pas de couplage dans les packages</p>
+	~%-25%<p>Pas de polymorphisme dans les packages </p>
+}
+// [tag:Final]
+::Quel patron est proposé par Larman pour résoudre le problème de création de FabriqueDeServices (ServicesFactory)?::[html]Quel patron est proposé par Larman pour résoudre le problème de création de FabriqueDeServices (ServicesFactory)?{
+	=Singleton#Le singleton FabriqueDeServices (ServicesFactory) a la responsabilité de s’instancier lui-même une fois seulement. Il fournit également un accès global (visibilité globale).
+	~Méthode fabrique (Factory method)#Ce n’est pas le patron proposé dans ce chapitre. SVP revoir les lectures.
+	~Fabrique Concrète (Factory)#Ce n’est pas le patron proposé dans ce chapitre. SVP revoir les lectures.
+	~Fabrique Abstraite (Abstract Factory)#Ce n’est pas le patron proposé dans ce chapitre. SVP revoir les lectures.
+}
+// [tag:Final]
+::Quelle phrase résume le mieux l’application des patrons Adaptateur, Fabrique Concrète et Singleton dans l’exemple de ce chapitre?::[html]Quelle phrase résume le mieux l’application des patrons Adaptateur, Fabrique Concrète et Singleton dans l’exemple du chapitre F23 Application des patrons GOF?{
+	=Nous traitons le problème des variations des interfaces externes avec des Adaptateurs générés par une Fabrique Concrète Singleton.#Cette phrase résume le mieux l’application des trois patrons dans l’exemple de ce chapitre.
+	~Nous traitons le problème des variations des calculateurs de taxes externes avec des Adaptateurs générés par une Fabrique Concrète Singleton.#Cette phrase n’est pas complète, car le problème concerne également les variations du système de comptabilité et de gestion de stock.
+	~Nous appliquons des Adaptateurs générés par une Fabrique Concrète Singleton parce que l’application des patrons GoF donne toujours une meilleure conception.#Appliquer des patrons GoF ne donne pas toujours une meilleure conception. Les patrons GoF doivent être appliqués pour résoudre les problèmes existants. Par exemple, la variation des interfaces externes est un problème résolu par l’application des Adaptateurs issus d’une Fabrique Concrète Singleton.
+	~Nous traitons le problème des variations des interfaces externes avec des Fabriques Concrètes Singleton générées par un Adaptateur.#Dans l’exemple du livre, il n’y a qu’une Fabrique Concrète Singleton. C’est elle qui génère des instances des différents adaptateurs, selon les conditions dynamiques (la configuration du logiciel).
+}
+// [tag:Final]
+::Quels sont les principes GRASP présents dans le patron GoF Adaptateur appliqué pour supporter plusieurs calculateurs de taxes?  /::[html]<p>Quels sont les principes GRASP présents dans le patron GoF Adaptateur appliqué pour supporter plusieurs calculateurs de taxes?</p><p><img src\="@@PLUGINFILE@@/Images_forQuizQuestions_Larman_Application des GRASP dans les GoF.png" alt\="" width\="644" height\="332"></p>{
+	~%16.66667%<p>Polymorphisme</p>#<p>Différents adaptateurs ont un comportement similaire, mais variable pour s’adapter aux divers calculateurs de taxes externes.</p>
+	~%-50%<p>Créateur</p>#<p>Le principe GRASP Créateur concerne le problème de responsabilité pour créer des objets, tandis que le patron Adaptateur est censé résoudre un problème d’interfaces incompatibles. Alors, le GRASP Créateur ne s’y applique pas.</p>
+	~%16.66667%<p>Indirection</p>#<p>La classe qui utilise l’interface « IAdaptateurCalculTaxes » ne sera pas couplée directement aux services externes de calcul de taxes. Les adaptateurs concrets servent d’intermédiaire et créent donc une indirection.</p>
+	~%16.66667%<p>Faible couplage</p>#<p>L’interface « IAdaptateurCalculTaxes » ainsi que toutes les implémentations concrètes (polymorphes) servent d’intermédiaire (Indirection). Alors, c’est une façon d’obtenir un faible couplage</p>
+	~%16.66667%<p>Forte cohésion</p>#<p>L’interface « IAdaptateurCalculTaxes » est une Fabrication pure. Toute Fabrication pure est une classe qui a une forte cohésion. La responsabilité dont la Fabrication pure s’occupe est en effet une responsabilité de moins pour au moins une autre classe, ce qui la rend plus cohésive en principe.</p>
+	~%16.66667%<p>Protection des variations</p>#<p>Le polymorphisme et l’indirection font en sorte que l’interface « IAdaptateurCalculTaxes » serve de point de stabilité pour les variations qui existent dans les adaptateurs concrets.</p>
+	~%16.66667%<p>Fabrication pure</p>#<p>Une Fabrication pure est une classe avec une cohésion très forte (souvent une seule responsabilité) et elle a été proposée pour résoudre un problème de cohésion. Alors, l’interface « IAdaptateurCalculTaxes » est une Fabrication pure, puisqu’elle prend la responsabilité de faire adapter les appels de calcul de taxes pour les différents services externes.</p>
+	~%-50%<p>Contrôleur</p>#<p>Le principe Contrôleur concerne la responsabilité de traiter des opérations système. Ce principe n’est pas du tout considéré dans Adaptateur.</p>
+}
+// [tag:Final]
+::RDCU a)::[html]<p><img src\="https\://www.plantuml.com/plantuml/svg/ZLRBRkCs55rRNo6a2q-BiJDfTqLGZEia7HIT8eYJMML3KpSACHAfa9GHeyY_TDUulw4Vwo75K8nSfyt2SExZtCSvkl97OvcsRLrbvgkG3TEipetTLeHFBVZ8isRyQwbLAmkkAgLpgvaqS96qILH1Twojx8MIzdTMKxxGWbNvZHHS5PH_NYMX3G1PIVaVMPwlbIv8zy3VBFmVh7T0UMrxoku5S6gozwem_JzKDtOBKxqcRJ9UCMFoeolYj67hYinHpanULbas2QubEbbMtMx1UVVSkpbdQ6CoyKt-cBk8bMLMA0bZmInzebOxprdydasU9jaaWYxMIaggiGmFoDR0IrBFQDtQD3zrNWWvSZLQFCBq6PXC44eDpOCnMkfkLmWRMlULP5kJLiXPWJfP1lZpnqPeFqSeuA6owGlQ9T1Zpms0ffD9ZQKpQPFoKoJjvzpAqSmDXgP7IxBeiVvN0i9o_EqNHSs84BZmISQFAmg0Y3k1d7JcOxc-L49Qiv1SGrlmdIEETF0jVXDhJIOneqee0eicBDxGhVpIxIhLbzkwWaFKabbMgRAbT9fUHCj5Z3eZmxLeNDDxKvyj0EXcBbhGw4NblsHZrb7KLJywESfdxXC5u3tDRwoeXEbsiuRfF8CnH7nt16olNZSR5lCJM5lUV3Z9NjP8UYEuwxor2eEolhzKJQj571Gea4x8wGTS-SxTG_85B4EhSVTeTkKQcS_HnQnl5yt37shHh0aoCBD6jHhDlKF0UrJyDf_F7NRSthMxB8oxxiQzlXBizUBID_Il3sZ2sHKzjDtVbju4kte0Mf2lHuxPtQvHqln7TZFETdXOGzo64pjaP-oCv4PjGVZB7f1x859JzrSRumOrz6Jx2WW4d23uGK3gRRpt2X1AU2q05vvO1k61dIWc9vXt28kiE90iU-SinXiuPra6703Cj2ZlxGpVO0qDOs6A2w1rVm8inCt2K244l6vYFOmKOj2Od_kNxbdJADd4pMagXR4wvaz7wU7X80UDOKC-gaJaKx-7iAZO_2NR3fXbbIwoWVjNC21P01wvWJOAy4_Tzzdnz4L2mpdPGB07ZXSPUmvHIKam_gnK1Od8BBc2_hA5mnRkvvjegAfLAoe0fOYJO_ZS7HpNUIcZyQmC7JUkvJTVP8VVOoXqJReMydK7JsCbRmRUyonXj66E6cLCzrpGM2rmnYnm6XmVvlEJ7l1JjrkJBeEMXhJD87ldsoHQW3CexOu9spztfsE-DsEwfySzupyaZ5z0vbZ1hJp3zO1bk1Ht1VQv_vAD1AJloyCe3M3ITosoOGfzuXDblAf5l1umzCj1G1prabhtL9LGr7ZI0B4_wRahQ_gV5DnfgxdV6l7GqlkSnJTTNYbPpYp8fsGhoqg40P3frY1LdMYM5PemfEF7VqkNClx1TbZwJ-dfG1q_9le0dqxP_MdYR1GILNOQVM5TGDi_RYCjygZ5iAMFOAQjgty0" alt\="" width\="1090" height\="650" role\="presentation"></p><p><br></p><p><img src\="https\://www.plantuml.com/plantuml/png/bP31SjCm48RlUegTNfpCDA70XV6KJ3EXlRLq2BrnMSiRLrDPCglLKDw8yXfvCRPnIbA77BZOqkZV___-lKY2BBdr9Zsuq25Z2qb-Uj8lEpjugT0-D1npg6tqaK4OGz8d2cAAdUmUG_s3dGW5bMJQSwXfXTdBLGnoWot1d1rwk0lEnfhWUccAuzebDP7WbbsGVLhwdYbOkgQKiA6vTqq0gqJ4fhZv_FKIIgWTDgfLZmhJ-adBPOOhrqpX_TdqxGSW-NjxTsOASU89ldnQt44NLUcBsAsV6CL5jMOru5jqr6h8l8eXR4v6SSHPrs4GE4dbKZRw4y04oPWGXS3JIY2k89LmNir6E3v_KytCP9QWFEhxBOn2RXUBKwXHwFAn6nlpEWkhSYVVv65b4anc-bVZ3k7Z_xY_ykwmt0wfT93IeR5CEgQdlX-xvdvJ4Ak-OTKtL8w9udIeEFt8GUwfpamxTezZKy2IV0omK6Pzp0oZNJ9aSTubWiCkK1C8htyfsVDtF5YJjUL2x_HiMxk-WhKl5QmTL53OleFjE-XTEwZkU8T_ekyu3ohiunp23pUwnQbtAzrk5BD4LZyUwTGBmGeT4wJe9ktwTqlcWaATM_y7" alt\="" width\="949" height\="378" role\="presentation"></p>Identifier l'heuristique justifiant le choix de conception indiqué par la note UML&nbsp;<b>(a)</b>. Si une note couvre plusieurs lignes de vie, l'explication doit comprendre le message avant la note et les objets dont leur ligne de vie est couverte par la note.<br><br><p></p>{
+	=<p>Selon contrôleur de facade, Station est un équipement</p>
+	~<p>Selon contrôleur de session</p>
+	~<p>Selon contrôleur de façade, Station est un objet racine</p>#<p>Selon contrôleur de façade, Station est un système</p>
+}
+// [tag:Final]
+::RDCU b)::[html]<p></p><p><img src\="https\://www.plantuml.com/plantuml/svg/ZLRBRkCs55rRNo6a2q-BiJDfTqLGZEia7HIT8eYJMML3KpSACHAfa9GHeyY_TDUulw4Vwo75K8nSfyt2SExZtCSvkl97OvcsRLrbvgkG3TEipetTLeHFBVZ8isRyQwbLAmkkAgLpgvaqS96qILH1Twojx8MIzdTMKxxGWbNvZHHS5PH_NYMX3G1PIVaVMPwlbIv8zy3VBFmVh7T0UMrxoku5S6gozwem_JzKDtOBKxqcRJ9UCMFoeolYj67hYinHpanULbas2QubEbbMtMx1UVVSkpbdQ6CoyKt-cBk8bMLMA0bZmInzebOxprdydasU9jaaWYxMIaggiGmFoDR0IrBFQDtQD3zrNWWvSZLQFCBq6PXC44eDpOCnMkfkLmWRMlULP5kJLiXPWJfP1lZpnqPeFqSeuA6owGlQ9T1Zpms0ffD9ZQKpQPFoKoJjvzpAqSmDXgP7IxBeiVvN0i9o_EqNHSs84BZmISQFAmg0Y3k1d7JcOxc-L49Qiv1SGrlmdIEETF0jVXDhJIOneqee0eicBDxGhVpIxIhLbzkwWaFKabbMgRAbT9fUHCj5Z3eZmxLeNDDxKvyj0EXcBbhGw4NblsHZrb7KLJywESfdxXC5u3tDRwoeXEbsiuRfF8CnH7nt16olNZSR5lCJM5lUV3Z9NjP8UYEuwxor2eEolhzKJQj571Gea4x8wGTS-SxTG_85B4EhSVTeTkKQcS_HnQnl5yt37shHh0aoCBD6jHhDlKF0UrJyDf_F7NRSthMxB8oxxiQzlXBizUBID_Il3sZ2sHKzjDtVbju4kte0Mf2lHuxPtQvHqln7TZFETdXOGzo64pjaP-oCv4PjGVZB7f1x859JzrSRumOrz6Jx2WW4d23uGK3gRRpt2X1AU2q05vvO1k61dIWc9vXt28kiE90iU-SinXiuPra6703Cj2ZlxGpVO0qDOs6A2w1rVm8inCt2K244l6vYFOmKOj2Od_kNxbdJADd4pMagXR4wvaz7wU7X80UDOKC-gaJaKx-7iAZO_2NR3fXbbIwoWVjNC21P01wvWJOAy4_Tzzdnz4L2mpdPGB07ZXSPUmvHIKam_gnK1Od8BBc2_hA5mnRkvvjegAfLAoe0fOYJO_ZS7HpNUIcZyQmC7JUkvJTVP8VVOoXqJReMydK7JsCbRmRUyonXj66E6cLCzrpGM2rmnYnm6XmVvlEJ7l1JjrkJBeEMXhJD87ldsoHQW3CexOu9spztfsE-DsEwfySzupyaZ5z0vbZ1hJp3zO1bk1Ht1VQv_vAD1AJloyCe3M3ITosoOGfzuXDblAf5l1umzCj1G1prabhtL9LGr7ZI0B4_wRahQ_gV5DnfgxdV6l7GqlkSnJTTNYbPpYp8fsGhoqg40P3frY1LdMYM5PemfEF7VqkNClx1TbZwJ-dfG1q_9le0dqxP_MdYR1GILNOQVM5TGDi_RYCjygZ5iAMFOAQjgty0" alt\="" width\="1090" height\="650" role\="presentation"></p><p><br></p><p><img src\="https\://www.plantuml.com/plantuml/png/bP31SjCm48RlUegTNfpCDA70XV6KJ3EXlRLq2BrnMSiRLrDPCglLKDw8yXfvCRPnIbA77BZOqkZV___-lKY2BBdr9Zsuq25Z2qb-Uj8lEpjugT0-D1npg6tqaK4OGz8d2cAAdUmUG_s3dGW5bMJQSwXfXTdBLGnoWot1d1rwk0lEnfhWUccAuzebDP7WbbsGVLhwdYbOkgQKiA6vTqq0gqJ4fhZv_FKIIgWTDgfLZmhJ-adBPOOhrqpX_TdqxGSW-NjxTsOASU89ldnQt44NLUcBsAsV6CL5jMOru5jqr6h8l8eXR4v6SSHPrs4GE4dbKZRw4y04oPWGXS3JIY2k89LmNir6E3v_KytCP9QWFEhxBOn2RXUBKwXHwFAn6nlpEWkhSYVVv65b4anc-bVZ3k7Z_xY_ykwmt0wfT93IeR5CEgQdlX-xvdvJ4Ak-OTKtL8w9udIeEFt8GUwfpamxTezZKy2IV0omK6Pzp0oZNJ9aSTubWiCkK1C8htyfsVDtF5YJjUL2x_HiMxk-WhKl5QmTL53OleFjE-XTEwZkU8T_ekyu3ohiunp23pUwnQbtAzrk5BD4LZyUwTGBmGeT4wJe9ktwTqlcWaATM_y7" alt\="" width\="949" height\="378" role\="presentation"></p>Identifier l'heuristique justifiant le choix de conception indiqué par la note UML <b>(b)</b>. Si une note couvre plusieurs lignes de vie, l'explication doit comprendre le message avant la note et les objets dont leur ligne de vie est couverte par la note.<br><br><br><p></p>{
+	=<p>Selon créateur, Abonnement utilise PaiementAbonnement de très près.</p>
+	~<p>Selon expert, Abonnement possède les données pour initialiser Paiement</p>
+	~<p>Selon créateur, Abonnement possède les données pour initialiser Paiement</p>
+	~<p>Selon expert, Abonnement utilise PaiementAbonnement de très près.<br></p>
+}
+// [tag:Final]
+::RDCU c)::[html]<p></p><p><img src\="https\://www.plantuml.com/plantuml/svg/ZLRBRkCs55rRNo6a2q-BiJDfTqLGZEia7HIT8eYJMML3KpSACHAfa9GHeyY_TDUulw4Vwo75K8nSfyt2SExZtCSvkl97OvcsRLrbvgkG3TEipetTLeHFBVZ8isRyQwbLAmkkAgLpgvaqS96qILH1Twojx8MIzdTMKxxGWbNvZHHS5PH_NYMX3G1PIVaVMPwlbIv8zy3VBFmVh7T0UMrxoku5S6gozwem_JzKDtOBKxqcRJ9UCMFoeolYj67hYinHpanULbas2QubEbbMtMx1UVVSkpbdQ6CoyKt-cBk8bMLMA0bZmInzebOxprdydasU9jaaWYxMIaggiGmFoDR0IrBFQDtQD3zrNWWvSZLQFCBq6PXC44eDpOCnMkfkLmWRMlULP5kJLiXPWJfP1lZpnqPeFqSeuA6owGlQ9T1Zpms0ffD9ZQKpQPFoKoJjvzpAqSmDXgP7IxBeiVvN0i9o_EqNHSs84BZmISQFAmg0Y3k1d7JcOxc-L49Qiv1SGrlmdIEETF0jVXDhJIOneqee0eicBDxGhVpIxIhLbzkwWaFKabbMgRAbT9fUHCj5Z3eZmxLeNDDxKvyj0EXcBbhGw4NblsHZrb7KLJywESfdxXC5u3tDRwoeXEbsiuRfF8CnH7nt16olNZSR5lCJM5lUV3Z9NjP8UYEuwxor2eEolhzKJQj571Gea4x8wGTS-SxTG_85B4EhSVTeTkKQcS_HnQnl5yt37shHh0aoCBD6jHhDlKF0UrJyDf_F7NRSthMxB8oxxiQzlXBizUBID_Il3sZ2sHKzjDtVbju4kte0Mf2lHuxPtQvHqln7TZFETdXOGzo64pjaP-oCv4PjGVZB7f1x859JzrSRumOrz6Jx2WW4d23uGK3gRRpt2X1AU2q05vvO1k61dIWc9vXt28kiE90iU-SinXiuPra6703Cj2ZlxGpVO0qDOs6A2w1rVm8inCt2K244l6vYFOmKOj2Od_kNxbdJADd4pMagXR4wvaz7wU7X80UDOKC-gaJaKx-7iAZO_2NR3fXbbIwoWVjNC21P01wvWJOAy4_Tzzdnz4L2mpdPGB07ZXSPUmvHIKam_gnK1Od8BBc2_hA5mnRkvvjegAfLAoe0fOYJO_ZS7HpNUIcZyQmC7JUkvJTVP8VVOoXqJReMydK7JsCbRmRUyonXj66E6cLCzrpGM2rmnYnm6XmVvlEJ7l1JjrkJBeEMXhJD87ldsoHQW3CexOu9spztfsE-DsEwfySzupyaZ5z0vbZ1hJp3zO1bk1Ht1VQv_vAD1AJloyCe3M3ITosoOGfzuXDblAf5l1umzCj1G1prabhtL9LGr7ZI0B4_wRahQ_gV5DnfgxdV6l7GqlkSnJTTNYbPpYp8fsGhoqg40P3frY1LdMYM5PemfEF7VqkNClx1TbZwJ-dfG1q_9le0dqxP_MdYR1GILNOQVM5TGDi_RYCjygZ5iAMFOAQjgty0" alt\="" width\="1090" height\="650" role\="presentation"></p><p><br></p><p><img src\="https\://www.plantuml.com/plantuml/png/bP31SjCm48RlUegTNfpCDA70XV6KJ3EXlRLq2BrnMSiRLrDPCglLKDw8yXfvCRPnIbA77BZOqkZV___-lKY2BBdr9Zsuq25Z2qb-Uj8lEpjugT0-D1npg6tqaK4OGz8d2cAAdUmUG_s3dGW5bMJQSwXfXTdBLGnoWot1d1rwk0lEnfhWUccAuzebDP7WbbsGVLhwdYbOkgQKiA6vTqq0gqJ4fhZv_FKIIgWTDgfLZmhJ-adBPOOhrqpX_TdqxGSW-NjxTsOASU89ldnQt44NLUcBsAsV6CL5jMOru5jqr6h8l8eXR4v6SSHPrs4GE4dbKZRw4y04oPWGXS3JIY2k89LmNir6E3v_KytCP9QWFEhxBOn2RXUBKwXHwFAn6nlpEWkhSYVVv65b4anc-bVZ3k7Z_xY_ykwmt0wfT93IeR5CEgQdlX-xvdvJ4Ak-OTKtL8w9udIeEFt8GUwfpamxTezZKy2IV0omK6Pzp0oZNJ9aSTubWiCkK1C8htyfsVDtF5YJjUL2x_HiMxk-WhKl5QmTL53OleFjE-XTEwZkU8T_ekyu3ohiunp23pUwnQbtAzrk5BD4LZyUwTGBmGeT4wJe9ktwTqlcWaATM_y7" alt\="" width\="949" height\="378" role\="presentation"></p>Identifier l'heuristique justifiant le choix de conception indiqué par la note UML&nbsp;<b>(c)</b>. Si une note couvre plusieurs lignes de vie, l'explication doit comprendre le message avant la note et les objets dont leur ligne de vie est couverte par la note.<br><br><p></p>{
+	=<p>Selon créateur, PaiementAbonnement utilise CarteCredit de très près.</p>
+	~<p>Selon créateur, PaiementAbonnement est payé par CarteCredit</p>
+	~<p>Selon créateur, PaiementAbonnement possède les données pour initialiser CarteCredit</p>
+	~<p>Selon expert, PaiementAbonnement possède les données pour initialiser CarteCredit<br></p>
+	~<p>Selon expert, PaiementAbonnement est payé par CarteCredit<br></p>
+}
+// [tag:Final]
+::RDCU d)::[html]<p></p><p><img src\="https\://www.plantuml.com/plantuml/svg/ZLRBRkCs55rRNo6a2q-BiJDfTqLGZEia7HIT8eYJMML3KpSACHAfa9GHeyY_TDUulw4Vwo75K8nSfyt2SExZtCSvkl97OvcsRLrbvgkG3TEipetTLeHFBVZ8isRyQwbLAmkkAgLpgvaqS96qILH1Twojx8MIzdTMKxxGWbNvZHHS5PH_NYMX3G1PIVaVMPwlbIv8zy3VBFmVh7T0UMrxoku5S6gozwem_JzKDtOBKxqcRJ9UCMFoeolYj67hYinHpanULbas2QubEbbMtMx1UVVSkpbdQ6CoyKt-cBk8bMLMA0bZmInzebOxprdydasU9jaaWYxMIaggiGmFoDR0IrBFQDtQD3zrNWWvSZLQFCBq6PXC44eDpOCnMkfkLmWRMlULP5kJLiXPWJfP1lZpnqPeFqSeuA6owGlQ9T1Zpms0ffD9ZQKpQPFoKoJjvzpAqSmDXgP7IxBeiVvN0i9o_EqNHSs84BZmISQFAmg0Y3k1d7JcOxc-L49Qiv1SGrlmdIEETF0jVXDhJIOneqee0eicBDxGhVpIxIhLbzkwWaFKabbMgRAbT9fUHCj5Z3eZmxLeNDDxKvyj0EXcBbhGw4NblsHZrb7KLJywESfdxXC5u3tDRwoeXEbsiuRfF8CnH7nt16olNZSR5lCJM5lUV3Z9NjP8UYEuwxor2eEolhzKJQj571Gea4x8wGTS-SxTG_85B4EhSVTeTkKQcS_HnQnl5yt37shHh0aoCBD6jHhDlKF0UrJyDf_F7NRSthMxB8oxxiQzlXBizUBID_Il3sZ2sHKzjDtVbju4kte0Mf2lHuxPtQvHqln7TZFETdXOGzo64pjaP-oCv4PjGVZB7f1x859JzrSRumOrz6Jx2WW4d23uGK3gRRpt2X1AU2q05vvO1k61dIWc9vXt28kiE90iU-SinXiuPra6703Cj2ZlxGpVO0qDOs6A2w1rVm8inCt2K244l6vYFOmKOj2Od_kNxbdJADd4pMagXR4wvaz7wU7X80UDOKC-gaJaKx-7iAZO_2NR3fXbbIwoWVjNC21P01wvWJOAy4_Tzzdnz4L2mpdPGB07ZXSPUmvHIKam_gnK1Od8BBc2_hA5mnRkvvjegAfLAoe0fOYJO_ZS7HpNUIcZyQmC7JUkvJTVP8VVOoXqJReMydK7JsCbRmRUyonXj66E6cLCzrpGM2rmnYnm6XmVvlEJ7l1JjrkJBeEMXhJD87ldsoHQW3CexOu9spztfsE-DsEwfySzupyaZ5z0vbZ1hJp3zO1bk1Ht1VQv_vAD1AJloyCe3M3ITosoOGfzuXDblAf5l1umzCj1G1prabhtL9LGr7ZI0B4_wRahQ_gV5DnfgxdV6l7GqlkSnJTTNYbPpYp8fsGhoqg40P3frY1LdMYM5PemfEF7VqkNClx1TbZwJ-dfG1q_9le0dqxP_MdYR1GILNOQVM5TGDi_RYCjygZ5iAMFOAQjgty0" alt\="" width\="1090" height\="650" role\="presentation"></p><p><br></p><p><img src\="https\://www.plantuml.com/plantuml/png/bP31SjCm48RlUegTNfpCDA70XV6KJ3EXlRLq2BrnMSiRLrDPCglLKDw8yXfvCRPnIbA77BZOqkZV___-lKY2BBdr9Zsuq25Z2qb-Uj8lEpjugT0-D1npg6tqaK4OGz8d2cAAdUmUG_s3dGW5bMJQSwXfXTdBLGnoWot1d1rwk0lEnfhWUccAuzebDP7WbbsGVLhwdYbOkgQKiA6vTqq0gqJ4fhZv_FKIIgWTDgfLZmhJ-adBPOOhrqpX_TdqxGSW-NjxTsOASU89ldnQt44NLUcBsAsV6CL5jMOru5jqr6h8l8eXR4v6SSHPrs4GE4dbKZRw4y04oPWGXS3JIY2k89LmNir6E3v_KytCP9QWFEhxBOn2RXUBKwXHwFAn6nlpEWkhSYVVv65b4anc-bVZ3k7Z_xY_ykwmt0wfT93IeR5CEgQdlX-xvdvJ4Ak-OTKtL8w9udIeEFt8GUwfpamxTezZKy2IV0omK6Pzp0oZNJ9aSTubWiCkK1C8htyfsVDtF5YJjUL2x_HiMxk-WhKl5QmTL53OleFjE-XTEwZkU8T_ekyu3ohiunp23pUwnQbtAzrk5BD4LZyUwTGBmGeT4wJe9ktwTqlcWaATM_y7" alt\="" width\="949" height\="378" role\="presentation"></p>Identifier l'heuristique justifiant le choix de conception indiqué par la note UML&nbsp;<b>(d)</b>. Si une note couvre plusieurs lignes de vie, l'explication doit comprendre le message avant la note et les objets dont leur ligne de vie est couverte par la note.<br><br><p></p>{
+	=<p>patron faire soi-même.&nbsp; PaiementAbonnement&nbsp;sait comment s'autoriser.</p>
+	~<p>Patron expert. PaiementAbonnement sait comment s'autoriser</p>
+	~<p>Patron expert. PaiementAbonnement possède l'information pour s'autoriser.<br></p>
+}
+// [tag:Final]
+::RDCU e)::[html]<p></p><p><img src\="https\://www.plantuml.com/plantuml/svg/ZLRBRkCs55rRNo6a2q-BiJDfTqLGZEia7HIT8eYJMML3KpSACHAfa9GHeyY_TDUulw4Vwo75K8nSfyt2SExZtCSvkl97OvcsRLrbvgkG3TEipetTLeHFBVZ8isRyQwbLAmkkAgLpgvaqS96qILH1Twojx8MIzdTMKxxGWbNvZHHS5PH_NYMX3G1PIVaVMPwlbIv8zy3VBFmVh7T0UMrxoku5S6gozwem_JzKDtOBKxqcRJ9UCMFoeolYj67hYinHpanULbas2QubEbbMtMx1UVVSkpbdQ6CoyKt-cBk8bMLMA0bZmInzebOxprdydasU9jaaWYxMIaggiGmFoDR0IrBFQDtQD3zrNWWvSZLQFCBq6PXC44eDpOCnMkfkLmWRMlULP5kJLiXPWJfP1lZpnqPeFqSeuA6owGlQ9T1Zpms0ffD9ZQKpQPFoKoJjvzpAqSmDXgP7IxBeiVvN0i9o_EqNHSs84BZmISQFAmg0Y3k1d7JcOxc-L49Qiv1SGrlmdIEETF0jVXDhJIOneqee0eicBDxGhVpIxIhLbzkwWaFKabbMgRAbT9fUHCj5Z3eZmxLeNDDxKvyj0EXcBbhGw4NblsHZrb7KLJywESfdxXC5u3tDRwoeXEbsiuRfF8CnH7nt16olNZSR5lCJM5lUV3Z9NjP8UYEuwxor2eEolhzKJQj571Gea4x8wGTS-SxTG_85B4EhSVTeTkKQcS_HnQnl5yt37shHh0aoCBD6jHhDlKF0UrJyDf_F7NRSthMxB8oxxiQzlXBizUBID_Il3sZ2sHKzjDtVbju4kte0Mf2lHuxPtQvHqln7TZFETdXOGzo64pjaP-oCv4PjGVZB7f1x859JzrSRumOrz6Jx2WW4d23uGK3gRRpt2X1AU2q05vvO1k61dIWc9vXt28kiE90iU-SinXiuPra6703Cj2ZlxGpVO0qDOs6A2w1rVm8inCt2K244l6vYFOmKOj2Od_kNxbdJADd4pMagXR4wvaz7wU7X80UDOKC-gaJaKx-7iAZO_2NR3fXbbIwoWVjNC21P01wvWJOAy4_Tzzdnz4L2mpdPGB07ZXSPUmvHIKam_gnK1Od8BBc2_hA5mnRkvvjegAfLAoe0fOYJO_ZS7HpNUIcZyQmC7JUkvJTVP8VVOoXqJReMydK7JsCbRmRUyonXj66E6cLCzrpGM2rmnYnm6XmVvlEJ7l1JjrkJBeEMXhJD87ldsoHQW3CexOu9spztfsE-DsEwfySzupyaZ5z0vbZ1hJp3zO1bk1Ht1VQv_vAD1AJloyCe3M3ITosoOGfzuXDblAf5l1umzCj1G1prabhtL9LGr7ZI0B4_wRahQ_gV5DnfgxdV6l7GqlkSnJTTNYbPpYp8fsGhoqg40P3frY1LdMYM5PemfEF7VqkNClx1TbZwJ-dfG1q_9le0dqxP_MdYR1GILNOQVM5TGDi_RYCjygZ5iAMFOAQjgty0" alt\="" width\="1090" height\="650" role\="presentation"></p><p><br></p><p><img src\="https\://www.plantuml.com/plantuml/png/fL7DJXin4BxxAKQv997IGDjB5H54H8dK0nGrb1ENMU_inc9ZB-Fn0ez4NoClrjdTG03HKo-MFVFDz-CvYO8iQLEPUEjyZOmRYF9OaPxixBjEXlQsv91yRaCL68JHHssH5pFSmzReytjs8kGLakWLGqu5fagMmSi5RWWMxB22tzxPa1EShvJcdzWLbO7WafsNFQDMxn9vI-SK8vQqg5pfmP8NOZEy-7br1ZF87PQALOuCu_Q982Q6fIkdyFLm-laRaBoylXmQvHLdNOrUO53Zx18TRPJmnY-ou7rt7m16gD5yEjPJ5J19O1U9H-EtyzREJlLDfxnzobq_PwqnFWW1kt8j48gUuoWx7j7uw20xDlfMPckrAXRcK99SFTOq6cj1Byzi-bjK1Gzd3pMncBVAipClJ7NhwdhxL8LEcffte1_VhyddbBXhkxpfjHMeKjhinLzG8x7ZtdjeY1KrQMTsvelUF3LAeEKzWt183VN3PbYu1v0rGPRAWu9G4XFSErd3O3gT3bwjjd85LSxJIXY5oaVm8ORAvMO-Xr5TfGY2dElG6ERpTxcMcB6xIxGYRfobsCLRhjwY8jhMuoB7MbGXyOtVuHVzFb5SyDseGlUvbMZILdQvorTBqvPM8-wszW7TRdVTPmnXrItmafNQjbt8AKA3x3fidC1p4221lT7_oj4RxOVKJAqwf7QnhZba7VGNtQNj7w5HZPDsXsF3LFJHMu8FuXZoEIZ8dEWbRQg_" alt\="" width\="915" height\="422" role\="presentation" class\="img-responsive atto_image_button_text-bottom"><br></p>Identifier l'heuristique justifiant le choix de conception indiqué par la note UML&nbsp;<b>(e)</b>. Si une note couvre plusieurs lignes de vie, l'explication doit comprendre le message avant la note et les objets dont leur ligne de vie est couverte par la note.<br><br><p></p>{
+	=<p>patron expert. PaiementAbonnement possède une CarteCredit. CarteCredit connait sont type</p>
+	~<p>Patron expert. PaiementAbonnement a besoin du type de la carte de crédit</p>
+	~<p>Patron faire soi-même. PaiementAbonnement sait comment récupérer le type de CarteCredit<br></p>
+}
+// [tag:Final]
+::RDCU f)::[html]<p></p><p><img src\="https\://www.plantuml.com/plantuml/svg/ZLRBRkCs55rRNo6a2q-BiJDfTqLGZEia7HIT8eYJMML3KpSACHAfa9GHeyY_TDUulw4Vwo75K8nSfyt2SExZtCSvkl97OvcsRLrbvgkG3TEipetTLeHFBVZ8isRyQwbLAmkkAgLpgvaqS96qILH1Twojx8MIzdTMKxxGWbNvZHHS5PH_NYMX3G1PIVaVMPwlbIv8zy3VBFmVh7T0UMrxoku5S6gozwem_JzKDtOBKxqcRJ9UCMFoeolYj67hYinHpanULbas2QubEbbMtMx1UVVSkpbdQ6CoyKt-cBk8bMLMA0bZmInzebOxprdydasU9jaaWYxMIaggiGmFoDR0IrBFQDtQD3zrNWWvSZLQFCBq6PXC44eDpOCnMkfkLmWRMlULP5kJLiXPWJfP1lZpnqPeFqSeuA6owGlQ9T1Zpms0ffD9ZQKpQPFoKoJjvzpAqSmDXgP7IxBeiVvN0i9o_EqNHSs84BZmISQFAmg0Y3k1d7JcOxc-L49Qiv1SGrlmdIEETF0jVXDhJIOneqee0eicBDxGhVpIxIhLbzkwWaFKabbMgRAbT9fUHCj5Z3eZmxLeNDDxKvyj0EXcBbhGw4NblsHZrb7KLJywESfdxXC5u3tDRwoeXEbsiuRfF8CnH7nt16olNZSR5lCJM5lUV3Z9NjP8UYEuwxor2eEolhzKJQj571Gea4x8wGTS-SxTG_85B4EhSVTeTkKQcS_HnQnl5yt37shHh0aoCBD6jHhDlKF0UrJyDf_F7NRSthMxB8oxxiQzlXBizUBID_Il3sZ2sHKzjDtVbju4kte0Mf2lHuxPtQvHqln7TZFETdXOGzo64pjaP-oCv4PjGVZB7f1x859JzrSRumOrz6Jx2WW4d23uGK3gRRpt2X1AU2q05vvO1k61dIWc9vXt28kiE90iU-SinXiuPra6703Cj2ZlxGpVO0qDOs6A2w1rVm8inCt2K244l6vYFOmKOj2Od_kNxbdJADd4pMagXR4wvaz7wU7X80UDOKC-gaJaKx-7iAZO_2NR3fXbbIwoWVjNC21P01wvWJOAy4_Tzzdnz4L2mpdPGB07ZXSPUmvHIKam_gnK1Od8BBc2_hA5mnRkvvjegAfLAoe0fOYJO_ZS7HpNUIcZyQmC7JUkvJTVP8VVOoXqJReMydK7JsCbRmRUyonXj66E6cLCzrpGM2rmnYnm6XmVvlEJ7l1JjrkJBeEMXhJD87ldsoHQW3CexOu9spztfsE-DsEwfySzupyaZ5z0vbZ1hJp3zO1bk1Ht1VQv_vAD1AJloyCe3M3ITosoOGfzuXDblAf5l1umzCj1G1prabhtL9LGr7ZI0B4_wRahQ_gV5DnfgxdV6l7GqlkSnJTTNYbPpYp8fsGhoqg40P3frY1LdMYM5PemfEF7VqkNClx1TbZwJ-dfG1q_9le0dqxP_MdYR1GILNOQVM5TGDi_RYCjygZ5iAMFOAQjgty0" alt\="" width\="1090" height\="650" role\="presentation"></p><p><br></p><p><img src\="https\://www.plantuml.com/plantuml/png/fL7DJXin4BxxAKQv997IGDjB5H54H8dK0nGrb1ENMU_inc9ZB-Fn0ez4NoClrjdTG03HKo-MFVFDz-CvYO8iQLEPUEjyZOmRYF9OaPxixBjEXlQsv91yRaCL68JHHssH5pFSmzReytjs8kGLakWLGqu5fagMmSi5RWWMxB22tzxPa1EShvJcdzWLbO7WafsNFQDMxn9vI-SK8vQqg5pfmP8NOZEy-7br1ZF87PQALOuCu_Q982Q6fIkdyFLm-laRaBoylXmQvHLdNOrUO53Zx18TRPJmnY-ou7rt7m16gD5yEjPJ5J19O1U9H-EtyzREJlLDfxnzobq_PwqnFWW1kt8j48gUuoWx7j7uw20xDlfMPckrAXRcK99SFTOq6cj1Byzi-bjK1Gzd3pMncBVAipClJ7NhwdhxL8LEcffte1_VhyddbBXhkxpfjHMeKjhinLzG8x7ZtdjeY1KrQMTsvelUF3LAeEKzWt183VN3PbYu1v0rGPRAWu9G4XFSErd3O3gT3bwjjd85LSxJIXY5oaVm8ORAvMO-Xr5TfGY2dElG6ERpTxcMcB6xIxGYRfobsCLRhjwY8jhMuoB7MbGXyOtVuHVzFb5SyDseGlUvbMZILdQvorTBqvPM8-wszW7TRdVTPmnXrItmafNQjbt8AKA3x3fidC1p4221lT7_oj4RxOVKJAqwf7QnhZba7VGNtQNj7w5HZPDsXsF3LFJHMu8FuXZoEIZ8dEWbRQg_" alt\="" width\="915" height\="422" role\="presentation"><br></p>Identifier l'heuristique justifiant le choix de conception indiqué par la note UML&nbsp;<b>(f)</b>. Si une note couvre plusieurs lignes de vie, l'explication doit comprendre le message avant la note et les objets dont leur ligne de vie est couverte par la note.<br><br><p></p>{
+	=<p>Patron expert. EntrepriseVelo connait le codeVendeur pour le type de carte donnée. IDVenteur connait IDV.</p>
+	~<p>Patron expert. EntrepriseVelo connait le type de carte donnée</p>
+	~<p>Patron expert. IDVenteur connait le type de carte tc.</p>
+	~<p>Patron expert. EntrepriseVelo connait les données nécessaire pour trouer IDV.</p>
+}
+// [tag:Final]
+::RDCU g)::[html]<p></p><p><img src\="https\://www.plantuml.com/plantuml/svg/ZLRBRkCs55rRNo6a2q-BiJDfTqLGZEia7HIT8eYJMML3KpSACHAfa9GHeyY_TDUulw4Vwo75K8nSfyt2SExZtCSvkl97OvcsRLrbvgkG3TEipetTLeHFBVZ8isRyQwbLAmkkAgLpgvaqS96qILH1Twojx8MIzdTMKxxGWbNvZHHS5PH_NYMX3G1PIVaVMPwlbIv8zy3VBFmVh7T0UMrxoku5S6gozwem_JzKDtOBKxqcRJ9UCMFoeolYj67hYinHpanULbas2QubEbbMtMx1UVVSkpbdQ6CoyKt-cBk8bMLMA0bZmInzebOxprdydasU9jaaWYxMIaggiGmFoDR0IrBFQDtQD3zrNWWvSZLQFCBq6PXC44eDpOCnMkfkLmWRMlULP5kJLiXPWJfP1lZpnqPeFqSeuA6owGlQ9T1Zpms0ffD9ZQKpQPFoKoJjvzpAqSmDXgP7IxBeiVvN0i9o_EqNHSs84BZmISQFAmg0Y3k1d7JcOxc-L49Qiv1SGrlmdIEETF0jVXDhJIOneqee0eicBDxGhVpIxIhLbzkwWaFKabbMgRAbT9fUHCj5Z3eZmxLeNDDxKvyj0EXcBbhGw4NblsHZrb7KLJywESfdxXC5u3tDRwoeXEbsiuRfF8CnH7nt16olNZSR5lCJM5lUV3Z9NjP8UYEuwxor2eEolhzKJQj571Gea4x8wGTS-SxTG_85B4EhSVTeTkKQcS_HnQnl5yt37shHh0aoCBD6jHhDlKF0UrJyDf_F7NRSthMxB8oxxiQzlXBizUBID_Il3sZ2sHKzjDtVbju4kte0Mf2lHuxPtQvHqln7TZFETdXOGzo64pjaP-oCv4PjGVZB7f1x859JzrSRumOrz6Jx2WW4d23uGK3gRRpt2X1AU2q05vvO1k61dIWc9vXt28kiE90iU-SinXiuPra6703Cj2ZlxGpVO0qDOs6A2w1rVm8inCt2K244l6vYFOmKOj2Od_kNxbdJADd4pMagXR4wvaz7wU7X80UDOKC-gaJaKx-7iAZO_2NR3fXbbIwoWVjNC21P01wvWJOAy4_Tzzdnz4L2mpdPGB07ZXSPUmvHIKam_gnK1Od8BBc2_hA5mnRkvvjegAfLAoe0fOYJO_ZS7HpNUIcZyQmC7JUkvJTVP8VVOoXqJReMydK7JsCbRmRUyonXj66E6cLCzrpGM2rmnYnm6XmVvlEJ7l1JjrkJBeEMXhJD87ldsoHQW3CexOu9spztfsE-DsEwfySzupyaZ5z0vbZ1hJp3zO1bk1Ht1VQv_vAD1AJloyCe3M3ITosoOGfzuXDblAf5l1umzCj1G1prabhtL9LGr7ZI0B4_wRahQ_gV5DnfgxdV6l7GqlkSnJTTNYbPpYp8fsGhoqg40P3frY1LdMYM5PemfEF7VqkNClx1TbZwJ-dfG1q_9le0dqxP_MdYR1GILNOQVM5TGDi_RYCjygZ5iAMFOAQjgty0" alt\="" width\="1090" height\="650" role\="presentation"></p><p><br></p><p><img src\="https\://www.plantuml.com/plantuml/png/fL7DJXin4BxxAKQv997IGDjB5H54H8dK0nGrb1ENMU_inc9ZB-Fn0ez4NoClrjdTG03HKo-MFVFDz-CvYO8iQLEPUEjyZOmRYF9OaPxixBjEXlQsv91yRaCL68JHHssH5pFSmzReytjs8kGLakWLGqu5fagMmSi5RWWMxB22tzxPa1EShvJcdzWLbO7WafsNFQDMxn9vI-SK8vQqg5pfmP8NOZEy-7br1ZF87PQALOuCu_Q982Q6fIkdyFLm-laRaBoylXmQvHLdNOrUO53Zx18TRPJmnY-ou7rt7m16gD5yEjPJ5J19O1U9H-EtyzREJlLDfxnzobq_PwqnFWW1kt8j48gUuoWx7j7uw20xDlfMPckrAXRcK99SFTOq6cj1Byzi-bjK1Gzd3pMncBVAipClJ7NhwdhxL8LEcffte1_VhyddbBXhkxpfjHMeKjhinLzG8x7ZtdjeY1KrQMTsvelUF3LAeEKzWt183VN3PbYu1v0rGPRAWu9G4XFSErd3O3gT3bwjjd85LSxJIXY5oaVm8ORAvMO-Xr5TfGY2dElG6ERpTxcMcB6xIxGYRfobsCLRhjwY8jhMuoB7MbGXyOtVuHVzFb5SyDseGlUvbMZILdQvorTBqvPM8-wszW7TRdVTPmnXrItmafNQjbt8AKA3x3fidC1p4221lT7_oj4RxOVKJAqwf7QnhZba7VGNtQNj7w5HZPDsXsF3LFJHMu8FuXZoEIZ8dEWbRQg_" alt\="" width\="915" height\="422" role\="presentation"><br></p>Identifier l'heuristique justifiant le choix de conception indiqué par la note UML&nbsp;<b>(g)</b>. Si une note couvre plusieurs lignes de vie, l'explication doit comprendre le message avant la note et les objets dont leur ligne de vie est couverte par la note.<br><br><p></p>{
+	=<p>Selon protection des variations, on utilise une fabrique et un adaptateur.</p>
+	~<p>Patron Fabrication pure.&nbsp;&nbsp;</p>
+	~<p>Patron adaptateur.</p>
+}
+// [tag:Final]
+::Séquence et Communication, faiblesses séquence::[html]<p>Quelles sont les faiblesses d'un diagramme de séquence par rapport à un diagramme de communication?</p>{
+	~%100%<p>L'ajout de nouveaux objets séffectue obligatoirement vers la droite, consommant toujours de l'espace horizontal.</p>#<p>Un diagramme de séquence est aussi large que le nombre d'objets impliqués dans la dynamique décrite par le diagramme.</p>
+	~<p>La lecture des séquences de messages est plus difficile.</p>#<p>Les diagrammes de séquence permettent une meilleure visualisation des flots d'appels, parce qu'on les lit simplement de haut en bas.</p>
+	~<p>Il y a moins d'options de notation.&nbsp;</p>#<p>Les diagrammes de séquence ont une plus grande richesse notationnelle que les diagrammes de communication.</p>
+}
+// [tag:Final]
+::Notation de base::[html]<p>Quel diagramme de communication est correct selon la notation documentée dans le chapitre sur les diagrammes d'interaction?</p>{
+	~<p><img src\="http\://www.plantuml.com\:80/plantuml/img/TSun2i9G30RWlQS8tJkuE3Yu51GN5q-GlXVRu7il9KaHlP7dy69MGN7GAVdvyaC6ZWI1DIIgXkUUANUazWu-IBJAJbn6LCmGwOXJyeqKtsCcQ6LI9lrzSU0hmMBv1_sI23f9ySjjm2XdBZqSCHbzIOVXrAjC9RQIHC4LYyr4nQkGq0pgrQvOK1wTfTI01k4ZsxavqlDPUqa_4pJpW1NKFVbUSgVKwlqMsGsQTVq0" alt\="PlantUML image" width\="504" height\="54" /></p>#<p>Cette notation n'est pas correcte parce qu'il manque la numérotation réglementaire pour un diagramme de communication (voir la figure A15.27/F14.27 pour plus d'explications).</p>
+	~<p><img src\="http\://www.plantuml.com\:80/plantuml/img/TSun2i9G30RWlQS8tHrS7BeM51SNJv2-bxR1zrvAaY9w8y_XnQo2ug1JylFbXumS2G9hI5IDpprJxaZj7NoKQ9MTk4oec25IZtFohHG_O2PePLOc_Nrnv2l1UlC7_P88Eadnost4A6Sk0_IOZBwamt0QLEOIMqcYu8h55gBYLKXe1dMpBnQK9sSfDQ11-CXkQKxqVDPUCYm4gsL00_MwWO7y8BbJQlL-Y-nMFm00" alt\="PlantUML image" /></p>#<p>Cette notation n'est pas correcte parce qu'il manque la flèche à côté du message (pas au bout du lien) indiquant le sens du message (voir la figure A15.24/F14.24 pour plus d'explications).</p>
+	~<p><img src\="http\://www.plantuml.com\:80/plantuml/img/TSun2i9G30RWlQS8tHrS73gu51GN5q-GlXVRu7il9KaHlP7dy69MGN7GAVdvyaC6ZWI1DIIgXkUUANUazWu-IBJAJbn6LCmGwOXJyeqKtsCcQ6LI9lrzSU0hmNBr1_sI23f9ySjjm2XdBZqSCHbzIOVXrAjC9RQIHC4LYyr4nQkGq0pgPbSiA8_EKcf0W_2HxTmSwVcilQIV2HRhUK83zRA1ddmlkLDgzNwBx5O_0000" alt\="PlantUML image" /></p>#<p>Cette notation n'est pas correcte parce que la flèche devrait être à côté du message et pas au bout du lien pour indiquer le sens du message. Un lien peut avoir des messages voyageant dans les deux sens, donc c'est pour cela que la flèche va avec le message (voir la figure A15.24/F14.24 pour plus d'explications).</p>
+	=<p><img src\="http\://www.plantuml.com\:80/plantuml/img/TSun2i9G30RWlQS8tHrS73gu51GN5q-GlXVRu7il9KaHlP7dy69MGN7GAVdvyaC6ZWI1DIIgXkUUANUazWu-IBJAJbn6LCmGwOXJyeqKtsCcQ6LI9lrzSU0hmNBr1_sI23f9ySjjm2XdBZqSCHbzIOVXrAjC9RQIHC4LYyr4nQkGq0pgPbSiA8_EKcf0W_2HxTmSwVcilQIV2HRpW0RgPGCz-LvofzJg_HRP3HRh-W40" alt\="PlantUML image" /></p>#<p>Cette notation est correcte. Il y a un numéro sur le message, ainsi qu'une flèche avec le message indiquant le sens du message.</p>
+}
+// [tag:Final]
+::Séquence et Communication, forces communication::[html]<p>Quelles sont les forces d'un diagramme de communication par rapport à un diagramme de séquence?</p>{
+	~<p>L'ordonnancement des messages est plus claire.</p>#<p>Un diagramme de séquence indique clairement la séquence et l'ordonnancement des messages.</p>
+	~<p>Il y a plus de support par les outils, grâce à la richesse de la notation.</p>#<p>Selon Larman, les outils prennent mieux en charge les diagrammes de séquence et les options de notation sont plus nombrueses.</p>
+	~%100%<p>L'espace occupé par un diagramme est plus petit.&nbsp;</p>#<p>Un diagramme de communication occupe&nbsp;<span style\="line-height\: 1.231;">généralement&nbsp;</span><span style\="line-height\: 1.231;">moins de place qu'un diagramme de séquence, puisqu'on peut ajouter des objets dans les deux dimensions (horizontales et verticales)&nbsp;et cela permet d'éconimiser de l'espace. Avec un diagramme de séquence, on doit toujours ajouter des objets dans la dimension horizontale.</span></p>
+}
+// [tag:Final]
+::Statégie fabrique::[html]<p>Dans la conception du logiciel NextGen POS, le patron Stratégie (GoF) a été proposé pour supporter la mise en place d'une logique de tarification plus élaborée. Il permet par exemple de définir des réductions sur tout le magasin pendant une journée, ou bien des réductions permanentes pour les personnes âgées, etc.&nbsp;<br><img src\="https\://www.plantuml.com/plantuml/svg/bLBDYjim4BxhAOQSieNu0KAwMKCfvB0bn6bFUndBOoCYZumq3fIG1-fpzCMgA7LYaa3OYpqQVJ_p3NeBWbxwrggmCzoXnnQ2_BOKlzxecviIzQxnhkTAE-iyY4SEyOfOHgYAQkojV7SiFx0boBr12p_PQ5SHl1VAi92lKHDC5elBuVNrWrT5b9I_Vnf3M_IcDXh5E9u01Z355Wwg8TawGJlTmnn-KII_nEBTCQCXTLJQOWWmkUfyyDhrNaSaDhIXrWHASiLway2f0jDsbje86dowAmdcK5k7Cl9-QCrE24edubfmTJ8uT5K9yw-mpmPklaUMynZJ5mMUfFSC9zWN67aU5N459yL7YSxyl0pEzl6Ohz6ByT_-1zlaYPEg-s0-SKU3uy2-zZwPDFeyJsfgc9um2xWOnYx0Q0KAo0QwQS8CqiXFLh9SBi_fLqFurNtsBClKR9P-H_KMvUBp_WS0" alt\="IStrategieTarifiaction" width\="570" height\="398"><br><br>Voici la collaboration des éléments du patron dans le contexte du système NextGen POS \:<br></p><div id\="magicparlabel-4923"></div><br><img src\="https\://www.plantuml.com/plantuml/svg/NP4nZjH044NpFiNNHe2q5nW9j9CGiGWnGC8IrBHhJMdRrQQhR0aYha562EUOct0IkctGUYQpw_zw_wlwnfoAJqCAzY0wKg41vbyJmxn8l52E51_waYVjOawvm0kfLOdLDwwExsbA_ZAhlwQ1iIz22UzLOkuOjuTj57-PM2FViXdrl4_IAsB5SGdLuH9b97LSpTZXGvjVWGppkTYssFPjajW-oYVixlHL6_wVBLk9pjTs1o_afz-zy9s-oLDfmTJpMnx4rY0Bro_GiXtFqRE_oquff9n7X1bLIrH5-wSUycIhWxL3Swqckm0ycPy6pSueqdzsv7jOQFhO7V4CusEJXTESmR0MQPuDQJ-J-jhtahZyVqEzBzAVxpz4pKaZLqZ72CijmURh6pO0JZ-H2E7nAakLXH0v9RwEWj29ZTaONMLEMd5YSfGaTMC1B-zw-kLbK_wcVar3-Wi0" alt\="ds-tarifiaction" width\="603" height\="361"><p></p><p><br></p><p><br><b style\="font-size\: 0.9375rem; font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;"><span style\="font-weight\: bolder; font-size\: 0.9375rem; font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">Quel est le rapport entre cette application du patron Stratégie et le principe GRASP Fabrication Pure?&nbsp;</span></b><br><br><br></p>{
+	=<p><span style\="font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size\: 0.9375rem;">La hiérarchie des stratégies est un ensemble de classes comportementales et artificielles.</span><br><br></p>
+	~<p><span style\="font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size\: 0.9375rem;">Le développeur a « fabriqué » le type interface IStratégieTarification qui est ensuite implémenté par des classes StratégiePourcentageRemise, StratégieRemiseAbsolueAPartirDe, etc. La méthode getTotal() doit être implémentée dans ces classes, puisqu'elles implémentent l'interface où elle est définie.</span><br><br></p>
+	~<p><span style\="font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size\: 0.9375rem;">Chaque stratégie a une logique « pure », qui va finalement changer le total pour la Vente. Alors, la méthode getTotal() peut se modifier en conformité avec la logique de chaque tarification.</span><br><br></p>
+}
+// [tag:Final]
+::Stratégie expert::[html]<p></p><p>Dans la conception du logiciel NextGen POS, le patron Stratégie (GoF) a été proposé pour supporter la mise en place d'une logique de tarification plus élaborée. Il permet par exemple de définir des réductions sur tout le magasin pendant une journée, ou bien des réductions permanentes pour les personnes âgées, etc.&nbsp;<br><img src\="https\://www.plantuml.com/plantuml/svg/bLBDYjim4BxhAOQSieNu0KAwMKCfvB0bn6bFUndBOoCYZumq3fIG1-fpzCMgA7LYaa3OYpqQVJ_p3NeBWbxwrggmCzoXnnQ2_BOKlzxecviIzQxnhkTAE-iyY4SEyOfOHgYAQkojV7SiFx0boBr12p_PQ5SHl1VAi92lKHDC5elBuVNrWrT5b9I_Vnf3M_IcDXh5E9u01Z355Wwg8TawGJlTmnn-KII_nEBTCQCXTLJQOWWmkUfyyDhrNaSaDhIXrWHASiLway2f0jDsbje86dowAmdcK5k7Cl9-QCrE24edubfmTJ8uT5K9yw-mpmPklaUMynZJ5mMUfFSC9zWN67aU5N459yL7YSxyl0pEzl6Ohz6ByT_-1zlaYPEg-s0-SKU3uy2-zZwPDFeyJsfgc9um2xWOnYx0Q0KAo0QwQS8CqiXFLh9SBi_fLqFurNtsBClKR9P-H_KMvUBp_WS0" alt\="IStrategieTarifiaction" width\="570" height\="398"><br><br>Voici la collaboration des éléments du patron dans le contexte du système NextGen POS \:<br></p><div id\="magicparlabel-4923"></div><br><img src\="https\://www.plantuml.com/plantuml/svg/NP4nZjH044NpFiNNHe2q5nW9j9CGiGWnGC8IrBHhJMdRrQQhR0aYha562EUOct0IkctGUYQpw_zw_wlwnfoAJqCAzY0wKg41vbyJmxn8l52E51_waYVjOawvm0kfLOdLDwwExsbA_ZAhlwQ1iIz22UzLOkuOjuTj57-PM2FViXdrl4_IAsB5SGdLuH9b97LSpTZXGvjVWGppkTYssFPjajW-oYVixlHL6_wVBLk9pjTs1o_afz-zy9s-oLDfmTJpMnx4rY0Bro_GiXtFqRE_oquff9n7X1bLIrH5-wSUycIhWxL3Swqckm0ycPy6pSueqdzsv7jOQFhO7V4CusEJXTESmR0MQPuDQJ-J-jhtahZyVqEzBzAVxpz4pKaZLqZ72CijmURh6pO0JZ-H2E7nAakLXH0v9RwEWj29ZTaONMLEMd5YSfGaTMC1B-zw-kLbK_wcVar3-Wi0" alt\="ds-tarifiaction" width\="603" height\="361"><br><b><br><b style\="font-size\: 0.9375rem; font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;"><span style\="font-weight\: bolder; font-size\: 0.9375rem; font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">Quel est le rapport entre cette application du patron Stratégie et le principe GRASP Expert?&nbsp;</span></b><br></b><br><p></p>{
+	~<p><span style\="font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size\: 0.9375rem;">La classe Vente est l'expert du sousTotal() de chaque LigneArticles.</span><br><br></p>
+	~<p><span style\="font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size\: 0.9375rem;">Les développeurs doivent être les experts de la tarification avant d'écrire les implémentations de getTotal() dans les stratégies concrètes.</span><br><br></p>
+	~<p><span style\="font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size\: 0.9375rem;">Déterminer des réductions pour les personnes âgées est une affaire des experts. Les développeurs ne doivent pas proposer de telles réductions.</span><br><br></p>
+	=<p><span style\="font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size\: 0.9375rem;">La stratégie n'est pas un expert du total de la vente en cours avant d'appliquer sa tarification.</span><br><br></p>
+}
+// [tag:Final]
+::Stratégie polymorphisme::[html]Dans la conception du logiciel NextGen POS, le patron Stratégie (GoF) a été proposé pour supporter la mise en place d'une logique de tarification plus élaborée. Il permet par exemple de définir des réductions sur tout le magasin pendant une journée, ou bien des réductions permanentes pour les personnes âgées, etc.&nbsp;<br><img src\="https\://www.plantuml.com/plantuml/svg/bLBDYjim4BxhAOQSieNu0KAwMKCfvB0bn6bFUndBOoCYZumq3fIG1-fpzCMgA7LYaa3OYpqQVJ_p3NeBWbxwrggmCzoXnnQ2_BOKlzxecviIzQxnhkTAE-iyY4SEyOfOHgYAQkojV7SiFx0boBr12p_PQ5SHl1VAi92lKHDC5elBuVNrWrT5b9I_Vnf3M_IcDXh5E9u01Z355Wwg8TawGJlTmnn-KII_nEBTCQCXTLJQOWWmkUfyyDhrNaSaDhIXrWHASiLway2f0jDsbje86dowAmdcK5k7Cl9-QCrE24edubfmTJ8uT5K9yw-mpmPklaUMynZJ5mMUfFSC9zWN67aU5N459yL7YSxyl0pEzl6Ohz6ByT_-1zlaYPEg-s0-SKU3uy2-zZwPDFeyJsfgc9um2xWOnYx0Q0KAo0QwQS8CqiXFLh9SBi_fLqFurNtsBClKR9P-H_KMvUBp_WS0" alt\="IStrategieTarifiaction" width\="570" height\="398" class\="img-responsive atto_image_button_text-bottom"><br><br><span style\="font-size\: 0.9375rem; font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">Voici la collaboration des éléments du patron dans le contexte du système NextGen POS \:</span><br><div id\="magicparlabel-4923"></div><br><img src\="https\://www.plantuml.com/plantuml/svg/NP4nZjH044NpFiNNHe2q5nW9j9CGiGWnGC8IrBHhJMdRrQQhR0aYha562EUOct0IkctGUYQpw_zw_wlwnfoAJqCAzY0wKg41vbyJmxn8l52E51_waYVjOawvm0kfLOdLDwwExsbA_ZAhlwQ1iIz22UzLOkuOjuTj57-PM2FViXdrl4_IAsB5SGdLuH9b97LSpTZXGvjVWGppkTYssFPjajW-oYVixlHL6_wVBLk9pjTs1o_afz-zy9s-oLDfmTJpMnx4rY0Bro_GiXtFqRE_oquff9n7X1bLIrH5-wSUycIhWxL3Swqckm0ycPy6pSueqdzsv7jOQFhO7V4CusEJXTESmR0MQPuDQJ-J-jhtahZyVqEzBzAVxpz4pKaZLqZ72CijmURh6pO0JZ-H2E7nAakLXH0v9RwEWj29ZTaONMLEMd5YSfGaTMC1B-zw-kLbK_wcVar3-Wi0" alt\="ds-tarifiaction" width\="603" height\="361" class\="img-responsive atto_image_button_text-bottom"><br><span style\="font-size\: 0.9375rem; font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;"><b>Quel est le rapport entre cette application du patron Stratégie et le principe GRASP Polymorphisme?&nbsp;</b></span><br><br>{
+	=<span style\="font-size\: 0.9375rem; font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;">Chaque stratégie concrète est responsable d'un comportement qui varie et possède une opération polymorphe getTotal().</span><br>
+	~<span style\="font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size\: 0.9375rem;">La hiérarchie des stratégies est un ensemble de classes comportementales et artificielles.</span><br>
+	~<p><span style\="font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size\: 0.9375rem;">Il existe un type interface IStratégieTarification qui est ensuite implémenté par des classes StratégiePourcentageRemise, StratégieRemiseAbsolueAPartirDe, etc. La méthode getTotal() doit être implémentée dans ces classes, puisqu'elles implémentent l'interface où la méthode getTotal() est définie.</span><br><br></p>
+}
+// [tag:Final]
+::stratégie protection des variations::[html]<p>Dans la conception du logiciel NextGen POS, le patron Stratégie (GoF) a été proposé pour supporter la mise en place d'une logique de tarification plus élaborée. Il permet par exemple de définir des réductions sur tout le magasin pendant une journée, ou bien des réductions permanentes pour les personnes âgées, etc.&nbsp;<br><img src\="https\://www.plantuml.com/plantuml/svg/bLBDYjim4BxhAOQSieNu0KAwMKCfvB0bn6bFUndBOoCYZumq3fIG1-fpzCMgA7LYaa3OYpqQVJ_p3NeBWbxwrggmCzoXnnQ2_BOKlzxecviIzQxnhkTAE-iyY4SEyOfOHgYAQkojV7SiFx0boBr12p_PQ5SHl1VAi92lKHDC5elBuVNrWrT5b9I_Vnf3M_IcDXh5E9u01Z355Wwg8TawGJlTmnn-KII_nEBTCQCXTLJQOWWmkUfyyDhrNaSaDhIXrWHASiLway2f0jDsbje86dowAmdcK5k7Cl9-QCrE24edubfmTJ8uT5K9yw-mpmPklaUMynZJ5mMUfFSC9zWN67aU5N459yL7YSxyl0pEzl6Ohz6ByT_-1zlaYPEg-s0-SKU3uy2-zZwPDFeyJsfgc9um2xWOnYx0Q0KAo0QwQS8CqiXFLh9SBi_fLqFurNtsBClKR9P-H_KMvUBp_WS0" alt\="IStrategieTarifiaction" width\="570" height\="398"><br><br>Voici la collaboration des éléments du patron dans le contexte du système NextGen POS \:<br></p><div id\="magicparlabel-4923"></div><br><img src\="https\://www.plantuml.com/plantuml/svg/NP4nZjH044NpFiNNHe2q5nW9j9CGiGWnGC8IrBHhJMdRrQQhR0aYha562EUOct0IkctGUYQpw_zw_wlwnfoAJqCAzY0wKg41vbyJmxn8l52E51_waYVjOawvm0kfLOdLDwwExsbA_ZAhlwQ1iIz22UzLOkuOjuTj57-PM2FViXdrl4_IAsB5SGdLuH9b97LSpTZXGvjVWGppkTYssFPjajW-oYVixlHL6_wVBLk9pjTs1o_afz-zy9s-oLDfmTJpMnx4rY0Bro_GiXtFqRE_oquff9n7X1bLIrH5-wSUycIhWxL3Swqckm0ycPy6pSueqdzsv7jOQFhO7V4CusEJXTESmR0MQPuDQJ-J-jhtahZyVqEzBzAVxpz4pKaZLqZ72CijmURh6pO0JZ-H2E7nAakLXH0v9RwEWj29ZTaONMLEMd5YSfGaTMC1B-zw-kLbK_wcVar3-Wi0" alt\="ds-tarifiaction" width\="603" height\="361"><br><span style\="font-size\: 0.9375rem; font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;"><b>Quel est le rapport entre cette application du patron Stratégie et le principe GRASP Protection des variations?</b></span><p></p>{
+	~<p><span style\="font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size\: 0.9375rem;">Les implémentations de chaque logique de tarification sont protégées des variations dans la classe Vente.</span><br><br></p>
+	~<p><span style\="font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size\: 0.9375rem;">Chaque tarification peut changer le total pour la Vente. Puisque le total peut varier ainsi que la tarification, nous avons besoin d'une protection face à ces changements. Le patron Stratégie fournit cette protection.</span><br><br></p>
+	=<p><span style\="font-family\: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size\: 0.9375rem;">La logique de tarification se veut flexible dans le système NextGen POS. Le type interface IStratégieTarification crée une stabilité pour la classe Vente permettant l'ajout de nouvelles tarifications sans impact négatif sur la classe Vente.</span><br><br></p>
+}
+// [tag:Final]
+::Transition définition::[html]<p>Un(e) __________________ est une relation entre deux états qui indique que l'objet change d'état lorsqu'un événement se produit. </p>{
+	~<p>événement</p>#<p>Un événement est une occurence d'un fait signifactif ou remarquable. </p>
+	~<p>état</p>#<p>Un état est la condition d'un objet à un moment donné -- il y demeure jusqu'à l'arrivée d'un nouvel événement.</p>
+	=<p>transition</p>#<p>Une transition est une relation entre deux états qui indique que l'objet change d'état lorsqu'un événement se produit. </p>
+	~<p>Aucune de ces réponses.</p>
+}
+// [tag:Final]
+::GRASP plus général que GoF::[html]<p>Les GRASP sont des principes basés sur des Design patrons GoF.</p>{FALSE#<p>Incorrect. Les GRASP sont des principes de conception sur lesquels sont basés les patrons GoF.</p>#<p>Correct. Les GRASP sont des principes de conception sur lesquels sont basés les patrons GoF.</p>}
+// [tag:Final]
+::Diagramme d'état - vidéo projecteur::[html]<p>A partir du diagramme d'état suivant et du diagramme de classe correspondant, veuillez définir le code pour l'opération <b>power</b> de la classe <b>Projecteur</b></p><p><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuUAArefLqDMrKt0vl3AfA34lEUFmIYwWR4cgWXEKgr3DXIG9LdouioGrCw_4IW4Ycbh41HK1ophcv9Jc7bvffL2GNmwKWd9HDM9AEUVdvQKcbu3q9KEOgKN1-QL5oQbSS2bKurDIyIj4iwoMomdP3qX-0Xe5um3LSJcavgK0mmO0"/></p>
+<p><img src\="https\://www.plantuml.com/plantuml/png/pLCv3i8m4Ept5Lj2aGzGSHRfa7Y1SPPBmK7sMY15F82dv1tv60PoOGX9IMVlZ6PdnlBOiD1iZp60Z8KnkDJ9WIIJrIaWHhJMGiaTwS7GNK_9kJZ9HAa7JQyIgoKzPn5zcxu9R8bNBDWXet3X3lKs1veIzA0XN052vMGtGX9wg6Up1l3KK2YzjyA-zLRYPyfMQfUfQz7vFCzUr3n3kZ2fo7ocx1OhrAOTKeX_MrbP2EOtfhtYAaALAOMVfgeI9d5iZuqE-WhqDbhicRtuNpQbq3jsLwG64kZzTiU1_wO0OxVSVUCx"/></p>{
+	~<p>this.setState(power())</p>
+	=<p>getState().power(this)</p>
+	~<p>eteint.power()</p>
+	~<p>allume.power()</p>
+	~<p>connecte.power()</p>
+	~<p>setState().power(this)</p>
+	~<p>getState(this).power()</p>
+	~<p>getState().eteindre()</p>
+	~<p>getState().allumer()</p>
+	~<p>getState().connecter()</p>
+	~<p>aucune de ses réponses</p>
+}
+// [tag:Final]
+::Diagramme d'état - vidéo projecteur::[html]<p>A partir du diagramme d'état suivant et du diagramme de classe correspondant, veuillez définir le code pour l'opération <b>power</b> de la classe <b>Éteint</b><p><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuUAArefLqDMrKt0vl3AfA34lEUFmIYwWR4cgWXEKgr3DXIG9LdouioGrCw_4IW4Ycbh41HK1ophcv9Jc7bvffL2GNmwKWd9HDM9AEUVdvQKcbu3q9KEOgKN1-QL5oQbSS2bKurDIyIj4iwoMomdP3qX-0Xe5um3LSJcavgK0mmO0"/></p>
+<p><img src\="https\://www.plantuml.com/plantuml/png/pLCv3i8m4Ept5Lj2aGzGSHRfa7Y1SPPBmK7sMY15F82dv1tv60PoOGX9IMVlZ6PdnlBOiD1iZp60Z8KnkDJ9WIIJrIaWHhJMGiaTwS7GNK_9kJZ9HAa7JQyIgoKzPn5zcxu9R8bNBDWXet3X3lKs1veIzA0XN052vMGtGX9wg6Up1l3KK2YzjyA-zLRYPyfMQfUfQz7vFCzUr3n3kZ2fo7ocx1OhrAOTKeX_MrbP2EOtfhtYAaALAOMVfgeI9d5iZuqE-WhqDbhicRtuNpQbq3jsLwG64kZzTiU1_wO0OxVSVUCx"/></p>{
+	=<p>projecteur.setState(new Allumé())</p>
+	~<p>projecteur.setState(new Débranché())</p>
+	~<p>projecteur.setState(new Connecté())</p>
+	~<p>projecteur.setState(new Éteint())</p>
+	~<p>this.setState(new Allumé())</p>
+	~<p>this.setState(new Débranché())</p>
+	~<p>this.setState(new Connecté())</p>
+	~<p>this.setState(new Éteint())</p>
+	~<p>aucune de ses réponses</p>
+}
+// [tag:Final]
+::Diagramme d'état - vidéo projecteur::[html]<p>A partir du diagramme d'état suivant et du diagramme de classe correspondant, veuillez définir le code pour l'opération <b>power</b> de la classe <b>Allumé</b></p><p><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuUAArefLqDMrKt0vl3AfA34lEUFmIYwWR4cgWXEKgr3DXIG9LdouioGrCw_4IW4Ycbh41HK1ophcv9Jc7bvffL2GNmwKWd9HDM9AEUVdvQKcbu3q9KEOgKN1-QL5oQbSS2bKurDIyIj4iwoMomdP3qX-0Xe5um3LSJcavgK0mmO0"/></p>
+<p><img src\="https\://www.plantuml.com/plantuml/png/pLCv3i8m4Ept5Lj2aGzGSHRfa7Y1SPPBmK7sMY15F82dv1tv60PoOGX9IMVlZ6PdnlBOiD1iZp60Z8KnkDJ9WIIJrIaWHhJMGiaTwS7GNK_9kJZ9HAa7JQyIgoKzPn5zcxu9R8bNBDWXet3X3lKs1veIzA0XN052vMGtGX9wg6Up1l3KK2YzjyA-zLRYPyfMQfUfQz7vFCzUr3n3kZ2fo7ocx1OhrAOTKeX_MrbP2EOtfhtYAaALAOMVfgeI9d5iZuqE-WhqDbhicRtuNpQbq3jsLwG64kZzTiU1_wO0OxVSVUCx"/></p>{
+	~<p>projecteur.setState(new Allumé())</p>
+	~<p>projecteur.setState(new Débranché())</p>
+	~<p>projecteur.setState(new Connecté())</p>
+	=<p>projecteur.setState(new Éteint())</p>
+	~<p>this.setState(new Allumé())</p>
+	~<p>this.setState(new Débranché())</p>
+	~<p>this.setState(new Connecté())</p>
+	~<p>this.setState(new Éteint())</p>
+	~<p>aucune de ses réponses</p>
+}
+// [tag:Final]
+::Diagramme d'état - vidéo projecteur::[html]<p>A partir du diagramme d'état suivant et du diagramme de classe correspondant, veuillez définir le code pour l'opération <b>power</b> de la classe <b>Connecté</b></p><p><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuUAArefLqDMrKt0vl3AfA34lEUFmIYwWR4cgWXEKgr3DXIG9LdouioGrCw_4IW4Ycbh41HK1ophcv9Jc7bvffL2GNmwKWd9HDM9AEUVdvQKcbu3q9KEOgKN1-QL5oQbSS2bKurDIyIj4iwoMomdP3qX-0Xe5um3LSJcavgK0mmO0"/></p>
+<p><img src\="https\://www.plantuml.com/plantuml/png/pLCv3i8m4Ept5Lj2aGzGSHRfa7Y1SPPBmK7sMY15F82dv1tv60PoOGX9IMVlZ6PdnlBOiD1iZp60Z8KnkDJ9WIIJrIaWHhJMGiaTwS7GNK_9kJZ9HAa7JQyIgoKzPn5zcxu9R8bNBDWXet3X3lKs1veIzA0XN052vMGtGX9wg6Up1l3KK2YzjyA-zLRYPyfMQfUfQz7vFCzUr3n3kZ2fo7ocx1OhrAOTKeX_MrbP2EOtfhtYAaALAOMVfgeI9d5iZuqE-WhqDbhicRtuNpQbq3jsLwG64kZzTiU1_wO0OxVSVUCx"/></p>{
+	~<p>projecteur.setState(new Allumé())</p>
+	~<p>projecteur.setState(new Débranché())</p>
+	~<p>projecteur.setState(new Connecté())</p>
+	=<p>projecteur.setState(new Éteint())</p>
+	~<p>this.setState(new Allumé())</p>
+	~<p>this.setState(new Débranché())</p>
+	~<p>this.setState(new Connecté())</p>
+	~<p>this.setState(new Éteint())</p>
+	~<p>aucune de ses réponses</p>
+}
+// [tag:Final]
+::Diagramme d'état - vidéo projecteur::[html]<p>A partir du diagramme d'état suivant et du diagramme de classe correspondant, veuillez définir le code pour l'opération <b>power</b> de la classe <b>Branché</b></p><p><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuUAArefLqDMrKt0vl3AfA34lEUFmIYwWR4cgWXEKgr3DXIG9LdouioGrCw_4IW4Ycbh41HK1ophcv9Jc7bvffL2GNmwKWd9HDM9AEUVdvQKcbu3q9KEOgKN1-QL5oQbSS2bKurDIyIj4iwoMomdP3qX-0Xe5um3LSJcavgK0mmO0"/></p>
+<p><img src\="https\://www.plantuml.com/plantuml/png/pLCv3i8m4Ept5Lj2aGzGSHRfa7Y1SPPBmK7sMY15F82dv1tv60PoOGX9IMVlZ6PdnlBOiD1iZp60Z8KnkDJ9WIIJrIaWHhJMGiaTwS7GNK_9kJZ9HAa7JQyIgoKzPn5zcxu9R8bNBDWXet3X3lKs1veIzA0XN052vMGtGX9wg6Up1l3KK2YzjyA-zLRYPyfMQfUfQz7vFCzUr3n3kZ2fo7ocx1OhrAOTKeX_MrbP2EOtfhtYAaALAOMVfgeI9d5iZuqE-WhqDbhicRtuNpQbq3jsLwG64kZzTiU1_wO0OxVSVUCx"/></p>{
+	~<p>projecteur.setState(new Allumé())</p>
+	~<p>projecteur.setState(new Débranché())</p>
+	~<p>projecteur.setState(new Connecté())</p>
+	~<p>projecteur.setState(new Éteint())</p>
+	~<p>this.setState(new Allumé())</p>
+	~<p>this.setState(new Débranché())</p>
+	~<p>this.setState(new Connecté())</p>
+	~<p>this.setState(new Éteint())</p>
+	=<p>aucune de ses réponses</p>
+}
+// [tag:Final]
+::Routeur application::[html]<p>Le routeur d'une application Express contient le code suivant\:</p><p>public get_item(req\: Request, res\: Response, next\: NextFunction) \{<p>...</p><p>\}</p><p>init()\{</p><p>&nbsp;&nbsp;&nbsp;this.router.get("/api/v1/item/\:item_name", this.get_item.bind(this));</p> <p>\{</p><p><b> Quels appels vont invoquer le get_item?</b></p>{
+	~<p>GET /api/v1/item/</p>
+	~%33.3333%<p>GET /api/v1/item/hammer/</p>
+	~<p>GET /api/v1/item/hammer/blue</p>
+	~%33.3333%<p>GET /api/v1/item/%20</p>
+	~%33.3333%<p>GET /api/v1/item/hammer?color\=blue</p>
+}
+// [tag:Final]
+::Analyse et conceptionh SGA::[html]<p>Durant le laboratoire, vous avez eu à créer des artéfacts afin d’effectuer l’analyse et la conception du SGA. Décrivez l’utilité de chaque artéfact durant l’implémentation</p>{
+	=<p>Modèle du domaine (MDD)</p> -> définir les classes conceptuelles, leurs propriétés et leurs associations
+	=<p>Diagramme de séquence système (DSS)</p> -> définir les routes de l’API et les méthodes des contrôleurs, leurs paramètres et valeurs de retour
+	=<p>Contrats d’opération</p> -> tester les postconditions dans les tests d’API
+	=<p>Réalisations de cas d’utilisation (RDCU)</p> -> séquence d’exécution de chaque opération des contrôleurs
+}
+// [tag:Final]
+::Séparartion des couches::[html]<p>Identifier la ou les situation où la séparation des couches est utile.</b></p>{
+	~%25%<p>Permet l’utilisation de l’API par des tiers</p>
+	~%25%<p>Permet de remplacer Express par un autre routeur</p>
+	~%25%<p>Permet de modifier l’interface graphique sans changer l’API</p>
+	~%25%<p>Permet d'obtenir un faible couplage entre la couche présentation et la couche domaine</p>
+	~<p>Permet d'augmenter le couplage entre la couche présentation et la couche domaine</p>
+	~<p>Permet d'augmenter la cohésion de la couche présentation</p>
+	~<p>Permet d'augmenter la cohésion de la couche domaine</p>
+	~<p>Permet de modifier l'API sans avoir d'impact sur le reste de l'application</p>	
+}
+// [tag:Final]
+::Inspecter votre code::[html]<p>Pour chaque opération système dans votre code, il doit y avoir\:</b></p>{
+	~%20%<p>Une méthode ayant le même nom dans la couche domaine</p>
+	~%20%<p>Un contrôleur GRASP qui reçoit la méthode</p>
+	~%20%<p>Une couche domaine contenant le contrôleur</p>
+	~%20%<p>Des arguments de type primitifs</p>
+	~%20%<p>Une route dans le router de la couche présentation</p>
+	~<p>Une méthode ayant le même nom dans la couche présentation</p>
+	~<p>Des arguments de type objet</p>
+	~<p>Un retour d'information de type objet</p>
+}
+// [tag:Final]
+::Exemple - quels sont les états::[html]<p>Donnez le nom d'un SEUL état (n'importe lequel) du diagramme suivant\:</p>\n<p><img src\="http\://www.plantuml.com\:80/plantuml/img/AyxEp2j8B4hCLKXAJCvEByelpKjnpi_9Br8eAKhCAmPAfUQLS1N3LHLd9ARabsVcfIka9UOKft95QyKgwEhQAJXnEIa0AMS5AuLoBcSG4oHZfL010000" alt\="diagrammes d'états en PlantUML" width\="284" height\="150" /></p>{
+	=%100%B#<p><em>B</em> et <em>C</em> sont les états.</p>\n<p><em>w</em> et <em>x</em> sont les transitions.</p>
+	=%100%C#<p><em>B</em> et <em>C</em> sont les états.</p>\n<p><em>w</em> et <em>x</em> sont les transitions.</p>
+	=%0%w#<p><em>B</em> et <em>C</em> sont les états.</p>\n<p><em>w</em> et <em>x</em> sont les transitions.</p>
+	=%0%x#<p><em>B</em> et <em>C</em> sont les états.</p>\n<p><em>w</em> et <em>x</em> sont les transitions.</p>
+}
+// [tag:Final]
+::Exemple - quels sont les transitions::[html]<p>Donnez le nom d'une SEULE transition (n'importe laquelle) du diagramme suivant\:</p>\n<p><img src\="http\://www.plantuml.com\:80/plantuml/img/AyxEp2j8B4hCLKXAJCvEByelpKjnpi_9Br8eAKhCAmPAfUQLS1N3LHLd9ARabsVcfIka9UOKft95QyKgwEhQAJXnEIa0AMS5AuLoBcSG4oHZfL010000" alt\="diagrammes d'états en PlantUML" width\="284" height\="150" /></p>{
+	=%0%B#<p><em>B</em> et <em>C</em> sont les états.</p>\n<p><em>w</em> et <em>x</em> sont les transitions.</p>
+	=%0%C#<p><em>B</em> et <em>C</em> sont les états.</p>\n<p><em>w</em> et <em>x</em> sont les transitions.</p>
+	=%100%w#<p><em>B</em> et <em>C</em> sont les états.</p>\n<p><em>w</em> et <em>x</em> sont les transitions.</p>
+	=%100%x#<p><em>B</em> et <em>C</em> sont les états.</p>\n<p><em>w</em> et <em>x</em> sont les transitions.</p>
+}
+// [tag:Final]
+::Sous-classes conceptuelles::[html]<p>Soit la partie suivante d'un MDD pour un système d'inscription pour les cours universitaire. Pourquoi cette modélisation n'est-elle pas probablement utile?</p>\n<p><img src\="http\://www.plantuml.com\:80/plantuml/img/AyxEp2j8B4hCLIWkgSn91P95cSabfRavN1cPAQaAgRa59PKAkQab6VafnQX2kKcfHSLSXpjBIbCo4_DA56ngT1NWFD_4ukJIdCmy1LmAt0wlpCtCoym30000" alt\="Image PlantUML" width\="372" height\="81" /></p>{
+	~%25%<p>Les sous-classes n'ont pas d'attributs supplémentaires pertinents.</p>
+	~%25%<p>Les sous-classes n'ont pas d'associations supplémentaires pertinents.</p>
+	~%25%<p>Les sous-classes ne sont pas être gérées différemment que la super-classe. </p>
+	~%25%<p>Les sous-classes n'ont pas de comportement différent de celui de la super-classe en ce qui concerne le domaine du logiciel.</p>
+	~%-20%<p>L'utilisation de sous-classes est toujours une mauvaise idée dans un MDD.</p>
+}

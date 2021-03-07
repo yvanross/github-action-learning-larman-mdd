@@ -1,0 +1,47 @@
+Contrats d'opération : CU02
+
+Opération : demarrerPropositionÉchange()
+Préconditions : 
+    •	Une instance c de Client existe
+    •	Une instance bdd de BureauDeveloppementDurable existe
+Postconditions: 
+    •	Une instance p de PropositionEchange a été créée
+    •	Une association a été créée entre l’instance p :PropositionEchange et c :Client
+    •	Une association a été créée entre l’instance bdd :BureauDeveloppement et p :PropositionEchange
+
+Opération : choisirClient(idClient : string)
+Préconditions : 
+    •	Une instance c de Client existe
+    •	Une instance p de PropositionEchange existe
+Postconditions: 
+    •	Une assocation entre p :PropositionEchange et client a été créée sur la base de correspondance avec le parametre idClient
+
+Opération : proposerLivreRecevoir(idLivre :CodeLivre)
+ Préconditions : 
+    •	Une instance c de Client existe
+    •	Une instance p de PropositionEchange existe
+Postconditions: 
+    •	Une association "Recoit" a été créée entre p :PropositionEchange et Livre sur la base de correspondance avec le paramètre idLivre
+
+Opération : proposerLivreOffrir(idLivre :CodeLivre)
+ Préconditions : 
+    •	Une instance c de Client existe
+    •	Une instance p de PropositionEchange existe
+Postconditions: 
+    •	Une association "Offre" a été créée entre p :PropositionEchange et Livre sur la base de correspondance avec le paramètre idLivre
+
+Opération : terminerProposition()
+Préconditions : 
+    •	Une instance c de Client existe
+    •	Une instance p de PropositionEchange existe
+Postconditions: 
+    •	aucune
+
+
+Opération : confirmerEchange()
+Préconditions : 
+    •	Une instance c de Client existe
+    •	Une instance p de PropositionEchange existe
+Postconditions: 
+    •	p.dateHeure est devenu maintenant
+

@@ -1,0 +1,25 @@
+$CATEGORY: $course$/TDD
+
+// [tag:seance06]
+::TDD éléments::[markdown]Appariez chaque énoncé avec son appartenance au *test-driven development* (TDD) {
+    =écrire un test qui échoue -> partie essentielle
+    =écrire un test qui passe -> partie essentielle
+    =faire du réusinage -> partie essentielle
+    =corriger les bogues dans les tests -> partie essentielle
+    =faire des petits pas -> partie essentielle
+    =utiliser un framework automatique de tests -> partie facultative    
+    =utiliser un environnement de développement avec les fonctionnalités automatisant des réusinages -> partie facultative
+    =faire des kata -> partie facultative
+    =travailler à deux (peer programming) -> partie facultative
+}
+
+// [tag:seance06]
+::TDD 3 regles::[html]Identifier les règles TDD.{
+=Vous n'êtes pas autorisé à écrire du code de production tant que vous n'avez pas écrit un test unitaire qui a échoué. -> TDD
+=Vous n'êtes pas autorisé à écrire plus de tests unitaires que ce qui est suffisant pour échouer et ne pas compiler échoue. -> TDD
+=Vous n'êtes pas autorisé à écrire plus de code de production que ce qui est suffisant pour réussir le test qui échoue actuellement. -> TDD
+=Vous devez réusiner votre code immédiatement lorsque votre test passe -> Non TDD
+=Vous devez réusiner votre test immédiatement lorsque votre test passe -> Non TDD
+=Vous êtes autorisé à écrire du code de production vous pourrez écrire le test unitaire plus tard -> Non TDD
+=Vous n'êtes pas autorisé à écrire les test unitaires avant les test d'intégrations -> Non TDD
+}

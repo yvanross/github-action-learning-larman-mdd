@@ -1,0 +1,57 @@
+@startuml S10-travail-equpe
+skinparam style strictuml
+actor ":Etudiant1" as E1
+actor ":Etudiant2" as E2
+
+participant ":Master" as M 
+participant ":Branche1" as B1
+participant ":Branche2" as B2
+
+E1 -> M: git clone master
+E1 -> M: git checkout -b Branche1
+E1 -->> B1: modify code
+E1 -->> B1: npm test
+E1 -->> B1: git commit -am "code modifed because..."
+E1 -->> B1: git push
+
+
+E2 -> M: git clone master
+E2 -> M: git checkout -b Branche2
+E2 -->> B2: modify code
+E2 -->> B2: npm test
+E2 -->> B2: git commit -am "code modifed because..."
+E2 -->> B2: git push
+
+== release Etudiant 1==
+
+E1 -> B1: git merge master
+B1->M: merge Master in Branche1
+E1 -> B1: valid = npm test
+opt valid
+    E1->M: git checkout master
+    E1 ->M: git merge branch1
+    M->B1: merge branch1 in master
+    E1->M: npm test
+    E1 -> M: git commit -am "code modifed because..."
+    E1 -> M: git push
+end
+
+== release Etudiant 2==
+
+
+E2 -> B2: git merge master
+B2->M: merge Master in Branche1
+E2 -> B2: valid = npm test
+opt valid
+    E2->M: git checkout master
+    E2 ->M: git merge branch2
+    M->B2: merge branch2 in master
+    E2->M: npm test
+    E2 -> M: git commit -am "code modifed because..."
+    E2 -> M: git push
+
+
+end
+
+
+@enduml

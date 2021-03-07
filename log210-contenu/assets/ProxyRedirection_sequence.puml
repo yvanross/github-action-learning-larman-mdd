@@ -1,0 +1,17 @@
+@startuml Proxy Redirection
+skinparam style strictuml
+skinparam BackgroundColor transparent
+participant ":Register" as r
+participant "accounting:Accounting\nRedirection\nProxy" as p
+participant "externalAccounting:SAP\nAccounting\nAdapter" as sap
+participant "localAccounting:Local\nAccounting" as local
+-> r : makePayment(...)
+r -> r : completeSaleHandling(...)
+r -> p : postSale(currentSale)
+p -> sap : result = \npostSale(currentSale)
+alt result=fail
+    p -> local : postSale(currentSale)
+    note over local: store post locally\nto try later    
+end
+
+@enduml

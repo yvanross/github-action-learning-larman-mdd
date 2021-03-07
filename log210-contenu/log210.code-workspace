@@ -1,0 +1,12 @@
+{
+	"settings": {
+		"plantuml.server": "https://www.plantuml.com/plantuml",
+		"revealjs.highlightTheme": "Github",
+		"revealjs.theme": "beige"
+	},
+	"folders": [
+		{
+			"path": "."
+		}
+	]
+}

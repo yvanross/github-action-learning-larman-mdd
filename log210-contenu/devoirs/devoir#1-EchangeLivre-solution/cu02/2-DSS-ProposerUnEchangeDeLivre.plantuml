@@ -1,0 +1,27 @@
+@startuml
+﻿skinparam style strictuml
+title CU02 - Proposer un échange de livres
+actor ":Client" as c
+participant ":Système" as s
+
+c->s : demarrerPropositionÉchange()
+s-->c : Clients et livres à échanger
+
+c-> s: choisirClient(idClient : String)
+s-->c : liste de livres du Client choisi et du client
+
+loop reste des livres à proposer
+  opt Client veut recevoir un livre
+    c->s: proposerLivreRecevoir(idLivre : CodeLivre)
+  end opt
+  opt Client veut offrir un livre
+    c->s: proposerLivreOffrir(idLivre : CodeLivre)
+  end opt
+end loop
+
+c->s: terminerProposition()
+s-->c: nombre livres a offrir et a recevoir
+
+c->s: confirmerÉchange()
+s-->c: resumé de l'échange
+@enduml

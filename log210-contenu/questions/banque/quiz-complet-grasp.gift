@@ -1,0 +1,284 @@
+$CATEGORY: $course$/pratique-intra
+
+
+// [tag:pratiqueIntra]
+::01. Quel est le type ce ce contrôleur::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span style\="text-indent\: -18pt;">Utiliser ce document pour répondre à toutes les questions de ce jeux-questionnaire\: &nbsp;</span><a href\="https\://docs.google.com/document/d/1Jg4KACuL4Ftn2Ss6vtTMMbG0splD6Gz6m8DjBvZqF38/edit?usp\=sharing" target\="_blank" style\="text-indent\: -18pt;">https\://docs.google.com/document/d/1Jg4KACuL4Ftn2Ss6vtTMMbG0splD6Gz6m8DjBvZqF38/edit?usp\=sharing</a></p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR" style\="text-indent\: -18pt;">1.&nbsp;<span style\="font-stretch\: normal; font-size\: 7pt; line-height\: normal; font-family\: &quot;Times New Roman&quot;;"></span></span><span lang\="FR" style\="text-indent\: -18pt;">CU4-1 demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: La première étape pour réaliser un RDCU consiste à identifier le bon contrôleur.&nbsp; Pouvez vous indiquer a quel type de contrôleur chacun de ses énoncés fait référence&nbsp;?</span></p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR"></span></p>{
+	=<span lang\="FR">Elle représente le système global</span></p> -> Contrôleur de façade
+	=<span lang\="FR">Elle représente un objet racine</span></p> -> Contrôleur de façade
+	=<span lang\="FR">Elle représente un scénario de cas d’utilisation</span></p> -> Contrôleur de session
+	=<span lang\="FR">Elle représente un équipement</span></p> -> Contrôleur de façade
+	=<span lang\="FR">Elle représente un sous-système</span></p> -> Contrôleur de façade
+}
+
+// [tag:pratiqueIntra]
+::02. Sélection du contrôleur::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\:&nbsp; Voici les propositions pour déterminer le contrôleur.&nbsp; Son t-il de type façade ou session&nbsp;?</span></p>{
+	=<span lang\="FR">Contrôleur d’abonnement</span></p> -> Contrôleur de Session
+	=<span lang\="FR">Contrôleur de paiement</span></p> -> Contrôleur de Session
+	=<span lang\="FR">Contrôleur d’emprunt</span></p> -> Contrôleur de Session
+	=<span lang\="FR">Contrôleur de borne</span></p> -> Contrôleur de facade de type Équipement
+	=<span lang\="FR">Contrôleur de Station</span></p> -> Contrôleur de facade de type Équipement
+	=<span lang\="FR">Contrôleur d’entreprise</span></p> -> Contrôleur de facade de type objet racine
+	= -> Contrôleur de facade de type système globale
+	= -> Contrôleur de facade de type sous-système
+}
+
+// [tag:pratiqueIntra]
+::03. Patron GRASP choix contrôleur::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR"></span></p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: Quel patron GRAP peut on utiliser pour choisir le bon contrôleur à partir des suggestions de la question précédente&nbsp;? Contrôleur d’abonnement, Contrôleur de paiement, Contrôleur d’emprunt, Contrôleur de borne, Contrôleur de station, Contrôleur d’entreprise.</span></p>{
+	=<span lang\="FR">Expert en information</span></p> -> Faux
+	=<p>Créateur</span></p> -> Faux
+	=<span lang\="FR">Forte cohésion</span></p> -> Vrai
+	=<span lang\="FR">Contrôleur de borne</span></p> -> Faux
+	=<span lang\="FR">Contrôleur de Station</span></p> -> Faux
+	=<span lang\="FR">Fabrication pure</span></p> -> Faux
+	=<p>Indirection</span></p> -> Faux
+	=<span lang\="FR">Protection des variations</span></p> -> Faux
+	=<p>Polymorphisme</p> -> Faux
+}
+
+// [tag:pratiqueIntra]
+::04. Selection du contrôleur::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: En utilisant le GRASP forte cohésion, quel nom devrait on donner à notre contrôleur pour réaliser ce cas d’utilisation?</span></p>{
+	=<span lang\="FR">Contrôleur d’abonnement</span></p> -> Vrai
+	=<span lang\="FR">Contrôleur de paiement</span></p> -> Faux
+	=<span lang\="FR">Contrôleur d’emprunt</span></p> -> Faux
+	=<span lang\="FR">Contrôleur de borne</span></p> -> Faux
+	=<span lang\="FR">Contrôleur de Station</span></p> -> Faux
+	=<span lang\="FR">Contrôleur d’entreprise</span></p> -> Faux
+}
+
+// [tag:pratiqueIntra]
+::05. Représentation RDCU::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: Comment vais-je représenter le contrôleur dans le RDCU?</span></p>{
+	=<p><img src\="https\://www.plantuml.com/plantuml/svg/JOynJiKm38RtdCBg0WmTa9Wwe5RX1eMDnRGkiaYSo747ZiJE3NgnPtLuxosH_dp_hqyUcw7QdbDeFomL5JCq-qtah_9o4cFp_3RF43zU-cTuLsGZ1Vmg8fH9BE1YHQ4ROcAF7M2362ggyS8LnHnDr_Q9fo35219j1cM3QO1OnFJuJxGhhEwdrhZ8fzJY7thyOU962kdXpXkXV_MjzpEgajuaZ-lk6nfOZBv9dy98iler5m00" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="350" width\="500"></p>
+	~<img src\="https\://www.plantuml.com/plantuml/svg/JOynJiKm38RtdC9w2_2a3aXC6L2ZS8F2nc9Q5raaJkMu0qTYvmQz65O7O8dqv_FlJnwxeTfUI-WVB1igLkZsMSXVvVaankRvQPeWlpmCz_2io4OA-DP4g99OmDcQmYNcmXulW1roy6t6CsyevYZzJfyu1Mb6K6WrQ2ka2Bc9wV5TQ5TOt4-zSvDNsPf_wF65XRjRoyq_RuRX4TBr6hrHKPNqJtExxDwYo6BqJdeNHfB5x_a1" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="350" width\="500"><p></p>#<p>On veut choisir le contrôleur et non le créer. Le contrôleur est crée dans le scénario d'initialisation du système.</p>
+}
+
+// [tag:pratiqueIntra]
+::06- création d'instance::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR"><span style\="font\:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span><!--[endif]--><span lang\="FR">CU4-1 demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: Comment réalise t’on la post-condition&nbsp;\: une instance d’abonnement à été créé&nbsp;?&nbsp; Qui crée l’abonnement&nbsp;? Qui contient, agrège, aux données pour initialiser, enregistre ou utilise étroitement l’abonnement.&nbsp; Regarder les associations dans les MDD. Les choix possibles sont&nbsp;\:</span></p><p><img src\="https\://www.plantuml.com/plantuml/svg/NP6_IiH04CRxVOhX6lNW2i4g7CU5-0RHBisucSZYPZRCJWhVI7lV82_cR0IDQGAJxy_tWxrcHT5vZ2w_1PvGS8Iixv7iAy6lYWQr-x5jeNb-EDt3as1G4i2Nn4mZiJhqcWGELHE3dGV038spDWq-JCXQfCGgAT8izK_krrZld3kzTewJ4aGQ5D9W_WhMikMhj45lh9HpIDpnbEo7B9yOGoQ1UBDXRE1qMSCzZIX26uxRVhOGLO6LNadk_WzQfAMO61eXL9liE1Bu3SAKSbu-UkhO9WCFIKPK0uALnvVk4Z8fAx8dGzYnrGMkFXuhE9-za28L9lf3kbpSbRYtz_W6"</p>{
+	~<p>Client</p>
+	~<p>ConditionAbonnement</p>
+	~<p>Paiement</p>
+	~<p>Emprunt</p>
+	=<p>ContrôleurAbonnement</p>
+	~<p>CléAccess</p>
+}
+
+// [tag:pratiqueIntra]
+::07-Utilisation des paramêtres::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR"><span style\="font\:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span><!--[endif]--><span lang\="FR">CU4-1&nbsp;\: demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: &nbsp;a.dateHeurDébut et a.dateHeureFin on été initialisé selon la durée?</span></p>{
+	=<p><img src\="https\://www.plantuml.com/plantuml/svg/NOu_Jkj04CPxdsAKvhsNfo0XKLd1YkM0w0ETcuaz2IlMizRiM88RGSyDSZ766m6EcvLclp_VRnCLHOVEP_75SO-27KHzysIlk2OfwjJkxMu7rTFDwXeU1PsI0Eu3CtN4cc6ZGM2HLzxPkG2CK6NMfgvnFRAEKc2Lu6cGyfpxCPOpvqmliuo34dWwA8I3-ND8PQVFiGrQOwKONU2Q-s0VSlf0xo89-3yJnWfMHGgtrA48JJZ-jeE5A7UiT2JvTpbeaHtvm509eTfapPwWcI3q8SRJUqirswJZGv0ErLaYyJHZjuL6AIfoGuOmOoj7k7Avp66zReGKQMIYNwIYE4E9Epv_KyL4TVVQaoWGmsIvPhngKUc1h6LB-q5lEnox65aln7l74-b_MitALP7wTMld72NR4BT3vxy0" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="857" width\="1825"></p>#<p><span lang\="FR">Le fait de passer la durée en paramètre permet de minimiser le couplage entre le contrôleur et la classe abonnement.&nbsp; Permettant ainsi de conserver la méthode setDuree de type privé.</span></p>
+	~<p><img src\="https\://www.plantuml.com/plantuml/svg/NP11JlD038NtEONLpT_sLv6GM4KbQfI2s1TssRY9MqPCF977aU16iES6lHYULA2qcqZsytllosoYekZG-Io-EUvHi8Ee7vxiAwuP5NLgytQtW-hbRdKBpu9EIG3tWPawOismqI0moollR9m1HgWoIrFNk1vPanHO9NWQf3px_WxBgyihlSmo3ahWwQ0G3dQVmnXs-avfq1ehnUW2rzm7MyZf2xsB9E3_JHWhM1N9R8OEHMZ2CMy7Cr7kMEb8ihWiDCkEV62eX52jicPFq4mG-X3ZwREbcgtIyI58X-hCCV8qATjCIOgAt90XNB6L2QvSBdDOhvknPhueYZE7kEFhBqWSGHxUUn85OfYKrOmthHcVZ8Ysj1_qliFqHuoi5-AZuudqlxKL6SAg60jqc-PvsavUP4FS3ft_0G00" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="914" width\="1173"></p>#<p><span lang\="FR">Le fait d’utiliser une méthode publique supplémentaire ‘setDuree’ augmente le couplage entre le contrôleur et l’abonnement.</span></p>
+}
+
+
+// [tag:pratiqueIntra]
+::08-Création d'association::   [html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR"><span style\="font\:7.0pt &quot;Times New Roman&quot;"></span></span><!--[endif]--><span lang\="FR">CU4-1&nbsp;\: demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: a&nbsp;\:Abonnement a été associé à Borne.&nbsp; J’ai besoin des deux instances pour pouvoir créer l’association.&nbsp; Laquelle de ses énoncé est vraie.</span></p>{
+	=<p><span lang\="FR">La transaction d’abonnement à lieu sur la borne elle même ce qui signifie que le contrôleur a reçu l’instance de celle-ci lorsqu’il a été créé.</span></p>
+	~<p><span lang\="FR">On ne possède pas l’instance de la borne alors cette poste condition est invalide</span></p>
+}
+
+// [tag:pratiqueIntra]
+::09-Qui crée l'association précédente::[html]<h4><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1&nbsp;\: demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: Quel patron GRASP vais-je utiliser pour déterminer qui va faire l’appel pour créer l’association précédente?</span></p></h4><p></p>{
+	=<p><span lang\="FR">Expert en information</span></p>#<p><span lang\="FR">Quelle classe possède les deux instances a&nbsp;\:Abonnement et b&nbsp;\:Borne pour pouvoir créer l’association</span></p>
+	~<p><span lang\="FR">Créateur</span></p>#<p><span lang\="FR">On veut créer une association entre deux classes et non une instance </span></p>
+	~<p><span lang\="FR">Contrôleur</span></p>#<p><span lang\="FR">Nous avons déjà notre contrôleur&nbsp;!</span></p>
+	~<p><span lang\="FR">Faible Couplage</span></p>#<p><span lang\="FR">Faible couplage sera utilisé avec forte cohésion pour déterminer qui implémentera l’opération pour créer l’association</span></p>
+	~<p><span lang\="FR">Forte Cohésion</span></p>#<p><span lang\="FR">Forte cohésion sera utilisé avec Faible couplage pour déterminer qui implémentera l’opération pour créer l’association</span></p>
+}
+
+// [tag:pratiqueIntra]
+::11-Creation association abonnement -- borne::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR"><span style\="font\:7.0pt &quot;Times New Roman&quot;"> </span></span><!--[endif]--><span lang\="FR">CU4-1&nbsp;\: demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: a\: Abonnement a été associé à borne.&nbsp; Quel <i>patrons</i> GRASP vais-je utiliser pour déterminer qui implémentera la méthode qui créera l’association entre a&nbsp;\:Abonnement et b&nbsp;\:Borne</span></p><p><img src\="https\://www.plantuml.com/plantuml/svg/XP0zRiCm38LtdOB8aXyW5n028uwlaOLMw4QeJHaaNQ2twLZllO4kLaLBaInT1F6z1toFFAkXs3ADJjyZpoWuWThdIEML6AfJL8iXpiW66zybDia_8otIzecP9cBR02fqxNCK_KlWnU_z9GbJjIxETUtnsBI7WuVJAGYXKTCuJaOWyUrka8P2y32ZG9VkUTMO-CeZWWcoOh0o0q9UBQz0mq31blBBNr0o_OFqG3GN3qhsrso7U_S_9cn93V8tFFEkV2C8YPNaW-JAC6uZ3qach6rqaQAWQWgnAhL1MnlKtNVztfs9R-NClm00" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="678" width\="867"></p>{
+	=<p><span lang\="FR">setBorne(b) à la classe Abonnement</span></p>#<p><span lang\="FR">La classe Abonnement a la responsabilité de persister l’information concernant la réalisation d’un abonnement.&nbsp; C’est donc elle qui doit conserver l’information pour savoir sur quelle borne la transaction a été effectuée</span></p>
+	~<p><span lang\="FR">setAbonnement(a) à la classe Borne. </span></p>#<p><span lang\="FR">La responsabilité de la classe borne est de persister l’information correspondant à la borne et non aux transactions reliées à celle-ci.&nbsp; C’est le rôle de la classe transactionnelle Abonnement.</span></p>
+}
+
+// [tag:pratiqueIntra]
+::12-Traitement de toutes les associations::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR"></span><span lang\="FR">CU4-1 demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: En analysant les associations dans le MDD et tout les contrats après l'opération démarrerAbonnement est-ce qu’on peut considérer que toutes les associations avec la classe abonnement ont été pris en compte&nbsp;?</span></p>{
+	=<p><span lang\="FR">L’association entre a&nbsp;\:Abonnement et ConditionAbonnement n’est pas pris en compte. L’association entre a&nbsp;\:Abonnement et Emprunt n’a pas été traité.</span></p>
+	~<p><span lang\="FR">Comment sera créé l’association entre a&nbsp;\:Abonnement et ConditionAbonnement</span></p>
+}
+
+// [tag:pratiqueIntra]
+::13-Instance de ConditionAbonnement::[html]<p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">&nbsp;CU4-1 demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: Comment vais-je faire pour obtenir l’instance de ConditionAbonnement&nbsp;?</span></p>{
+	=<p><span lang\="FR">Je vais faire une recherche sur la base de correspondance avec la durée</span></p>#<p><span lang\="FR">L’opération démarrerAbonnement est la seule qui possède un paramètre correspondant à la durée.&nbsp; C’est donc cette opération qui aura la responsabilité de créer l’association entre Abonnement et ConditionAbonnement</span></p>
+	~<p><span lang\="FR">Je vais faire une recherche sur la base de correspondance avec le prix</span></p>#<p><span lang\="FR">Le contrôleur ne possède pas d’attribut correspondant au prix de la ConditionAbonnement</span></p>
+	~<p><span lang\="FR">Je vais faire une recherche sur la base de correspondance avec la condition</span></p>#<p><span lang\="FR">Le contrôleur ne possède pas d’attribut correspondant à la condition.</span></p>
+}
+
+// [tag:pratiqueIntra]
+::14-extensions::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR"><span style\="font\:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span><!--[endif]--><span lang\="FR">CU4-1 demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: Est-ce que la classe ConditionAbonnement à plusieurs extensions?&nbsp; Voir le concept de symbole, intention et extension dans votre livre </span></p><p></p>{
+	=<p<span lang\="FR"> Oui</span></p>#<p><span lang\="FR">Il y a deux ConditionAbonnement possible soit 24 ou 72 heures.&nbsp; CU4-1 scénario 2</span></p>
+	~<p<span lang\="FR">Non</span></p>#<p><span lang\="FR">Il y a deux ConditionAbonnement possible soit 24 ou 72 heures.&nbsp; CU4-1 scénario 2.&nbsp; Donc deux extensions (ou si vous préféré, deux instances) possible </span></p>
+}
+
+// [tag:pratiqueIntra]
+::15-Map ou List::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: Comment vais-je obtenir l’instance nécessaire pour réaliser l’association entre a&nbsp;\:Abonnement et ConditionAbonnement&nbsp;? en utilisant&nbsp;\:</span></p><p></p>{
+	=<p><span lang\="FR"> \:map&lt;ConditionAbonnement&gt;</span></p>#<p><span lang\="FR">Sur la base de correspondance avec la durée de l’abonnement</span></p>
+	~<p><span lang\="FR">Sur la base de correspondance avec la durée de l’abonnement</span></p>
+}
+
+// [tag:pratiqueIntra]
+::16-Instance::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR"><span style\="font\:7.0pt &quot;Times New Roman&quot;"></span></span><span lang\="FR">CU4-1 demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: Qui possède l’instance de&nbsp; map&lt;ConditionAbonnement&gt;</span></p>{
+	=<p>>ControleurAbonnement</span></p>#<p>C’est le contrôleur puisque cette instance correspond à un objet racine </span></p>
+	~<p>>Abonnement</span></p>#<p><span lang\="FR">Ce n’est pas la classe Abonnement puisqu’un abonnement ne possède pas plusieurs ConditionAbonnement.&nbsp; Ce n’est pas une relation 1 a plusieurs mais bien plusieurs à 1.</span></p><p></p>
+}
+
+// [tag:pratiqueIntra]
+::17- association Abonnement et Emprunt::[html]<p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 demarrerAbonnement(duree&nbsp;\:Integer)&nbsp;\: Que fait on avec l’association entre a&nbsp;\:Abonnement et Emprunt&nbsp;?</span></p>{
+	=<p><span lang\="FR">On crée une instance de liste d’emprunt&nbsp;\:list&lt;Emprunt&gt;</span></p>#<p><span lang\="FR">Une association de 1 a plusieurs indique que l’abonnement a un attribut de type list&lt;Emprunt&gt;.&nbsp; Il faut donc créer l’instance de cette liste d’emprunt pour pouvoir associer des emprunts à l’abonnement lors des opérations système subséquentes.</span></p>
+	~<p><span lang\="FR">On ne fait rien pour le moment puisque ce cas d’utilisation ne traite pas de l’emprunt</span></p>#<p><span lang\="FR">Une association de 1 a plusieurs indique que l’abonnement a un attribut de type list&lt;Emprunt&gt;.&nbsp; Il faut donc créer l’instance de cette liste d’emprunt pour pouvoir associer des emprunts à l’abonnement lors des opérations système subséquentes.</span></p>
+	~<p><span lang\="FR">On crée une instance de Emprunt</span></p>#<p><span lang\="FR">Une association de 1 a plusieurs indique que l’abonnement a un attribut de type list&lt;Emprunt&gt;.&nbsp; Il faut donc créer l’instance de cette liste d’emprunt pour pouvoir associer des emprunts à l’abonnement lors des opérations système subséquentes.</span></p>
+}
+
+// [tag:pratiqueIntra]
+::18-Choix Contrôleur autres opérations::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 saisirCarteCredit(numero&nbsp;\: entier, dateExpiration&nbsp;\: entier)&nbsp;\: Comment choisie t’on le contrôleur pour cette opération&nbsp;?</span></p>{
+	=<p<span lang\="FR">On utilise le contrôleur identifier pour la première opération système puisque nous sommes dans le même cas d’utilisation</span></p>#<p><span lang\="FR">Nous sommes dans le même cas d’utilisation donc on utilise le même contrôleur.</span></p>
+	~<span lang\="FR">On utilise le patron GRASP contrôleur</span></p>#<p><span lang\="FR">Si on utilise le patron contrôleur on devrait arriver à la même conclusion que pour l’opération précédente.</span></p>
+}
+
+// [tag:pratiqueIntra]
+::19-Qui crée Paiement::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 saisirCarteCredit(numero&nbsp;\: entier, dateExpiration&nbsp;\: entier)&nbsp;\: Une instance p de Paiement à été créé? Quel patron GRASP doit on utiliser&nbsp;?</span></p>{
+	~<p><span lang\="FR">Expert en information</span></p>#<p><span lang\="FR">Ce GRASP ne permet de la création d’instance</span></p>
+	~<p><span lang\="FR">Contrôleur</span></p>#<p><span lang\="FR">Nous avons déjà notre contrôleur</span></p>
+	~<p><span lang\="FR">Cohésion</span></p>#<p><span lang\="FR">N’a rien à voir avec la création d’instance</span></p>
+	~<p><span lang\="FR">Faible couplage</span></p>#<p><span lang\="FR">L’instance de Paiement doit être créé par une classe du MDD ayant un lien avec la classe Paiement</span></p>
+	=<p><span lang\="FR">Créateur</span></p>#<p><span lang\="FR">Permet d’identifier quelle classe créera l’instance de Paiement</span></p>
+}
+
+// [tag:pratiqueIntra]
+::20-Qui crée Paiement::[html]<p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 saisirCarteCredit(numero&nbsp;\: entier, dateExpiration&nbsp;\: entier)&nbsp;\: Quelle classe créera l’instance de Paiement&nbsp;?</span></p>{
+	=<p><span lang\="FR">Abonnement</span></p>#<p><span lang\="FR">Puisqu’un Abonnement est payé par un Payement et que Abonnement possède l’information sur le montant (prix) nécessaire lors de la création de l’instance de Paiement</span></p>
+	~<p><span lang\="FR">CarteCredit</span></p>#<p><span lang\="FR">Un paiement est payé par une carte de crédit.&nbsp; Au niveau de la cohésion, ce n’est pas la responsabilité de la carte de crédit</span></p>
+	~<p><span lang\="FR">SystemeAutorisationPaiementACredit</span></p>#<p><span lang\="FR">Le système externe autorise le paiement donc ca ne sera pas cette classe qui créera le paiement.</span></p>
+	~<p><span lang\="FR">Emprunt</span></p>#<p><span lang\="FR">L’emprunt devrait pouvoir créer des instances d’Abonnement.&nbsp; Ce sera utilisé dans des cas d’utilisation ou l’on traitera de l’emprunt.</span></p>
+	~<p><span lang\="FR">ContrôleurAbonnement</span></p>#<p><span lang\="FR">En tenant compte du couplage, on préfèrera la classe Abonnement à la classe ContrôleurAbonnement</span></p>
+}
+
+// [tag:pratiqueIntra]
+::21-Qui crée CarteCredit::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 saisirCarteCredit(numero&nbsp;\: entier, dateExpiration&nbsp;\: entier)&nbsp;\: Une instance cc de CarteCredit a été créée.&nbsp; Qui crée cette instance&nbsp;?</span></p>{
+	=<p><span lang\="FR">Paiement</span></p>#<p><span lang\="FR">Un paiement est payé par carte de crédit donc le paiement devrait avoir les informations nécessaires pour créer l’instance de la carte de crédit.&nbsp; Le contrôleur peut lui transmettre en passant par la classe Abonnement.&nbsp; Ce qui minimise le couplage tout en respectant la cohésion.</span></p>
+	~<p><span lang\="FR">Client</span></p>#<span lang\="FR">Le Client possède la carte de crédit mais n’existe pas encore et nous n’avons pas l’information pour pouvoir le créer.</span></p>
+	~<p><span lang\="FR">ContrôleurAbonnement</span></p>#<p><span lang\="FR">Il est préférable que ce soit une classe du MDD qui crée l’instance de Carte Crédit.&nbsp; Ce qui nous permet de minimiser le couplage.</span></p>
+}
+
+// [tag:pratiqueIntra]
+::22-Qui crée carteCrédit::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 saisirCarteCredit(numero&nbsp;\: entier, dateExpiration&nbsp;\: entier)&nbsp;\: Une instance cc de CarteCredit a été créée.&nbsp; Quelle est la meilleure solution?</span></p>{
+	=<p><img src\="https\://www.plantuml.com/plantuml/svg/dPB1afD048RlF4NNNbotv0MebLfgzAZo05nweJUs3WtED9RxHkRk6_1YzcY4XCGzv9AgwVuptmS_3r4nwDJxB7vb6J5W3r6VFTbluFRF1biT0jmKpZE9tW16S9b5bLiUKJIj1j4m__8qXUfn4A5-ILQdKImsWSr-B6haTLkVRjj4wbXva2tdqyTtcwo5xKmkKCU7aCio6PGWyEwpml04he0ZT-W88iLerpSo3ZO8ynuzHmhWN-52p5nUkgg0Y1mv755k6v6ffp0Kbc8ARnhfKEdzZv439kjrtXlMF0-3rsTYTdsD0Uol51H8uGdvqPFfJgF77PdWnF7RHB2-2Q2eqCtxBzX8ctBp7l0xjU09slKnCrVbUMc04PzfBUpS7gxMJvSlzXTLno76-MT7ZKn2m18LfQNKm8MAioelKyC57BZm5dQa7_uURl-7Twa-fIaqSe4CdcA4pkRpdkAXS1P3BvKlMZNoFv6yhE_k2hY_RmEXqlMLb-LMkpxJDkwPz8lEHnzZLfkhSzV89hS7acxg_My0" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="750" width\="1350%"></p>#<p><span lang\="FR">Avec cette solution, on ne crée pas de couplage supplémentaire entre les classes.&nbsp; Tous les couplages se retrouvent dans les associations du MDD.</span></p>
+	~<p><img src\="https\://www.plantuml.com/plantuml/svg/dPD1SjH034NtFeKg6q8gSm5NS6MgOGdC0RnHRCqWQAjDIwR8ZPWzD_35w4wCdJ535hDiwNV_PttvNWsZ3Pqlz1jBZn4xK7lq16gHcwSEDXOYN9NECubT0Igu8acD6-vHBBU2M1n_UnhYzY68K3ShjwTIB5U2LRylTyXBTtVQRR9JoyP1rZwVFxrVQPCudSb5QdaIkQAGO0IH3ryCmXvS2I_OeILGKkKWjVGX5U9uHCzA4VmRd1qBjwdSjWH5LeulNAvhaQ6Z6CgaOegtjRHezE5dpn4pzLBlactYd0flrs3v-Hr6I5Sf6f317ld1Ky8TUey7Ie03w_U1O9a4a1gqu_4hrj9atNW4_44DU89c-Sp2RJURAXdq-4XBOF_ImyNu-V6P_Yng7rJ7NotLCWW1YnfAGpc1Cn4NsqsL4ovXyeLtS23x-7ou_f-zo_4P3R6MCyxWIHNQL1-Ff5FWBCbwZdp6-hkKHPxSxkQcXBkx9X8QNHvvLLsA_IhriexFjCvTW7kURjv60PPzYDtJZLVZJKCyaUeGvs42sOgssarBUNtwzzwkr-sUf1qw_mS0" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="753" width\="1349"></p>#<p><span lang\="FR">Ce n’est pas la meilleure solution puisque j’augmente le couplage entre Abonnement et CarteCrédit par le créateur et l’opération payer.&nbsp; Ce qui n’est pas très judicieux puisque ces associations ne se retrouve pas dans le MDD.</span></p>
+}
+
+// [tag:pratiqueIntra]
+::23-Initialisatioin carteCredit::[html]<p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR"><span style\="font\:7.0pt &quot;Times New Roman&quot;"></span></span><span lang\="FR">CU4-1 saisirCarteCredit(numero&nbsp;\: entier, dateExpiration&nbsp;\: entier)&nbsp;\: cc.numéro et cc.dateExpiration ont été initialisés selon les paramètres numero et dateExpiration.&nbsp; ?&nbsp; Est-ce que cette postcondition est réalisée par le RDCU précédent&nbsp;?</span></p>{
+	=<p><span lang\="FR">Oui</span></p>#<p><span lang\="FR">Initialisé par le constructeur de la carte de crédit</span></p>
+	~<p><span lang\="FR">Non</span></p>#<p><span lang\="FR">Le constructeur de la carte de crédit permet d’initialiser les attributs à partir de ses paramètres</span></p>
+}
+
+// [tag:pratiqueIntra]
+::24-Association CarteCredit à Paiement::[html]<span lang\="FR"><span style\="font\:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span><!--[endif]--><span lang\="FR">CU4-1 saisirCarteCredit(numero&nbsp;\: entier, dateExpiration&nbsp;\: entier)&nbsp;\:&nbsp; cc&nbsp;\:CarteCredit a été associé à l’instance p&nbsp;\:Paiment. ?&nbsp; Est-ce que cette postcondition est réalisée par le RDCU précédent&nbsp;?</span><p></p>{
+	=<p>Oui</p>#<p><span lang\="FR">C’est le paiement qui crée la carte de crédit alors il a tout ce qu’il faut pour persister l’association</span></p>
+	~<p>Non</p>#<p><span lang\="FR">C’est le paiement qui crée la carte de crédit alors il a tout ce qu’il faut pour persister l’association</span></p>
+}
+
+// [tag:pratiqueIntra]
+::25-Association Paiement à Abonnement::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR"><span style\="font\:7.0pt &quot;Times New Roman&quot;"></span></span><span lang\="FR">CU4-1 saisirCarteCredit(numero&nbsp;\: entier, dateExpiration&nbsp;\: entier)&nbsp;\:&nbsp; P.Paiement a été associé à l’abonnement en cours.&nbsp; Est-ce que cette postcondition est réalisée par le RDCU précédent&nbsp;?</span></p>{
+	=<p>Oui</p>#<p><span lang\="FR">L’instance p&nbsp;\:Paiement à été créé par l’abonnement donc l’abonnement peut créer cette association sans nécessiter d’autre opération que le constructeur.</span></p>
+	~<p>Non</p>#<p><span lang\="FR">&nbsp;L’instance p&nbsp;\:Paiement à été créé par l’abonnement donc l’abonnement peut créer cette association sans nécessiter d’autre opération que le constructeur.</span></p>
+}
+
+// [tag:pratiqueIntra]
+::26-p.Montant::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR"><span style\="font\:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span><!--[endif]--><span lang\="FR">CU4-1 confirmerAbonnement(estConfirmé&nbsp;\:Boolean) p.montant à été initialisé.&nbsp; Que fait on avec cette postcondition&nbsp;?</span></p>{
+	=<p><span lang\="FR">On l’enlève des postconditions puisqu’elle est déjà satisfaite</span></p>#<p><span lang\="FR">Nous avons satisfait cette post-condition lors de la création du paiement</span></p>
+	~<p><span lang\="FR">On la réalise</span></p>#<p><span lang\="FR">Nous avons satisfait cette post-condition lors de la création du paiement</span></p>
+}
+
+// [tag:pratiqueIntra]
+::27-noApprobation::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 confirmerAbonnement(estConfirmé&nbsp;\:Boolean) p.approbation est devenu noApprobation.&nbsp; D’ou vient noApprobation&nbsp;?</span></p><p></p>{
+	~<p><span lang\="FR">C’est l’abonnement qui fourni ce numéro</span></p>#<p><span lang\="FR">L’abonnement n’est pas en mesure de fournir aucun numéro d’autorisation</span></p>
+	~<span lang\="FR">C’est la carte de crédit qui fournie ce numéro</span></p>#<p><span lang\="FR">La classe carte de crédit à la responsabilité de fournir l’information sur la carte, c’est tout.</span></p>
+	=<p><span lang\="FR">C’est le SystemeAutorisationPaiementACredit qui fournie ce numéro</span></p>#<p><span lang\="FR">C’est ce système externe qui fournie le no d’autorisation, c’est son unique responsabilité</span></p>
+}
+
+// [tag:pratiqueIntra]
+::28-SystèmeAutorisationPaiementACredit::[html]<p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR">CU4-1 confirmerAbonnement(estConfirmé&nbsp;\:Boolean) Quelle classe possède l’instance du SystèmeAutorisationPaiementACredit?</span></p>{
+	~<p><span lang\="FR">Paiement</span></p>#<p><span lang\="FR">La classe Paiement est associé a SystèmeAutorisationPaiementACredit mais ce n’est pas elle qui possède son instance.</span></p>
+	=<p><span lang\="FR">ContrôleurAbonnement</span></p>#<p><span lang\="FR">SystèmeAutorisationPaiementACredit correspond à un objet racine qui ne dépend pas d’autre classes.&nbsp; C’est donc le contrôleur qui possèdera cet instance pour pouvoir autoriser les Paiements.</span></p>
+}
+
+// [tag:pratiqueIntra]
+::29-Qui crée CléAcces::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-1 confirmerAbonnement(estConfirmé&nbsp;\:Boolean) Une instance de CléAccès a été créé? Ca.code a été initialisé, ca.estActivé est devenu vrai, ca a été associé à l’abonnement en cour.&nbsp; Laquelle de ses deux solutions est la meilleure au niveau de la cohésion et du couplage&nbsp;?</span></p>{
+	=<p><img src\="https\://www.plantuml.com/plantuml/svg/bOqzRi0W38LtJe4ojKCkW28KX3Y8uxeIAfZ8cA7twWrwiTAVg8hKfOi7VzzxR-yAegCMqryodo1GRTVNGlDAnYy2g4tiucB9nBfOw3QQgMh6V0Bh9sgiylvMQ4YgfunBItSFN3WQCzMh9zmv5feh513fEn-CYQkFoLbi_9obalmsF53N-FDsHsk5W1zDJAiF__33EWTcODjG29J-jBmtE_7JgEK3" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="360" width\="1516"></p>#<p><span lang\="FR">Abonnement crée la cléAcces puisque c’est lui qui produit la CléAcces dans le MDD.&nbsp; Le contrôleur appelle l’opération confirmerAbonnement puisque c’est l’expert qui possède le paramètre estConfirmé. </span></p>
+	~<p><img src\="https\://www.plantuml.com/plantuml/svg/ROr1QaCn34JtFeN9Ae7c0YPyOemFegWgcDhoHv8NlLTlq8lLRXjAQ3TQQ6RUkwg1s6ZLwMlX7GIQLtkhDAyK_4e0hOi_X5GBiHqyg4zkLgrWsO5jHPrDFjuh3Sbjbt6lvSSUX7ZhpDJkdFYOOwLfeOX8t_leN3flAGUFdL-AD99Vmf7Kqiyxt7gl17noAP_d8WP_kQ0G61rFsxQ-M_oVigJBgFf4QlW7U2L-7gr-0W00" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="310" width\="999"></p>#<p><span lang\="FR">Cette solution a un couplage plus élevé entre le contrôleur et la cléAcces puisqu’elle crée un couplage que nous ne retrouvons pas naturellement dans le MDD.&nbsp; Les deux solution nécessitent la création deux nouvelle méthodes mais celle-ci ne respecte pas les associations du MDD.</span></p>
+}
+
+// [tag:pratiqueIntra]
+::30-Contrôleur Cas 2::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-2 demarrerEmprunt() Trouver le contrôleur&nbsp;!</span></p>{
+	~<p></span><span lang\="FR">Contrôleur de session Abonnement</span></p>#<p><span lang\="FR">La classe Abonnement fait parti du MDD mais ne correspond pas à la définition d’un contrôleur de façade.&nbsp; Ce n’est pas un objet racine puisqu’elle est dépend de plusieurs autres classes.</span></p>
+	~<p><span lang\="FR">Contrôleur de session Paiement</span></p>#<p><span lang\="FR">La classe Paiement fait parti du MDD mais ne correspond pas à la définition d’un contrôleur de façade.&nbsp; Ce n’est pas un objet racine puisqu’elle est dépend de plusieurs autres classes.</span></p>
+	=<p><span lang\="FR">Contrôleur d’emprunt</span></p>#<p><span lang\="FR">La classe Emprunt fait parti du MDD mais ne correspond pas à la définition d’un contrôleur de façade.&nbsp; Ce n’est pas un objet racine puisqu’elle est dépend de plusieurs autres classes. On choisira donc cette classe en tant que Contrôleur de session</span></p>
+	~<p><span lang\="FR">Contrôleur de borne</span></p>#<p><span lang\="FR">La classe Borne fait parti du MDD et correspond à un équipement alors si cette classe est choisi comme contrôleur ce sera un contrôleur de Façade de type équipement</span></p>
+	~<p><span lang\="FR">Contrôleur de Station</span></p>#<p><span lang\="FR">La classe Station fait parti du MDD et correspond à un équipement alors si cette classe est choisi comme contrôleur ce sera un contrôleur de Façade de type équipement</span></p>
+	~<p><span lang\="FR">Contrôleur d’entreprise</span></p>#<p><span lang\="FR">La classe Entreprise fait parti du MDD et correspond à un objet racine.&nbsp; Cet objet est important et ne dépend d’aucune autre classe. Si cette classe est choisi comme contrôleur ce sera un contrôleur de Façade</span></p>
+}
+
+// [tag:pratiqueIntra]
+::31 - Qui crée Emprunt::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR">CU4-2 demarrerEmprunt()&nbsp;\: Une instance d’emprunt à été créé. Quelle classe sera responsable de créer l’instance de la classe Emprunt&nbsp;?</span></p>{
+	=<p><span lang\="FR">ControleurEmprunt</span></p>#<p><span lang\="FR">C’est la classe abonnement qui possède la liste des Emprunt mais nous n’avons pas l’information suffisante pour récupérer l’instance de l’abonnement qui pourrait permettre de créer l’Emprunt.&nbsp; Ce qui fait que nous allons décider d’utiliser le contrôleur pour créer cette instance.</span></p>
+	~<p><span lang\="FR">Paiement</span></p>#<p><span lang\="FR">C’est l’emprunt qui crée des paiements et non l’inverse</span></p>
+	~<p><span lang\="FR">Borne</span></p>#<p><span lang\="FR">Une borne enregistre des emprunts, effectue des abonnements.&nbsp; Si nous utilisons la borne celle-ci aura donc plusieurs responsabilités différentes ce qui en ferait un choix avec une faible cohésion.</span></p>
+	~<p><span lang\="FR">Velo</span></p>
+	~<p><span lang\="FR">CleAcces</span></p>
+	~<p><span lang\="FR">Abonnement</span></p>#<p><span lang\="FR">C’est la classe abonnement qui possède la liste des Emprunt mais nous n’avons pas l’information suffisante pour récupérer l’instance de l’abonnement qui pourrait permettre de créer l’Emprunt.&nbsp; Ce qui fait que nous allons décider d’utiliser le contrôleur pour créer cette instance.</span></p>
+	~<p><span lang\="FR">ContrôleurAbonnement </span></p>#<p><span lang\="FR">Nous n’avons plus accès à ce contrôleur puisque nous sommes dans un nouveau cas d’utilisation.</span></p>
+}
+
+// [tag:pratiqueIntra]
+::32-Emprunt.heureDebut::[html]<p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR">CU4-2 demarrerEmprunt()&nbsp;\: emprunt.dateDebut est devenu maintenant.&nbsp; Emprunt.heureDebut est devenu maintenant. Comment traite-on ces post-condition&nbsp;?</span></p>{
+	=<p><p<span lang\="FR">Lors de la création de l’instance d’emprunt</span></p>#<p><span lang\="FR">Ce qui permet de limiter le couplage entre le contrôleur et Emprunt</span></p>
+	~<p><span lang\="FR">En ajoutant l’opération setDate() et setHeure() à la classe Emprunt</span></p>#<p><span lang\="FR">Ce n’est pas la meilleure solution puisque cela augmente le couplage entre le contrôleur et la classe Emprunt</span></p>
+	~<p><span lang\="FR">En ajoutant l’opération setDateHeure() à la classe Emprunt</span></p>#<p><span lang\="FR">Ce n’est pas la meilleure solution puisque cela augmente le couplage entre le contrôleur et la classe Emprunt</span></p>
+}
+
+// [tag:pratiqueIntra]
+::33-association Emprunt à Abonnement::[html]<p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-2 emprunterVelo(cléAcces&nbsp;\: integer)&nbsp;\: une association a été créée entre Emprunt et Abonnement sur la base de correspondance avec CléAcces.&nbsp; Est ce que le MDD est consistant avec cet énoncé&nbsp;? Attention aux multiplicités.</span></p>{
+	=<p>Non</p>#<p><span lang\="FR">Un Abonnement produit 1 cléAccès.&nbsp; On change cet énoncé pour un Abonnement produit plusieurs cléAcces.&nbsp; Ce qui signifie que l’on veut persister l’historique des cléAcces associés à l’abonnement</span></p>
+	~<p>Oui</p>#<p><span lang\="FR">J’ai besoin d’une map de cléAcces pour pouvoir utiliser les termes «&nbsp;sur la base de correspondance&nbsp;»</span></p><p></p>
+}
+
+// [tag:pratiqueIntra]
+::34-Association Emprunt à Abonnement::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR"><span style\="font\:7.0pt &quot;Times New Roman&quot;"> </span></span><!--[endif]--><span lang\="FR">CU4-2 emprunterVelo(cléAcces&nbsp;\: integer)&nbsp;\: une association a été créée entre Emprunt et Abonnement sur la base de correspondance avec CléAcces</span></p>{
+	~<p><span lang\="FR">Je possède l’instance de&nbsp; l’Emprunt que je viens de créé et l’abonnement que j’ai créé dans le cas d’utilisation précédente alors je peux créer l’association</span></p>
+	~<p><span lang\="FR">Je ne peux pas créer cette association puisque je n’ai pas l’instance de l’emprunt et de l’Abonnement</span></p>
+	=<p><span lang\="FR">Je possède l’instance de l’Emprunt et il me manque l’instance de l’Abonnement</span></p>
+	~<p><span lang\="FR">Je possède l’instance de l’Abonnement et il me manque l’instance de l’Emprunt</span></p>
+}
+
+// [tag:pratiqueIntra]
+::35-Créer association Abonnement-Emprunt::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR">CU4-2 emprunterVelo(cléAcces&nbsp;\: integer)&nbsp;\: Comment l'association entre Emprunt et Abonnement sera t'elle créée</span></p>{
+	=<p>Sur la base de correspondance avec le code de CléAcces</span></p>#
+	~<p>En mettant emprunt.abonnement_id correspondant au Id de Abonnement</span></p>
+	~<p>En mettant abonnement.emprunt_id correspondant au Id de l'emprunt</p>
+}
+
+// [tag:pratiqueIntra]
+::36-Association Emprunt-Abonnement avec correspondance::[html]<p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-2 emprunterVelo(cléAcces&nbsp;\: integer)&nbsp;\: une association a été créée entre Emprunt et Abonnement sur la base de correspondance avec CléAcces</span></p>{
+	~<p><img src\="https\://www.plantuml.com/plantuml/svg/XSunRWCX40NGdbCWLqwn5q3EoWZHhTlq4tPaeS3iQXYAt2itoCL2rZXIl8KR2lxJdtyk0Ymr9rK-8gt0a7MHpuJjvHYs188ih0_6fOWa1mr5EzMen11N8FcD5XB-_afOsUULwvtv_mwCVL-8C6C7zg4dmtfgTz26WAMCcxcuHpN58YVJ3ztGv9Lom-YyqNZxHtx3j1n3BpEH1A_8ByhvORJFcHt6Yskk9VfLNr7-pBuBvhclEVRQ-xgjP_AcYNrqHffhJZy0" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="330" width\="1000"></p>#<p><span lang\="FR">Le contrôleurEmprunt ne peut utiliser une opération de la classe Abonnement puisque nous n’avons pas cette instance. </span></p>
+	=<p><img src\="https\://www.plantuml.com/plantuml/svg/PSuzReGm48RXtgUmjc8BBc3jeaMMEzAcdvZHoefjq7WeSg_S81VBy0DHs8R2xoFcUnG6uYb5LJv37e4WwS9V4ULBmIy5F0-aByR6W9al6egsIYW77qR8FASXC_ryHvp8fP6cdRcJIp3Uv3_OUe-bD0jwi-r_vICUPX5d0ARz67B6jCyvTTE5mZUpBLclT4ufMpVM6OthEz8xng7osoKJvEc9T5NMrOsCCbgIlkidye5EQaPm5_2tfrhB7Ff-Mr1j5_T5LzNMJUUCYDVqmDnFAVu2.png" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="299" width\="1001"></p>#<p><span lang\="FR">ControleurEmprunt possède une map correspondant à toutes les clés.&nbsp; Une fois l’instance de cette clé récupérée, nous pouvons récupérer l’instance de l’abonnement correspondant.&nbsp; Puisque c’est l’abonnement qui possède la liste des emprunts, c’est à cette instance que nous demandons d’ajouter une association avec un nouvel emprunt.&nbsp; L’ajout de emprunt dans la liste d’emprunt permet de persister cette association. </span></p>
+}
+
+// [tag:pratiqueIntra]
+::37-Postcondition manquante::[html]<p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><span lang\="FR">CU4-2 emprunterVelo(cléAcces&nbsp;\: integer)&nbsp;\: Est-il possible qu’il manque une post-condition à cette opération&nbsp;?</span></p>{
+	=<p>Oui</p>#<p><span lang\="FR">L’association entre Emprunt et CléAccès n’est pas créée</span></p>
+	~<p>Non</p>#<p><span lang\="FR">Il manque l’association entre Emprunt et CléAcces qui n’a pas été créée.</span></p><p></p>
+}
+
+// [tag:pratiqueIntra]
+::38- Quel sera cette postcondition::[html]<p><p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR">1.<span style\="font\:7.0pt &quot;Times New Roman&quot;"></span></span><span lang\="FR">CU4-2 emprunterVelo(cléAcces&nbsp;\: integer)&nbsp;\: Quel sera cette post-condition&nbsp;?</span></p>{
+	=<p><span lang\="FR">Une association à été créée entre cle&nbsp;\:CleAcces et emprunt&nbsp;\:Emprunt</span></p>#<p><span lang\="FR">L’opération emprunterVelo possède l’instance de la clé&nbsp;\:CleAcces et de l’emprunt&nbsp;\:Emprunt alors on peut ajouter une méthode setCle(cleAcces&nbsp;\:CleAcces) à la classe Emprunt.</span></p>
+	~<p><span lang\="FR">Une association à créée entre emprunt&nbsp;\:Emprunt et CleAcces sur la base de correspondance avec le code de la clé d’accès.</span></p>#<p><span lang\="FR">On possède déjà l’instance la cléAcces alors nous n’avons pas besoin de la base de correspondance pour retrouver celle-ci</span></p>
+	~<p><span lang\="FR">Une association à créée entre cle&nbsp;\:CleAcces et Emprunt sur la base de correspondance avec le code de la clé d’accès.</span></p>#<p><span lang\="FR">On ne peut pas retrouver l’emprunt que nous venons de créer avec une base de correspondance sur la clé Access puisque cette association n’existe pas encore.&nbsp; C’est justement celle-ci que nous désirons créer.</span></p>
+}
+
+// [tag:pratiqueIntra]
+::39-Association Emprunt - Velo::[html]<p class\="QMultiChoice" style\="margin-left\:18.0pt;text-indent\: -18.0pt;tab-stops\:36.0pt"><!--[if !supportLists]--><span lang\="FR"><span style\="font\:7.0pt &quot;Times New Roman&quot;"></span></span><span lang\="FR">CU4-2 retirerVelo(IdentifiantPointAncrage&nbsp;\:integer, identifiantVelo&nbsp;\:integer)&nbsp;\: Une association a été créée entre emprunt et Velo sur la base de correspondance avec identifiantVelo. Une association entre velo&nbsp;\:Velo et PointAncrage a été détruite sur la base de correspondance avec identifiantPointAncrage.&nbsp; Laquelle de ses deux solutions est&nbsp; respecte le mieux les patrons GRASP</span></p><p></p>{
+	=<p><img src\="https\://www.plantuml.com/plantuml/svg/NP11QiGm34NtFeMPLRAO2vXcc12yB6ILlSceGJInZQmKUg_Ue1Uhx1PgpoO4wRt_XU-97V5vx2gzeu-EtA4JV-uWNyArR6JAk69qdlN5JC4pVN_jS98z8fsUBzebFTadxd3nnSm1FOz-9RV1hN2lyzY2iK8Qlk0LNSKki8U_kANTm-z9fZxDAZNPwqsQZQxRXWsummTunZSKkoxlYoB6XrHT1m960igz7OP_9G-CMB01zMeUfMKnEZj33B4ERyaSRerEKEPT5ap-wzKT_4CU_GS0" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="205" width\="1000"></p>
+	~<p><img src\="https\://www.plantuml.com/plantuml/svg/TOv1QiCm44NtFeN8Abdq0g8DCKPBWrVU2sTgXago68q3lLTlq8jrh1GZYtOZqCpxyzyjiILUlMlI1uPeoNgL-DE1l8HJtiYKSS9e0wkJxfR0zFtbO2NZ8ws1JyecrPcAypQ-wX7SSitxVZpkuPdLvOq_JmmB1cx3H7Q6trD3UmHZWHpuZ6UwRkRUnaskrZJYsNJcvTgFMZra_3O3d_4EWV4T9R-XbqmOhHBa__cn3yLDgzAdpfTwpyYM860ae7oiAjF2mmnqQOPMIdSlQOd_iyqDmdtrxWS0" alt\="" role\="presentation" style\="vertical-align\:text-bottom; margin\: 0 .5em;" class\="img-responsive" height\="214" width\="1000"></p>
+}
+
+

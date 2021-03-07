@@ -1,0 +1,34 @@
+$CATEGORY: $course$/Contrat
+
+
+// [tag:seance03]
+::Contrats artefacts directement liés::[html]<p>Quels artefacts du processus unifié sont directement liés aux contrats d'opération?</p>{
+	~<p>Cas d'utilisation</p>#<p>Incorrect. Les contrats d'opération définissent les détails d'une opération système provenant d'un diagramme de séquence système (DSS). Ces détails sont exprimés en termes des éléments du modèle du domaine.</p>
+	~<p>Plan d'itération</p>#<p>Incorrect. Les contrats d'opération définissent les détails d'une opération système provenant d'un diagramme de séquence système (DSS). Ces détails sont exprimés en termes des éléments du modèle du domaine.</p>
+	~%50%<p>Diagramme séquence système</p>#<p>Correct. Il y a un contrat d'opération pour chaque opération système.</p>
+	~%50%<p>Modèle du domaine</p>#<p>Correct. Les postconditions du contrat sont exprimées en termes des éléments du modèle du domaine.</p>
+}
+
+// [tag:seance03]
+::Contrats erreur la plus fréquente::[html]<p>Selon Larman, quelle est l'erreur la plus fréquente (qui peut être évitée grâce à la rédaction soigneuse de contrats d'opération)?</p>{
+	~<p>Omettre la création de nouvelles instances de classe.</p>#<p>Incorrect. Selon Larman, ceci n'est pas l'erreur la plus fréquente.</p>
+	=<p>Omettre la formation d'association entre instances.</p>#<p>Correct. Lorsqu'on crée de nouvelles instances, il faut souvent établir des associations avec plusieurs objets.</p>
+	~<p>Omettre la modification des valeurs des attributs.</p>#<p>Incorrect. Selon Larman, ceci n'est pas l'erreur la plus fréquente.</p>
+	~<p>Former une mauvaise association entre deux instances de classe.</p>#<p>Incorrect. Selon Larman, ceci n'est pas l'erreur la plus fréquente.</p>
+}
+
+// [tag:seance03]
+::Contrats partie plus importante::[html]<p>Quelle partie d'un contrat d'opération est la plus importante?</p>{
+	~<p>Nom de l'opération</p>#<p>Incorrect. Le nom de l'opération est important, mais ce n'est pas la partie la plus importante. Le nom est simplement répété du diagramme de séquence système (DSS).</p>
+	~<p>Références croisées (cross references)</p>#<p>Incorrect. Les références croisées sont simplement le(s) cas d'utilisation dans le(s)quel(s) l'opération peut se produire.</p>
+	~<p>Préconditions</p>#<p>Incorrect. Les préconditions ne sont pas la partie la plus importante. Ce sont des présupposés remarquables quant à l'état du système ou des objets du Modèle du domaine.</p>
+	=<p>Postconditions</p>#<p>Correct. Les postconditions sont la partie les plus importante car elle décrivent des modifications de l'état des objets du modèle du domaine.</p>
+}
+
+// [tag:seance03]
+::Contrats pourquoi faire::[html]<p>Pourquoi fait-on un contrat d'opération?</p>{
+	~<p>Un contrat d'opération sert à rendre explicite un protocole d'entente entre le développeur du logiciel et son client.</p>#<p>Incorrect. Un contrat d'opération concerne les opérations système et non le développeur et le client.</p>
+	~<p>Un contrat d'opération sert à rendre explicites les détails d'une méthode dans une classe Java.</p>#<p>Incorrect. Un contrat d'opération concerne les opérations système.</p>
+	=<p>Un contrat d'opération sert à rendre explicites les détails d'une opération système.</p>#<p>Correct. Un contrat d'opération spécifie d'une manière détaillée tout ce que doit faire une opération système.</p>
+	~<p>Le processus unifié nous oblige de faire des contrat d'opération.</p>#<p>Incorrect. La plupart des artefacts dans le processus unifié sont facultatifs.</p>
+}

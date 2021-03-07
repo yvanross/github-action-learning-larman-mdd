@@ -1,0 +1,20 @@
+@startuml proposerLivreRecevoir
+skinparam Style strictuml
+participant ":ControleurPropositionÉchange" as ctrl
+participant ":Bdd" as bdd
+participant "pe:PropositionEchange" as pe
+participant "ml:Map<Livre>" as ml  
+participant "listLivreRecevoir:List<:Livre>" as llr
+
+note left of ctrl: Controleur de session
+-> ctrl: proposerLivreRecevoir(codeLivre:string)
+note left of bdd: Expert\nctrl à une visibilité sur Bdd
+ctrl -> bdd: l = getLivre(codeLivre) 
+note left of ml: Expert\nbdd bdd connais tout les livres
+bdd -> ml: l = get(codeLivre)
+note left of pe: Expert\nCtrl est le créateur de pe:PropositionEchange\nPropositionÉcheange contient une liste de livre à Offrir
+ctrl ->pe: ajouterLivreARecevoir(codeLivre)
+note left of llr: Expert\nPropositionEchange contient des livre à recevoir
+pe -> llr: add(l)
+
+@enduml

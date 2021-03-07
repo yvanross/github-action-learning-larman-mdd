@@ -1,0 +1,17 @@
+$CATEGORY: $course$/Outils
+
+
+// [tag:seance08]
+::pro-ingénierie, rétro-ingénierie, ingénierie cyclique::[html]<p>Faire la mise en correspondance entre les éléments.</p>{
+	=<p>Consiste à générer du code à partir d'un diagramme UML</p> -> pro-ingénierie
+	=<p>Consiste à générer un diagramme UML à partir du code</p> -> rétro-ingénierie
+	=<p>Consiste à générer du code à partir d'un diagramme UML et garde la synchronisation entre les diagrammes UML et le code automatiquement, à mesure que les deux sont modifiés.</p> -> ingénierie cyclique
+}
+
+// [tag:seance08]
+::Comment actualiser les diagrammes après le codage::[html]<p>Si vous travaillez dans une petite équipe en appliquant UML en mode esquisse, quelle est la suggestion de Craig Larman pour actualiser vos diagrammes UML après la fin d'une itération et pour recommencer la modélisation UML au début de la prochaine itération?</p>{
+	=<p>Utiliser un outil pour générer des diagrammes UML à partir du code existant - diagrammes de packages, de classes et d'interaction. Imprimer ces diagrammes sur de grandes feuilles de papier et les accrocher aux murs de la salle de modélisation. </p>
+	~<p>Ne pas actualiser les diagrammes, puisque vous serez assez familier avec le code après une itération. La modélisation "mentale" suffira.</p>#<p>Incorrect. Il faut "itérer" sur la solution existante dans le processus unifié. Alors, Larman conseille d'utiliser un outil pour générer des diagrammes UML à partir du code existant - diagrammes de packages, de classes et d'interaction - et d'imprimer ces diagrammes sur de grandes feuilles de papier et les accrocher aux murs de la salle de modélisation. </p>
+	~<p><span>Confier à un tiers ("outsource") la génération et l'impression des modèles UML, puisque le coût des outils UML sophistiqués et des tables traçantes est probablement trop élevé pour une petite équipe. </span></p>#<p>Incorrect. Larman conseille d'utiliser un outil pour générer des diagrammes UML à partir du code existant - diagrammes de packages, de classes et d'interaction - et d'imprimer ces diagrammes sur de grandes feuilles de papier et les accrocher aux murs de la salle de modélisation. </p>
+}
+

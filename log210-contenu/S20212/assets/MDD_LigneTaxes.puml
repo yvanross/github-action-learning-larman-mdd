@@ -1,0 +1,18 @@
+@startuml MDD LigneTaxes
+skinparam style strictuml
+skinparam BackgroundColor transparent
+hide empty members
+class Vente {
+    date: Date
+}
+class LigneArticles {
+    quantité: int
+}
+class LigneTaxes #ddffdd {
+    description : String
+    pourcentage : int
+    montant : Monnaie 
+}
+Vente "1" -down- "1..*" LigneArticles : Contient
+Vente "1" -right- "1..*" LigneTaxes : Contient
+@enduml

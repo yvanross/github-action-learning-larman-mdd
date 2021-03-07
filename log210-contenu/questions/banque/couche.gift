@@ -1,0 +1,103 @@
+$CATEGORY: $course$/Architecture en couche
+
+
+// [tag:seance08]
+::Qu'est ce qu'une couche?::[html]<p>Qu'est ce qu'une couche?<br></p>{
+	=<p>Un regroupement à très forte granularité de classes, packages et sous-systèmes qui a une responsabilité de cohésion pour un aspect majeure du système.</p>
+	~<p>Un regroupement à très forte granularité de composants et systèmes qui a une responsabilité de cohésion pour un aspect majeure du système.<br></p>
+	~<p>Un regroupement à très forte granularité de classes, packages et sous-systèmes qui a une responsabilité de couplage pour un aspect majeure du système.<br></p>
+	~<p>Un regroupement à très forte granularité de composants et systèmes qui a une responsabilité de couplage pour un aspect majeure du système.<br></p>
+}
+
+// [tag:seance08]
+::couche les plus basses::[html]<p>Les couches les plus basses contiennent des fonctions réutilisables.</p>{TRUE##<p>Les couches de bas niveau sont généralement utilisées dans plusieurs application différentes.</p>}
+
+// [tag:seance08]
+::Dans quelle couche trouve-t-on un service de reconnaissance de la parole (comme Siri) ?::[html]Dans quelle couche trouve-t-on un service de reconnaissance de la parole (comme Siri) ?{
+	=Présentation#La couche présentation contient des services d’interface utilisateur (fenêtres), le HTML, le XML et l’interface vocale.
+	~Application#La couche application contient des services de gestion des requêtes de la couche présentation, du workflow, de l’état des sessions, etc.
+	~Domaine(s)#La(les) couche(s) domaine(s) contient(nent) des services du domaine, ou les règles du domaine, etc.
+	~Infrastructure métier#La couche d’infrastructure métier contient des services de bas niveau utilisés dans de nombreux domaines métier.
+	~Services techniques#La couche de services techniques contient des services de techniques et frameworks de (relativement) haut niveau tels que la persistance et la sécurité.
+	~Fondation#La couche fondation contient des services technique et frameworks de (relativement) bas niveau tels que les fonctions mathématiques, les structures de données, les threads, les entrées-sorties des fichiers, les bases de données et les réseaux.
+}
+
+// [tag:seance08]
+::Dans quelle couche trouve-t-on la logique pour vérifier la dynamique (le séquencement des messages) dans un diagramme de séquence système (DSS) ?::[html]Dans quelle couche trouve-t-on la logique pour vérifier la dynamique (le séquencement des messages) dans un diagramme de séquence système (DSS) ?{
+	~Présentation#La couche présentation contient des services d’interface utilisateur (fenêtres), le HTML, le XML et l’interface vocale.
+	=Application#La couche application contient des services de gestion des requêtes de la couche présentation, du workflow, de l’état des sessions, etc.
+	~Domaine(s)#La(les) couche(s) domaine(s) contient(nent) des services du domaine, ou les règles du domaine, etc.
+	~Infrastructure métier#La couche d’infrastructure métier contient des services de bas niveau utilisés dans de nombreux domaines métier.
+	~Services techniques#La couche de services techniques contient des services de techniques et frameworks de (relativement) haut niveau tels que la persistance et la sécurité.
+	~Fondation#La couche fondation contient des services technique et frameworks de (relativement) bas niveau tels que les fonctions mathématiques, les structures de données, les threads, les entrées-sorties des fichiers, les bases de données et les réseaux.
+}
+
+// [tag:seance08]
+::Dans quelle couche trouve-t-on un service pour traiter l'emprunt d'un vélo dans un système comme Bixi ?::[html]Dans quelle couche trouve-t-on un service pour traiter l'emprunt d'un vélo dans un système comme Bixi ?{
+	~Présentation#La couche présentation contient des services d'interface utilisateur (fenêtres), le HTML, le XML et l'interface vocale.
+	~Application#La couche application contient des services de gestion des requêtes de la couche présentation, du workflow, de l'état des sessions, etc.
+	=Domaine(s)#La(les) couche(s) domaine(s) contient(nent) des services du domaine, ou les règles du domaine, etc.
+	~Infrastructure métier#La couche d'infrastructure métier contient des services de bas niveau utilisés dans de nombreux domaines métier.
+	~Services techniques#La couche de services techniques contient des services de techniques et frameworks de (relativement) haut niveau tels que la persistance et la sécurité.
+	~Fondation#La couche fondation contient des services technique et frameworks de (relativement) bas niveau tels que les fonctions mathématiques, les structures de données, les threads, les entrées-sorties des fichiers, les bases de données et les réseaux.
+}
+
+// [tag:seance08]
+::Dans quelle couche trouve-t-on des règles pour la vente des produits dans une application telle que NextGen, ou pour un jeu comme Monopoly ?::[html]Dans quelle couche trouve-t-on des règles pour la vente des produits dans une application telle que NextGen, ou pour un jeu comme Monopoly ?{
+	~Présentation#La couche présentation contient des services d’interface utilisateur (fenêtres), le HTML, le XML et l’interface vocale.
+	~Application#La couche application contient des services de gestion des requêtes de la couche présentation, du workflow, de l’état des sessions, etc.
+	=Domaine(s)#La(les) couche(s) domaine(s) contient(nent) des services du domaine, ou les règles du domaine, etc.
+	~Infrastructure métier#La couche d’infrastructure métier contient des services de bas niveau utilisés dans de nombreux domaines métier.
+	~Services techniques#La couche de services techniques contient des services de techniques et frameworks de (relativement) haut niveau tels que la persistance et la sécurité.
+	~Fondation#La couche fondation contient des services technique et frameworks de (relativement) bas niveau tels que les fonctions mathématiques, les structures de données, les threads, les entrées-sorties des fichiers, les bases de données et les réseaux.
+}
+
+// [tag:seance08]
+::Dans quelle couche trouve-t-on un service pour traiter l’emprunt d’un vélo dans un système comme Bixi ?::[html]Dans quelle couche trouve-t-on un service pour traiter l’emprunt d’un vélo dans un système comme Bixi ?{
+	~Présentation#La couche présentation contient des services d’interface utilisateur (fenêtres), le HTML, le XML et l’interface vocale.
+	~Application#La couche application contient des services de gestion des requêtes de la couche présentation, du workflow, de l’état des sessions, etc.
+	=Domaine(s)#La(les) couche(s) domaine(s) contient(nent) des services du domaine, ou les règles du domaine, etc.
+	~Infrastructure métier#La couche d’infrastructure métier contient des services de bas niveau utilisés dans de nombreux domaines métier.
+	~Services techniques#La couche de services techniques contient des services de techniques et frameworks de (relativement) haut niveau tels que la persistance et la sécurité.
+	~Fondation#La couche fondation contient des services technique et frameworks de (relativement) bas niveau tels que les fonctions mathématiques, les structures de données, les threads, les entrées-sorties des fichiers, les bases de données et les réseaux.
+}
+
+// [tag:seance08]
+::Dans quelle couche trouve-t-on un service convertir les francs suisses en dollars candiens ?::[html]Dans quelle couche trouve-t-on un service convertir les francs suisses en dollars candiens ?{
+	~Présentation#La couche présentation contient des services d’interface utilisateur (fenêtres), le HTML, le XML et l’interface vocale.
+	~Application#La couche application contient des services de gestion des requêtes de la couche présentation, du workflow, de l’état des sessions, etc.
+	~Domaine(s)#La(les) couche(s) domaine(s) contient(nent) des services du domaine, ou les règles du domaine, etc.
+	=Infrastructure métier#La couche d’infrastructure métier contient des services de bas niveau utilisés dans de nombreux domaines métier.
+	~Services techniques#La couche de services techniques contient des services de techniques et frameworks de (relativement) haut niveau tels que la persistance et la sécurité.
+	~Fondation#La couche fondation contient des services technique et frameworks de (relativement) bas niveau tels que les fonctions mathématiques, les structures de données, les threads, les entrées-sorties des fichiers, les bases de données et les réseaux.
+}
+
+// [tag:seance08]
+::Dans quelle couche trouve-t-on un service pour automatiser le stockage des données dans une base de données relationnelle ?::[html]Dans quelle couche trouve-t-on un service pour automatiser le stockage des données dans une base de données relationnelle ?{
+	~Présentation#La couche présentation contient des services d’interface utilisateur (fenêtres), le HTML, le XML et l’interface vocale.
+	~Application#La couche application contient des services de gestion des requêtes de la couche présentation, du workflow, de l’état des sessions, etc.
+	~Domaine(s)#La(les) couche(s) domaine(s) contient(nent) des services du domaine, ou les règles du domaine, etc.
+	~Infrastructure métier#La couche d’infrastructure métier contient des services de bas niveau utilisés dans de nombreux domaines métier.
+	=Services techniques#La couche de services techniques contient des services de techniques et frameworks de (relativement) haut niveau tels que la persistance et la sécurité.
+	~Fondation#La couche fondation contient des services technique et frameworks de (relativement) bas niveau tels que les fonctions mathématiques, les structures de données, les threads, les entrées-sorties des fichiers, les bases de données et les réseaux.
+}
+
+// [tag:seance08]
+::Dans quelle couche trouve-t-on un service pour calculer l’arc tangente d’un nombre réel ?::[html]Dans quelle couche trouve-t-on un service pour calculer l’arc tangente d’un nombre réel ?{
+	~Présentation#La couche présentation contient des services d’interface utilisateur (fenêtres), le HTML, le XML et l’interface vocale.
+	~Application#La couche application contient des services de gestion des requêtes de la couche présentation, du workflow, de l’état des sessions, etc.
+	~Domaine(s)#La(les) couche(s) domaine(s) contient(nent) des services du domaine, ou les règles du domaine, etc.
+	~Infrastructure métier#La couche d’infrastructure métier contient des services de bas niveau utilisés dans de nombreux domaines métier.
+	~Services techniques#La couche de services techniques contient des services de techniques et frameworks de (relativement) haut niveau tels que la persistance et la sécurité.
+	=Fondation#La couche fondation contient des services technique et frameworks de (relativement) bas niveau tels que les fonctions mathématiques, les structures de données, les threads, les entrées-sorties des fichiers, les bases de données et les réseaux.
+}
+
+// [tag:seance08]
+::Dans quelle couche trouve-t-on un service pour stocker les données dans une base de données relationnelle ?::[html]Dans quelle couche trouve-t-on un service pour stocker les données dans une base de données relationnelle ?{
+	~Présentation#La couche présentation contient des services d’interface utilisateur (fenêtres), le HTML, le XML et l’interface vocale.
+	~Application#La couche application contient des services de gestion des requêtes de la couche présentation, du workflow, de l’état des sessions, etc.
+	~Domaine(s)#La(les) couche(s) domaine(s) contient(nent) des services du domaine, ou les règles du domaine, etc.
+	~Infrastructure métier#La couche d’infrastructure métier contient des services de bas niveau utilisés dans de nombreux domaines métier.
+	~Services techniques#La couche de services techniques contient des services de techniques et frameworks de (relativement) haut niveau tels que la persistance et la sécurité.
+	=Fondation#La couche fondation contient des services technique et frameworks de (relativement) bas niveau tels que les fonctions mathématiques, les structures de données, les threads, les entrées-sorties des fichiers, les bases de données et les réseaux.
+}

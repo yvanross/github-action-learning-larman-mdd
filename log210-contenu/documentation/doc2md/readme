@@ -1,0 +1,1 @@
+pandoc --extract-media Exercices.gddoc.docx -o exercices.gddoc.docx.md

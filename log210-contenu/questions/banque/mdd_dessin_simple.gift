@@ -1,0 +1,4 @@
+$CATEGORY: $course$/Mdd dessin
+
+// [tag:seance02]
+::MDD Simple::[markdown]Joindre l'image d'un dessin fait à la main (sans outil) d'un modèle du domaine simple représentant les informations suivantes\:\n\n- un ordinateur, ayant un nom (ex. "iPad") et une capacité de mémoire en gigaoctets (ex. 8 Go)\n- un utilisateur, ayant un nom (ex. "Michel Tremblay") et une année de naissance.\n- un utilisateur étudie en ligne avec un ou plusieurs ordinateurs.{}

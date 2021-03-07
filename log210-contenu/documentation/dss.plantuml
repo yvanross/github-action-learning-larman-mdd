@@ -1,0 +1,8 @@
+skinparam style strictuml
+hide empty fields
+hide empty methods
+class "Vente" as A
+class "LigneArticles" as B
+'A "1" -- "1..*" B : contient >
+'A "1" o-- "1..*" B : contient >
+A "1" *-- "1..*" B : contient >

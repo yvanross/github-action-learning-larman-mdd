@@ -1,0 +1,4 @@
+$CATEGORY: $course$/Déploiement
+
+// [tag:seance12]
+::Deploiement Simple::[markdown]Joindre l'image d'un dessin fait à la main (sans outil) d'un diagramme de déploiement modélisant un navigateur web sur une machine "PC" Windows 10 qui communique avec un serveur web sur une autre machine "Serveur" Linux par le protocole `https`. Cette dernière roule une application "MyApp" qui communique avec une base de données par SQL. {}

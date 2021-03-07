@@ -1,0 +1,25 @@
+@startuml Exercice Solution Séquence de Communication
+skinparam style strictuml
+skinparam backgroundcolor transparent
+participant ":OrderEntry\nWindow" as window
+participant ":Order" as order
+participant "MacallanLine\n:OrderLine[i]" as line
+participant "MacallanStock\n:StockItem" as stockItem
+participant ":Reorder\nItem" as reorderItem
+participant ":Delivery\nItem" as delItem
+window -> order : prepare()
+loop
+order -> line : prepare()
+line -> stockItem : hasStock : check()
+alt hasStock
+    line -> stockItem : remove()
+    stockItem -> stockItem : needsReorder =\nneedToReorder()
+        alt needsReorder
+        create reorderItem
+        stockItem --> reorderItem : create
+        end
+    create delItem
+    line --> delItem : create
+end
+end loop
+@enduml

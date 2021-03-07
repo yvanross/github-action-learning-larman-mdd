@@ -1,0 +1,60 @@
+$CATEGORY: mgl843/Analyse Architecturale
+
+
+// question: 12618  name: Achever des solutions réduisant l'effet dû à un besoin ayant un impact pertinent sur l'architecture est
+::Achever des solutions réduisant l'effet dû à un besoin ayant un impact pertinent sur l'architecture est::[html]Achever des solutions réduisant l'effet dû à un besoin ayant un impact pertinent sur l'architecture est{
+	=une décision architecturale#Une décision architecturale est de mettre au point une solution qui réduit l'impact des facteurs architecturaux.
+	~un scénario de qualité#Les scénarios de qualité définissent des réponses mesurables pour les facteurs architecturaux.
+	~un facteur architectural#Ces facteurs sont principalement des besoins non fonctionnels, mais les besoins fonctionnels peuvent aussi être importants.
+}
+
+// question: 12619  name: Les besoins qui ont un effet sur l'architecture sont …?
+::Les besoins qui ont un effet sur l'architecture sont …?::[html]Les besoins qui ont un effet sur l'architecture sont …?{
+	=les facteurs architecturaux#Ces facteurs sont principalement des besoins non fonctionnels, mais les besoins fonctionnels peuvent aussi être importants.
+	~les décisions architecturales#Les décisions architecturales sont prises pour réduire l'impact d'un facteur architectural.
+	~les scénarios de qualité#Les scénarios de qualité définissent des réponses mesurables pour les facteurs architecturaux.
+}
+
+// question: 12620  name: Qu'est-ce qui n'est pas dans un mémo technique?
+::Qu'est-ce qui n'est pas dans un mémo technique?::[html]Qu'est-ce qui n'est pas dans un mémo technique?{
+	~Une description des facteurs du problème (besoin) à résoudre.#Cette documentation est très importante pour avoir un historique de prise de décision.
+	~Une description de la motivation pour la solution au problème (besoin) à résoudre.#Cette documentation est très importante pour avoir un historique de prise de décision.
+	~Une description de la solution au problème (besoin) à résoudre.#Cette documentation est très importante pour avoir un historique de prise de décision.
+	=Un résumé des facteurs architecturaux avec les scénarios de qualité, la variabilité, l'impact sur les parties prenantes, etc., ainsi que les priorités et les risques.#C'est un tableau de facteur.
+}
+
+// question: 12621  name: Quel choix n'est pas un bon scénario de qualité :
+::Quel choix n'est pas un bon scénario de qualité \:::[html]Quel choix n'est pas un bon scénario de qualité \:{
+	~Quand un nouveau système tiers doit être intégré, il doit l'être, et ce en vingt jours/homme.#Cet énoncé est du style « stimulus » « réponse mesurable »
+	=Quand un service distant est défaillant, le système doit rétablir la connectivité le plus tôt possible.#Cet énoncé est du style « stimulus », mais la suite n'est pas une « réponse mesurable ». « Rétablir la connectivité dans la minute où le service redevient disponible… » serait mesurable.
+	~Lors d'un contrôle de conformité, celle-ci doit être égale à 100 %.#Cet énoncé est du style « stimulus » « réponse mesurable »
+}
+
+// question: 10156915  name: Achever des solutions réduisant l’effet dû à un besoin ayant un impact pertinent sur l’architecture est
+::Achever des solutions réduisant l’effet dû à un besoin ayant un impact pertinent sur l’architecture est::[html]Achever des solutions réduisant l’effet dû à un besoin ayant un impact pertinent sur l’architecture est{
+	=une décision architecturale#Une décision architecturale est de mettre au point une solution qui réduit l’impact des facteurs architecturaux.
+	~un scénario de qualité#Les scénarios de qualité définissent des réponses mesurables pour les facteurs architecturaux.
+	~un facteur architectural#Ces facteurs sont principalement des besoins non fonctionnels, mais les besoins fonctionnels peuvent aussi être importants.
+}
+
+// question: 10156916  name: Les besoins qui ont un effet sur l’architecture sont …?
+::Les besoins qui ont un effet sur l’architecture sont …?::[html]Les besoins qui ont un effet sur l’architecture sont …?{
+	=les facteurs architecturaux#Ces facteurs sont principalement des besoins non fonctionnels, mais les besoins fonctionnels peuvent aussi être importants.
+	~les décisions architecturales#Les décisions architecturales sont prises pour réduire l’impact d’un facteur architectural.
+	~les scénarios de qualité#Les scénarios de qualité définissent des réponses mesurables pour les facteurs architecturaux.
+}
+
+// question: 10156917  name: Qu’est-ce qui n’est pas dans un mémo technique?
+::Qu’est-ce qui n’est pas dans un mémo technique?::[html]Qu’est-ce qui n’est pas dans un mémo technique?{
+	~Une description des facteurs du problème (besoin) à résoudre.#Cette documentation est très importante pour avoir un historique de prise de décision.
+	~Une description de la motivation pour la solution au problème (besoin) à résoudre.#Cette documentation est très importante pour avoir un historique de prise de décision.
+	~Une description de la solution au problème (besoin) à résoudre.#Cette documentation est très importante pour avoir un historique de prise de décision.
+	=Un résumé des facteurs architecturaux avec les scénarios de qualité, la variabilité, l’impact sur les parties prenantes, etc., ainsi que les priorités et les risques.#C’est un tableau de facteur.
+}
+
+// question: 10156918  name: Quel choix n’est pas un bon scénario de qualité :
+::Quel choix n’est pas un bon scénario de qualité \:::[html]Quel choix n’est pas un bon scénario de qualité \:{
+	~Quand un nouveau système tiers doit être intégré, il doit l’être, et ce en vingt jours/homme.#Cet énoncé est du style « stimulus » « réponse mesurable »
+	=Quand un service distant est défaillant, le système doit rétablir la connectivité le plus tôt possible.#Cet énoncé est du style « stimulus », mais la suite n’est pas une « réponse mesurable ». « Rétablir la connectivité dans la minute où le service redevient disponible… » serait mesurable.
+	~Lors d’un contrôle de conformité, celle-ci doit être égale à 100 %.#Cet énoncé est du style « stimulus » « réponse mesurable »
+}

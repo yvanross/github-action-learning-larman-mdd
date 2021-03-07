@@ -1,0 +1,124 @@
+$CATEGORY: $course$/DiagrammeActivite
+
+
+// [tat:seance10]
+::Forme \: signal reçu::[html]<p>Dans un diagramme d’activités, que signifie la forme suivante?<br /><img src\="https\://www.plantuml.com/plantuml/img/SoWkIImgAStDuLAmoalCriZNjEDoICrB0Oe00000" alt\="rectangle avec triangle sur un côté" width\="100" height\="50" />
+</p>{
+	=<p>C’est une reception de signal</p>
+	~<p>C'est un signal envoyé lorsqu'un délai est atteint</p>
+	~<p>C’est un débranchement</p>
+	~<p>C’est une jointure</p>
+	~<p>C’est une fusion</p>
+	~<p>C’est une sous-activité</p>
+}
+
+// [tat:seance10]
+::Forme \: signal délai atteint::[html]<p>Dans un diagramme d’activités, que signifie la forme correspondant à un sablier?<br /></p>{
+	~<p>C’est une reception de signal lorsqu'un délai est atteint</p>
+	=<p>C'est un signal envoyé lorsqu'un délai est atteint</p>
+	~<p>C’est un débranchement</p>
+	~<p>C’est une jointure</p>
+	~<p>C’est une fusion</p>
+	~<p>C’est une sous-activité</p>
+}
+
+// [tat:seance10]
+::Forme \: noeud d'objet::[html]<p>Dans un diagramme d’activités, que signifie la forme suivante?<br /><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuR9ApKdDJSqhYULoICrB0Oe00000" alt\="rectangle" width\="151" height\="67" /></p>{
+	=<p>C’est un nœud d’objet</p>
+	~<p>C’est une action.</p>
+	~<p>C’est un débranchement</p>
+	~<p>C’est une jointure</p>
+	~<p>C’est le début de l’activité</p>
+	~<p>C’est la fin de l’activité</p>
+}
+
+// [tat:seance10]
+::Forme \: jointure::[html]<p>Dans un diagramme d’activités, que signifie la barre horizontale entre les activités 1,2 et 3?<br /><img src\="https\://www.plantuml.com/plantuml/svg/SoWkIImgAStDuKhBByhciafCBiaiooofDBJcKb002IaafYTcvW4vS2aZa5HgNee2gWvZQou7e2ZGA000" alt\="plusieurs flèches entrantes sur une barre horizontale et une flèche sortante" width\="110" height\="110" /></p>{
+	~<p>C’est un nœud d’objet</p>
+	~<p>C’est une action.</p>
+	~<p>C’est un débranchement</p>
+	=<p>C’est une jointure</p>
+	~<p>C’est le début de l’activité</p>
+	~<p>C’est la fin de l’activité</p>
+}
+
+// [tat:seance10]
+::Forme \: fusion::[html]<p>Dans un diagramme d’activités, que signifie le losange entre les activité 1,2 et 3?<br /><img src\="https\://www.plantuml.com/plantuml/svg/SoWkIImgAStDuSfCKz0eIIqkqLGeoKZDux9AJ2x9BCiigJIqvahDAKv521W11V9ICjCG8iRMN0v08Q0f0000" alt\="deux flèches entrantes sur un lozange et une flèche sortante" width\="110" height\="110" /></p>{
+	~<p>C’est une décision</p>
+	~<p>C’est une action.</p>
+	~<p>C’est un débranchement</p>
+	~<p>C’est une jointure</p>
+	=<p>C’est une fusion</p>
+	~<p>C’est la fin de l’activité</p>
+}
+
+// [tat:seance10]
+::Forme \: sous-activité::[html]<p>Dans un diagramme d’activités, que signifie un rectangle arrondi avec rateau"</p>{
+	~<p>C’est une décision</p>
+	~<p>C’est une action.</p>
+	~<p>C’est un débranchement</p>
+	~<p>C’est une jointure</p>
+	~<p>C’est une fusion</p>
+	=<p>C’est une sous-activité</p>
+}
+
+// [tat:seance10]
+::Forme \: fin::[html]<p>Dans un diagramme d’activités, que signifie la forme suivante?<br /><img src\="https\://www.plantuml.com/plantuml/svg/SoWkIImgAStDuIekoI_WSaZDIm5o0000" alt\="rond noir entouré d'un cercle" width\="63" height\="64" /></p>{
+	~<p>C’est un nœud d’objet</p>
+	~<p>C’est une action.</p>
+	~<p>C’est un débranchement</p>
+	~<p>C’est une jointure</p>
+	~<p>C’est le début de l’activité</p>
+	=<p>C’est la fin de l’activité</p>
+}
+
+// [tat:seance10]
+::Forme \: décision::[html]<p>Dans un diagramme d’activités, que signifie la forme correspondant à element?<br /><img src\="https\://www.plantuml.com/plantuml/svg/SoWkIImgAStDuR9AJ2x9BCiigJImvifCKz18pKdDJSqhqLGeoKZDGyWQMdEbvXId8WICW09vAPbf215ZQou7e13GK000" alt\="flèche entrante sur un lozenge et deux flèches sortantes" width\="150" height\="150" /></p>{
+	=<p>C’est une décision</p>
+	~<p>C’est une action.</p>
+	~<p>C’est un débranchement</p>
+	~<p>C’est une jointure</p>
+	~<p>C’est une fusion</p>
+	~<p>C’est la fin de l’activité</p>
+}
+
+// [tat:seance10]
+::Forme \: début::[html]<p>Dans un diagramme d’activités, que signifie la forme suivante?<br /><img src\="https\://www.plantuml.com/plantuml/svg/SoWkIImgAStDuG8pk1nIyrA0F000" alt\="rond noir" width\="46" height\="46" /></p>{
+	~<p>C’est un nœud d’objet</p>
+	~<p>C’est une action.</p>
+	~<p>C’est un débranchement</p>
+	~<p>C’est une jointure</p>
+	=<p>C’est le début de l’activité</p>
+	~<p>C’est la fin de l’activité</p>
+}
+
+// [tat:seance10]
+::Forme \: débranchement::[html]<p>Dans un diagramme d’activités, que signifie la barre horizontal entre les activités 1,2 et 3?<br /><img src\="https\://www.plantuml.com/plantuml/svg/SoWkIImgAStDuR9AJ2x9BCiigJIqvahBByf621X111GIqnCpyn32njPSN0wfUIb0pG00" alt\="flèche entrante sur une barre horizontale et deux flèches sortantes" width\="110" height\="110" /></p>{
+	~<p>C’est un nœud d’objet</p>
+	~<p>C’est une action.</p>
+	=<p>C’est un débranchement</p>
+	~<p>C’est une jointure</p>
+	~<p>C’est le début de l’activité</p>
+	~<p>C’est la fin de l’activité</p>
+}
+
+// [tat:seance10]
+::Forme \: action::[html]<p>Dans un diagramme d’activités, que signifie la forme suivante?<br /><img src\="https\://www.plantuml.com/plantuml/svg/SoWkIImgAStDuR9ApKdDJSqhiUPoICrB0Oe00000" alt\="rectangle arrondi" width\="158" height\="70" /></p>{
+	~<p>C’est un nœud d’objet</p>
+	=<p>C’est une action.</p>
+	~<p>C’est un débranchement</p>
+	~<p>C’est une jointure</p>
+	~<p>C’est le début de l’activité</p>
+	~<p>C’est la fin de l’activité</p>
+}
+
+
+// [tat:seance10]
+::Forme \: signal reçu::[html]<p>Dans un diagramme d'activités, que signifie la forme suivante?<br /><img src\="https\://www.plantuml.com/plantuml/svg/SoWkIImgAStDuLAmIir9pKtDAx7XSaZDIm4A0G00" alt\="rectangle avec triangle sur un côté" width\="100" height\="50" /></p>{
+	=<p>C'est une reception de signal</p>
+	~<p>C'est un signal envoyé lorsqu'un délai est atteint</p>
+	~<p>C'est un débranchement</p>
+	~<p>C'est une jointure</p>
+	~<p>C'est une fusion</p>
+	~<p>C'est une sous-activité</p>
+}

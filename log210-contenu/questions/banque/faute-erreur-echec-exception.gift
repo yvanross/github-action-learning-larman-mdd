@@ -1,0 +1,27 @@
+$CATEGORY: $course$/Faute Erreur et Échec
+
+
+// [tag:seance09]
+::Échec (scénario pneu)::[html]<p>Aujourd'hui en conduisant sa voiture, Jean a roulé sur un clou et ce clou est malheureusement resté dans un pneu de la voiture sans qu'il le sache. Le résultat est que le pneu perdait de la pression d'air et se dégonflait lentement. Le lendemain, Jean a aperçu que le pneu était crevé. Puisqu'il n'avait pas de pneu de secours, Jean n'a pu se rendre à son travail. </p><p>Si on considère que la voiture offre à Jean un <em>service de transport</em>, quelle est l'<em>échec</em> (selon la définition donnée dans le cours) dans ce scénario?</p>{
+	~<p>L'échec est quand Jean a roulé sur le clou qui est rentré dans le pneu.</p>#<p>Selon la définition, un échec est un déni de service causé par une erreur.</p>
+	~<p>L échec est que Jean n'a pas de pneu de secours.</p>#<p>Selon la définition, un échec est un déni de service causé par une erreur.</p>
+	~<p>L'échec est que Jean n'a pas aperçu le clou dans le pneu.</p>#<p>Selon la définition, un échec est un déni de service causé par une erreur.</p>
+	~<p>L'échec est que Jean n'a pu travailler.</p>#<p>Selon la définition, un échec est un déni de service causé par une erreur. Jean aurait pu employer un autre service pour se rendre au travail (marcher, taxi, autobus). </p>
+	=<p>L'échec est que Jean n'a pu utiliser sa voiture pour se rendre au travail.</p>#<p>Selon la définition, un échec est un déni de service causé par une erreur. Le service de transport (par la voiture) a effectivement été impossible à cause du pneu crevé. </p>
+}
+
+// [tag:seance09]
+::Erreur (scénario pneu)::[html]<p>Aujourd'hui en conduisant sa voiture, Jean a roulé sur un clou et ce clou est malheureusement resté dans un pneu de la voiture sans qu'il le sache. Le résultat est que le pneu perdait de la pression d'air et se dégonflait lentement. Le lendemain, Jean a aperçu que le pneu était crevé. Puisqu'il n'avait pas de pneu de secours, Jean n'a pu se rendre à son travail. </p><p>Si on considère que la voiture offre à Jean un <em>service de transport</em>, quelle est l'<em>erreur</em> (selon la définition donnée dans le cours) dans ce scénario?</p>{
+	=<p>L'erreur est quand Jean aperçoit que le pneu est crevé.</p>#<p>C'est la manifestation de la faute. </p>
+	~<p>L'erreur est que la voiture de Jean a roulé sur un clou.</p>#<p>Selon la définition, une erreur est une manifestation d'une faute. </p>
+	~<p>L'erreur est que Jean n'a pas de pneu de secours.</p>#<p>Selon la définition, une erreur est une manifestation d'une faute. </p>
+	~<p>L'erreur est que Jean n'a pas aperçu le clou dans le pneu.</p>#<p>Selon la définition, une erreur est une manifestation d'une faute. </p>
+}
+
+// [tag:seance09]
+::Faute (scénario pneu)::[html]<p>Aujourd'hui en conduisant sa voiture, Jean a roulé sur un clou et ce clou est malheureusement resté dans un pneu de la voiture sans qu'il le sache. Le résultat est que le pneu perdait de la pression d'air et se dégonflait lentement. Le lendemain, Jean a aperçu que le pneu était crevé. Puisqu'il n'avait pas de pneu de secours, Jean n'a pu se rendre à son travail. </p><p>Si on considère que la voiture offre à Jean un <em>service de transport</em>, quelle est la <em>faute</em> (selon la définition donnée dans le cours) dans ce scénario?</p>{
+	=<p>La faute est quand Jean a roulé sur le clou qui est rentré dans le pneu.</p>#<p>C'est la cause première du problème. </p>
+	~<p>La faute est que Jean n'a pas de pneu de secours.</p>#<p>Selon la définition, une faute est la cause première du problème.</p>
+	~<p>La faute est que Jean n'a pas aperçu le clou dans le pneu.</p>#<p>Selon la définition, une faute est la cause première du problème.</p>
+	~<p>La faute est que Jean n'a pas appelé un taxi pour se rendre au travail.</p>#<p>Selon la définition, une faute est la cause première du problème.</p>
+}

@@ -1,0 +1,11 @@
+@startuml demarrerAjoutLivre
+skinparam Style strictuml
+participant ":ControleurAjoutLivre" as ctrl
+participant "bdd:BDD" as bdd 
+
+note left of ctrl: Controleur de session
+-> ctrl: demarrerAjoutLivre()
+
+note left of bdd: Expert\nCtrl a une visibilité sur Bdd\nBdd gere ses Clients membre\nChaque Client à une liste de livre
+ctrl -> bdd: getClientsAvecLeurLivres()
+@enduml

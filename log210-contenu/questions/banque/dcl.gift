@@ -1,0 +1,23 @@
+$CATEGORY: $course$/Diagramme de classe logiciel
+
+
+// [tag:seance03]
+::Opération vs méthodes::[html]<p>Apparier la bonne déclaration au type de diagramme</p>{
+	=<p>Opération</p> -> Modèle du domaine
+	=<p>Méthode</p> -> Diagramme de classe logiciels
+	=<p>Lien</p> -> Diagramme de communication
+	=Diagramme de séquence système -> Opération
+	=<p>Diagramme de séquence</p> -> Opération
+}
+
+// [tag:seance03]
+::Flèche de navigabilité::[html]<p>La flèche de navigabilité pour un diagramme de classe logiciels est situé&nbsp;</p>{
+	=<p>sur une extrémité du lien entre les deux classes</p>
+	~<p>avec le verbe décrivant l'association</p>
+}
+
+// [tag:seance03]
+::Multiplicité::[html]<p>Une indication de multiplicité du côté cible, mais non du côté source est représenté dans&nbsp;</p>{
+	~<p>un modèle du domaine</p>
+	=<p>un diagramme de classes logicieles</p>
+}

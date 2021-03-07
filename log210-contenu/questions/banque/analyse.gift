@@ -1,0 +1,32 @@
+$CATEGORY: $course$/Analyse
+
+
+// [tac:seance02]
+::Analyse::[html]<p>Artefacts permettant de démonter l'analyse de cas d'utilisation<br></p>{
+	~%33%<p>Modèle du domaine</p>
+	~%33%<p>Diagramme de séquence système (DSS)</p>
+	~%34%<p>Contrat</p>
+	~%-33%<p>Diagramme de classe logiciels</p>
+	~%-33%<p>Diagramme de séquence</p>
+	~%-33%<p>Réalisation d'un cas d'utilisation (RDCU)</p>
+}
+
+// [tac:seance02]
+::Analyse statique vs dynamique::Dans le contexte général d'une analyse statique de code source, classifier les informations suivantes\:{
+	=le nombre de classes dans le logiciel -> possible d'obtenir
+	=le nombre de méthodes dans le logiciel -> possible d'obtenir
+	=le nombre d'objets dans le logiciel -> impossible d'obtenir
+	=le nombre de fois qu'une methode est appelée lors de l'exécution -> impossible d'obtenir
+}
+
+// [tac:seance02]
+::L'analyse orientée objet (selon Larman) se penche sur la modélisation des ...::L'analyse orientée objet (selon Larman) se penche sur la modélisation des classes conceptuelles (conceptual classes).{TRUE}
+
+// [tac:seance02]
+::Analyse vs Conception::[html]Faire la bonne mise en correspondance pour classifier les aspects de l'analyse et de la conception.{
+	=[moodle]investigation du problème -> Analyse
+	=[moodle]investigation des exigences -> Analyse
+	=[moodle]observation plutôt que création -> Analyse
+	=[moodle]élaboration d’une solution -> Conception
+	=[moodle]création qui répond aux exigences -> Conception
+}

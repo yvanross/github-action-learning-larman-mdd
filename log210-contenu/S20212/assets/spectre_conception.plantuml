@@ -1,0 +1,40 @@
+@startuml
+skinparam style strictuml
+skinparam backgroundcolor transparent
+' this is a handwritten font in Windows
+'skinparam defaultfontname Kristen ITC
+'These others look great in SVG (make sure they're installed for ALL USERS in Windows 10)
+skinparam defaultfontname sage sans
+'skinparam defaultfontname Ink Journal
+'skinparam defaultfontname xkcd Script
+'skinparam defaultfontname Petters
+skinparam handwritten true
+skinparam classBorderColor transparent
+skinparam classBackgroundColor transparent
+skinparam classArrowColor black
+hide stereotypes
+hide empty members
+class "<size:30>]" as waterfall
+class "« Cascade pure »" as Ncp
+class "**+**" as bduf <<middle>>
+class "Beaucoup de\nconception\nau début\n(BDUF)" as Nbduf
+class "**+**" as duf <<middle>>
+class "Un peu de design\nau début\n(Some DUF)" as Nduf
+class "**+**" as agile <<middle>>
+class "Agile" as Na
+class "Design\némergent" as Nde
+class "<size:30>[" as hacking
+class "« Hacking cowboy »" as Nh
+
+waterfall -left[bold]- bduf
+bduf -left[bold]- duf
+duf -left[bold]- agile
+agile -left[bold]- hacking
+
+waterfall <-u[dashed]- Ncp
+bduf <-d[dashed]- Nbduf
+duf <-u[dashed]- Nduf
+agile <-d[dashed]- Nde
+agile <-u[dashed]- Na
+hacking <-d[dashed]- Nh
+@enduml

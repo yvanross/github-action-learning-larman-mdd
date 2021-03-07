@@ -1,0 +1,10 @@
+$CATEGORY: $course$/État-dessin
+
+// [tag:seance10]
+::Etat Simple::[markdown]Joindre l'image d'un dessin fait à la main (sans outil) d'un diagramme d'état modélisant la dynamique suivante\:
+Il s'agit de l'évolution dans l'état d'un bulletin de notes pour un cours.
+- Le bulletin est intialement vide et l'enseignant ne peut pas saisir des notes.
+- Dès que l'enseignant crée une structure d'évaluation, il peut saisir les notes des étudiants et finalement déterminer les cotes (les lettres).
+- Si l'enseignant a déterminé les cotes, il peut soumettre les cotes à son directeur pour une approbation. Il ne peut pas modifier le bulletin après cette demande. Le directeur reçoit un courriel à propos de la demande d'approbation.
+- Le directeur peut ensuite approuver les cotes et l'enseignant reçoit donc un courriel à ce propos et il ne peut plus modifier le bulletin.
+- Le directeur peut aussi refuser les cotes et l'enseignant reçoit un courriel à ce propos et le bulletin de notes est de nouveau modifiable (y compris les cotes) par l'enseignant qui pourra éventuellement demander de nouveau une approbation des cotes. {}

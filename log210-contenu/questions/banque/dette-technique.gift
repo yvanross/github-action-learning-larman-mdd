@@ -1,0 +1,36 @@
+$CATEGORY: $course$/Dette technique
+
+// [tag:seance11]
+::Dette forme de risque::Est-ce que la dette technique est une forme de Risque?{TRUE}
+
+// [tag:seance11]
+::coboy hacking::Est-ce que le coboy hacking est une dette technique?{TRUE}
+
+// [tag:seance11]
+::consequence::Quel sont les conséquences d'avoir une dette technique?{
+  ~%25%Coût de réparation plus élevé
+  ~%25%Nombre de défault plus élevé
+  ~%25%Entretient plus difficile
+  ~%25%Faible productivité
+  ~%0%Très bonne productivité
+  ~%0%Bonne performance à l'exécution
+  ~%0%Mauvaise performance à l'exécution
+  ~%0%Entretient plus facile
+}
+
+// [tag:seance11]
+::evite dette technique::Quel sont les actions à réaliser pour minimiser la dette technique?{
+  ~%25%Réaliser le Modèle du domaine (MDD)
+  ~%25%Réaliser les RDCU
+  ~%25%Utiliser TDD
+  ~%25%Avoir de la tracabilité entre les artéfacts
+  ~%0%Améliorer la performance du code
+  ~%0%Ne pas prendre de décision
+  ~%0%Ne pas faire de test pour minimiser les coûts
+}
+
+// [tag:seance11]
+::cout test::Quel est l'impact sur la dette technique?{
+  =Ecrire des tests automatisée? -> Diminue
+  =Réaliser des tests manuel? -> Augmente
+}

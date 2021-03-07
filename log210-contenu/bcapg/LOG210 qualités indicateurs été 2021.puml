@@ -1,0 +1,69 @@
+@startuml diagram name
+skinparam style strictuml
+hide empty members
+title LOG210: 2020 été Qualités et Indicateurs BCAPG
+class "BCAPG" as BCAPG
+BCAPG "1" - "12" Qualité : définit >
+abstract class "Q12 Apprentissage continue" as Q12 #lightgreen extends Qualité
+class "i1 Identifier ses\nbesoins en formation" as Q12i1 #lightblue implements Q12
+abstract class "Q2 Analyse de problèmes" as Q2 #lightgreen extends Qualité
+class "i2 Formuler une approche" as Q2i2 #lightblue implements Q2
+class "i3 Développer une solution" as Q2i3 #lightblue implements Q2
+
+abstract class "Q3 Investigation" as Q3 #lightgreen extends Qualité
+class "LOG210 2020 été" as LOG210
+class "i1 Planifier" as Q3i1 #lightblue implements Q3
+class "i2 Appliquer\nles méthodologies" as Q3i2 #lightblue implements Q3
+class "i3 Interpréter\nles résultats" as Q3i3 #lightblue implements Q3
+
+class "Activité" as activité
+
+class "Lab0" as lab0 #yellow extends activité
+class "Lab3 Planification" as lab3Plan #yellow extends activité
+class "Lab3 RDCU" as lab3RDCU #yellow extends activité
+class "Lab2 Rétroaction" as lab2Feedback #yellow extends activité
+class "Lab3 MDD" as lab3MDD #yellow extends activité
+class "Lab3 Évaluation Démo" as lab3Démo #yellow extends activité
+
+LOG210 "1" *-- "*" activité : propose >
+
+'mapping
+lab0 "*" -- "1" Q12i1 : mesure >
+lab3Plan "*" -- "1" Q3i1 : mesure >
+lab3RDCU "*" -- "1" Q3i2 : mesure >
+lab2Feedback "*" -- "1" Q3i3 : mesure >
+lab3MDD "*" -- "1" Q2i2 : mesure >
+lab3Démo "*" -- "1" Q2i3 : mesure >
+
+note as q2note
+**Q2 Analyse de problèmes**
+I2: "Choisir un modèle ou une méthode pour 
+analyser ou résoudre un problème", c'est la 
+modélisation du domaine, ou l'analyse 
+orientée objet suivi par une conception 
+cohérente suivant les règles de modularité (GRASP). 
+I3: "Appliquer le modèle ou la méthode en vue 
+d’analyser ou résoudre le problème", c'est 
+la définition d'une solution, ou réalisation 
+de cas d'utilistion (RDCU) qui est aussi 
+implémentée dans le laboratoire.
+end note
+
+note as q3note
+**Q3 Investigation**
+L’objectif du cours est de parfaire l’apprentissage des 
+méthodes et techniques de modélisation orientés objet, 
+des langages de modélisation, des patrons de conception, 
+des processus itératif et évolutif, … 
+Se faisant, l’étudiant est amené à planifier (**I1**) 
+et concevoir son processus d’investigation afin de 
+proposer une approche structurée pour le développement 
+d’une (ou des) solution(s).
+(**I2**) Appliquer les méthodologies - les RDCU à la 
+dernière itération
+(**I3**) Interpréter les résultats - le saisi de 
+la rétroaction à l'avant-dernière iteration
+end note
+
+@enduml
+

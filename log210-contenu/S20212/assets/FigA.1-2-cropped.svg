@@ -1,0 +1,2289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="FigA.1-2-cropped.svg"
+   id="svg745"
+   version="1.1"
+   class="st27"
+   color-interpolation-filters="sRGB"
+   xml:space="preserve"
+   viewBox="0 0 487.68801 511.07001"
+   height="7.0981946in"
+   width="6.7734447in"><metadata
+   id="metadata749"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   inkscape:current-layer="svg745"
+   inkscape:window-maximized="0"
+   inkscape:window-y="116"
+   inkscape:window-x="159"
+   inkscape:cy="389.76093"
+   inkscape:cx="337.71925"
+   inkscape:zoom="1.1383348"
+   fit-margin-bottom="0"
+   fit-margin-right="0"
+   fit-margin-left="0"
+   fit-margin-top="0"
+   showgrid="false"
+   id="namedview747"
+   inkscape:window-height="861"
+   inkscape:window-width="941"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" />
+	<v:documentProperties
+   v:viewMarkup="false"
+   v:langID="1033">
+		<v:userDefs>
+			<v:ud
+   v:nameU="msvConvertTheme" />
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style
+   id="style2"
+   type="text/css">
+	<![CDATA[
+		.st1 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#000000;font-family:Calibri;font-size:0.666664em}
+		.st3 {font-size:1em}
+		.st4 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st5 {stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st6 {fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st7 {fill:#000000;font-family:Calibri;font-size:0.666664em;font-weight:bold}
+		.st8 {fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st9 {stroke:#000000;stroke-dasharray:3.6,2.16;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st10 {marker-end:url(#mrkr4-57);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st11 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.08695652173913}
+		.st12 {fill:#000000;font-family:Arial;font-size:0.666664em}
+		.st13 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st14 {marker-end:url(#mrkr13-100);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st15 {fill:#000000;font-family:Arial;font-size:0.666664em;font-style:italic}
+		.st16 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st17 {fill:#000000;font-family:Arial;font-size:0.416656em}
+		.st18 {fill:#ffffff;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st19 {fill:#000000;font-family:Arial;font-size:0.499992em}
+		.st20 {fill:#000000;font-family:Calibri;font-size:0.666664em;font-style:italic}
+		.st21 {font-size:1em;font-style:normal}
+		.st22 {marker-end:url(#mrkr13-229);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st23 {marker-end:url(#mrkr7-258);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st24 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.068965517241379}
+		.st25 {marker-end:url(#mrkr4-57);stroke:#000000;stroke-dasharray:3.6,2.16;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st26 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st27 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs
+   id="Markers">
+		<g
+   id="lend4">
+			<path
+   id="path4"
+   style="stroke:none"
+   d="M 2,1 0,0 2,-1 v 2" />
+		</g>
+		<marker
+   overflow="visible"
+   markerUnits="strokeWidth"
+   orient="auto"
+   refX="-23"
+   v:setback="23"
+   v:arrowSize="2"
+   v:arrowType="4"
+   class="st11"
+   id="mrkr4-57">
+			<use
+   height="100%"
+   width="100%"
+   y="0"
+   x="0"
+   id="use7"
+   transform="scale(-11.5)"
+   xlink:href="#lend4" />
+		</marker>
+		<g
+   id="lend13">
+			<path
+   id="path10"
+   style="stroke:none"
+   d="M 3,1 0,0 3,-1 v 2" />
+		</g>
+		<marker
+   overflow="visible"
+   markerUnits="strokeWidth"
+   orient="auto"
+   refX="-34.5"
+   v:setback="34.5"
+   v:arrowSize="2"
+   v:arrowType="13"
+   class="st11"
+   id="mrkr13-100">
+			<use
+   height="100%"
+   width="100%"
+   y="0"
+   x="0"
+   id="use13"
+   transform="scale(-11.5)"
+   xlink:href="#lend13" />
+		</marker>
+		<marker
+   overflow="visible"
+   markerUnits="strokeWidth"
+   orient="auto"
+   refX="-33"
+   v:setback="33"
+   v:arrowSize="2"
+   v:arrowType="13"
+   class="st11"
+   id="mrkr13-229">
+			<use
+   height="100%"
+   width="100%"
+   y="0"
+   x="0"
+   id="use16"
+   transform="scale(-11.5)"
+   xlink:href="#lend13" />
+		</marker>
+		<g
+   id="lend7">
+			<path
+   id="path19"
+   style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+   d="M 1.84309,-0.959455 C 1.43792,-0.3808 0.784502,-0.0260248 0.0785258,-0.00137083 l -3e-6,0.00274146 C 0.784499,0.0260235 1.43791,0.380798 1.84309,0.959452" />
+		</g>
+		<marker
+   overflow="visible"
+   markerUnits="strokeWidth"
+   orient="auto"
+   v:arrowSize="3"
+   v:arrowType="7"
+   class="st24"
+   id="mrkr7-258">
+			<use
+   height="100%"
+   width="100%"
+   y="0"
+   x="0"
+   id="use22"
+   transform="scale(-14.5)"
+   xlink:href="#lend7" />
+		</marker>
+	</defs>
+	<g
+   transform="translate(-67.5,-164.055)"
+   id="g743"
+   v:groupContext="foregroundPage"
+   v:index="1"
+   v:mID="0">
+		<title
+   id="title26">Page-1</title>
+		<v:pageProperties
+   v:shadowOffsetY="-9"
+   v:shadowOffsetX="9"
+   v:drawingUnits="19"
+   v:pageScale="1"
+   v:drawingScale="1" />
+		<v:layer
+   v:index="0"
+   v:name="Connector" />
+		<g
+   v:groupContext="group"
+   v:mID="3"
+   transform="translate(194.063,-565.025)"
+   id="group3-1">
+			<title
+   id="title28">Two.23</title>
+			<g
+   transform="translate(0,-27.2)"
+   v:groupContext="shape"
+   v:mID="24"
+   id="shape24-2">
+				<title
+   id="title30">Sheet.24</title>
+				<desc
+   id="desc32">Vente</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="52.88"
+   cy="783"
+   cx="26.4375" />
+				<rect
+   id="rect34"
+   class="st1"
+   height="18"
+   width="52.875"
+   y="774"
+   x="0" />
+				<text
+   id="text36"
+   v:langID="1033"
+   class="st2"
+   y="785.40002"
+   x="16.75"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Vente</text>			</g>
+			<g
+   transform="translate(0,0.00352676)"
+   v:groupContext="shape"
+   v:mID="25"
+   id="shape25-5">
+				<title
+   id="title39">Sheet.25</title>
+				<desc
+   id="desc41">dateHeure . . .</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="27.2035"
+   width="52.88"
+   cy="778.398"
+   cx="26.4375" />
+				<rect
+   id="rect43"
+   class="st1"
+   height="27.203501"
+   width="52.875"
+   y="764.79602"
+   x="0" />
+				<text
+   id="text47"
+   v:langID="1033"
+   class="st2"
+   y="776"
+   x="4.7199998"><v:paragraph
+   v:indentLeft="0.72" /><v:tabList />dateHeure<v:newlineChar /><tspan
+   id="tspan45"
+   class="st3"
+   dy="1.2em"
+   x="4.7199998">. . .</tspan></text>			</g>
+		</g>
+		<g
+   v:groupContext="group"
+   v:mID="26"
+   transform="translate(305.437,-569.125)"
+   id="group26-9">
+			<title
+   id="title51">Two.29</title>
+			<g
+   transform="translate(0,-18)"
+   v:groupContext="shape"
+   v:mID="27"
+   id="shape27-10">
+				<title
+   id="title53">Sheet.27</title>
+				<desc
+   id="desc55">Registre</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="52.88"
+   cy="783"
+   cx="26.4375" />
+				<rect
+   id="rect57"
+   class="st1"
+   height="18"
+   width="52.875"
+   y="774"
+   x="0" />
+				<text
+   id="text59"
+   v:langID="1033"
+   class="st2"
+   y="785.40002"
+   x="13.19"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Registre</text>			</g>
+			<g
+   v:groupContext="shape"
+   v:mID="28"
+   id="shape28-13">
+				<title
+   id="title62">Sheet.28</title>
+				<desc
+   id="desc64">...</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="52.88"
+   cy="783"
+   cx="26.4375" />
+				<rect
+   id="rect66"
+   class="st1"
+   height="18"
+   width="52.875"
+   y="774"
+   x="0" />
+				<text
+   id="text68"
+   v:langID="1033"
+   class="st2"
+   y="785.40002"
+   x="4.7199998"><v:paragraph
+   v:indentLeft="0.72" /><v:tabList />...</text>			</g>
+		</g>
+		<g
+   transform="translate(246.938,-587.625)"
+   v:groupContext="shape"
+   v:mID="29"
+   id="shape29-16">
+			<title
+   id="title72">Univ Assoc</title>
+			<path
+   id="path74"
+   class="st4"
+   d="m 0,792 h 33.75 v -0.09 -0.1 h 24.61" />
+		</g>
+		<g
+   transform="translate(305.437,-603.025)"
+   v:groupContext="shape"
+   v:mID="30"
+   id="shape30-19">
+			<title
+   id="title77">1..*.51</title>
+			<desc
+   id="desc79">1</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="20.0036"
+   width="36"
+   cy="799.606"
+   cx="-5.62499" />
+			<path
+   id="path81"
+   class="st5"
+   d="m 0,792 h -5.62 v 7.61 7.6 h 5.48" />
+			<text
+   id="text83"
+   v:langID="1033"
+   class="st2"
+   y="802.60999"
+   x="-7.6500001"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>		</g>
+		<g
+   transform="translate(246.938,-587.625)"
+   v:groupContext="shape"
+   v:mID="45"
+   id="shape45-23">
+			<title
+   id="title86">1..71</title>
+			<desc
+   id="desc88">1</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="17.6036"
+   width="36"
+   cy="780.7"
+   cx="5.0625" />
+			<path
+   id="path90"
+   class="st5"
+   d="M 0,792 H 5.06 V 780.7 769.4 H -0.17" />
+			<text
+   id="text92"
+   v:langID="1033"
+   class="st2"
+   y="783.09998"
+   x="3.04"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>		</g>
+		<g
+   v:groupContext="group"
+   v:mID="31"
+   transform="translate(380.044,-569.25)"
+   id="group31-27">
+			<title
+   id="title95">Two.31</title>
+			<g
+   transform="translate(0,-18)"
+   v:groupContext="shape"
+   v:mID="32"
+   id="shape32-28">
+				<title
+   id="title97">Sheet.32</title>
+				<desc
+   id="desc99">CatalogueProduits</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="72"
+   cy="783"
+   cx="36" />
+				<rect
+   id="rect101"
+   class="st1"
+   height="18"
+   width="72"
+   y="774"
+   x="0" />
+				<text
+   id="text103"
+   v:langID="1033"
+   class="st2"
+   y="785.40002"
+   x="6.0999999"><v:paragraph
+   v:horizAlign="1" /><v:tabList />CatalogueProduits</text>			</g>
+			<g
+   v:groupContext="shape"
+   v:mID="42"
+   id="shape42-31">
+				<title
+   id="title106">Sheet.42</title>
+				<desc
+   id="desc108">. . .</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="72"
+   cy="783"
+   cx="36" />
+				<rect
+   id="rect110"
+   class="st1"
+   height="18"
+   width="72"
+   y="774"
+   x="0" />
+				<text
+   id="text112"
+   v:langID="1033"
+   class="st2"
+   y="785.40002"
+   x="4.7199998"><v:paragraph
+   v:indentLeft="0.72" /><v:tabList />. . .</text>			</g>
+		</g>
+		<g
+   transform="translate(358.312,-587.25)"
+   v:groupContext="shape"
+   v:mID="43"
+   id="shape43-34">
+			<title
+   id="title116">Univ Assoc.16</title>
+			<path
+   id="path118"
+   class="st4"
+   d="M 0,792 H 10.87 21.73" />
+		</g>
+		<g
+   transform="translate(160.313,-560.325)"
+   v:groupContext="shape"
+   v:mID="13"
+   id="shape13-37">
+			<title
+   id="title121">Sheet.13</title>
+			<desc
+   id="desc123">Modèle du Domaine</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="67.5"
+   width="377.14"
+   cy="758.25"
+   cx="188.568" />
+			<rect
+   id="rect125"
+   class="st6"
+   ry="18"
+   rx="18"
+   height="67.5"
+   width="377.13599"
+   y="724.5"
+   x="0" />
+			<text
+   id="text127"
+   v:langID="1033"
+   class="st7"
+   y="735.70001"
+   x="154.62"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Modèle du Domaine</text>		</g>
+		<g
+   transform="translate(160.503,-394.875)"
+   v:groupContext="shape"
+   v:mID="14"
+   id="shape14-40">
+			<title
+   id="title130">Sheet.14</title>
+			<desc
+   id="desc132">Modèle de Cas d’Utilisation</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="149.344"
+   width="393"
+   cy="717.328"
+   cx="196.499" />
+			<rect
+   id="rect134"
+   class="st6"
+   ry="18"
+   rx="18"
+   height="149.34399"
+   width="392.99701"
+   y="642.65601"
+   x="0" />
+			<text
+   id="text136"
+   v:langID="1033"
+   class="st7"
+   y="653.85999"
+   x="150.78"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Modèle de Cas d’Utilisation</text>		</g>
+		<g
+   transform="translate(160.313,-117)"
+   v:groupContext="shape"
+   v:mID="17"
+   id="shape17-43">
+			<title
+   id="title139">Sheet.17</title>
+			<desc
+   id="desc141">Modèle de Conception</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="263.25"
+   width="391.22"
+   cy="660.375"
+   cx="195.609" />
+			<rect
+   id="rect143"
+   class="st8"
+   ry="18"
+   rx="18"
+   height="263.25"
+   width="391.21899"
+   y="528.75"
+   x="0" />
+			<text
+   id="text145"
+   v:langID="1033"
+   class="st7"
+   y="539.95001"
+   x="157.92"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Modèle de Conception</text>		</g>
+		<g
+   transform="rotate(90,317.0185,760.1115)"
+   v:groupContext="shape"
+   v:mID="49"
+   id="shape49-46">
+			<title
+   id="title148">Sheet.49</title>
+			<path
+   id="path150"
+   class="st9"
+   d="M 0,792 H 117.66" />
+		</g>
+		<g
+   transform="translate(262.631,-350.19)"
+   v:groupContext="shape"
+   v:mID="50"
+   id="shape50-49">
+			<title
+   id="title153">Sheet.50</title>
+			<desc
+   id="desc155">: Registre</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="15.435"
+   width="45"
+   cy="784.283"
+   cx="22.5" />
+			<rect
+   id="rect157"
+   class="st6"
+   height="15.435"
+   width="45"
+   y="776.565"
+   x="0" />
+			<text
+   id="text159"
+   v:langID="1033"
+   class="st2"
+   y="786.67999"
+   x="7.27"><v:paragraph
+   v:horizAlign="1" /><v:tabList />: Registre</text>		</g>
+		<g
+   transform="translate(170.438,-293.625)"
+   v:groupContext="shape"
+   v:mID="51"
+   id="shape51-52">
+			<title
+   id="title162">Msg.51</title>
+			<desc
+   id="desc164">saisirArticle(code, quantité)</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(0,4,22,4)" />
+			<v:textRect
+   height="31.6036"
+   width="98.3"
+   cy="795.094"
+   cx="53.9007" />
+			<path
+   id="path166"
+   class="st10"
+   d="m 0,792 h 55.67 50.16" />
+			<text
+   id="text168"
+   v:langID="1033"
+   class="st2"
+   y="786.48999"
+   x="9.0299997"><v:paragraph
+   v:horizAlign="1" /><v:tabList />saisirArticle(code, quantité)</text>		</g>
+		<g
+   transform="translate(397.631,-350.19)"
+   v:groupContext="shape"
+   v:mID="52"
+   id="shape52-59">
+			<title
+   id="title171">Sheet.52</title>
+			<desc
+   id="desc173">: CatalogueProduits</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="15.435"
+   width="76.5"
+   cy="784.283"
+   cx="38.25" />
+			<rect
+   id="rect175"
+   class="st6"
+   height="15.435"
+   width="76.5"
+   y="776.565"
+   x="0" />
+			<text
+   id="text177"
+   v:langID="1033"
+   class="st2"
+   y="786.67999"
+   x="6.3699999"><v:paragraph
+   v:horizAlign="1" /><v:tabList />: CatalogueProduits</text>		</g>
+		<g
+   transform="rotate(90,391.2685,834.3615)"
+   v:groupContext="shape"
+   v:mID="18"
+   id="shape18-62">
+			<title
+   id="title180">Sheet.18</title>
+			<path
+   id="path182"
+   class="st9"
+   d="M 0,792 H 118.84" />
+		</g>
+		<g
+   transform="translate(289.238,-276.75)"
+   v:groupContext="shape"
+   v:mID="53"
+   id="shape53-65">
+			<title
+   id="title185">Msg.53</title>
+			<desc
+   id="desc187">desc = getDescription(code)</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(0,4,22,4)" />
+			<v:textRect
+   height="10.44"
+   width="124.75"
+   cy="786.78"
+   cx="70.5838" />
+			<path
+   id="path189"
+   class="st10"
+   d="m 0,792 h 70.65 65.13" />
+			<text
+   id="text191"
+   v:langID="1033"
+   class="st2"
+   y="788.76001"
+   x="25.309999"><v:paragraph
+   v:horizAlign="1" /><v:tabList />desc = getDescription(code)</text>		</g>
+		<g
+   transform="translate(288.563,-257.625)"
+   v:groupContext="shape"
+   v:mID="55"
+   id="shape55-71">
+			<title
+   id="title194">Msg.55</title>
+			<desc
+   id="desc196">ajouterLigneArticles(desc, quantité)</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(0,4,22,4)" />
+			<v:textRect
+   height="9.59626"
+   width="201.42"
+   cy="787.202"
+   cx="72.3392" />
+			<path
+   id="path198"
+   class="st10"
+   d="M 0,792 H 114.08 222.63" />
+			<text
+   id="text200"
+   v:langID="1033"
+   class="st2"
+   y="789.59998"
+   x="14.34"><v:paragraph
+   v:horizAlign="1" /><v:tabList />ajouterLigneArticles(desc, quantité)</text>		</g>
+		<g
+   transform="translate(497.797,-308.646)"
+   v:groupContext="shape"
+   v:mID="56"
+   id="shape56-77">
+			<title
+   id="title203">Sheet.56</title>
+			<desc
+   id="desc205">: Vente</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="15.435"
+   width="41.71"
+   cy="784.282"
+   cx="20.8537" />
+			<rect
+   id="rect207"
+   class="st6"
+   height="15.435"
+   width="41.7075"
+   y="776.565"
+   x="0" />
+			<text
+   id="text209"
+   v:langID="1033"
+   class="st2"
+   y="786.67999"
+   x="9.1899996"><v:paragraph
+   v:horizAlign="1" /><v:tabList />: Vente</text>		</g>
+		<g
+   transform="rotate(90,413.888,897.242)"
+   v:groupContext="shape"
+   v:mID="57"
+   id="shape57-80">
+			<title
+   id="title212">Sheet.57</title>
+			<path
+   id="path214"
+   class="st9"
+   d="M 0,792 H 77.46" />
+		</g>
+		<g
+   transform="rotate(90,515.8715,803.4285)"
+   v:groupContext="shape"
+   v:mID="5"
+   id="shape5-83">
+			<title
+   id="title217">Sheet.5</title>
+			<path
+   id="path219"
+   class="st9"
+   d="M 0,792 H 73.86" />
+		</g>
+		<g
+   transform="translate(502.312,-504.395)"
+   v:groupContext="shape"
+   v:mID="6"
+   id="shape6-86">
+			<title
+   id="title222">Sheet.6</title>
+			<desc
+   id="desc224">: Système</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="15.435"
+   width="45"
+   cy="784.283"
+   cx="22.5" />
+			<rect
+   id="rect226"
+   class="st6"
+   height="15.435"
+   width="45"
+   y="776.565"
+   x="0" />
+			<text
+   id="text228"
+   v:langID="1033"
+   class="st12"
+   y="786.67999"
+   x="4.7199998"><v:paragraph
+   v:horizAlign="1" /><v:tabList />: Système</text>		</g>
+		<g
+   transform="translate(320.074,-411.929)"
+   v:groupContext="shape"
+   v:mID="20"
+   id="shape20-89">
+			<title
+   id="title231">Sheet.20</title>
+			<desc
+   id="desc233">cas d’utilisation</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="15.75"
+   width="67.5"
+   cy="784.125"
+   cx="33.75" />
+			<rect
+   id="rect235"
+   class="st13"
+   height="15.75"
+   width="67.5"
+   y="776.25"
+   x="0" />
+			<text
+   id="text237"
+   v:langID="1033"
+   class="st12"
+   y="787.45001"
+   x="6.6300001"><v:paragraph
+   v:horizAlign="1" /><v:tabList />cas d’utilisation</text>		</g>
+		<g
+   transform="translate(414,-407.519)"
+   v:groupContext="shape"
+   v:mID="21"
+   id="shape21-92">
+			<title
+   id="title240">Sheet.21</title>
+			<desc
+   id="desc242">Diagrammes de séquence système</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="17.4375"
+   width="141.19"
+   cy="783.281"
+   cx="70.5938" />
+			<rect
+   id="rect244"
+   class="st13"
+   height="17.4375"
+   width="141.188"
+   y="774.56299"
+   x="0" />
+			<text
+   id="text246"
+   v:langID="1033"
+   class="st12"
+   y="785.76001"
+   x="7.9000001"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Diagrammes de séquence système</text>		</g>
+		<g
+   transform="translate(394.313,-470.519)"
+   v:groupContext="shape"
+   v:mID="34"
+   id="shape34-95">
+			<title
+   id="title249">Sheet.34</title>
+			<path
+   id="path251"
+   class="st14"
+   d="M 0,792 H 27.72" />
+		</g>
+		<g
+   transform="translate(391.361,-464.246)"
+   v:groupContext="shape"
+   v:mID="35"
+   id="shape35-101">
+			<title
+   id="title254">Sheet.35</title>
+			<desc
+   id="desc256">événements système</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="36"
+   width="56.96"
+   cy="774"
+   cx="28.4757" />
+			<rect
+   id="rect258"
+   class="st13"
+   height="36"
+   width="56.9515"
+   y="756"
+   x="0" />
+			<text
+   id="text262"
+   v:langID="1033"
+   class="st15"
+   y="771.59998"
+   x="6.6799998"><v:paragraph
+   v:horizAlign="1" /><v:tabList />événements  <tspan
+   id="tspan260"
+   class="st3"
+   dy="1.2em"
+   x="13.58">système</tspan></text>		</g>
+		<g
+   v:groupContext="group"
+   v:mID="36"
+   transform="translate(182.111,-429.272)"
+   id="group36-105">
+			<title
+   id="title265">Sheet.36</title>
+			<g
+   v:groupContext="group"
+   v:mID="37"
+   transform="translate(0,-33.5302)"
+   id="group37-106">
+				<title
+   id="title267">Actor.241</title>
+				<g
+   v:groupContext="group"
+   v:mID="38"
+   transform="translate(13.3135,-14.7928)"
+   id="group38-107">
+					<title
+   id="title269">Sheet.38</title>
+					<g
+   transform="translate(1.47928,-11.8342)"
+   v:groupContext="shape"
+   v:mID="39"
+   id="shape39-108">
+						<title
+   id="title271">Sheet.39</title>
+						<path
+   id="path273"
+   class="st1"
+   d="m 0,787.56 a 4.44,4.44 0 0 1 8.88,0 4.44,4.44 0 1 1 -8.88,0 z" />
+					</g>
+					<g
+   transform="translate(0,-10.3549)"
+   v:groupContext="shape"
+   v:mID="40"
+   id="shape40-110">
+						<title
+   id="title276">Sheet.40</title>
+						<path
+   id="path278"
+   class="st4"
+   d="M 0,792 H 11.83" />
+					</g>
+					<g
+   transform="rotate(90,8.8755,789.0415)"
+   v:groupContext="shape"
+   v:mID="41"
+   id="shape41-113">
+						<title
+   id="title281">Sheet.41</title>
+						<path
+   id="path283"
+   class="st4"
+   d="M 0,792 H 5.92" />
+					</g>
+					<g
+   transform="rotate(135,4.1844908,790.26625)"
+   v:groupContext="shape"
+   v:mID="46"
+   id="shape46-116">
+						<title
+   id="title286">Sheet.46</title>
+						<path
+   id="path288"
+   class="st4"
+   d="M 0,792 H 8.37" />
+					</g>
+					<g
+   transform="rotate(45,10.101684,796.18425)"
+   v:groupContext="shape"
+   v:mID="47"
+   id="shape47-119">
+						<title
+   id="title291">Sheet.47</title>
+						<path
+   id="path293"
+   class="st4"
+   d="M 0,792 H 8.37" />
+					</g>
+				</g>
+				<g
+   transform="translate(0,-5.3329)"
+   v:groupContext="shape"
+   v:mID="48"
+   id="shape48-122">
+					<title
+   id="title297">Sheet.48</title>
+					<desc
+   id="desc299">Caissier</desc>
+					<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+					<v:textRect
+   height="11.8342"
+   width="38.47"
+   cy="786.083"
+   cx="19.2306" />
+					<rect
+   id="rect301"
+   class="st16"
+   height="11.8342"
+   width="38.461201"
+   y="780.16602"
+   x="0" />
+					<text
+   id="text303"
+   v:langID="1033"
+   class="st17"
+   y="787.58002"
+   x="10.2"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Caissier</text>				</g>
+			</g>
+			<g
+   transform="translate(6.41019)"
+   v:groupContext="shape"
+   v:mID="54"
+   id="shape54-125">
+				<title
+   id="title307">Sheet.54</title>
+				<rect
+   id="rect309"
+   class="st6"
+   height="83.332497"
+   width="83.332497"
+   y="708.66803"
+   x="0" />
+			</g>
+			<g
+   v:groupContext="group"
+   v:mID="59"
+   id="group59-127">
+				<title
+   id="title312">Actor.250</title>
+				<g
+   v:groupContext="group"
+   v:mID="60"
+   transform="translate(13.3135,-14.7928)"
+   id="group60-128">
+					<title
+   id="title314">Sheet.60</title>
+					<g
+   transform="translate(1.47928,-11.8342)"
+   v:groupContext="shape"
+   v:mID="61"
+   id="shape61-129">
+						<title
+   id="title316">Sheet.61</title>
+						<path
+   id="path318"
+   class="st1"
+   d="m 0,787.56 a 4.44,4.44 0 0 1 8.88,0 4.44,4.44 0 1 1 -8.88,0 z" />
+					</g>
+					<g
+   transform="translate(0,-10.3549)"
+   v:groupContext="shape"
+   v:mID="62"
+   id="shape62-131">
+						<title
+   id="title321">Sheet.62</title>
+						<path
+   id="path323"
+   class="st4"
+   d="M 0,792 H 11.83" />
+					</g>
+					<g
+   transform="rotate(90,8.8755,789.0415)"
+   v:groupContext="shape"
+   v:mID="63"
+   id="shape63-134">
+						<title
+   id="title326">Sheet.63</title>
+						<path
+   id="path328"
+   class="st4"
+   d="M 0,792 H 5.92" />
+					</g>
+					<g
+   transform="rotate(135,4.1844908,790.26625)"
+   v:groupContext="shape"
+   v:mID="64"
+   id="shape64-137">
+						<title
+   id="title331">Sheet.64</title>
+						<path
+   id="path333"
+   class="st4"
+   d="M 0,792 H 8.37" />
+					</g>
+					<g
+   transform="rotate(45,10.101684,796.18425)"
+   v:groupContext="shape"
+   v:mID="65"
+   id="shape65-140">
+						<title
+   id="title336">Sheet.65</title>
+						<path
+   id="path338"
+   class="st4"
+   d="M 0,792 H 8.37" />
+					</g>
+				</g>
+				<g
+   v:groupContext="shape"
+   v:mID="67"
+   id="shape67-143">
+					<title
+   id="title342">Sheet.67</title>
+					<rect
+   id="rect344"
+   class="st16"
+   height="11.8342"
+   width="38.461201"
+   y="780.16602"
+   x="0" />
+				</g>
+			</g>
+			<g
+   transform="translate(44.8713,-54.4866)"
+   v:groupContext="shape"
+   v:mID="69"
+   id="shape69-145">
+				<title
+   id="title348">Use Case</title>
+				<desc
+   id="desc350">Traiter une vente</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="12.8204"
+   width="37.4"
+   cy="785.59"
+   cx="18.6963" />
+				<path
+   id="path352"
+   class="st1"
+   d="m 0,785.59 a 18.6963,6.41019 0 0 1 37.39,0 18.6963,6.41019 0 1 1 -37.39,0 z" />
+				<text
+   id="text356"
+   v:langID="1033"
+   class="st17"
+   y="784.09003"
+   x="6.6100001"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Traiter une <tspan
+   id="tspan354"
+   class="st3"
+   dy="1.2em"
+   x="12.58">vente</tspan></text>			</g>
+			<g
+   transform="translate(41.6663,-32.051)"
+   v:groupContext="shape"
+   v:mID="70"
+   id="shape70-149">
+				<title
+   id="title359">Use Case.259</title>
+				<path
+   id="path361"
+   class="st1"
+   d="m 0,785.59 a 14.425,6.4111233 0 0 1 28.85,0 14.425,6.4111233 0 1 1 -28.85,0 z" />
+			</g>
+			<g
+   transform="translate(54.3402,-9.76176)"
+   v:groupContext="shape"
+   v:mID="71"
+   id="shape71-151">
+				<title
+   id="title364">Use Case.260</title>
+				<path
+   id="path366"
+   class="st1"
+   d="m 0,785.59 a 14.425,6.4111233 0 0 1 28.85,0 14.425,6.4111233 0 1 1 -28.85,0 z" />
+			</g>
+			<g
+   transform="rotate(-11.3099,-276.89245,617.49794)"
+   v:groupContext="shape"
+   v:mID="72"
+   id="shape72-153">
+				<title
+   id="title369">Sheet.72</title>
+				<path
+   id="path371"
+   class="st4"
+   d="M 0,792 H 16.34" />
+			</g>
+			<g
+   transform="rotate(19.44,88.466475,858.7043)"
+   v:groupContext="shape"
+   v:mID="73"
+   id="shape73-156">
+				<title
+   id="title374">Sheet.73</title>
+				<path
+   id="path376"
+   class="st4"
+   d="M 0,792 H 28.89" />
+			</g>
+			<g
+   transform="rotate(-26.5651,-40.686661,721.47634)"
+   v:groupContext="shape"
+   v:mID="74"
+   id="shape74-159">
+				<title
+   id="title379">Sheet.74</title>
+				<path
+   id="path381"
+   class="st4"
+   d="M 0,792 H 19.71" />
+			</g>
+			<g
+   transform="rotate(41.9872,89.594423,800.73987)"
+   v:groupContext="shape"
+   v:mID="75"
+   id="shape75-162">
+				<title
+   id="title384">Sheet.75</title>
+				<path
+   id="path386"
+   class="st4"
+   d="M 0,792 H 21.56" />
+			</g>
+		</g>
+		<g
+   transform="rotate(90,470.6735,771.5665)"
+   v:groupContext="shape"
+   v:mID="76"
+   id="shape76-165">
+			<title
+   id="title390">Sheet.76</title>
+			<path
+   id="path392"
+   class="st9"
+   d="M 0,792 H 60.53" />
+		</g>
+		<g
+   v:groupContext="group"
+   v:mID="77"
+   transform="translate(428.538,-491.625)"
+   id="group77-168">
+			<title
+   id="title395">Actor</title>
+			<g
+   v:groupContext="group"
+   v:mID="78"
+   transform="translate(13.5,-15)"
+   id="group78-169">
+				<title
+   id="title397">Sheet.78</title>
+				<g
+   transform="translate(1.5,-12)"
+   v:groupContext="shape"
+   v:mID="79"
+   id="shape79-170">
+					<title
+   id="title399">Sheet.79</title>
+					<path
+   id="path401"
+   class="st1"
+   d="m 0,787.5 a 4.5,4.5 0 0 1 9,0 4.5,4.5 0 1 1 -9,0 z" />
+				</g>
+				<g
+   transform="translate(0,-10.5)"
+   v:groupContext="shape"
+   v:mID="80"
+   id="shape80-172">
+					<title
+   id="title404">Sheet.80</title>
+					<path
+   id="path406"
+   class="st4"
+   d="M 0,792 H 12" />
+				</g>
+				<g
+   transform="rotate(90,9,789)"
+   v:groupContext="shape"
+   v:mID="81"
+   id="shape81-175">
+					<title
+   id="title409">Sheet.81</title>
+					<path
+   id="path411"
+   class="st4"
+   d="M 0,792 H 6" />
+				</g>
+				<g
+   transform="rotate(135,4.2425593,790.24344)"
+   v:groupContext="shape"
+   v:mID="82"
+   id="shape82-178">
+					<title
+   id="title414">Sheet.82</title>
+					<path
+   id="path416"
+   class="st4"
+   d="M 0,792 H 8.49" />
+				</g>
+				<g
+   transform="rotate(45,10.243374,796.24294)"
+   v:groupContext="shape"
+   v:mID="83"
+   id="shape83-181">
+					<title
+   id="title419">Sheet.83</title>
+					<path
+   id="path421"
+   class="st4"
+   d="M 0,792 H 8.49" />
+				</g>
+			</g>
+			<g
+   v:groupContext="shape"
+   v:mID="84"
+   id="shape84-184">
+				<title
+   id="title425">Sheet.84</title>
+				<desc
+   id="desc427">: Cassier</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="12"
+   width="39"
+   cy="786"
+   cx="19.5" />
+				<rect
+   id="rect429"
+   class="st18"
+   height="12"
+   width="39"
+   y="780"
+   x="0" />
+				<text
+   id="text431"
+   v:langID="1033"
+   class="st19"
+   y="787.79999"
+   x="7.6599998"><v:paragraph
+   v:horizAlign="1" /><v:tabList />: Cassier</text>			</g>
+		</g>
+		<g
+   transform="translate(271.688,-471.902)"
+   v:groupContext="shape"
+   v:mID="85"
+   id="shape85-187">
+			<title
+   id="title435">Sheet.85</title>
+			<desc
+   id="desc437">noms des cas d’utilisation</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="36"
+   width="47.68"
+   cy="774"
+   cx="23.8368" />
+			<rect
+   id="rect439"
+   class="st13"
+   height="36"
+   width="47.6735"
+   y="756"
+   x="0" />
+			<text
+   id="text445"
+   v:langID="1033"
+   class="st15"
+   y="766.79999"
+   x="14.06"><v:paragraph
+   v:horizAlign="1" /><v:tabList />noms<v:newlineChar /><tspan
+   id="tspan441"
+   class="st3"
+   dy="1.2em"
+   x="10.05">des cas </tspan><tspan
+   id="tspan443"
+   class="st3"
+   dy="1.2em"
+   x="4.0500002">d</tspan>’utilisation</text>		</g>
+		<g
+   transform="translate(283.361,-471.902)"
+   v:groupContext="shape"
+   v:mID="86"
+   id="shape86-192">
+			<title
+   id="title448">Sheet.86</title>
+			<path
+   id="path450"
+   class="st14"
+   d="M 0,792 H 27.72" />
+		</g>
+		<g
+   transform="translate(186.482,-411.929)"
+   v:groupContext="shape"
+   v:mID="87"
+   id="shape87-197">
+			<title
+   id="title453">Sheet.87</title>
+			<desc
+   id="desc455">Diagrammes de cas d’utilisation</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="15.75"
+   width="87.75"
+   cy="784.125"
+   cx="43.875" />
+			<rect
+   id="rect457"
+   class="st13"
+   height="15.75"
+   width="87.75"
+   y="776.25"
+   x="0" />
+			<text
+   id="text461"
+   v:langID="1033"
+   class="st12"
+   y="787.45001"
+   x="15.64"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Diagrammes de<v:newlineChar /><tspan
+   id="tspan459"
+   class="st3"
+   dy="1.2em"
+   x="16.75">cas d</tspan>’utilisation</text>		</g>
+		<g
+   transform="translate(67.5,-375.75)"
+   v:groupContext="shape"
+   v:mID="141"
+   id="shape141-201">
+			<title
+   id="title464">Sheet.141</title>
+			<desc
+   id="desc466">les classes de conception découvertes lors des réalisations d...</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="29.25"
+   width="72"
+   cy="777.375"
+   cx="36" />
+			<rect
+   id="rect468"
+   class="st13"
+   height="29.25"
+   width="72"
+   y="762.75"
+   x="0" />
+			<text
+   id="text486"
+   v:langID="1033"
+   class="st20"
+   y="741.38"
+   x="25.24"><v:paragraph
+   v:horizAlign="2" /><v:tabList />les classes de<v:newlineChar /><tspan
+   id="tspan470"
+   class="st3"
+   dy="1.2em"
+   x="32.459999">conception<v:newlineChar /></tspan><tspan
+   id="tspan472"
+   class="st3"
+   dy="1.2em"
+   x="15.17">découvertes lors </tspan><tspan
+   id="tspan474"
+   class="st3"
+   dy="1.2em"
+   x="7.98">des réalisations de </tspan><tspan
+   id="tspan476"
+   class="st3"
+   dy="1.2em"
+   x="17.27">cas d</tspan>’utilisation <tspan
+   id="tspan478"
+   class="st3"
+   dy="1.2em"
+   x="26.9">peuvent être </tspan><tspan
+   id="tspan480"
+   class="st3"
+   dy="1.2em"
+   x="7.0100002">résumées dans des </tspan><tspan
+   id="tspan482"
+   class="st3"
+   dy="1.2em"
+   x="17.639999">diagrammes de </tspan><tspan
+   id="tspan484"
+   class="st3"
+   dy="1.2em"
+   x="45.560001">classes</tspan></text>		</g>
+		<g
+   transform="translate(322.087,-429.929)"
+   v:groupContext="shape"
+   v:mID="16"
+   id="shape16-212">
+			<title
+   id="title489">Sheet.16</title>
+			<desc
+   id="desc491">Traiter une vente 1. Le Client arrive ... 2. Le Caissier débu...</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="80.6025"
+   width="73.92"
+   cy="751.699"
+   cx="36.9566" />
+			<rect
+   id="rect493"
+   class="st1"
+   height="80.602501"
+   width="73.9132"
+   y="711.39801"
+   x="0" />
+			<text
+   id="text503"
+   v:langID="1033"
+   class="st20"
+   y="730.09998"
+   x="4"><v:paragraph /><v:tabList />Traiter une vente<v:newlineChar /><v:newlineChar /><tspan
+   id="tspan495"
+   class="st21"
+   dy="2.4000001em"
+   x="4">1. Le Client arrive ...<v:newlineChar /></tspan><tspan
+   id="tspan497"
+   class="st21"
+   dy="1.2em"
+   x="4">2. Le Caissier début </tspan><tspan
+   id="tspan499"
+   class="st21"
+   dy="1.2em"
+   x="4">une nouvelle Vente.<v:newlineChar /></tspan><tspan
+   id="tspan501"
+   class="st21"
+   dy="1.2em"
+   x="4">3. ...</tspan></text>		</g>
+		<g
+   transform="translate(167.249,-347.625)"
+   v:groupContext="shape"
+   v:mID="146"
+   id="shape146-219">
+			<title
+   id="title506">Sheet.146</title>
+			<desc
+   id="desc508">réalisation des cas d’utilisation avec des diagrammes d’inter...</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="25.3275"
+   width="94.13"
+   cy="779.336"
+   cx="47.0639" />
+			<rect
+   id="rect510"
+   class="st13"
+   height="25.327499"
+   width="94.1278"
+   y="766.672"
+   x="0" />
+			<text
+   id="text516"
+   v:langID="1033"
+   class="st20"
+   y="772.14001"
+   x="4"><v:paragraph /><v:tabList />réalisation des cas <tspan
+   id="tspan512"
+   class="st3"
+   dy="1.2em"
+   x="4">d</tspan>’utilisation avec des <tspan
+   id="tspan514"
+   class="st3"
+   dy="1.2em"
+   x="4">diagrammes d</tspan>’interaction</text>		</g>
+		<g
+   transform="matrix(0,1,1,0,-631.688,201.375)"
+   v:groupContext="shape"
+   v:mID="147"
+   id="shape147-224">
+			<title
+   id="title519">Sheet.147</title>
+			<path
+   id="path521"
+   class="st22"
+   d="m 0,792 a 286.645,44.8784 170.59 0 1 279.53,-7.27 l 0.17,0.32" />
+		</g>
+		<g
+   v:groupContext="group"
+   v:mID="44"
+   transform="translate(209.812,-133.594)"
+   id="group44-230">
+			<title
+   id="title524">Three</title>
+			<g
+   transform="translate(0,-54.8)"
+   v:groupContext="shape"
+   v:mID="58"
+   id="shape58-231">
+				<title
+   id="title526">Sheet.58</title>
+				<desc
+   id="desc528">Registre</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="87.75"
+   cy="783"
+   cx="43.875" />
+				<rect
+   id="rect530"
+   class="st1"
+   height="18"
+   width="87.75"
+   y="774"
+   x="0" />
+				<text
+   id="text532"
+   v:langID="1033"
+   class="st2"
+   y="785.40002"
+   x="30.620001"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Registre</text>			</g>
+			<g
+   transform="translate(0,-36.8)"
+   v:groupContext="shape"
+   v:mID="88"
+   id="shape88-234">
+				<title
+   id="title535">Sheet.88</title>
+				<desc
+   id="desc537">...</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="87.75"
+   cy="783"
+   cx="43.875" />
+				<rect
+   id="rect539"
+   class="st1"
+   height="18"
+   width="87.75"
+   y="774"
+   x="0" />
+				<text
+   id="text541"
+   v:langID="1033"
+   class="st2"
+   y="785.40002"
+   x="4.7199998"><v:paragraph
+   v:indentLeft="0.72" /><v:tabList />...</text>			</g>
+			<g
+   transform="translate(0,0.00349014)"
+   v:groupContext="shape"
+   v:mID="89"
+   id="shape89-237">
+				<title
+   id="title544">Sheet.89</title>
+				<desc
+   id="desc546">créerNouvelleVente() saisirArticle(...) ...</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="36.8035"
+   width="87.75"
+   cy="773.598"
+   cx="43.875" />
+				<rect
+   id="rect548"
+   class="st1"
+   height="36.803501"
+   width="87.75"
+   y="755.19702"
+   x="0" />
+				<text
+   id="text554"
+   v:langID="1033"
+   class="st2"
+   y="766.40002"
+   x="4.7199998"><v:paragraph
+   v:indentLeft="0.72" /><v:tabList />créerNouvelleVente()<v:newlineChar /><tspan
+   id="tspan550"
+   class="st3"
+   dy="1.2em"
+   x="4.7199998">saisirArticle(...)<v:newlineChar /></tspan><tspan
+   id="tspan552"
+   class="st3"
+   dy="1.2em"
+   x="4.7199998">...</tspan></text>			</g>
+		</g>
+		<g
+   v:groupContext="group"
+   v:mID="90"
+   transform="translate(371.812,-138.394)"
+   id="group90-242">
+			<title
+   id="title558">Three.56</title>
+			<g
+   transform="translate(0,-45.2)"
+   v:groupContext="shape"
+   v:mID="91"
+   id="shape91-243">
+				<title
+   id="title560">Sheet.91</title>
+				<desc
+   id="desc562">CatalogueProduits</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="137.26"
+   cy="783"
+   cx="68.625" />
+				<rect
+   id="rect564"
+   class="st1"
+   height="18"
+   width="137.25"
+   y="774"
+   x="0" />
+				<text
+   id="text566"
+   v:langID="1033"
+   class="st2"
+   y="785.40002"
+   x="38.720001"><v:paragraph
+   v:horizAlign="1" /><v:tabList />CatalogueProduits</text>			</g>
+			<g
+   transform="translate(0,-27.2)"
+   v:groupContext="shape"
+   v:mID="92"
+   id="shape92-246">
+				<title
+   id="title569">Sheet.92</title>
+				<desc
+   id="desc571">...</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="137.26"
+   cy="783"
+   cx="68.625" />
+				<rect
+   id="rect573"
+   class="st1"
+   height="18"
+   width="137.25"
+   y="774"
+   x="0" />
+				<text
+   id="text575"
+   v:langID="1033"
+   class="st2"
+   y="785.40002"
+   x="4.7199998"><v:paragraph
+   v:indentLeft="0.72" /><v:tabList />...</text>			</g>
+			<g
+   transform="translate(0,0.00352676)"
+   v:groupContext="shape"
+   v:mID="93"
+   id="shape93-249">
+				<title
+   id="title578">Sheet.93</title>
+				<desc
+   id="desc580">getDescription(...): DescriptionProduit ...</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="27.2035"
+   width="137.26"
+   cy="778.398"
+   cx="68.625" />
+				<rect
+   id="rect582"
+   class="st1"
+   height="27.203501"
+   width="137.25"
+   y="764.79602"
+   x="0" />
+				<text
+   id="text586"
+   v:langID="1033"
+   class="st2"
+   y="776"
+   x="4.7199998"><v:paragraph
+   v:indentLeft="0.72" /><v:tabList />getDescription(...): DescriptionProduit<v:newlineChar /><tspan
+   id="tspan584"
+   class="st3"
+   dy="1.2em"
+   x="4.7199998">...</tspan></text>			</g>
+		</g>
+		<g
+   transform="translate(297.562,-169.994)"
+   v:groupContext="shape"
+   v:mID="94"
+   id="shape94-253">
+			<title
+   id="title590">Navigate</title>
+			<path
+   id="path592"
+   class="st23"
+   d="M 0,792 H 74.25" />
+		</g>
+		<g
+   transform="translate(371.812,-154.194)"
+   v:groupContext="shape"
+   v:mID="95"
+   id="shape95-259">
+			<title
+   id="title595">1</title>
+			<desc
+   id="desc597">1</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="17.6036"
+   width="36"
+   cy="784.1"
+   cx="-13.5" />
+			<path
+   id="path599"
+   class="st5"
+   d="m 0,792 h -13.5 v -7.9 -7.9 H 0" />
+			<text
+   id="text601"
+   v:langID="1033"
+   class="st2"
+   y="786.5"
+   x="-15.53"><v:paragraph
+   v:horizAlign="1" /><v:tabList />1</text>		</g>
+		<g
+   transform="translate(245.813,-571.625)"
+   v:groupContext="shape"
+   v:mID="150"
+   id="shape150-263">
+			<title
+   id="title604">Sheet.150</title>
+			<desc
+   id="desc606">Capturée-dans</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="20"
+   width="59.35"
+   cy="782"
+   cx="29.6719" />
+			<rect
+   id="rect608"
+   class="st13"
+   height="20"
+   width="59.3438"
+   y="772"
+   x="0" />
+			<text
+   id="text610"
+   v:langID="1033"
+   class="st2"
+   y="785.59998"
+   x="5.8000002"><v:paragraph
+   v:horizAlign="1" /><v:tabList />Capturée-dans</text>		</g>
+		<g
+   v:groupContext="group"
+   v:mID="153"
+   transform="translate(476.437,-569.25)"
+   id="group153-266">
+			<title
+   id="title613">Two.153</title>
+			<g
+   transform="translate(0,-18)"
+   v:groupContext="shape"
+   v:mID="154"
+   id="shape154-267">
+				<title
+   id="title615">Sheet.154</title>
+				<desc
+   id="desc617">. . .</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="52.88"
+   cy="783"
+   cx="26.4375" />
+				<rect
+   id="rect619"
+   class="st1"
+   height="18"
+   width="52.875"
+   y="774"
+   x="0" />
+				<text
+   id="text621"
+   v:langID="1033"
+   class="st2"
+   y="785.40002"
+   x="21.6"><v:paragraph
+   v:horizAlign="1" /><v:tabList />. . .</text>			</g>
+			<g
+   v:groupContext="shape"
+   v:mID="155"
+   id="shape155-270">
+				<title
+   id="title624">Sheet.155</title>
+				<desc
+   id="desc626">. . .</desc>
+				<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+				<v:textRect
+   height="18"
+   width="52.88"
+   cy="783"
+   cx="26.4375" />
+				<rect
+   id="rect628"
+   class="st1"
+   height="18"
+   width="52.875"
+   y="774"
+   x="0" />
+				<text
+   id="text630"
+   v:langID="1033"
+   class="st2"
+   y="785.40002"
+   x="4.7199998"><v:paragraph
+   v:indentLeft="0.72" /><v:tabList />. . .</text>			</g>
+		</g>
+		<g
+   transform="translate(452.044,-587.25)"
+   v:groupContext="shape"
+   v:mID="156"
+   id="shape156-273">
+			<title
+   id="title634">Univ Assoc.156</title>
+			<path
+   id="path636"
+   class="st4"
+   d="M 0,792 H 12.2 24.39" />
+		</g>
+		<g
+   transform="translate(450.75,-477.75)"
+   v:groupContext="shape"
+   v:mID="160"
+   id="shape160-276">
+			<title
+   id="title639">Msg.160</title>
+			<desc
+   id="desc641">créer NouvelleVente()</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(0,4,22,4)" />
+			<v:textRect
+   height="41.4507"
+   width="67.54"
+   cy="792"
+   cx="36.7559" />
+			<path
+   id="path643"
+   class="st10"
+   d="M 0,792 H 38.25 70.98" />
+			<text
+   id="text647"
+   v:langID="1033"
+   class="st2"
+   y="778.46997"
+   x="28.299999"><v:paragraph
+   v:horizAlign="1" /><v:tabList />créer<v:lf /><tspan
+   id="tspan645"
+   class="st3"
+   dy="1.223em"
+   x="10.22">NouvelleVente()</tspan></text>		</g>
+		<g
+   transform="translate(195.837,-535.093)"
+   v:groupContext="shape"
+   v:mID="161"
+   id="shape161-283">
+			<title
+   id="title650">Sheet.161</title>
+			<desc
+   id="desc652">concepts du domaine</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="36"
+   width="96.22"
+   cy="774"
+   cx="48.1099" />
+			<rect
+   id="rect654"
+   class="st13"
+   height="36"
+   width="96.219704"
+   y="756"
+   x="0" />
+			<text
+   id="text656"
+   v:langID="1033"
+   class="st15"
+   y="776.40002"
+   x="10.08"><v:paragraph
+   v:horizAlign="1" /><v:tabList />concepts du domaine</text>		</g>
+		<g
+   transform="rotate(-114.696,-7.7205827,432.93402)"
+   v:groupContext="shape"
+   v:mID="162"
+   id="shape162-286">
+			<title
+   id="title659">Sheet.162</title>
+			<path
+   id="path661"
+   class="st14"
+   d="M 0,792 H 34.13" />
+		</g>
+		<g
+   transform="translate(288.113,-315.072)"
+   v:groupContext="shape"
+   v:mID="164"
+   id="shape164-291">
+			<title
+   id="title664">Msg.164</title>
+			<desc
+   id="desc666">create</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(0,4,22,4)" />
+			<v:textRect
+   height="10.4003"
+   width="183.46"
+   cy="787.566"
+   cx="107.279" />
+			<path
+   id="path668"
+   class="st25"
+   d="m 0,792 h 104.06 98.55" />
+			<text
+   id="text670"
+   v:langID="1033"
+   class="st2"
+   y="789.57001"
+   x="96.959999"><v:paragraph
+   v:horizAlign="1" /><v:tabList />create</text>		</g>
+		<g
+   transform="matrix(0.54881274,0.83594532,0.83594532,-0.54881274,-429.175,832.148)"
+   v:groupContext="shape"
+   v:mID="169"
+   id="shape169-297">
+			<title
+   id="title673">Sheet.169</title>
+			<path
+   id="path675"
+   class="st22"
+   d="m 0,792 a 40.9738,8.98316 166.22 0 1 32.53,-3.7 l 0.32,0.16" />
+		</g>
+		<g
+   transform="translate(281.813,-312.187)"
+   v:groupContext="shape"
+   v:mID="174"
+   id="shape174-302">
+			<title
+   id="title678">Sheet.174</title>
+			<rect
+   id="rect680"
+   class="st26"
+   height="15.1875"
+   width="6.75"
+   y="776.81299"
+   x="0" />
+		</g>
+		<g
+   transform="translate(288.563,-244.125)"
+   v:groupContext="shape"
+   v:mID="178"
+   id="shape178-304">
+			<title
+   id="title683">Msg.178</title>
+			<desc
+   id="desc685">. . .</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(0,4,22,4)" />
+			<v:textRect
+   height="13.5"
+   width="63.96"
+   cy="787.5"
+   cx="31.9799" />
+			<path
+   id="path687"
+   class="st10"
+   d="m 0,792 h 36.23 30.7" />
+			<text
+   id="text689"
+   v:langID="1033"
+   class="st2"
+   y="787.95001"
+   x="27.139999"><v:paragraph
+   v:horizAlign="1" /><v:tabList />. . .</text>		</g>
+		<g
+   transform="translate(430.313,-265.5)"
+   v:groupContext="shape"
+   v:mID="179"
+   id="shape179-310">
+			<title
+   id="title692">Sheet.179</title>
+			<rect
+   id="rect694"
+   class="st26"
+   height="10.9688"
+   width="6.75"
+   y="781.03101"
+   x="0" />
+		</g>
+		<g
+   transform="translate(281.813,-239.625)"
+   v:groupContext="shape"
+   v:mID="175"
+   id="shape175-312">
+			<title
+   id="title697">Sheet.175</title>
+			<rect
+   id="rect699"
+   class="st26"
+   height="54"
+   width="6.75"
+   y="738"
+   x="0" />
+		</g>
+		<g
+   transform="translate(515.813,-247.5)"
+   v:groupContext="shape"
+   v:mID="180"
+   id="shape180-314">
+			<title
+   id="title702">Sheet.180</title>
+			<rect
+   id="rect704"
+   class="st26"
+   height="10.9688"
+   width="6.75"
+   y="781.03101"
+   x="0" />
+		</g>
+		<g
+   transform="translate(371.812,-185.794)"
+   v:groupContext="shape"
+   v:mID="185"
+   id="shape185-316">
+			<title
+   id="title707">1..16</title>
+			<desc
+   id="desc709">catalogue</desc>
+			<v:textBlock
+   v:margins="rect(4,4,4,4)" />
+			<v:textRect
+   height="17.6036"
+   width="41.55"
+   cy="795.846"
+   cx="-20.7711" />
+			<path
+   id="path711"
+   class="st5"
+   d="m 0,792 h -1.59 -14.3 v 68.79" />
+			<text
+   id="text713"
+   v:langID="1033"
+   class="st2"
+   y="798.25"
+   x="-36.639999"><v:paragraph
+   v:horizAlign="1" /><v:tabList />catalogue</text>		</g>
+		<g
+   transform="translate(450,-454.5)"
+   v:groupContext="shape"
+   v:mID="188"
+   id="shape188-320">
+			<title
+   id="title716">Msg.188</title>
+			<desc
+   id="desc718">saisirArticle (code, quantité)</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(0,4,22,4)" />
+			<v:textRect
+   height="41.4507"
+   width="67.54"
+   cy="792"
+   cx="36.7559" />
+			<path
+   id="path720"
+   class="st10"
+   d="M 0,792 H 38.25 70.98" />
+			<text
+   id="text726"
+   v:langID="1033"
+   class="st2"
+   y="778.46997"
+   x="17.91"><v:paragraph
+   v:horizAlign="1" /><v:tabList />saisirArticle<v:lf /><tspan
+   id="tspan722"
+   class="st3"
+   dy="1.223em"
+   x="10.73">(code, quantit</tspan><tspan
+   id="tspan724"
+   v:langID="3084"
+   class="st3">é)</tspan></text>		</g>
+		<g
+   transform="translate(450,-441)"
+   v:groupContext="shape"
+   v:mID="189"
+   id="shape189-328">
+			<title
+   id="title729">Msg.189</title>
+			<path
+   id="path731"
+   class="st10"
+   d="M 0,792 H 38.25 70.98" />
+		</g>
+		<g
+   transform="translate(171,-326.786)"
+   v:groupContext="shape"
+   v:mID="190"
+   id="shape190-333">
+			<title
+   id="title734">Msg.190</title>
+			<desc
+   id="desc736">créerNouvelleVente</desc>
+			<v:textBlock
+   v:verticalAlign="0"
+   v:margins="rect(0,4,22,4)" />
+			<v:textRect
+   height="31.6036"
+   width="98.3"
+   cy="795.094"
+   cx="53.9007" />
+			<path
+   id="path738"
+   class="st10"
+   d="m 0,792 h 55.67 50.16" />
+			<text
+   id="text740"
+   v:langID="3084"
+   class="st2"
+   y="786.48999"
+   x="21.33"><v:paragraph
+   v:horizAlign="1" /><v:tabList />créerNouvelleVente</text>		</g>
+	</g>
+</svg>

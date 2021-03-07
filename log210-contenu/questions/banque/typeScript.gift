@@ -1,0 +1,10 @@
+$CATEGORY: $course$/Typescript
+
+// [tag:seance05]
+::ArrowFunction equivalent classic function::[html]Quel est l'équivalent de <br>function bonjour(qui\: string) \{<br>&nbsp;&nbsp;&nbsp;return console.log("Bonjour " + qui); <br> \}{
+	=[html]const bonjour \= (qui\: string) \=&gt; console.log("Bonjour " + qui)
+	~[html]const bonjour \= (qui\: string) \=&gt; return console.log("Bonjour " + qui)
+	~[html](qui\: string) \=&gt; console.log("Bonjour " + qui)
+}
+
+

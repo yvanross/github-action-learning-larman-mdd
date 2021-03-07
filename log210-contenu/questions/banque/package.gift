@@ -1,0 +1,61 @@
+$CATEGORY: $course$/Package
+
+
+// [tag:seance10]
+::Caractéristiques package stable::[html]<p>Quelles sont les caractéristiques d'un package stable?</p>{
+	~%25%<p>Il contient uniquement ou essentiellement des interfaces et des classes abstraites.</p>
+	~%25%<p>Il est indépendant des autres packages, ne dépend que de packages stables ou encapsule ses dépendances de sorte que les dépendants ne soient pas affectés par ses modifications.</p>
+	~%25%<p>Il contient du code relativement stable, car il a été testé et optimisé avant livraison.</p>
+	~%25%<p>Il est expressément conçu pour changer lentement.</p>
+}
+
+// [tag:seance10]
+::Limiter dépendances avec fabrications::[html]<p>Quel est le problème avec le couplage entre les packages dans la figure suivante\:</p><p><img src\="https\://www.plantuml.com/plantuml/img/LOqn3i8m34Ltdy8dw16G43CIOc1YCUbNiHf7KHA62d6WdeEBuO52ktYmt_EhewOiHOnhco9y5WtjOP7kseDXkKrii1jAfInXb05yGMge_2Jc4ALMFcDGDq4l-a4dKPY3QsxPxG_bFVVQDhmN_8caW9Lnb9nHhcantVZMksxtRz3Qtbm-" alt\="Image PlantUML" /></p>{
+	=<p>Les implémentations de Paiements (classes concrètes) devraient être masquées des packages Ventes et Persistance pour respecter le principe GRASP de Protection des variations.</p>
+	~<p>Le couplage est dans le mauvais sens. Le package Paiements devrait dépendre de Ventes et de Persistance. </p>
+	~<p>Il manque les classes PaiementParChèque et PaiementEnEspèces dans le package Paiements.</p>
+	~<p>Il devrait y avoir une dépendance cyclique entre les packages. Il manque les liens de couplage de Paiements vers Ventes et vers Persistance.</p>
+}
+
+// [tag:seance10]
+::Limiter dépendances avec fabrications (objets de domaine)::[html]<p>Quel est la <em>solution</em> à ce problème avec le couplage entre les packages dans la figure suivante\:</p><p><img src\="https\://www.plantuml.com/plantuml/img/LOqn3i8m34Ltdy8dw16G43CIOc1YCUbNiHf7KHA62d6WdeEBuO52ktYmt_EhewOiHOnhco9y5WtjOP7kseDXkKrii1jAfInXb05yGMge_2Jc4ALMFcDGDq4l-a4dKPY3QsxPxG_bFVVQDhmN_8caW9Lnb9nHhcantVZMksxtRz3Qtbm-" alt\="Image PlantUML" /></p>{
+	=<p>Introduire un nouveau package CréationObjetsDuDomaine avec les interfaces et les fabriques. Ainsi, Ventes et Persistance ignorent les détails de Paiements.</p>
+	~<p>Factoriser Ventes et Persistance dans un même package. Ainsi on élimine un lien de couplage entre packages. </p>
+	~<p>On doit calculer la <em>cohésion relationnelle</em> de chaque package pour décider s'il devrait y avoir de la dépendance cyclique. </p>
+	~<p>On applique le patron MVC pour régler le problème de couplage dans le mauvais sens.</p>
+}
+
+// [tag:seance10]
+::Principes d'organisation de packages::[html]<p>Quels sont les principes d'organisation de packages présentés dans les lectures?</p>{
+	~%16.66667%<p>Organiser les packages en partitions verticales et horizontales fonctionnellement cohésives</p>
+	~%16.66667%<p>Packager une famille d'interfaces</p>
+	~%16.66667%<p>Créer un package par tâche et par groupe de classes instables</p>
+	~%16.66667%<p>Factoriser les types indépendants</p>
+	~%16.66667%<p>Utiliser les Fabrications pour limiter la dépendance aux packages concrets</p>
+	~%16.66667%<p>Pas de cycles dans les packages</p>
+	~%-25%<p>Packager les classes par cas d'utilisation</p>
+	~%-25%<p>Pas de couplage dans les packages</p>
+	~%-25%<p>Pas de polymorphisme dans les packages </p>
+}
+
+// [tag:seance10]
+::Caractéristiques package stable::[html]<p>Quelles sont les caractéristiques d’un package stable?</p>{
+	~%25%<p>Il contient uniquement ou essentiellement des interfaces et des classes abstraites.</p>
+	~%25%<p>Il est indépendant des autres packages, ne dépend que de packages stables ou encapsule ses dépendances de sorte que les dépendants ne soient pas affectés par ses modifications.</p>
+	~%25%<p>Il contient du code relativement stable, car il a été testé et optimisé avant livraison.</p>
+	~%25%<p>Il est expressément conçu pour changer lentement.</p>
+}
+
+// [tag:seance10]
+::Valeur faible de CR::[html]<p>Que signifie une valeur faible de cohésion relationnelle?</p>{
+	~%33.33333%<p>Il y a peu de liens entre les types du package. Le package est possiblement mal organisé.</p>
+	~%33.33333%<p>Le package pourrait consister principalement des classes utilitaires, sans lien.</p>
+	~%33.33333%<p>Il existe quelques agrégats de sous-ensembles à CR élevé, mais le CR du package est diminué à cause des autres classes principalement sans lien.</p>
+	~%-33.33333%<p>Le package contient des entités avec beaucoup de couplage entre eux.</p>
+}
+
+// [tag:seance10]
+::Responsabilité et stabilité::[html]<p>Un package <em>responsable</em> est un package sur lequel peu de classes dépendent. </p>{
+	FALSE#<p>Incorrect. Les packages les plus responsables doivent être les plus stables, puisque les autres entités dépendent beaucoup d'eux.</p>#<p>Correct. Les packages les plus responsables doivent être les plus stables, puisque les autres entités dépendent beaucoup d'eux.</p>}
+
+

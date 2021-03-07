@@ -1,0 +1,234 @@
+$CATEGORY: $course$/Intra
+
+
+// [tag:Intra]
+::Qu'est-ce qui n'est pas une approche pour gérer la complexité inhérente?::Qu'est-ce qui n'est pas une approche pour gérer la complexité inhérente?{
+	~Masquage de l’information
+	~Encapsulation
+	=Ramasse-miettes (garbage collection)
+	~Abstraction
+	~Généralisation
+}
+
+// [tag:intra-dessin]
+::MDD Simple::[markdown]Dessiner un modèle du domain simple représentant les informations suivantes\:
+- un ordinateur, ayant un nom (ex. "iPad") et une capacité de mémoire en gigaoctets (ex. 8 Go) 
+- un utilisateur, ayant un nom (ex. "Michel Tremblay") et une année de naissance.
+- certains utilisateurs étudient en ligne avec un ou plusieurs ordinateurs.
+{}
+
+// [tag:Intra]
+::Sens "affecter les responsabilités"::[html]<p>Lorsqu'on dit « affecter les responsabilités » dans le contexte des GRASP, de quoi s'agit-il dans le contexte de la programmation?</p>{
+	=<p>Décider où placer une ou plusieurs méthodes (dans quelle classe logicielle).</p>#<p>Correct. Une méthode est la forme concrète d'une responsabilité d'une classe.</p>
+	~<p>Décider quelles sont les associations entre les classes.</p>#<p>Incorrect. Bien que les décisions sur les associations entre les classes soient importantes, cela n'est pas l'idée principale des "responsabilités" dans le contexte des GRASP.</p>
+	~<p>Décider qui va programmer les classes.</p>#<p>Incorrect. Le sens du terme "responsabilité" avec GRASP n'est pas lié aux personnes, mais aux classes logicielles.</p>
+	~<p>Décider qui sera juridiquement responsable si un logiciel se plante.</p>#<p>Incorrect. Le sens du terme <em>responsabilité</em> avec GRASP n'est pas lié aux lois. C'est une métaphore pour faciliter la conception orientée objets. On pense aux objets comme s'ils étaient des personnes qui collaborent pour réaliser des tâches. Chacun a des responsabilités claires et bien organisées. </p>
+}
+
+// [tag:Intra]
+::MDD Justification d'association::[html]<p>Une association entre deux classes conceptuelles dans le modèle du domaine est justifiée par\:</p>{
+	~%50%<p>le besoin de conserver la mémoire de leur relation.</p>#<p>C'est correct. L'association existe lorsqu'il est indispensable de mémoriser le fait qu'une instance de classe conceptuelle est associée à une autre instance de classe conceptuelle.&nbsp;</p>
+	~%-50%<p>une association dans la vraie vie. Si une classe conceptuelle est logiquement associée à une autre classe conceptuelle dans la vraie vie, alors on met une association entre les deux classes dans le modèle du domaine.</p>#<p>C'est incorrect. Pour éviter des informations superflues dans le modèle du domaine, on ne fait une association entre deux objets que si on a besoin de mémoriser ce fait dans le modèle.</p>
+	~%50%<p>le fait qu'il s'agisse d'une association dérivée de la liste des associations courantes.</p>#<p>C'est correct. Pour la liste des associations courantes, voir le Tableau 9.2 du livre.</p>
+}
+
+// [tag:Intra]
+::ArrowFunction equivalent classic function::[markdown]Quel est l'équivalent de `const bonjour \= (qui\: string) \=> console.log("Bonjour " + qui)\n`{
+	=[html]<pre>function bonjour(qui\: string) \{ \n     return console.log("Bonjour " + qui); \n\}</pre>
+	~[html]<pre>function bonjour(qui\: string) \{ \n    console.log("Bonjour " + qui); \n\}</pre>
+	~[html]<pre>bonjour(qui\: string) \{ \n    console.log("Bonjour " + qui); \n\}</pre>
+}
+
+// [tag:Intra]
+::Dans le Processus Unifié, les exigences concernant les fonctionnalités d’un logiciel sont spécifiées dans quel artefact?::[html]Dans le Processus Unifié, les exigences concernant les fonctionnalités d’un logiciel sont spécifiées dans quel artefact?{
+	=Cas d’utilisation (Use cases)#Les cas d’utilisation documentent les scénarios typiques de l’utilisation d’un système, et donc concernent avant tout les besoins fonctionnels (comportementaux).
+	~Contrats d’opération#Les contrats d’opération spécifient les détails des opérations système. Le niveau de modélisation est plus bas que les fonctionnalités du logiciel.
+	~Diagrammes de séquence système#Les diagrammes de séquence système modélisent les opérations système avec les arguments et les informations de retour. Le niveau de modélisation est plus bas que les fonctionnalités du logiciel.
+	~Spécifications supplémentaires#Les spécifications supplémentaires sont complémentaires aux fonctionnalités. Par exemple, on y trouve des exigences de performances ou les licences).
+	~Glossaire#Le glossaire contient des définitions des termes importants dans le domaine du logiciel à développer.
+}
+
+// [tag:Intra]
+::La complexité inhérente est de mieux en mieux gérée grâce aux innovations ...::La complexité inhérente est de mieux en mieux gérée grâce aux innovations technologiques.{FALSE}
+
+// [tag:Intra]
+::Notation (création)::[html]<p>Que signifie la notation suivante?</p>\n<p><img src\="http\://www.plantuml.com\:80/plantuml/img/TSuzZW8n38RXFgUmgA2WeDbY2YH-XAXezWHEx06B48yIpovmUiBG08BsUVr9BaT97MOy0N6BVRID9jlXYM7ByOzD0hhowUPNhWopdo_HBf71QwIdNWv8-Yzf3ot6ma_5OpZki_Q9LXerWsLCfIPEvWv23AsgUJsxQlKZwJ0PZ9h52B00lkboKF-cgq73grAp7fWSmdGE7XgG92OOfN1s8JCQrv67QSsXvWUDQUB2VK6LC5Z_6Dm0" alt\="PlantUML image" /></p>{
+	~<p>L'instance <em>d</em> de <em>D</em> est créée par <em>\:C</em></p>#<p>Selon la notation, il n'est pas indiqué qui a créé l'instance <em>d</em> de <em>\:D</em>.<em><br /></em></p>
+	=<p>L'instance <em>\:C</em> est créée par <em>\:B</em></p>#<p>Le message <em>create(d)</em> indique que <em>\:B</em> crée une instance (sans nom) de <em>C</em>. </p>
+	~<p>L'instance <em>d</em> de <em>D</em> est créée par <em>\:B</em></p>#<p>Selon la notation, il n'est pas indiqué qui a créé l'instance <em>d</em> de <em>\:D</em>.</p>
+	~<p>L'instance <em>\:B</em> est créée par <em>\:C</em></p>#<p>Le message <em>create(d)</em> indique que <em>\:B</em> crée une instance (sans nom) de <em>C</em>. </p>
+}
+
+// [tag:Intra]
+::L'analyse orientée objet (selon Larman) se penche sur la modélisation des ...::L'analyse orientée objet (selon Larman) se penche sur la modélisation des classes logicielles (software classes).{FALSE}
+
+// [tag:Intra]
+::Contrats catégorie de postconditions::[html]<p>Quel élément ne fait pas partie des catégories de postconditions dans les contrats d'opération</p>{
+	~<p>Création d'instance</p>#<p>Incorrect. Cet élément peut bien être une postcondition.</p>
+	~<p>Suppression d'instance</p>#<p>Incorrect. Cet élément peut bien être une postcondition.</p>
+	~<p>Modification des valeurs des attributs</p>#<p>Incorrect. Cet élément peut bien être une postcondition.</p>
+	~<p>Formation d'assocation</p>#<p>Incorrect. Cet élément peut bien être une postcondition.</p>
+	~<p>Rupture d'association</p>#<p>Incorrect. Cet élément peut bien être une postcondition.</p>
+	=<p>Aucune de ces réponses.</p>#<p>Correct. Tous les éléments ici font partie des catégories de postconditions.</p>
+}
+
+// [tag:Intra-dessin]
+::MDD Simple::[markdown]Joindre l'image d'un dessin d'un modèle du domaine simple représentant les informations suivantes\:\n\n- une calculatrice, ayant une marque (ex. "Texas Instruments") un modèle (ex. "TI-84 Plus")\n- un étudiant, ayant un nom (ex. "Michel Tremblay") et une programme d'études (ex. "LOG", "TI", etc.).\n- chaque étudiants utilise sa propre calculatrice.{}
+
+// [tag:Intra]
+::DSS nommer les opérations système::[html]<p><img src\="https\://www.planttext.com/api/plantuml/img/NOmn2i9G38RtTuhGtGjqKCJPgOjhZA64lkRLbtHmS_CgUexUn9CO7AG8uOVmVNmsY4vOSGJpM-ROAkJpc9Fzo1bfw6kPzK8bbmfUKIqGgw-iZgypA_6HpR3dVPPUWSBXcbmysXqjByKg1Ku9oQFKj8SieJI01fGYv48oeNgWxcQ-F4V-GakqsHgqyBu_rhVx-zC7" alt\="opération système" class\="img-responsive atto_image_button_text-bottom"><br> Quel est le meilleur nom pour cette opération système (?).</p>{
+	~<p>résultat(cote)</p>#<p>Incorrect. Une opération système devrait commencer avec un verbe (ajouter..., saisir..., terminer..., effectuer...).</p>
+	=<p>saisirRésultat(cote)</p>#<p>Correct. Ce nom reflète bien l'intention de l'opération à un niveau abstrait, sans impliquer la technologie utilisée.</p>
+	~<p>taperRésultat(cote)</p>#<p>Incorrect. Bien que ça commence avec un verbe (taper), ce nom implique que le système doit fonctionner avec un clavier. Le meilleur nom utilise un verbe plus abstrait.</p>
+	~<p>saisir(cote)</p>#<p>Incorrect. Il est vrai que ce verbe (saisir) est abstrait et n'implique aucune technologie. Mais malheureusement il n'est pas assez détaillé pour indiquer l'intention de l'opération (saisir quoi?). Si jamais il y avait une autre information à saisir dans le DSS (p. ex. un nom), il peut y avoir de la confusion concernant l'intention des deux opérations avec le même nom (saisir).</p>
+}
+
+// [tag:Intra]
+::Notation (destruction)::[html]<p>Que signifie la notation suivante?</p>\n<p><img src\="https\://www.plantuml.com/plantuml/img/TSwn2i903CRn_PuYT7TmSIYbe88ukVW4kLxQ7hqcvIvLwzDxY4CHtSBl_mr9W-S98uxWgCKvw4bOBpWId2dSI7s39ltQNFsJOBlx4tK915Q2M_NKevExvmvQ38bMnM8pT55cTaS94a4ZSig9M4tl7K4hebOU9bl-o4_82aMvBm0Ju9SUtchDfWQ44bhF67oYQ10osKnLvIXfbAMkpUS2-m80" alt\="PlantUML image" /></p>{
+	~<p>L'instance \:<em>A</em> se détruit.</p>#<p>Selon la notation, le X au bout de la ligne de vie de <em>\:B</em> signifie que l'objet est détruit. Le message stéréotypé <em>&lt;&lt;destroy&gt;&gt;</em> provenant de <em>\:A</em> indique la destruction explicite de l'objet par <em>\:A</em>.</p>
+	=<p>L'instance \:<em>B</em> est détruite explicitement par <em>\:A</em>.</p>#<p>Selon la notation, le X au bout de la ligne de vie de <em>\:B</em> signifie que l'objet est détruit. Le message stéréotypé <em>&lt;&lt;destroy&gt;&gt;</em> provenant de <em>\:A</em> indique la destruction explicite de l'objet par <em>\:A</em>.</p>
+	~<p>L'instance \:<em>B</em> se détruit lui-même durant l'exécution de l'opération <em>&lt;&lt;destroy&gt;&gt;</em>.</p>#<p>Selon la notation, le X au bout de la ligne de vie de <em>\:B</em> signifie que l'objet est détruit. Le message stéréotypé <em>&lt;&lt;destroy&gt;&gt;</em> provenant de <em>\:A</em> indique la destruction explicite de l'objet par <em>\:A</em>.</p>
+}
+
+// [tag:Intra]
+::MDD qu'est-ce que c'est::[html]<p>Qu'est-ce que le modèle du domaine?</p>{
+	~<p>Le modèle du domaine est un diagramme de classes, décrivant visuellement leurs attributs, associations et responsabilités.</p>#<p>Le modèle du domaine ne décrit pas les RESPONSABILITÉS des classes. Une classe dans le modèle du domaine n'a pas de responsabilités, car cela serait l'équivalent d'une méthode dans une classe logicielle. Le modèle du domaine contient des classes conceptuelles et non logicielles.</p>
+	~<p>Le modèle du domaine décrit le domaine du logiciel à développer, avec des classes logicielles ayant certaines responsabilités.</p>#<p>Le modèle du domaine contient des classes conceptuelles et non logicielles. Les classes conceptuelles décrivent le domaine du problème, mais elles n'ont pas de responsabilités.</p>
+	~<p>C'est un diagramme UML décrivant les classes logicielles et les relations entre elles.</p>#<p>Le modèle du domaine modélise plusieurs classes, mais il s'agit des classes conceptuelles (et non logicielles) qui sont liées au domaine du problème de l'application.</p>
+	=<p>C'est une sorte de dictionnaire visuel décrivant les attributs et associations entre les classes conceptuelles.</p>#<p>Le modèle du domaine présente toutes les classes conceptuelles avec les attributs et les associations.</p>
+}
+
+// [tag:Intra]
+::Visibilité globale (UML)::[html]<p>Quelle est la visibilité de la méthode <em>getValeur()</em> de la classe suivante\:</p>\n<p><img src\="https\://www.planttext.com/api/plantuml/img/JOin2W9134NxEKLAlOATO6ibsCSOXc6p6KqoWYnxe3s75tDOOR7vnNll-r3qWOOZUBo5-rgXQACatymDQSXMczwfIZK8G_MkMEElkl2piHAVsHqp7wLa1UeDMo91TpXz5fZI2uMR7Q3qz-I1KMY6p75T-Mx_C_CN" alt\="Classe avec méthode soulignée en UML" width\="114" height\="82" class\="img-responsive atto_image_button_text-bottom"></p>{
+	=<p>Visibilité globale</p>#<p>Puisque la méthode est soulignée, elle appartient à la classe (méthode statique). D'habitude, les méthodes statiques sont visibles partout dans le système.&nbsp;</p>
+	~<p>Visibilité d'attribut</p>#<p>Cette forme de visibilité s'applique aux attributs dans les classes.</p>
+	~<p>Visibilité locale</p>#<p>Cette forme de visibilité s'applique aux variables locales définies dans les méthodes.</p>
+	~<p>Visibilité de paramètre</p>#<p>Cette forme de visibilité s'applique aux paramètres définis dans la signature d'une méthode.</p>
+}
+
+// [tag:Intra]
+::DSS à quoi sert-il::[html]<p>À quoi sert un DSS?</p>{
+	~<p>Il permet de détailler un cas d'utilisation, afin de mieux comprendre le problème.</p>#<p>Incorrect. Le but d'un DSS n'est pas de comprendre le problème, mais de commencer avec une solution en proposant des événements système.</p>
+	=<p>Il modélise précisément seulement les événements système, sans détailler la conception de l'intérieur du système.</p>#<p>Correct. C'est un modèle "boîte noire" du système, puisqu'on ne voit pas les détails de comment chaque opération système est réalisée.</p>
+	~<p>Il modélise précisément les événements provenant du clavier, de la souris, etc.</p>#<p>Incorrect. Les événements système décrivent les messages qui vont rentrer dans le système. Mais il sera nécessaire plus tard de comment les événements provenant du clavier, de la souris, etc. seront transformés en événements système.</p>
+	~<p>Il modélise en détail comment le système va effectuer les opérations système.</p>#<p>Incorrect. Un DSS modélise le comportement système comme une boîte noire, ce qui veut dire qu'il décrit ce que le système va faire, mais sans rentrer dans beaucoup de détails.</p>
+}
+
+// [tag:Intra]
+::Contrôleur (notion)::[html]<p>Quel principe GRASP s'applique lorsqu'on doit décider quelle classe va recevoir une opération système?</p>{
+	=<p>Contrôleur</p>#<p>Contrôleur est une directive qui aide à déterminer la classe en dehors de la couche présentation qui reçoit et coodronne (contrôle) une opération système.</p>
+	~<p>Créateur</p>#<p>Créateur est un principe pour décider quelle classe devrait avoir la responsabilité de créer des instances d'une certaine autre classe.</p>
+	~<p>Expert en information </p>#<p>Expert en information est une directive générale de conception d'objets. Il y a une autre directive plus appropriée lors qu'il s'agit d'affecter la responsabilité de recevoir et de coordonner une opération système. </p>
+	~<p>Commande</p>#<p>Commande est un pattern GoF (Gang des quatre) et non un principe GRASP. </p>
+}
+
+// [tag:Intra]
+::artefacts dépendance::[html]<p>Quels sont les éléments du Processus Unifié dont dépend une réalisation de cas d'utilisation (RDCU) ?</p>{
+	~%33.33333%<p>Le Cas d'Utilisation</p>#<p>Une RDCU dépend effectivement du cas d'utilisation qu'elle réalise.</p>
+	~%33.33333%<p>Le Modèle du Domaine</p>#<p>La RDCU dépend du modèle du domaine, puisqu'une conception proche de la modélisation du problème (le MDD) sera plus facile à comprendre.</p>
+	~%-33.33333%<p>Le plan d'itération</p>#<p>Le plan d'itération sert à planifier ce qui sera fait dans une itération. Une RDCU n'utilise pas l'information dans le plan d'itération.</p>
+	~%-33.33333%<p>Les références croisées dans un contrat d'opération</p>#<p>Les références croisées dans un contrat d'opération sont des informations pour indiquer dans quel contexte le contrat d'opération s'applique. Une RDCU ne dépend pas de cette information.</p>
+	~%33.33333%<p>Les postconditions dans un contrat d'opération</p>#<p>Une RDCU doit satisfaire toutes les postconditions du contrat d'opération pour l'opération système qu'elle réalise. </p>
+}
+
+// [tag:Intra]
+::Décalage de représentation::[html]<p>Qu'est-ce qui est entendu par le "décalage des représentations"? (en anglais to lower the representational gap)</p>{
+	~<p>C'est l'écart entre deux valeurs d'un attribut dérivé dans une classe logicielle.</p>
+	~<p>C'est l'écart entre deux couches logicielles dans un modèle en couches.</p>
+	=<p>C'est l'écart entre deux modèles, celui du problème et celui de la solution logicielle.</p>
+	~<p>C'est l'écart entre deux version d'une interface de programmation (application programming interface, API)</p>
+}
+
+// [tag:Intra]
+::En développement logiciel, la complexité inhérente est due au domaine du ...::En développement logiciel, la complexité inhérente est due au domaine du problème et cause des complexités dans la solution.{TRUE}
+
+// [tag:Intra]
+::Faible Couplage et Forte Cohésion (évaluative) (GRASP 1-5)::[html]<p>Selon le principe Créateur, vous trouvez que deux classes différentes pourraient avoir la même responsabilité de créer une instance (objet) d'une classe. Quel(s) principe(s) GRASP existe(nt) pour vous aider à décider laquelle est la meilleure des classes pour avoir cette responsabilité?</p>{
+	~<p>Expert en information</p>#<p>Incorrect. Normalement, ce principe ne vous aide pas à choisir entre deux classes lorsque la responsabilité est de créer une instance (objet) d'une classe.</p>
+	~%50%<p>Faible Couplage</p>#<p>Correct. Affecter les responsabilités de sorte que le couplage (inutile) demeure faible. Employez ce principe pour évaluer les différentes solutions.</p>
+	~%50%<p>Forte Cohésion</p>#<p>Correct. Affecter les responsabilités de sorte que les classes demeurent cohésives. Employez ce principe pour évaluer les différentes solutions.</p>
+	~<p>Contrôleur</p>#<p>Incorrect. Le principe GRASP Contrôleur concerne la décision pour assigner la responsabilité pour les opérations système.</p>
+}
+
+// [tag:Intra]
+::Contrats qualité d'une bonne postcondition::[html]<p>Indiquer les postconditions qui sont mal écrites.</p>{
+	~%33.33333%<p>Un livre a été réservé.</p>#<p>Cette postcondition est mal écrite puisqu'elle n'entre pas dans les catégories de création et suppresion d'instance, modification d'attributs, ou formation et rupture d'associations.</p>
+	~%33.33333%<p>Le cours a été sélectionné.</p>#<p>Cette postcondition est mal écrite puisqu'elle n'entre pas dans les catégories de création et suppresion d'instance, modification d'attributs, ou formation et rupture d'associations.</p>
+	~%33.33333%<p>Le système retourne les résultats de la recherche (potentiellement infructueuse).</p>#<p>Cette postcondition est mal écrite puisqu'elle n'entre pas dans les catégories de création et suppresion d'instance, modification d'attributs, ou formation et rupture d'associations.</p>
+	~<p>Une instance <em>r</em> de Réservation a été créée.</p>#<p>Cette postcondition est bien écrite puisqu'elle est de la catégorie de création d'instance.</p>
+	~<p>L'instance <em>lc</em> de LigneChambres a été associée à DescriptionChambre sur la base de la correspondance avec catégorieChambre.</p>#<p>Cette postcondition est bien écrite puisqu'elle est de la catégorie de formation d'associations.</p>
+}
+
+// [tag:Intra]
+::Avantages du développement piloté par les tests::[html]<p>Selon Larman, quels sont les avantages du développement piloté par les tests?</p>{
+	~%20%<p>Les tests unitaires sont réellement écrits, malgré la nature humaine à ne pas écrire les tests unitaires ou à les remettre à plus tard.</p>
+	~%20%<p>Le défi d'écrire un programme permettant de réussir les tests (déjà établis) a un effet psychologique positif. Le programmeur a du bonheur et le code est plus harmonieux. </p>
+	~%20%<p>Les détails sont plus clairs en ce qui concerne l'interface de programmation et le comportement de l'objet.</p>
+	~%20%<p>On peut démontrer, de façon automatique, la vérification des conditions dans les tests.</p>
+	~%-14.28571%<p>La conception du logiciel aura certainement moins de couplage.</p>#<p>Bien que le codage soit plus logique, il n'y a pas forcément une amélioration du couplage grâce au développement piloté par les tests.</p>
+	~%-14.28571%<p>On peut démontrer l'absence de bogues dans le logiciel lorsque tous les tests sont réussis.</p>#<p>Malheureusement, un test ne peut montrer la présence d'un bogue dans le logiciel si le test est échoué.</p>
+	~%20%<p>Lorsqu'un développeur a besoin de modifier le code existant dans un système — qu'il en soit l'auteur ou non — il dispose d'une suite de tests qu'il peut exécuter et d'une rétroaction immédiate si la modification provoque une erreur.</p>
+}
+
+// [tag:Intra]
+::Lors d'une analyse selon Larman, quelle classe ne serait pas une classe ...::Lors d'une analyse selon Larman, quelle classe ne serait pas une classe conceptuelle?{
+	=String
+	~Étudiant
+	~Université
+	~Cours
+	~Devoir
+}
+
+// [tag:Intra]
+::Faites la mise en correspondance entre l’exigence et sa catégorie \:::[html]Faites la mise en correspondance entre l’exigence et sa catégorie \:{
+	=Journalisation de toutes les erreurs en mémoire persistante -> Fonctionnalité
+	=Possibilité de personnaliser les fonctionnalités du système par un ensemble de règles arbitraires. -> Fonctionnalité
+	=Toute utilisation implique une authentification -> Fonctionnalité
+	=Le client doit voir le système sur un grand écran et donc le texte doit être lisible à un mètre de distance. -> Convivialité (Usability)
+	=Les couleurs associées aux formes courantes de daltonisme doivent être évitées. -> Convivialité (Usability)
+	=Une fonctionnalité primaire doit être lancée en deux gestes ou moins. -> Convivialité (Usability)
+	=En cas de d’indisponibilité des systèmes connectés, il faut une solution locale qui permette de réaliser quand même la vente. -> Fiabilité (Reliability)
+	=L’autorisation bancaire d’un paiement doit se faire en moins d’une minute dans 90 % des cas. -> Performance
+	=Il y a des règles personnalisables intégrées à différents points d’un scénario (début d’une transaction, fin d’une transaction, etc.). -> Possibilités de prises en charge (Supportability)
+	=Les différents clients veulent des configurations de réseau précises pour leur système, tels des clients légers ou des clients lourds ou encore des couches physiques à deux niveau ou à N niveaux. Ils souhaitent que ces configurations puissent évoluer à mesure que leurs besoins en termes de performance et leurs règles d’affaires changent. -> Possibilités de prises en charge (Supportability)
+	=Le système doit fournir une interface utilisateur dans plusieurs langues. -> Possibilités de prises en charge (Supportability)
+}
+
+// [tag:Intra]
+::MDD association vs attribut::[html]<p>Il existe une classe conceptuelle "Étudiant" dans le modèle du domaine. Comment modéliser correctement les clubs étudiants auxquels l'étudiant fait partie?</p>{
+	=<p>Comme une classe conceptuelle "Club", avec une association entre "Étudiant" et "Club" ayant la relation "est-membre-de".</p>#<p>Correct. Nous ne pensons pas un club en termes alphanumériques dans le monde réel, alors Club est une classe conceptuelle. On relie cette classe conceptuelle à la classe conceptuelle "Étudiant" avec une association "est-membre-de".</p>
+	~<p>Comme une classe conceptuelle "String", avec une association entre "Étudiant" et "String" ayant la relation "est-membre-du-club".</p>#<p>Incorrect. "String" serait un concept lié à l'implémentation (la solution) et donc ne sera pas une bonne classe conceptuelle. Les classes conceptuelles devraient modéliser le domaine de l'application et pas la solution.</p>
+	~<p>Comme un attribut "clubs" dans la même classe.</p>#<p>Incorrect. Un attribut "clubs" ne serait pas facilement représenté en termes alphanumériques dans le monde réel. Alors, une classe conceptuelle "Club" est plus appropriée pour modéliser ce concept.</p>
+}
+
+// [tag:Intra]
+::MDD rapport modèle de conception::[html]<p>Quel est le rapport entre le modèle du domaine et le modèle de conception?</p>{
+	~<p>Il s'agit des synonymes pour le même modèle décrit en UML.</p>#<p>Incorrect. Bien que les deux modèles se présentent avec les diagrammes de classe en UML, ce sont deux modèles différents.</p>
+	~<p>Il n'y a aucun rapport entre les deux modèles.</p>#<p>Incorrect. Le modèle du domaine contient des classes conceptuelles décrivant le domaine du problème à résoudre avec un logiciel, tandis que le modèle de conception contient des classes logicielles décrivant une solution au problème. Le rapport est qu'il y a une correspondance entre la plupart des classes.</p>
+	~<p>Le modèle du domaine décrit les classes logicielles, tandis que le modèle de conception décrit les classes conceptuelles.</p>#<p>Incorrect. C'est le contraire. Le modèle du domaine décrit les classes conceptuelles et le modèle de conception décrit les classes conceptuelles.</p>
+	=<p>Beaucoup de classes du modèle de conception trouvent leur inspiration dans le modèle du domaine.</p>#<p>Correct. Il y a une correspondance entre une partie importante des classes des deux modèles.</p>
+}
+
+// [tag:Intra]
+::Les outils de développement comme Eclipse répondent principalement aux ...::Les outils de développement comme Eclipse répondent principalement aux difficultés dues à la complexité accidentelle.{TRUE}
+
+// [tag:Intra]
+::Qu'est-ce qu'une RDCU::[html]<p>Selon la définition du livre obligatoire, qu'est-ce qu'une <em>réalisation de cas d'utilisation</em>?</p>{
+	=<p>C'est quand on donne corps à un cas d'utilisation en termes des classes et des collaborations dans le modèle de conception.</p>#<p>Correct. </p>
+	~<p>C'est quand on donne corps à un cas d'utilisation en termes des classes et des associations dans le modèle du domaine.</p>#<p>Incorrect. C'est quand on donne corps à un cas d'utilisation en termes des classes et des collaborations dans le modèle de conception.</p>
+	~<p>C'est quand on donne corps à un cas d'utilisation en termes des classes et des collaborations dans l'implémentation.</p>#<p>Incorrect. C'est quand on donne corps à un cas d'utilisation en termes des classes et des collaborations dans le modèle de conception.</p>
+	~<p>C'est quand on donne corps à un cas d'utilisation en termes de sa forme textuelle. Il s'agit d'étoffer le cas d'utilisation.</p>#<p>Incorrect. C'est quand on donne corps à un cas d'utilisation en termes des classes et des collaborations dans le modèle de conception.</p>
+}
+
+// [tag:Intra]
+::Correspondance classes et multiples responsabilités::[html]<p></p><p>Parmi les classes suivantes, lesquelles ont de multiples responsabilités (faible cohésion)?</p><p><img src\="http\://www.plantuml.com/plantuml/png/POz1JiD034NtEKMMS8iYsC2YOi45t1at6JfZLxOdegfwe9mZ5yDAsYhGJURxV-VfUwC6OhNaHW-9ZY1GMhLJHlzA2l-I7OH39rmf1iuihGcGUeHaJSYWsdvWRSzDvYxHqtEJI8CaGPTn6eyP0efhIpA_WcgpkDp-vefL7A1eMowUk7Y9lgUu3DjQfb7uQngp0tkcsOSwO0SIPrZeGRe_sDMsimEN8-jI048G3lqy-1rv5aW3dr3Uc6WQKTtPEwPVzyJw2cAeZkj1j_XZdjBo21OUq0N4w5lnRbq7xUj-dt65-mHAACw2RwvsxP1nkAe0IHNbuT1B0pirWM3jmdat530M9vrlqQMz5roRzE3SQZjsWnHhoRy0" alt\="Diagramme de classes en UML"></p><br><p></p>{
+	=<p>Jeu</p> -> a plusieurs responsabilités
+	=<p>Joueur</p> -> a plusieurs responsabilités
+	=<p>Téléphone</p> -> a une responsabilité
+	=<p>JeuCartes</p> -> a plusieurs responsabilités
+	=<p>Panier</p> -> a plusieurs responsabilités
+	=<p>Itérateur</p> -> a plusieurs responsabilités
+}
+
+// [tag:Intra]
+::En développement logiciel, la complexité accidentelle est due au domaine du ...::En développement logiciel, la complexité accidentelle est due au domaine du problème et cause des complexités dans la solution.{FALSE}

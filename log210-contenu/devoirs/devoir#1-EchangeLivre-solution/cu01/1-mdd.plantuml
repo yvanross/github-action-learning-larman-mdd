@@ -1,0 +1,36 @@
+@startuml allo 
+﻿skinparam style strictuml
+hide empty members
+hide empty methods
+
+class Client <C05>{
+ nomUtilisateur : String
+ nom : String
+ courriel : AdresseCourriel
+} 
+
+class Livre <C03> {
+ identifiant : CodeLivre
+ condition : CodeCondition
+}
+class DescriptionLivre <C09> {
+  codeISBN : String
+  description : String
+}
+class "Bureau\nDéveloppement\nDurable"  as BDD <C04,C06>
+Client "1" -- "*" Livre: veut-échanger\nA11 >
+BDD "1" - "*" Client : fournit-\nservice-à\nA09 >
+Livre "*" -- "1" DescriptionLivre : est-décrit-par\nA07 >
+
+class "PropositionÉchange" as PE <C01> {
+  dateHeure : DateHeure
+}
+PE "1" -- "1..*" Livre : offre\nA03 >
+PE "1" -- "1..*" Livre : reçoit\nA03 >
+BDD "1" - "*" PE : enregistre\nA06\nA11 >
+PE "1" - "1" Client : est-proposée-par\nA04 >
+PE "1" - "1" Client : est-proposée-à\nA04 >
+legend left
+CodeLivre, CodeCondition, DateHeure, AdresseCourriel, etc. sont les types de données.
+end legend
+@enduml

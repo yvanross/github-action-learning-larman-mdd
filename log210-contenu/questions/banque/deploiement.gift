@@ -1,0 +1,106 @@
+$CATEGORY: $course$/Déploiement
+
+
+// [tag:seance12]
+::Classifiez les éléments du diagramme suivant (déploiement)::[html]<p>Classifiez les éléments du diagramme suivant\:<br /><img src\="" alt\="Diagramme de déploiement UML (tiré du livre &quot;UML2 et les design patterns&quot; de Craig Larman)" /></p>{
+	=<p>« client workstation » \: GenericPC</p> -> nœud physique
+	=<p>« server » \: Dell PowerEdge 3600</p> -> nœud physique
+	=<p>« server » \: Dell PowerEdge 3400</p> -> nœud physique
+	=<p>« browser » \: WebBrowser</p> -> nœud d'environnement d'exécution
+	=<p>« OS » \: Red Hat Enterprise Linux 4</p> -> nœud d'environnement d'exécution
+	=<p>« web server cluster » \: Apache 2.1</p> -> nœud d'environnement d'exécution
+	=<p>« database » \: PostgreSQL 10</p> -> nœud d'environnement d'exécution
+}
+
+// [tag:seance12]
+::Quels sont les exemples d'artefacts dans les diagrammes de déploiement?::[html]<p>Lesquels sont les exemples d'artefacts dans les diagrammes de déploiement?</p>{
+	~%-50%<p><img src\="https\://www.plantuml.com/plantuml/png/AyxEp2j8B4hCLIWkgSn91P95cSabfRavN7dvAQaAIZOsnQb5PQb5TdOnUJQbTbOABgavEGe1-UMfHQufwQaAncO61ZRwfK3PQWN_ODkWr1G5ZyGI1TUyajIYWgBCubG5dyoyqWe54uLQ9OLghbe0" /></p>#<p>Cela est un exemple de nœud physique</p>
+	~%-50%<p><img src\="https\://www.plantuml.com/plantuml/png/UxzxVt5sPbv1Ob5Yha9nIMLEAf0ioamkAStDuUNAoqz9LL2oiKb9B4bCIYnEjREBoRCfjRCAo2ykIIzA3GxqKJ0qiD4ljLDIgERbgWK0" /></p>#<p>Cela est un exemple de nœud d'environnement d'exécution (ENN, execution environment node)</p>
+	~%50%<p><img src\="https\://www.plantuml.com/plantuml/png/3SJ13K1G303GkyGEZJiJY4bSgYhAxyzFMnApEHZ92XpUU-_7Tya53HKyhiJ_9XI7fhfQPMPWBN61iaviNbUKq1sQlaSBMP1Y6CPyE5lxEuMusz0QG0Vw0000" /></p>#<p>Cela est un exemple d'artefact</p>
+	~%50%<p><img src\="https\://www.plantuml.com/plantuml/png/3SJ13O0W3030FmaxDFnrfuerDb93sg9XDX-Ev0hokFkUrmu-AoeAcFT2O-NiJKeCEwy49DKx2Cb2QZ6WEc-O7L8pqccuEDDyewOV" /></p>#<p>Cela est un exemple d'artefact</p>
+}
+
+// [tag:seance12]
+::Types de nœuds diagramme de déploiement (matching)::[html]<p>Décidez si chaque énoncé est un type de nœuds dans un diagramme de déploiement.</p>{
+	=<p>nœuds physiques</p> -> oui
+	=<p>nœuds d'environnement d'exécution</p> -> oui
+	=<p>nœuds d'objet</p> -> non
+	=<p>nœuds d'origine</p> -> non
+	=<p>nœuds de cravate</p> -> non
+}
+
+// [tag:seance12]
+::Utilisation diagrammede  déploiement::[html]Quel diagramme est utilisé pour montrer l'affectation de fichiers exécutables à des nœuds de traitement?{
+	=diagramme de déploiement
+	~diagramme d'activités
+	~diagramme de séquence
+	~diagramme de communication
+	~diagramme de composants
+}
+
+// [tag:seance12]
+::Dans le diagramme suivant, quels sont les nœuds d'environnement d'exécution (ENN, execution environment nodes)?::[html]<p>Dans le diagramme suivant, quels sont les nœuds d'environnement d'exécution (ENN, execution environment nodes)?<br /><img src\="https\://www.plantuml.com/plantuml/svg/ZP0zJyCm48Rt_8fJzw8MeWwegWgbOgb480CBYp-EnCBOqTq58w7-Tn8h2XtP_F6yVbxVdaMHz9--yFWk8178DQs0TOH6N0n5Y1PXiTqUlCCWa29z39dnQhTx2xUF692SgGuBK0oT-Pa3cc9Yf4ozehwdEEmofOlpJDL8NnFqWDv35HFIqJO8DvlLAkEssy3ViqzrXb_GGgi4ZXAGEdBC22SN-kzoSG4drC3P0CRtB9FfhbEcHRY-McT1ukBylqhbNAcyi5WbIYl67AaYIqDOFvzWFS7ZVmiDo-LeIZminhCz1ZiC_XS0" width\="640" height\="480" alt\="Diagramme de déploiement UML (tiré du livre &quot;UML2 et les design patterns&quot; de Craig Larman)" /></p>{
+	~%-33.33333%<p>« client workstation » \: GenericPC</p>#<p>Cela est un nœud physique.</p>
+	~%-33.33333%<p>« server » \: Dell PowerEdge 3600</p>#<p>Cela est un nœud physique.</p>
+	~%-33.33333%<p>« server » \: Dell PowerEdge 3400</p>#<p>Cela est un nœud physique.</p>
+	~%25%<p>« browser » \: WebBrowser</p>#<p>Ce nœud est un navigateur Web, qui est modélisé comme un nœud d'environnement d'exécution (ENN, execution environment node).</p>
+	~%25%<p>« OS » \: Red Hat Enterprise Linux 4</p>#<p>Ce nœud est un système d'exploitation, qui est modélisé comme un nœud d'environnement d'exécution (ENN, execution environment node).</p>
+	~%25%<p>« web server cluster » \: Apache 2.1</p>#<p>Ce nœud est un exemple de machine virtuelle (grappe), qui est modélisé comme un nœud d'environnement d'exécution (ENN, execution environment node).</p>
+	~%25%<p>« database » \: PostgreSQL 10</p>#<p>Ce nœud est un exemple de système de base de données (PostgreSQL), qui est modélisé comme un nœud d'environnement d'exécution (ENN, execution environment node).</p>
+}
+
+// [tag:seance12]
+::Utilisation diagramme de déploiement::[html]Quel diagramme est utilisé pour montrer l'affectation de fichiers exécutables à des nœuds de traitement?{
+	=diagramme de déploiement
+	~diagramme d'activités
+	~diagramme de séquence
+	~diagramme de communication
+	~diagramme de composants
+}
+
+// [tag:seance12]
+::Quels sont les exemples d’artefacts dans les diagrammes de déploiement?::[html]<p>Lesquels sont les exemples d’artefacts dans les diagrammes de déploiement?</p>{
+	~%-50%<p><img src\="https\://www.plantuml.com/plantuml/png/AyxEp2j8B4hCLIWkgSn91P95cSabfRavN7dvAQaAIZOsnQb5PQb5TdOnUJQbTbOABgavEGe1-UMfHQufwQaAncO61ZRwfK3PQWN_ODkWr1G5ZyGI1TUyajIYWgBCubG5dyoyqWe54uLQ9OLghbe0" /></p>#<p>Cela est un exemple de nœud physique</p>
+	~%-50%<p><img src\="https\://www.plantuml.com/plantuml/png/UxzxVt5sPbv1Ob5Yha9nIMLEAf0ioamkAStDuUNAoqz9LL2oiKb9B4bCIYnEjREBoRCfjRCAo2ykIIzA3GxqKJ0qiD4ljLDIgERbgWK0" /></p>#<p>Cela est un exemple de nœud d’environnement d’exécution (ENN, execution environment node)</p>
+	~%50%<p><img src\="https\://www.plantuml.com/plantuml/png/3SJ13K1G303GkyGEZJiJY4bSgYhAxyzFMnApEHZ92XpUU-_7Tya53HKyhiJ_9XI7fhfQPMPWBN61iaviNbUKq1sQlaSBMP1Y6CPyE5lxEuMusz0QG0Vw0000" /></p>#<p>Cela est un exemple d’artefact</p>
+	~%50%<p><img src\="https\://www.plantuml.com/plantuml/png/3SJ13O0W3030FmaxDFnrfuerDb93sg9XDX-Ev0hokFkUrmu-AoeAcFT2O-NiJKeCEwy49DKx2Cb2QZ6WEc-O7L8pqccuEDDyewOV" /></p>#<p>Cela est un exemple d’artefact</p>
+}
+
+// [tag:seance12]
+::Dans le diagramme suivant, quels sont les nœuds physiques?::[html]<p>Dans le diagramme suivant, quels sont les nœuds physiques?</p><p><img src\="https\://www.plantuml.com/plantuml/svg/ZP0zJyCm48Rt_8fJzw8MeWwegWgbOgb480CBYp-EnCBOqTq58w7-Tn8h2XtP_F6yVbxVdaMHz9--yFWk8178DQs0TOH6N0n5Y1PXiTqUlCCWa29z39dnQhTx2xUF692SgGuBK0oT-Pa3cc9Yf4ozehwdEEmofOlpJDL8NnFqWDv35HFIqJO8DvlLAkEssy3ViqzrXb_GGgi4ZXAGEdBC22SN-kzoSG4drC3P0CRtB9FfhbEcHRY-McT1ukBylqhbNAcyi5WbIYl67AaYIqDOFvzWFS7ZVmiDo-LeIZminhCz1ZiC_XS0" width\="640" height\="480" alt\="Diagramme de déploiement UML (tiré du livre UML2 et les design patterns de Craig Larman)" /></p>{
+	~%33.33333%<p>« client workstation » \: GenericPC</p>#<p>Il y a deux nœuds physiques dans ce diagramme avec ce nom.</p>
+	~%33.33333%<p>« server » \: Dell PowerEdge 3600</p>#<p>Ce nœud physique héberge le serveur Web et la machine virtuelle pour Tomcat 6.</p>
+	~%33.33333%<p>« server » \: Dell PowerEdge 3400</p>#<p>Ce nœud physique héberge le serveur de base de données sous Linux Red Hat.</p>
+	~%-25%<p>« browser » \: WebBrowser</p>#<p>Ce nœud est un nœud d’environnement d’exécution (ENN, execution environment node).</p>
+	~%-25%<p>« OS » \: Red Hat Enterprise Linux 4</p>#<p>Ce nœud est un nœud d’environnement d’exécution (ENN, execution environment node).</p>
+	~%-25%<p>« web server cluster » \: Apache 2.1</p>#<p>Ce nœud est un nœud d’environnement d’exécution (ENN, execution environment node).</p>
+	~%-25%<p>« database » \: PostgreSQL 10</p>#<p>Ce nœud est un nœud d’environnement d’exécution (ENN, execution environment node).</p>
+}
+
+// [tag:seance12]
+::Types de nœuds diagramme de déploiement::[html]<p>Quels sont les types de nœuds dans un diagramme de déploiement?</p>{
+	~%50%<p>nœuds physiques</p>
+	~%50%<p>nœuds d’environnement d’exécution</p>
+	~<p>nœuds d’objet</p>
+	~<p>nœuds d’origine</p>
+	~<p>nœuds de cravate</p>
+}
+
+// [tag:seance12]
+::Utilisation diagramme de déploiement::[html]Quel diagramme est utilisé pour montrer l’affectation de fichiers exécutables à des nœuds de traitement?{
+	=diagramme de déploiement
+	~diagramme d’activités
+	~diagramme de séquence
+	~diagramme de communication
+	~diagramme de composants
+}
+
+// [tag:seance12]
+::Utilisation diagramme de composants::[html]Quel diagramme est utilisé pour montrer la relation entre les éléments modulaires qui encapsulent leur contenu et qui sont remplaçables dans leur environnement?{
+	~diagramme de déploiement
+	~diagramme d’activités
+	~diagramme de séquence
+	~diagramme de communication
+	=diagramme de composants
+}
+
