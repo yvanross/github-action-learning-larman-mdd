@@ -1,0 +1,64 @@
+$CATEGORY: $course$/GRASP/Protection des variations
+
+//  [tag:observateur] [tag:gof] [tag:faible-couplage]
+::PV et observateur::
+[markdown]
+Dans le pattern Observateur, qu'est-ce qui empêche les sujets d'avoir un fort couplage aux observateurs concrets? {
+    = 
+    Les sujets ont un accès restreint aux observateurs. Les sujets voient les observateurs à travers l'interface Observer.
+    #
+    En effet, les sujets n'ont qu'un lien de couplage vers le type interface Observer. Ainsi, tous les observateurs (implémentant ce type interface) sont visibles aux sujets comme des "Observer". C'est une sorte de déguisement empêchant un fort couplage.
+    ~
+    Le patron fait en sorte que les sujets ne voient pas du tout les observateurs. Par exemple, les classes du modèle n'ont pas le droit de connaître les vues.
+    #
+    Au fait, les sujets voient tous les observateurs en tant qu'instances du type interface Observer. Ce dernier est **stable**, c'est-à-dire son API ne va probablement pas évoluer. Alors les sujets ont un faible couplage vers les observateurs.
+    ~
+    Le couplage aux observateurs demeure faible puisque les sujets ne font pas beaucoup d'appels à `update()`.#
+    La fréquence d'appels ne fait pas partie du problème que résout Observateur. La fréquence d'appels est un aspect dynamique de la conception, tandis que le couplage (fort ou faible) est un aspect statique.
+}
+
+// [tag:protection-des-variations] [tag:observateur] [tag:gof]
+::PV avec Observateur dans MVC::
+[markdown]
+Considérez l'application du pattern Observateur dans le contexte MVC où le principe GRASP **Protection des variations** s'y applique. Les classes ________ sont *protégées* des variations des classes ________ grâce à l'interface stable ________ \:
+{
+    =du modèle / de la vue / Observer 
+    ~de la vue / du modèle / Subject 
+    ~du modèle / de la vue / Subject 
+    ~de la vue / du modèle / Observer
+}
+
+// [tag:protection-des-variations] [tag:observateur] [tag:gof]
+::PV avec Observateur::
+[markdown]
+Considérez le pattern Observateur où le principe GRASP **Protection des variations** s'y applique. Les classes ________ sont *protégées* des variations des classes ________ grâce à l'interface stable ________ \:
+{
+    =sujets / observateurs concrets / Observer 
+    ~observateurs concrets / sujets / Subject
+    ~sujets / observateurs concrets / Subject
+    ~observateurs concrets / sujets / Observer
+}
+
+// [tag:protection-des-variations] [tag:gof]
+::MVC stabilité modèle vs vue::
+[markdown]
+Selon le principe MVC, les classes ________ sont plus stables que les classes ________ parce que ________ \:
+{
+    =du modèle / de la vue / faire des vues correctement est difficile et leur code change souvent. 
+    ~de la vue / du modèle / faire des vues correctement est difficile et leur code change souvent. 
+    ~du modèle / de la vue / le code des classes du modèle ne change jamais. 
+    ~de la vue / du modèle / le code des classes du modèle ne change jamais. 
+}
+
+// [tag:protection-des-variations] [tag:observateur] [tag:gof]
+::MVC stabilité modèle vs vue::
+[markdown]
+Quel est le rapport entre le pattern Observateur et le principe GRASP **Protection des variations**?
+{
+    =Des objets (les sujets) veulent informer d'autres objets (les observateurs) mais ne veulent pas avoir de conséquence négatives à cause du code des observateurs qui est souvent modifié.
+    #En effet l'impact négatif des instabilités des observateurs est diminué grâce à l'interface (stable) Observateur qui est le seul lien de couplage qu'ont des sujets.
+    ~Des objets (les observateurs) veulent recevoir des mises à jour d'autres objets (les sujets) sans que les changements dans le code des sujets aient un impact négatif sur les observateurs.
+    #
+    Selon ![Observer (GoF)](https\://www.plantuml.com/plantuml/svg/PP9DRjj038NtFCM3DhKNle206WaSE9iaBM3a02EPggQT7u535JK2tprZAx8aLxiX7nyVF-WXgH7jlQDlFvq9-lxwWZeU6TK9krPiqjYrBDZthNWJIAqwneygiVpDvTLptAyf_R6XCs8yafvoEwdO-cewTOxScDxfFWPzCvxnADRC-o4gtvgxs8jO5cfjZiA-qnCy-uebaQcolQaLjJCfuT1Nlpc_FkXHrTJjQiosfYU-Axn5jSrfjQOpqMKV73UAs8mcPJaeg8a2unmYR43ycazv1n0ts_VkQ9HNQvo9m_6QdCW6PMbCFOEJvHzZsZF6gSloCNHnyowmsKwJ9GhSle9eE7KNGosiF4xpFytxvmY0PzQ33dk0m_oH1jMry1-0E-kodFdaUYzXEJ_TFKGhHeFnX08cvHy9rdUEFGTD2ouJ3TpuBfE9_TLUezMnB0SrBPJuFXsrsSxoph9555-ApFToQuPyJt716dFi3zaf_yIV "Observer (GoF)"), les observateurs concrets connaissent leur sujets concrets. Alors, les observateurs ne sont pas **protégés des variations** des sujets. 
+}
+

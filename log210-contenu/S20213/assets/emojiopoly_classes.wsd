@@ -1,0 +1,114 @@
+@startuml
+' projet provenant de https://github.com/Chuzzy/Emojiopoly
+'skinparam style strictuml
+skinparam Shadowing false
+left to right direction
+'hide members
+scale 1.5
+interface HouseRules {
+    +needMonopolyToBuild: boolean
+    +doubleRentWithMortgages: boolean
+    +evenBuildRule: boolean
+    +rentInJail: boolean
+    +extraTurnOnRollingOutOfJail: boolean
+    +tradeOutOfBankruptcy: boolean
+    +bankCoversUnpaidRent: boolean
+    +bankruptAssetsAlwaysToBank: boolean
+    +purchaseMortgagedProperties: boolean
+    +freeParkingJackpot: number | "fines"
+    +goSalary: number
+    +landOnGo: "normal" | "double" | "freemove"
+    +startingMoney: number
+    +turnsInJail: number
+    +bailAmount: number
+    +maxConsecutiveDoubles: number
+    +houseLimit: number
+    +hotelLimit: number
+    +mortgageRate: number
+    +unmortgageRate: number
+    +maintenanceRate: number
+    +incomeTax: number
+    +superTax: number
+}
+class Player {
+    +ownedProperties: Property[]
+    +currentSquare: Square
+    +turnsInJail: number
+    +name: string
+    +money: number
+}
+class Property {
+    +buildingsCount: number
+    +isMortgaged: boolean
+    +owner: Player
+    +name: string
+    +color: "brown" | "lightblue" | "pink" | "orange" | "red" | "yellow" | "green" | "blue" | "white"
+    +price: number
+    +rent: "transport" | "utility" | number[]
+    +buildPrice: number
+}
+class Square {
+    +occupants: Player[]
+    +addOccupant(occupant: Player): void
+    +removeOccupant(occupant: Player): void
+    +squareContents: Property | "go" | "jail" | "gotojail" | "parking" | "chance" | "chest" | "incometax" | "supertax"
+}
+class Debt {
+    +amount: number
+    +payDebt(): void
+    +toString(): string
+    +game: MonopolyGame
+    +debtor: Player
+    +creditor: Player
+    +initialAmount: number
+}
+interface Card {
+    +text: string
+    +action: "gotojail" | "advance" | "back" | "choice" | "payeach" | "collecteach" | "doubletransport" | "earn" | "pay" | "stealmoney" | "stolenmoney" | "streetrepairs"
+    +value?: string | number | number[]
+}
+class MonopolyGame {
+    +jackpot: number
+    +currentTurnIndex: number
+    +consecutiveDoubles: number
+    +players: Player[]
+    +currentPlayer: Player
+    +dice: number[]
+    +isTurnFinished: boolean
+    +unpaidDebts: Debt[]
+    +messageEventHandler: (message: string) => void
+    +chanceCards: Card[]
+    +chestCards: Card[]
+    +chanceCardIndex: number
+    +chestCardIndex: number
+    +addToJackpot(amount: number): void
+    +rollDice(die1?: number, die2?: number): void
+    +moveToSquare(newSquare: Square, awardSalary?: boolean): void
+    +sendToJail(): void
+    +moveBack(numberOfSpaces: number): void
+    +postBail(): void
+    +takeChance(): void
+    +takeChest(): void
+    +handleCard(card: Card): void
+    +movePlayer(): void
+    +payDebts(): void
+    +finishTurn(): void
+    +board: Square[]
+    +playerNames: string[]
+    +houseRules: HouseRules
+}
+Player *- Property
+Player *- "currentSquare" Square : "                              "
+Property *- Player
+Square *- "occupants" Player : ""
+Square *- Property
+Debt *-- MonopolyGame
+Debt *-- Player
+MonopolyGame *-- Player
+MonopolyGame *-- Debt
+MonopolyGame *-- Card
+MonopolyGame *-- Square
+MonopolyGame *-- HouseRules
+hide Card members
+hide HouseRules members
+@enduml

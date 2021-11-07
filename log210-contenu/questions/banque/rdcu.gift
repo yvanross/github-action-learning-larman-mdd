@@ -1,6 +1,6 @@
 $CATEGORY: $course$/RDCU
 
-// [tagLseabce08]
+// [tag:rdcu]
 ::RDCU Initialisation::Quel patron GRASP n'est pas appliqué dans une RDCU pour le scénario Démarrer? {
     =Contrôleur
     ~Expert
@@ -8,14 +8,14 @@ $CATEGORY: $course$/RDCU
     ~Créateur
 }
 
-// [tag:seance04]
+// [tag:rdcu]
 ::RDCU Id en objets::Dans une RDCU, quel patron permet de respecter la séparation des couches? {
     =Transformer identifiant en objets
     ~Créateur
     ~Polymorphisme
 }
 
-// [tag:seance04]
+// [tag:rdcu]
 ::RDCU et messages::[markdown]Appariez l'exemple de message à son patron le justifiant dans une RDCU. {
     =addX() -> Expert
     =setX()/getX() -> Expert
@@ -25,14 +25,14 @@ $CATEGORY: $course$/RDCU
     =*opération système* -> Contrôleur
 }
 
-// [tag:seance02]
+// [tag:rdcu]
 ::Point de départ (Opérations système)::[html]<p>Quel élément est le point de départ pour faire une réalisation de cas d'utilisation (RDCU)?</p>{
 	=<p>L'opération système provenant du diagramme de séquence système (DSS) pour le cas d'utilisation (par exemple, <em><strong>démarrerVente</strong></em>).</p>#<p>L'opération système du DSS est le message de départ qui sera envoyé à un objet de la couche domaine.</p>
 	~<p>La première étape du cas d'utilisation (par exemple, <em>1. Le Caissier démarre une nouvelle vente</em>).</p>#<p>La forme textuelle d'un cas d'utilisation n'est pas appropriée pour commencer une RDCU. Il faut commencer avec une opération système définie dans un diagramme de séquence système.</p>
 	~<p>La première postcondition du contrat d'opération définie pour l'opération système dans un diagramme de séquence système (DSS) (par exemple,&nbsp;<em>-une instance&nbsp;v de Vente a été créée</em>).</p>#<p>Une RDCU doit satisfaire les postconditions, mais ce n'est pas le point de départ. On commence avec une opération système définie dans un&nbsp;diagramme de séquence système.</p>
 }
 
-// [tag:seance05]
+// [tag:rdcu]
 ::Visibilité d'attribut::[html]<p>Quelle variable a la visibilité d'attribut dans le code Java suivant?</p> <p><span style\="font-family\: 'courier new', courier, monospace;">public class Widget \{<br />  public static final int Z\=13;<br />  private a int;<br />  public int x(int b) \{<br />    int y \= 0;<br />    return y;<br /></span><span style\="font-family\: 'courier new', courier, monospace; line-height\: 1.231;">  \}<br />\}</span></p>{
 	~<p>y</p>#<p>La variable y est définie à l'intérier de la méthode x. Elle a donc une visibilité "locale" à x().</p>
 	~<p>Z</p>#<p>La variable Z est définie de façon statique, ce qui veut dire qu'elle appartient à la classe Widget. Puisqu'elle est publique et la classe Widget aussi, Z pourrait être considéré comme ayant une visibilité globale.</p>
@@ -40,7 +40,7 @@ $CATEGORY: $course$/RDCU
 	~<p>b</p>#<p>La variable b est définie comme un paramètre de la fonction x(). Elle a donc une visibilité de paramètre. </p>
 }
 
-// [tag:seance05]
+// [tag:rdcu]
 ::Visibilité de paramètre::[html]<p>Quelle variable a la visibilité de paramètre dans le code Java suivant?</p><p><span style\="font-family\: 'courier new', courier, monospace;">public class Widget \{<br />  public static final int Z\=13;<br />  private a int;<br />  public int x(int b) \{<br />    int y \= 0;<br />    return y;<br /></span><span style\="font-family\: 'courier new', courier, monospace; line-height\: 1.231;">  \}<br />\}</span></p>{
 	~<p>y</p>#<p>La variable y est définie à l'intérier de la méthode x. Elle a donc une visibilité "locale" à x().</p>
 	~<p>Z</p>#<p>La variable Z est définie de façon statique, ce qui veut dire qu'elle appartient à la classe Widget. Puisqu'elle est publique et la classe Widget aussi, Z pourrait être considéré comme ayant une visibilité globale.</p>
@@ -48,7 +48,7 @@ $CATEGORY: $course$/RDCU
 	=<p>b</p>#<p>La variable b est définie comme un paramètre de la fonction x(). Elle a donc une visibilité de paramètre. </p>
 }
 
-// [tag:seance05]
+// [tag:rdcu]
 ::Visibilité globale::[html]<p>Quelle variable a la visibilité globale dans le code Java suivant?</p> <p><span style\="font-family\: 'courier new', courier, monospace;">public class Widget \{<br />  public static final int Z\=13;<br />  private a int;<br />  public int x(int b) \{<br />    int y \= 0;<br />    return y;<br /></span><span style\="font-family\: 'courier new', courier, monospace; line-height\: 1.231;">  \}<br />\}</span></p>{
 	~<p>y</p>#<p>La variable y est définie à l'intérier de la méthode x. Elle a donc une visibilité "locale" à x().</p>
 	=<p>Z</p>#<p>La variable Z est définie de façon statique, ce qui veut dire qu'elle appartient à la classe Widget. Puisqu'elle est publique et la classe Widget aussi, Z pourrait être considéré comme ayant une visibilité globale.</p>
@@ -56,10 +56,16 @@ $CATEGORY: $course$/RDCU
 	~<p>b</p>#<p>La variable b est définie comme un paramètre de la fonction x(). Elle a donc une visibilité de paramètre. </p>
 }
 
-// [tag:seance05]
+// [tag:rdcu]
 ::Visibilité locale::[html]<p>Quelle variable a la visibilité locale dans le code Java suivant?</p> <p><span style\="font-family\: 'courier new', courier, monospace;">public class Widget \{<br />  public static final int Z\=13;<br />  private a int;<br />  public int x(int b) \{<br />    int y \= 0;<br />    return y;<br /></span><span style\="font-family\: 'courier new', courier, monospace; line-height\: 1.231;">  \}<br />\}</span></p>{
 	=<p>y</p>#<p>La variable y est définie à l'intérier de la méthode x. Elle a donc une visibilité "locale" à x().</p>
 	~<p>Z</p>#<p>La variable Z est définie de façon statique, ce qui veut dire qu'elle appartient à la classe Widget. Puisqu'elle est publique et la classe Widget aussi, Z pourrait être considéré comme ayant une visibilité globale.</p>
 	~<p>a</p>#<p>La variable a est définie dans la classe Widget. Elle a donc une visibilité d'attribut, puisqu'il s'agit d'un attribut de Widget.</p>
 	~<p>b</p>#<p>La variable b est définie comme un paramètre de la fonction x(). Elle a donc une visibilité de paramètre. </p>
+}
+
+::RDCU kesse::[markdown]Qu'est-ce qu'une réalisation de cas d'utilisation? {
+	~C'est l'implémentation dans un langage de programmation d'une fonctionnalité définie dans un cas d'utilisation.
+	=C'est une esquisse d'une solution logicielle avec messages et objets permettant de visualiser et d'évaluer sa conception sur le plan de la modularité.
+	~C'est une approche de développement qui nécessite des diagrammes UML pour la documentation du code afin de respecter les contrôles (*audits*) de la conception, comme dans le cycle de vie en cascade (waterfall lifecycle).
 }

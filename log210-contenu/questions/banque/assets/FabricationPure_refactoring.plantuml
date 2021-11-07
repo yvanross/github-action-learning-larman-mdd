@@ -1,0 +1,73 @@
+@startuml Diagramme UML d'un réusinage
+skinparam style strictuml
+rectangle "Avant réusinage" {
+    class "Vente" as Vente {
+        estTerminée : Boolean
+        heure : DateHeure
+        ...
+        ---
+        terminer()
+        créerLigneArticles(...)
+        créerPaiement(...)
+        getTotal()
+        ...
+        **insert( Object )**
+        **update( Object )**
+        ...
+    }
+}
+rectangle "Après réusinage" {
+    class "StockagePersistant" {
+        ---
+        **insert( Object )**
+        **update( Object )**
+        ...
+    }
+    class "Vente" as Vente2 {
+        estTerminée : Boolean
+        heure : DateHeure
+        ...
+        ---
+        terminer()
+        créerLigneArticles(...)
+        créerPaiement(...)
+        getTotal()
+        ...
+    }
+}
+@enduml
+
+@startuml Diagramme UML d'un réusinage 2
+skinparam style strictuml
+hide empty members
+rectangle "Avant réusinage" {
+    class "Joueur" as J
+    class "Dé" as Vente {
+        valeur : Entier
+        ---
+        brasser()
+        getValeur()
+    }
+    J -[#hidden]- "2" Vente
+    J -> "dés" Vente
+}
+rectangle "Après réusinage" {
+    class "Joueur" as J2
+    class "Dé" as Vente2 {
+        valeur : Entier
+        ---
+        brasser()
+        getValeur()
+    }
+    class "Cornet" as Cornet {
+        ---
+        brasser()
+        getTotal()
+    }
+    J2 -[#hidden]- "1" Cornet
+    J2 -> "cornet" Cornet
+    Cornet -> "des\r*" Vente2 :  "      "
+'    Cornet -[#hidden]- " " Vente2 :  "           "
+    Cornet -[#hidden]- "\r{ordered}" Vente2
+}
+@enduml

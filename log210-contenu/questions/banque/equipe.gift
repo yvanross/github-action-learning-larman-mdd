@@ -1,0 +1,72 @@
+$CATEGORY: $course$/Equipe
+
+// [tag:team]
+::Bus factor importance:: [markdown]Quelle est l'importance du *bus factor* dans le travail en équipe? {
+    ~Pour éviter qu'on soit obligé de changer d'équipe si les coéquipiers ne contribuent pas de manière équitable.
+    =Pour éviter qu'une équipe soit incapable d'avancer si des membres quittent l'équipe.
+    ~Pour avoir le plus d'efficacité dans une équipe.
+}
+
+// [tag:team] [tag:bus-factor]
+::Bus factor traduction:: [markdown]Quelle est le sens de *facteur de bus* dans le travail en équipe? {
+    =degré de redondance des compétences#C'est la redondance des compétences (par rapport à une tâche) dans l'équipe.
+    ~probabilité de perdre un coéquipier#Le facteur de bus ne considère pas la probabilité, mais plutôt la mitigation du risque qu'un ou plusieurs coéquipiers quittent l'équipe.
+    ~nombre de coéquipiers travaillant sur les tâches différentes#Le facteur de bus est le degré de redondance (nombre de coéquipiers travaillant sur la même tâche).
+}
+
+// [tag:team]
+::Mentorat conseils::Il faut éviter d'aider des coéquipiers, parce qu'ils doivent apprendre individuellement pour être efficace en informatique. {FALSE#L'un des avantages du travail d'équipe est que nous pouvons nous entraider. Mais les coéquipiers doivent respecter le temps de chacun.#L'un des avantages du travail d'équipe est que nous pouvons nous entraider. Mais les coéquipiers doivent respecter le temps de chacun.}
+
+// [tag:team]
+::Mentorat conseils::Selon les auteurs de Team Geek, on sait qu'on a donné assez d'aide à la personne encadrée lorsqu'elle nous dit gentiment qu'elle a compris. {FALSE#Selon Team Geek, une personne peut être gênée et va vous ignorer si vous lui donnez trop d'informations#Selon Team Geek, une personne peut être gênée et va vous ignorer si vous lui donnez trop d'informations}
+
+// [tag:team] [tag:bus-factor]
+::Bus facteur équipe à 4 ou 5::Dans le projet d'équipe en équipe de LOG210, quel est le minimum pour le facteur de bus? {
+    ~1#Avec quatre ou cinq membres par équipe, vous risquez d'en perdre un pendant le trimestre. Le facteur de bus doit être supérieur à 1 dans ce cas.
+    =2#Avec quatre ou cinq membres par équipe, vous risquez d'en perdre un pendant le trimestre. Le facteur de bus à 2 veut dire que votre projet pourra continuer malgré la perte d'une personne.
+}
+
+// [tag:team] [tag:bus-factor]
+::Bus factor sens programmation::Dans le projet en équipe de LOG210, si votre équipe a un facteur de bus à deux, il est suffisant d'avoir seulement deux personnes qui codent. {FALSE#Cela n'est pas suffisant, puisque la tâche de programmation n'est pas triviale (les deux personnes risquent l'épuisement) et les personnes qui ne codent pas ne pourront pas développer leurs habiletés de programmation.#Il n'est pas suffisant puisque la tâche de programmation n'est pas triviale (les deux personnes risquent l'épuisement) et les personnes qui ne codent pas ne pourront pas développer leurs habiletés de programmation.}
+
+$CATEGORY: $course$/Equipe/HRC-matching
+
+// [tag:team]
+::HRC Appariement::[markdown]Appariez l'énoncé avec sa qualité pour le travail en équipe {
+    =Je suis prêt.e à améliorer mes faiblesses -> Humilité
+    =Je suis confortable avec une autre personne qui code, même si je pense que je suis meilleur.e en programmation qu'elle -> Confiance
+    =J'ai de l'estime pour les réalisations faites par mes coéquipiers, même si je juge qu'ils ont fait moins que moi. -> Respect
+    =Je me soucie de mes coéquipiers. -> Respect
+}
+
+// [tag:team]
+::HRC Appariement::[markdown]Appariez l'énoncé avec sa qualité pour le travail en équipe {
+    =J'ai de l'estime pour les réalisations faites par mes coéquipiers, même si je juge qu'ils ont fait moins que moi. -> Respect
+    =Je me soucie de mes coéquipiers. -> Respect
+    =L'harmonie de l'équipe est plus importante que si j'ai raison ou tord -> Humilité
+    =Je sais que mes coéquipiers respecteront le plan de l'itération. -> Confiance
+}
+
+// [tag:team]
+::HRC Appariement::[markdown]Appariez l'énoncé avec sa qualité pour le travail en équipe {
+    =L'harmonie de l'équipe est plus importante que si j'ai raison ou tord -> Humilité
+    =Je sais que mes coéquipiers respecteront le plan de l'itération. -> Confiance
+    =J'accepte des critiques sur mon travail sans les prendre personnellement. -> Humilité
+    =Je donne des critiques sur le travail de mes coéquipiers de manière objective et sans réaction affective. -> Respect
+}
+
+// [tag:team]
+::HRC Appariement::[markdown]Appariez l'énoncé avec sa qualité pour le travail en équipe {
+    =Je suis prêt.e à améliorer mes faiblesses -> Humilité
+    =J'accepte des critiques sur mon travail sans les prendre personnellement. -> Humilité
+    =Je donne des critiques sur le travail de mes coéquipiers de manière objective et sans réaction affective. -> Respect
+    =Je ne sais pas tout. -> Humilité
+}
+
+// [tag:team]
+::HRC Appariement::[markdown]Appariez l'énoncé avec sa qualité pour le travail en équipe {
+    =Je suis prêt.e à améliorer mes faiblesses -> Humilité
+    =Je suis confortable avec une autre personne qui code, même si je pense que je suis meilleur.e en programmation qu'elle -> Confiance
+    =J'ai de l'estime pour les réalisations faites par mes coéquipiers, même si je juge qu'ils ont fait moins que moi. -> Respect
+    =Je ne sais pas tout. -> Humilité
+}

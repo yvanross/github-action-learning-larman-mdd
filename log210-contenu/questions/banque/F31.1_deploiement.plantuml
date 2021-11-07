@@ -1,0 +1,31 @@
+@startuml F31.1_deploiement
+left to right direction
+skinparam style strictuml
+skinparam BackgroundColor transparent
+node "__:GenericPC__" as thick <<client workstation>> {
+    artifact "MyRichGUIClient.exe" as app {        
+    }
+}
+node "__:GenericPC__" as thin <<client workstation>> {
+    node "<u>:WebBrowser</u>" as browser <<browser>> {        
+    }
+}
+
+node "__:Dell PowerEdge 3600__\n{ OS= Red Hat Enterprise Linux 4 }" as server <<server>> {
+    node "<u>      :Apache 2.1</u>\l{ cluserCount = 4}" as webserver <<web server cluster>>
+    node "<u> :Tomcat 6</u>\n{ JVM = Sun Hotspot 2.0 }" as servletContainer <<servlet container>> {
+        artifact "webstore.war" as webstore
+    }
+    webserver-servletContainer : Ajpv13
+}
+
+node "<u>:Dell PowerEdge 3400</u>" as dbserver <<server>> {
+    node "<u>:Red Hat Enterprise Linux 4</u>" as os <<OS>> {
+        node "<u>:PostgreSQL 10</u>" as db <<database>>
+    }
+}
+
+db -u- servletContainer : SQL
+thick -d- webserver : SOAP/HTTP
+browser -d- webserver : HTTP
+@enduml

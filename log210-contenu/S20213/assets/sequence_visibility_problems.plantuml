@@ -1,0 +1,20 @@
+@startuml sequence_visibility_problems
+skinparam style strictuml
+skinparam BackgroundColor transparent
+skinparam sequenceMessageAlign center
+skinparam handwritten true
+participant ":Avion" as A
+participant ":Base" as B
+participant ":Camion" as C
+participant ":Dragon" as D
+participant "e:Étoile" as E
+
+-> A : m1
+A -> C : m2
+
+create E
+C -->> E : e = create
+A -> B : add(e)
+C -> D : add(e)
+<<-- A : "ok"
+@enduml

@@ -1,21 +1,21 @@
 $CATEGORY: $course$/Dss-dessin
 
 
-// [tag:seance02]
+// [tag:dss-dessin]
 ::DSS Simple::[markdown]Dessiner un diagramme de séquence système pour le cas d'utilisation simple suivant\:
 1. Le Passager arrive à un tourniquet (*turnstile* en anglais) du métro.
 2. Le Passager approche sa carte OPUS au-dessu du lecteur de la boîte de perception.
 3. Le Système affiche le nombre de titres restant sur la carte OPUS et débloque le tourniquet.
 {}
 
-// [tag:seance02]
+// [tag:dss-dessin]
 ::DSS Simple::[markdown]Dessiner un diagramme de séquence système pour le cas d'utilisation simple suivant\:
 1. Le Client arrive à une borne pour emprunter des livres à la bibliothèque.
 2. Le Client approche sa carte d'abonné au-dessu du lecteur de la boîte de perception.
 3. Le Système affiche le nombre de livres empruntés par le Client avec sa carte.
 {}
 
-// [tag:seance02]
+// [tag:dss-dessin]
 ::DSS Simple::[markdown]Dessiner un diagramme de séquence système pour le cas d'utilisation simple suivant\:
 1. Le Client arrive à une borne de vélo Bixi.
 2. Le Client insère sa clé d'abonné dans la fente de la borne.

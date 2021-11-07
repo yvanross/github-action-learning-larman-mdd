@@ -1,0 +1,66 @@
+@startuml Fab_Pure_Controleurs
+'left to right direction
+skinparam style strictuml
+skinparam BackgroundColor transparent
+rectangle "avant" as av #ffdddd {
+    class "Registre" {
+        identifiant : string
+        ...
+        --
+        créerNouvelleVente()
+        saisirArticle()
+        ...
+        ..
+        créerNouveauRetour()
+        saisirArticleRetourné()
+        ...
+        ..
+        créerMisePlateau()
+        authentifier()
+        ...
+        ..
+        (d'autres méthodes)
+    }
+}
+note top
+**Contrôleur de façade** surchargé
+d'opérations systeme.
+//Situation désespéree// -- transgression 
+des principes de **Forte cohésion** et
+**Faible couplage**
+end note
+rectangle "après" as ap #ddffdd {
+    class "Registre" as R2 {
+        identifiant : string
+        ...
+        --
+        (d'autres méthodes)
+    }
+    class "GestionnaireVentes" as GV {
+        --
+        créerNouvelleVente()
+        saisirArticle()
+        ...
+    }
+    class "GestionnaireRetours" as GR {
+        --
+        créerNouveauRetour()
+        saisirArticleRetourné()
+        ...
+    }
+    class "GestionnaireCashIn" as GCI {
+        --
+        créerMisePlateau()
+        authentifier()
+        ...
+    }
+}
+note as FB
+**Fabrications Pures** avec **Contrôleurs de session (de cas d'utilisation)**. 
+C'est le réusinage "extract class" pour chaque ensemble d'opérations systeme
+end note
+FB .d. GV
+FB .d. GR
+FB .d. GCI
+'av -[#hidden]down- ap
+@enduml

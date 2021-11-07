@@ -1,73 +1,73 @@
 $CATEGORY: $course$/Processus unifié
 
 
-// [tag:seance02]
+// [tag:processprocessusUnifie]
 ::Phases::[html]<p>Les phases du processus unifié sont</p>{
 	~%25%<p>Inception</p>
 	~%25%<p>Élaboration</p>
 	~%25%<p>Construction</p>
 	~%25%<p>Transition</p>
-	~<p>Test</p>
-	~<p>Analyse</p>
-	~<p>Conception</p>
-	~<p>Implémentation</p>
+	~%-25%<p>Test</p>
+	~%-25%<p>Analyse</p>
+	~%-25%<p>Conception</p>
+	~%-25%<p>Implémentation</p>
 	####<p>Inception, Élaboration, Construction et Transistion</p>
 }
 
-// [tag:seance06]
-::Cascade::[html]<p>Quel est le pourcentage réelle des fonctionnalités utilisées suite à la réalisation d'un projet utilisant un processus en cascade?</p>{
+// [tag:processusUnifie]
+::Cascade::[html]<p>Selon le livre de Larman, appariez le pourcentage réel des fonctionnalités utilisées à la suite de la réalisation d'un projet utilisant un processus en cascade.</p>{
 	=<p>Jamais</p> -> 45%
 	=<p>Rarement</p> -> 19%
 	=<p>Toujours</p> -> 7%
 }
 
-// [tag:seance06]
-::Processus unifié (1)::[html]Dans un cycle de vie en ________________, on essaie de définir en détail toutes (ou presque) les exigences avant de programmer.{
-	=%100%cascade#
-}
+// [tag:processusUnifie]
+// ::Processus unifié (1)::[html]Dans un cycle de vie en ________________, on essaie de définir en détail toutes (ou presque) les exigences avant de programmer.{
+// 	=%100%cascade#
+// }
 
-// [tag:seance06]
+// [tag:processusUnifie]
 ::Processus unifié (2)::[html]Quelle est une durée typique d'une itération dans le processus unifié?{
 	~3 jours.#Cette durée n'est pas adéquate pour effectuer des activités d'analyse, de conception et de programmation et aussi avoir du feedback du client sur une implémentation qui fonctionne.
 	~3 mois.#Trois mois sont adéquats pour effectuer des activités d'analyse, de conception et de programmation. Mais le feedback du client sur une implémentation devrait venir plus souvent pour ne pas avoir de mauvaises surprises.
 	=3 semaines.#Dans trois semaines il est possible d'avoir effectué des activités d'analyse, de conception et de programmation, afin d'avoir un feedback du client sur l'implémentation.
 }
 
-// [tag:seance06]
+// [tag:processusUnifie]
 ::Processus unifié (3)::[html]Un objectif du processus unifié est de réduire les risques (techniques, spécifications, objectifs, etc.)...{
 	~en figeant les changements dans les exigences les plus tôt possible.#Au contraire, le processus unifié veut gérer les changements, car au début d'un projet, les besoins sont souvent mal connus.
 	=en faisant du développement itératif et évolutif, organisé dans les courtes itérations.#Les risques techniques sont réduits puisque dans chaque itération il y a quelque chose de concret qui fonctionne. Cela permet de valider les hypothèses sur les aspects techniques du système et de mieux connaître les objectifs et les spécifications du système à développer.
 	~en planifiant dès le début du projet tous les détails des courtes itérations.#Selon le processus unifié, on ne planifie que la prochaine itération. Puisqu'il peut y avoir beaucoup d'inconnus (risques techniques) au début du projet, ça ne sert à rien de planifier tous les détails de chaque itération. À la fin d'une itération lorsqu'il y a quelque chose de concret qui fonctionne, les inconnus changeront et cela affectera la planification de la prochaine itération.
-	~en faisant beaucoup de programmation tôt dans le projet.#Bien que commencer à ecrire du code tôt est une bonne chose, cela n'est pas suffisant pour réduire les risques techniques. Il faut également chercher les exigences (faire une analyse) et proposer une bonne conception pour réduire ces risques.
+	~en faisant beaucoup de programmation tôt dans le projet.#Bien que commencer à écrire du code tôt est une bonne chose, cela n'est pas suffisant pour réduire les risques techniques. Il faut également chercher les exigences (faire une analyse) et proposer une bonne conception pour réduire ces risques.
 	~en bien documentant toutes les exigences au début du projet.#En fait, un point faible du processus en cascade (séquentiel) est d'essayer de comprendre toutes les exigences au début du projet. Cela est très difficile, voire impossible pour les projets complexes.
 }
 
-// [tag:seance06]
+// [tag:processusUnifie]
 ::Processus unifié (4)::[html]Vrai ou faux\: Selon le Processus Unifié, les diagrammes UML et les activités de conception servent à définir des modèles exacts et très détaillés, et la programmation n'est qu'une simple transcription mécanique de ceux-ci en code.{
 	~Vrai#C'est faux! Le Processus Unifié reconnaît le fait que la programmation n'est pas triviale. C'est pour cela qu'une itération nécessite une réalisation en code de quelque chose concret, afin de valider la conception du système.
 	=Faux#Bien que le Processus Unifié nécessite les activités de conception, il reconnaît le fait que la programmation n'est pas une activité triviale. Bien que les diagrammes UML et les activités de conception puissent servir comme une base pour la programmation, ces diagrammes ne sont qu'une esquisse d'une solution. Seule une implémentation peut valider ces diagrammes.
 }
 
-// [tag:seance06]
-::Processus unifié (5)::[html]Vrai ou faux\: Dans le Processus Unifié, la phase Inception \= analyse (spécifications), élaboration \= conception et construction \= implémentation.{
-	~Vrai#C'est faux! Le Processus Unifié n'est pas simplement une variante du modèle en cascade (séquentiel). Par exemple, il devrait y avoir des activités d'analyse, de conception et d'implémentation durant toutes les phases du Processus Unifié.
-	=Faux#Le Processus Unifié se distingue du modèle en cascade puisqu'il peut y avoir des activités d'analyse, de conception et d'implémentation dans toutes les phases.
+// [tag:processusUnifie]
+::Processus unifié (5)::[markdown]Vrai ou faux\: Dans le Processus Unifié, la phase Inception \= analyse (spécifications), élaboration \= conception et construction \= implémentation.{
+	~Vrai#C'est faux! Le Processus Unifié n'est pas simplement une variante du modèle en cascade (séquentiel). Par exemple, il devrait y avoir des activités d'analyse, de conception et d'implémentation durant **toutes** les itérations de **toutes** les phases du Processus Unifié.
+	=Faux#Le Processus Unifié se distingue du modèle en cascade puisqu'il peut y avoir des activités d'analyse, de conception et d'implémentation dans **toutes** les itérations de **toutes** le phases.
 }
 
-// [tag:seance06]
+// [tag:processusUnifie]
 ::Processus unifié (6)::[html]Dans le Processus Unifié, la construction a pour but de traduire en code tous les modèles de conception définis durant l'élaboration.{
 	~Vrai#C'est faux. Les modèles de conception sont utilisés pour guider le codage dans chaque itération. Le but du Processus Unifié est de valider un modèle de conception rapidement en l'implémentant dans la même itération.
 	=Faux#Les modèles de conception sont utilisés pour guider le codage dans <em>chaque</em> itération. Le but du Processus Unifié est de valider un modèle de conception rapidement en l'implémentant dans <em>la même itération</em>.
 }
 
-// [tag:seance06]
-::Processus unifié (7)::[html]Vrai ou faux\: Adopter l'UML implique beaucoup d'activités et de documents.{
+// [tag:processusUnifie]
+::Processus unifié UML est lourd::[markdown]Vrai ou faux\: Adopter l'UML implique beaucoup d'activités et de documents.{
 	~Vrai#Bien que l'UML soit une norme complexe, il y a moyen de s'en servir sans faire nécessairement beaucoup d'activités ou de documents.
 	=Faux#Le Processus Unifié favorise l'application d'UML avec des pratiques de modélisation agiles.
 }
 
-// [tag:seance06]
-::Processus unifié (8)::[html]Dans le Processus Unifié, quel document détaille le projet en entier?{
+// [tag:processusUnifie]
+::Processus unifié - plan d'itération::[html]Dans le Processus Unifié, quel document détaille le projet en entier?{
 	~Plan de projet (diagramme de Gantt)#Ce document ne fait pas partie du Processus Unifié.
 	=Il n'y a pas de plan détaillé du projet entier.#Le plan de haut niveau s'appelle le <em>Plan de phases</em>, mais le seul plan détaillé s'appelle <em>Plan d'itération</em> et il ne détaille qu'une itération à la fois.
 	~Plan d'itération#Le plan d'itération ne détaille qu'une itération à la fois.

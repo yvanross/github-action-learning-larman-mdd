@@ -1,0 +1,10 @@
+$CATEGORY: $course$/TypeScript
+
+// [tag:TypeScript]
+::ArrowFunction equivalent classic function::[markdown]Quel est l'équivalent de\n```\nfunction bonjour(qui\: string) \{\n    return console.log("Bonjour " + qui);\n\}\n```\n?
+{
+	=`const bonjour \= (qui\: string) \=> console.log("Bonjour " + qui)`
+	~`const bonjour \= (qui\: string) \=> return console.log("Bonjour " + qui)`
+	~`const bonjour \= qui\: string \=> console.log("Bonjour " + qui)`
+	~`(qui\: string) \=> console.log("Bonjour " + qui)`
+}

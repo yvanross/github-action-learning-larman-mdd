@@ -1,0 +1,37 @@
+@startuml FigureA26.1
+skinparam style strictuml
+class "<<interface>>\nIAccountingAdapter" as IAccAd {
+__
+postReceivable( CreditPayment )
+postSale( Sale )
+...
+}
+class "SAPAccountingAdapter" as TaxMasterAd implements IAccAd {
+__
+postReceivable( CreditPayment )
+postSale( Sale )
+...
+}
+class "GreatNorthernAccountingAdapter" as GAGTaxProAd implements IAccAd {
+__
+postReceivable( CreditPayment )
+postSale( Sale )
+...
+}
+@enduml
+
+@startuml FigureA26.2
+skinparam style strictuml
+skinparam SequenceMessageTextAlignment center
+participant ":Register" as r
+participant ":SAPAccountingAdapter" as sapad
+participant ":SAPSystem" as sap
+-> r : makePayment
+activate r
+... ...
+r -> sapad : postSale( sale )
+activate sapad
+note right: SOAP over HTTP
+create sap
+sapad -> sap : xxx
+@enduml

@@ -1,36 +1,64 @@
 $CATEGORY: $course$/Dette technique
 
-// [tag:seance11]
-::Dette forme de risque::Est-ce que la dette technique est une forme de Risque?{TRUE}
+// [tag:dette-technique]
+::Dette forme de risque::Est-ce que la dette technique est une forme de risque?{TRUE}
 
-// [tag:seance11]
-::coboy hacking::Est-ce que le coboy hacking est une dette technique?{TRUE}
+// // [tag:dette-technique]
+// ::cowboy hacking::Est-ce que le hacking cowboy est une dette technique?{TRUE}
 
-// [tag:seance11]
-::consequence::Quel sont les conséquences d'avoir une dette technique?{
-  ~%25%Coût de réparation plus élevé
-  ~%25%Nombre de défault plus élevé
-  ~%25%Entretient plus difficile
-  ~%25%Faible productivité
-  ~%0%Très bonne productivité
-  ~%0%Bonne performance à l'exécution
-  ~%0%Mauvaise performance à l'exécution
-  ~%0%Entretient plus facile
+// // [tag:dette-technique]
+// ::consequence::Quel sont les conséquences d'avoir une dette technique?{
+//   ~%25%Coût de réparation plus élevé
+//   ~%25%Nombre de défaut plus élevé
+//   ~%25%Entretient plus difficile
+//   ~%25%Faible productivité
+//   ~%0%Très bonne productivité
+//   ~%0%Bonne performance à l'exécution
+//   ~%0%Mauvaise performance à l'exécution
+//   ~%0%Entretient plus facile
+// }
+
+// // [tag:dette-technique]
+// ::éviter dette technique::Quel sont les actions à réaliser pour minimiser la dette technique?{
+//   ~%25%Réaliser le Modèle du domaine (MDD)
+//   ~%25%Réaliser les RDCU
+//   ~%25%Utiliser TDD
+//   ~%25%Avoir de la traçabilité entre les artéfacts
+//   ~%0%Améliorer la performance du code
+//   ~%0%Ne pas prendre de décision
+//   ~%0%Ne pas faire de test pour minimiser les coûts
+// }
+
+// // [tag:dette-technique]
+// ::coût test::Quel est l'impact sur la dette technique?{
+//   =Écrire des tests automatisés? -> Diminue
+//   =Réaliser des tests manuels? -> Augmente
+// }
+
+// [tag:dette-technique]
+::Dette technique et cowboy hacking::
+[markdown]
+Le hacking cowboy amène de la dette technique... {
+  =parce qu'on écrit vite du code qui fonctionne, sans porter une attention à sa lisibilité, à son extensibilité, etc. 
+  ~parce que le coût de la main-d'œuvre en programmation augmente avec le temps.
+  ~parce que le code écrit rapidement a plus de bogues à corriger.
 }
 
-// [tag:seance11]
-::evite dette technique::Quel sont les actions à réaliser pour minimiser la dette technique?{
-  ~%25%Réaliser le Modèle du domaine (MDD)
-  ~%25%Réaliser les RDCU
-  ~%25%Utiliser TDD
-  ~%25%Avoir de la tracabilité entre les artéfacts
-  ~%0%Améliorer la performance du code
-  ~%0%Ne pas prendre de décision
-  ~%0%Ne pas faire de test pour minimiser les coûts
+// [tag:dette-technique]
+::Dette technique est à éviter::
+[markdown]
+La dette technique n'a que des conséquences négatives. Alors, il faut l'éviter. 
+{FALSE
+#La dette technique est à gérer plutôt qu'à éviter. Par exemple, on peut décider de ne pas porter beaucoup d'attention à la conception au début d'un projet afin de produire des fonctionnalités plus rapidement (hacking cowboy). Cela peut apporter un avantage de positionnement stratégique dans un secteur où il y a de la concurrence et on doit convaincre des investisseurs de miser. Par contre, les qualités du code telles que la maintenabilité, la lisibilité et l'extensibilité seront médiocres et cette *dette technique* devra être payée éventuellement.
+#La dette technique est à gérer plutôt qu'à éviter. Par exemple, on peut décider de ne pas porter beaucoup d'attention à la conception au début d'un projet afin de produire des fonctionnalités plus rapidement (hacking cowboy). Cela peut apporter un avantage de positionnement stratégique dans un secteur où il y a de la concurrence et on doit convaincre des investisseurs de miser. Par contre, les qualités du code telles que la maintenabilité, la lisibilité et l'extensibilité seront médiocres et cette *dette technique* devra être payée éventuellement.
 }
 
-// [tag:seance11]
-::cout test::Quel est l'impact sur la dette technique?{
-  =Ecrire des tests automatisée? -> Diminue
-  =Réaliser des tests manuel? -> Augmente
+// [tag:dette-technique]
+::Dette technique classification::
+[markdown]
+Selon le quadrant de Fowler, appariez chaque exemple de dette technique avec sa classification\: {
+  =Pour aller plus vite, une équipe a instancié et manipulé les objets du domaine à partir du code d'une méthode du Routeur Express. -> Involontaire/Imprudente
+  =On sait que le code du driver Bluetooth est difficile à modifier, mais la plupart des clients n'utilisent pas cette option. -> Délibérée/Prudente
+  =Le chef d'équipe dit que la conception sera réalisée tout seul, si on est vraiment "agile". -> Délibérée/Imprudente
+  =Notre solution 1.0 a été la première sur le marché, mais nous avons une meilleure maîtrise du domaine d'affaires pour la solution 2.0. -> Involontaire/Prudente
 }

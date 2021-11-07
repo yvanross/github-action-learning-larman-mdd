@@ -1,0 +1,44 @@
+@startuml
+title GRASP Contrôleur (deux options)
+skinparam style strictuml
+skinparam BackgroundColor transparent
+
+class "Registre" {
+    identifiant : string
+    ...
+    --
+    créerNouvelleVente()
+    saisirArticle()
+    ...
+    ..
+    (d'autres méthodes)
+}
+note top
+**Contrôleur de façade**
+(représente le système global, 
+un <<objet racine>>, un équipement 
+ou un sous-système)
+Inspiré du MDD
+end note
+
+    class "GestionnaireVentes" as GV {
+        --
+        créerNouvelleVente()
+        saisirArticle()
+        ...
+    }
+note as FB
+**Contrôleur de session**
+**(de cas d'utilisation)**. 
+(scénario de cas d'utilisation
+dans lequel l'opération système
+se produit)
+//GRASP Fabrication Pure//
+end note
+note as OS
+  Opérations système
+end note
+OS .l.> Registre::créerNouvelleVente
+OS .r.> GV::créerNouvelleVente
+FB .d. GV
+@enduml

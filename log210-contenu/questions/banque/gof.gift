@@ -1,7 +1,7 @@
 $CATEGORY: $course$/GOF
 
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Visiteur::[html]<p>On a une structure d'objets ayant plusieurs classes avec des interfaces différentes. On veut effectuer des opérations sur ces objets et les opérations dépendent des classes concrètes. On trouve que les classes de la structure d'objets ont du code spécifique pour les opérations et ce code n'est pas très cohésif. Les classes définissant la structure d'objets évoluent rarement, mais il est plus fréquent d'ajouter ou de modifier une opération effectuée sur la structure d'objets.</p>{
 	=<p>Visiteur</p>#<p>Correct! </p>
 	~<p>Décorateur</p>#<p>Incorrect.</p>
@@ -10,7 +10,7 @@ $CATEGORY: $course$/GOF
 	~<p>Chaîne des responsabilités</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Adaptateur::[html]<p>L'application a besoin d'un service, mais ce service est déjà implémenté. Il en existe plusieurs implémentations, ayant des interfaces de programmation (API) différentes. On est obligé de faire beaucoup de modifications dans l'application pour que ça fonctionne avec chaque API différente.</p>{
 	=<p>Adaptateur</p>#<p>Correct! </p>
 	~<p>Façade</p>#<p>Incorrect.</p>
@@ -19,7 +19,7 @@ $CATEGORY: $course$/GOF
 	~<p>Décorateur</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Commande::[html]<p>On veut pouvoir spécifier, mettre en file d'attente, puis exécuter des opérations de l'application. On veut pouvoir faire des opérations de l'application avec des paramètres. On veut pouvoir défaire (« undo ») des opérations de l'application. On veut définir et exécuter la combinaison des opérations de l'application.</p>{
 	=<p>Commande</p>#<p>Correct! </p>
 	~<p>Visiteur</p>#<p>Incorrect.</p>
@@ -28,7 +28,7 @@ $CATEGORY: $course$/GOF
 	~<p>Chaîne des responsabilités</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Composite::[html]<p>On applique certains services sur un ensemble d'objets individuels. Mais on aimerait également appliquer ces services sur une ou plusieurs sortes agrégation de ces objets, comme si une agrégation était un objet individuel.</p>{
 	=<p>Composite</p>#<p>Correct! </p>
 	~<p>Décorateur</p>#<p>Incorrect.</p>
@@ -37,7 +37,7 @@ $CATEGORY: $course$/GOF
 	~<p>Commande</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron de méthode (Template method)::[html]<p>On trouve qu'il existe un algorithme ayant des parties fixes et des parties variantes, avec du code complexe pour traiter tous les cas variants. Il y a des sous-classes ayant des responsabilités communes et dupliquées dans le code. On veut contrôler les extensions permises dans les sous-classes pour une certaine classe.</p>{
 	=<p>Patron de méthode (<em>Template method</em>)</p>#<p>Correct! </p>
 	~<p>Méthode fabrique</p>#<p>Incorrect.</p>
@@ -46,7 +46,7 @@ $CATEGORY: $course$/GOF
 	~<p>Mandataire (<em>Proxy</em>)</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Décorateur::[html]<p>On veut pouvoir ajouter (ou enlever) des responsabilités (comportements, fonctionnalités) aux objets d'une façon dynamique et transparente, sans affecter d'autres objets. Le nombre de combinaisons possibles de ces responsabilités est important. Alors, il est complexe de faire une sous-classe pour chaque combinaison.</p><p> </p>{
 	=<p>Décorateur</p>#<p>Correct! </p>
 	~<p>Chaîne des responsabilités</p>#<p>Incorrect.</p>
@@ -55,7 +55,7 @@ $CATEGORY: $course$/GOF
 	~<p>Stratégie</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Fabrique Abstraite::[html]<p>On veut instancier un objet faisant partie d'une hiérarchie de classes, mais on n'est pas toujours sûr de quelle classe il s'agit.</p><p> </p>{
 	=<p>Fabrique abstraite</p>#<p>Correct! </p>
 	~<p>Méthode fabrique</p>#<p>Incorrect.</p>
@@ -64,7 +64,7 @@ $CATEGORY: $course$/GOF
 	~<p>Patron de méthode (<em>Template methode</em>)</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Itérateur::[html]<p>On veut accéder au contenu d'un objet agrégé sans connaître sa structure interne (son implémentation). On veut pouvoir supporter de multiples parcours d'objets agrégés. On veut fournir une interface normalisée pour parcourir des objets agrégés ayant des formes différentes.</p>{
 	=<p>Itérateur</p>#<p>Correct! </p>
 	~<p>Visiteur</p>#<p>Incorrect.</p>
@@ -73,7 +73,7 @@ $CATEGORY: $course$/GOF
 	~<p>Chaîne des responsabilités</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Mandataire (Proxy)::[html]<p>On a besoin d'accéder à des objets à distance, comme s'ils étaient locaux. On trouve que l'instanciation de certains objets a un impact négatif sur la performance du système. On veut limiter l'accès à certains objets pour la sécurité. On a des besoins particuliers concernant l'accès à certains objets, p. ex. charger en mémoire vive pour la première fois un objet persistant.</p>{
 	=<p>Proxy (Mandataire)</p>#<p>Correct! </p>
 	~<p>Strategie</p>#<p>Incorrect.</p>
@@ -82,7 +82,7 @@ $CATEGORY: $course$/GOF
 	~<p>Observateur</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Observateur::[html]<p>Une abstraction comporte deux aspects et l'un dépend de l'autre. Un changement d'état dans un objet engendre des changements d'état dans d'autres objets, et on ne sait pas a priori lesquels. Un objet devrait pouvoir avertir d'autres objets des événements importants, sans un couplage fort avec ces derniers (sans les connaître concrètement).</p>{
 	=<p>Observateur</p>#<p>Correct! </p>
 	~<p>État (State)</p>#<p>Incorrect.</p>
@@ -91,7 +91,7 @@ $CATEGORY: $course$/GOF
 	~<p>Singleton</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Singleton::[html]<p>On veut faire en sorte qu'une classe n'ait qu'une seule instance et que l'accès à cette instance soit accessible aux clients à un endroit bien connu. On veut permettre la spécialisation de la seule instance par des sous classes, sans que les clients aient à modifier leur code.</p>{
 	=<p>Singleton</p>#<p>Correct! </p>
 	~<p>Mandataire (<em>Proxy</em>)</p>#<p>Incorrect.</p>
@@ -100,7 +100,7 @@ $CATEGORY: $course$/GOF
 	~<p>Composite</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Stratégie::[html]<p>On trouve qu'il y a plusieurs classes similaires, mais qui varient seulement sur le plan comportemental. On a besoin de plusieurs variantes algorithmiques pour un même service. Un algorithme utilise des structures de données complexes, augmentant le couplage entre le client et ces structures. Une classe définit plusieurs comportements, mais ces comportements dépendent d'une condition.</p>{
 	=<p>Stratégie</p>#<p>Correct! </p>
 	~<p>Décorateur</p>#<p>Incorrect.</p>
@@ -109,7 +109,7 @@ $CATEGORY: $course$/GOF
 	~<p>Itérateur</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Adaptateur contexte ChF23::[html]<p>Pourquoi Larman propose-t-il le pattern Adaptateur pour le système POS NextGen? </p>{
 	~<p>Adaptateur permet de protéger les services externes des changements éventuels dans les classes clients.</p>#<p>Adaptateur ne permet pas une protection de variations dans ce sens. </p>
 	~%50%<p>Adaptateur permet de protéger les classes utilisant les services externes des changements éventuels de ces derniers. </p>#<p>Adaptateur fournit aux classes clients une Protection des variations (GRASP) des services externes. </p>
@@ -117,7 +117,7 @@ $CATEGORY: $course$/GOF
 	~%50%<p>Adaptateur permet d'accéder à plusieurs systèmes externes (dont leur API est immuable) comme s'ils avaient tous une même API.  </p>#<p>Adaptateur "adapte" l'API des services externes afin que cela fonctionne avec une API commune. </p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Composite context ChF23::[html]<p>Pourquoi le pattern Composite a-t-il été proposé pour le système POS NextGen (chapitre F23/A26)?</p>{
 	~%50%<p>Le pattern Composite a été proposé pour permettre la combinaison de stratégies de tarification. </p>
 	~%50%<p>Le pattern Composite a été proposé pour résoudre le conflit entre deux stratégies de tarification. </p>
@@ -125,7 +125,7 @@ $CATEGORY: $course$/GOF
 	~<p>Le pattern Composite a été proposé pour permettre la combinaison des lignes de taxes (p.ex. taxes fédérales et provinciales). </p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Context Stratégie (Vente) ChF23::[html]<p>Quel est l’objet contexte auquel l’algorithme de Stratégie s’applique dans le système POS NextGen (expliqué dans le chapitre F23/A26)?</p>{
 	=<p>Vente</p>#<p>C'est la classe Vente qui est l'objet des stratégies de <em>tarification</em>.</p>
 	~<p>LigneArticle</p>#<p>Quel est l'objet des stratégies de <em>tarification</em>?</p>
@@ -133,7 +133,7 @@ $CATEGORY: $course$/GOF
 	~<p>FabriqueDeServices</p>#<p>Quel est l'objet des stratégies de <em>tarification</em>?</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Façade contexte ChF23::[html]<p>Dans quel contexte le pattern Façade a-t-il été proposé pour le système POS NextGen (chapitre F23/A26)?</p>{
 	=<p>Pour définir un point de contact unique pour permettre les règles de gestion insérables. </p>
 	~<p>Pour définir un point de contact unique (contrôleurs de session) pour toutes les opérations système du système POS NextGen. </p>
@@ -141,7 +141,7 @@ $CATEGORY: $course$/GOF
 	~<p>Pour définir un point de contact unique pour le sous-système de création d'objets dans la couche de présentation. </p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Nombre de GoF les plus utiles ChF23::[html]<p>Selon Larman, combien des Design Patterns GoF sont les plus utiles et les plus courants?</p>{
 	=<p>15</p>#<p>Les vingt-trois patterns GoF ne sont pas tous largement utilisés \: les plus utiles et les plus courants sont au nombre de quinze.</p>
 	~<p>6</p>#<p>Les vingt-trois patterns GoF ne sont pas tous largement utilisés \: les plus utiles et les plus courants sont au nombre de quinze.</p>
@@ -149,14 +149,14 @@ $CATEGORY: $course$/GOF
 	~<p>3</p>#<p>Les vingt-trois patterns GoF ne sont pas tous largement utilisés \: les plus utiles et les plus courants sont au nombre de quinze.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Pourquoi le pattern Fabrique Concrète est-il proposé dans la solution avec les adaptateurs?::[html]Pourquoi le pattern Fabrique Concrète est-il proposé dans la solution avec les adaptateurs?{
 	=Lors de l’exécution du logiciel, dans chacune des hiérarchies d’adaptateurs (calculateurs de taxe, système de comptabilité, gestion de stock), il faudra déterminer la bonne classe d’adaptateur concret à utiliser et à instancier.#Ce pattern aide aussi à gérer la complexité qui est introduite lorsqu’on propose les hiérarchies des adaptateurs différents.
 	~C’est pour encapsuler la logique de création des objets de Vente (Sale), de LigneArticles (SalesLineItem) et de LigneTaxes (TaxLineItem).#Les adaptateurs concrets eux-mêmes doivent être créés et la logique pour les créer est complexe. La Fabrique Concrète prend la responsabilité de déterminer quels adaptateurs à utiliser ainsi que de créer (instancier) ces adaptateurs.
 	~Le pattern Fabrique Concrète n’a pas été proposé dans la solution avec les adaptateurs. Il résout le problème de déterminer quelle classe dans la couche domaine reçoit une opération système.#Les adaptateurs concrets doivent être créés et la logique pour les créer est complexe. La Fabrique Concrète prend la responsabilité de déterminer quels adaptateurs à utiliser ainsi que de créer (instancier) ces adaptateurs.
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Quelle phrase résume le mieux l’application des patterns Adaptateur, Fabrique Concrète et Singleton dans l’exemple de ce chapitre?::[html]Quelle phrase résume le mieux l’application des patterns Adaptateur, Fabrique Concrète et Singleton dans l’exemple de ce chapitre?{
 	=Nous traitons le problème des variations des interfaces externes avec des Adaptateurs générés par une Fabrique Concrète Singleton.#Cette phrase résume le mieux l’application des trois patterns dans l’exemple de ce chapitre.
 	~Nous traitons le problème des variations des calculateurs de taxes externes avec des Adaptateurs générés par une Fabrique Concrète Singleton.#Cette phrase n’est pas complète, car le problème concerne également les variations du système de comptabilité et de gestion de stock.
@@ -164,7 +164,7 @@ $CATEGORY: $course$/GOF
 	~Nous traitons le problème des variations des interfaces externes avec des Fabriques Concrètes Singleton générées par un Adaptateur.#Dans l’exemple du livre, il n’y a qu’une Fabrique Concrète Singleton. C’est elle qui génère des instances des différents adaptateurs, selon les conditions dynamiques (la configuration du logiciel).
 } 
 
-// [tag:seance08]
+// [tag:gof]
 ::Quel pattern est proposé par Larman pour résoudre le problème de création de FabriqueDeServices (ServicesFactory)?::[html]Quel pattern est proposé par Larman pour résoudre le problème de création de FabriqueDeServices (ServicesFactory)?{
 	=Singleton#Le singleton FabriqueDeServices (ServicesFactory) a la responsabilité de s’instancier lui-même une fois seulement. Il fournit également un accès global (visibilité globale).
 	~Méthode fabrique (Factory method)#Ce n’est pas le pattern proposé dans ce chapitre. SVP revoir les lectures.
@@ -172,7 +172,7 @@ $CATEGORY: $course$/GOF
 	~Fabrique Abstraite (Abstract Factory)#Ce n’est pas le pattern proposé dans ce chapitre. SVP revoir les lectures.
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Limiter dépendances avec fabrications::[html]<p>Quel est le problème avec le couplage entre les packages dans la figure suivante\:</p><p><img src\="https\://www.plantuml.com/plantuml/img/LOqn3i8m34Ltdy8dw16G43CIOc1YCUbNiHf7KHA62d6WdeEBuO52ktYmt_EhewOiHOnhco9y5WtjOP7kseDXkKrii1jAfInXb05yGMge_2Jc4ALMFcDGDq4l-a4dKPY3QsxPxG_bFVVQDhmN_8caW9Lnb9nHhcantVZMksxtRz3Qtbm-" alt\="Image PlantUML" width\="370" height\="304" /></p>{
 	=<p>Les implémentations de Paiements (classes concrètes) devraient être masquées des packages Ventes et Persistance pour respecter le principe GRASP de Protection des variations.</p>
 	~<p>Le couplage est dans le mauvais sens. Le package Paiements devrait dépendre de Ventes et de Persistance. </p>
@@ -180,7 +180,7 @@ $CATEGORY: $course$/GOF
 	~<p>Il devrait y avoir une dépendance cyclique entre les packages. Il manque les liens de couplage de Paiements vers Ventes et vers Persistance.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Limiter dépendances avec fabrications (objets de domaine)::[html]<p>Quel est la <em>solution</em> à ce problème avec le couplage entre les packages dans la figure suivante\:</p><p><img src\="https\://www.plantuml.com/plantuml/img/LOqn3i8m34Ltdy8dw16G43CIOc1YCUbNiHf7KHA62d6WdeEBuO52ktYmt_EhewOiHOnhco9y5WtjOP7kseDXkKrii1jAfInXb05yGMge_2Jc4ALMFcDGDq4l-a4dKPY3QsxPxG_bFVVQDhmN_8caW9Lnb9nHhcantVZMksxtRz3Qtbm-" alt\="Image PlantUML" width\="370" height\="304" /></p>{
 	=<p>Introduire un nouveau package CréationObjetsDuDomaine avec les interfaces et les fabriques. Ainsi, Ventes et Persistance ignorent les détails de Paiements.</p>
 	~<p>Factoriser Ventes et Persistance dans un même package. Ainsi on élimine un lien de couplage entre packages. </p>
@@ -188,7 +188,7 @@ $CATEGORY: $course$/GOF
 	~<p>On applique le patron MVC pour régler le problème de couplage dans le mauvais sens.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Adaptateur::[html]<p>L’application a besoin d’un service, mais ce service est déjà implémenté. Il en existe plusieurs implémentations, ayant des interfaces de programmation (API) différentes. On est obligé de faire beaucoup de modifications dans l’application pour que ça fonctionne avec chaque API différente.</p>{
 	=<p>Adaptateur</p>#<p>Correct! </p>
 	~<p>Façade</p>#<p>Incorrect.</p>
@@ -197,7 +197,7 @@ $CATEGORY: $course$/GOF
 	~<p>Décorateur</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Commande::[html]<p>On veut pouvoir spécifier, mettre en file d’attente, puis exécuter des opérations de l’application. On veut pouvoir faire des opérations de l’application avec des paramètres. On veut pouvoir défaire (« undo ») des opérations de l’application. On veut définir et exécuter la combinaison des opérations de l’application.</p>{
 	=<p>Commande</p>#<p>Correct! </p>
 	~<p>Visiteur</p>#<p>Incorrect.</p>
@@ -206,7 +206,7 @@ $CATEGORY: $course$/GOF
 	~<p>Chaîne des responsabilités</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Décorateur::[html]<p>On veut pouvoir ajouter (ou enlever) des responsabilités (comportements, fonctionnalités) aux objets d’une façon dynamique et transparente, sans affecter d’autres objets. Le nombre de combinaisons possibles de ces responsabilités est important. Alors, il est complexe de faire une sous-classe pour chaque combinaison.</p><p> </p>{
 	=<p>Décorateur</p>#<p>Correct! </p>
 	~<p>Chaîne des responsabilités</p>#<p>Incorrect.</p>
@@ -215,7 +215,7 @@ $CATEGORY: $course$/GOF
 	~<p>Stratégie</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Fabrique Abstraite::[html]<p>On veut instancier un objet faisant partie d’une hiérarchie de classes, mais on n’est pas toujours sûr de quelle classe il s’agit.</p><p> </p>{
 	=<p>Fabrique abstraite</p>#<p>Correct! </p>
 	~<p>Méthode fabrique</p>#<p>Incorrect.</p>
@@ -224,7 +224,7 @@ $CATEGORY: $course$/GOF
 	~<p>Patron de méthode (<em>Template methode</em>)</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Itérateur::[html]<p>On veut accéder au contenu d’un objet agrégé sans connaître sa structure interne (son implémentation). On veut pouvoir supporter de multiples parcours d’objets agrégés. On veut fournir une interface normalisée pour parcourir des objets agrégés ayant des formes différentes.</p>{
 	=<p>Itérateur</p>#<p>Correct! </p>
 	~<p>Visiteur</p>#<p>Incorrect.</p>
@@ -233,7 +233,7 @@ $CATEGORY: $course$/GOF
 	~<p>Chaîne des responsabilités</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Singleton::[html]<p>On veut faire en sorte qu’une classe n’ait qu’une seule instance et que l'accès à cette instance soit accessible aux clients à un endroit bien connu. On veut permettre la spécialisation de la seule instance par des sous classes, sans que les clients aient à modifier leur code.</p>{
 	=<p>Singleton</p>#<p>Correct! </p>
 	~<p>Mandataire (<em>Proxy</em>)</p>#<p>Incorrect.</p>
@@ -242,7 +242,7 @@ $CATEGORY: $course$/GOF
 	~<p>Composite</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Patron Stratégie::[html]<p>On trouve qu’il y a plusieurs classes similaires, mais qui varient seulement sur le plan comportemental. On a besoin de plusieurs variantes algorithmiques pour un même service. Un algorithme utilise des structures de données complexes, augmentant le couplage entre le client et ces structures. Une classe définit plusieurs comportements, mais ces comportements dépendent d’une condition.</p>{
 	=<p>Stratégie</p>#<p>Correct! </p>
 	~<p>Décorateur</p>#<p>Incorrect.</p>
@@ -251,7 +251,7 @@ $CATEGORY: $course$/GOF
 	~<p>Itérateur</p>#<p>Incorrect.</p>
 }
 
-// [tag:seance08]
+// [tag:gof]
 ::Pour chaque caractéristique de l'initialisation d'un objet (singleton), indiquez s'il s'agit de l'initialisation différée (lazy initialization) ou de l'initialisation immédiate (eager initialization) \:::[html]Pour chaque caractéristique de l'initialisation d'un objet (singleton), indiquez s'il s'agit de l'initialisation différée (lazy initialization) ou de l'initialisation immédiate (eager initialization) \:{
 	=Elle nécessite un contrôle de la concurrence des threads. -> Initialisation différée (lazy initialization)
 	=Elle peut ralentir le démarrage de l'application. -> Initialisation immédiate (eager initialization)

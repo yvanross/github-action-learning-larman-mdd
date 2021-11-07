@@ -1,0 +1,23 @@
+@startuml Experimenting
+skinparam Style StateAttributeFontColor
+skinparam SequenceMessageAlignment center
+skinparam ObjectAttributeFontStyle bold
+skinparam BackgroundColor IndianRed
+Together2 -[#orange]> Bar1
+A -> B : message text
+A -> B : text
+objAlias1 -> objAlias2: message
+objAlias1 <-- objAlias2: returnVal
+'Alt=> async msg: A->>B or A-\B; lost msg: A->o]; found msg: Ao<-]
+legend center
+yo
+end legend
+@enduml
+
+@startuml diagram 2
+hide empty description
+class A
+class B
+A "0..1" *-[#red,dashed]-> "n" B : name
+C "5" *-> "10" D : "   association_name   "
+@enduml

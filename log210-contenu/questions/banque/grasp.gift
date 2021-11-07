@@ -1,7 +1,7 @@
 $CATEGORY: $course$/GRASP
 
 
-// [tag:seance03]
+// [tag:grasp] [tag:créateur]
 ::Créateur (scénarios)::[html]<p>Dans quels scénarios suivants est-ce que la responsabilité est cohérente avec le principe GRASP Créateur?</p>{
 	~%50%<p>Des objets de la classe Doigt peuvent être instanciés par la classe Main.</p>#<p>Correct. Selon Créateur, une classe Main peut avoir la responsabilité de créer un objet Doigt, puisqu'une main contient (agrège, utilise étroitement) un doigt.</p>
 	~%-20%<p>Des objets de la classe Main peuvent être instanciés par la classe Doigt.</p>#<p>Incorrect. Selon Créateur, une classe Doigt ne devrait pas créer un objet Main, puisqu'un doigt ne contient (agrège, utilise étroitement) pas une main. Cependant, le contraire est vrai.</p>
@@ -10,7 +10,7 @@ $CATEGORY: $course$/GRASP
 	~%-20%<p>Des objets de la classe Vente peuvent être instanciés par la classe LigneVente.</p>#<p>Incorrect. Selon Créateur, la classe LigneVente pourrait avoir la responsabilité de créer des objets Vente si LigneVente contenait (possèdait, utilisait étroitement) les objets Vente. En fait, c'est plutôt Vente qui contient des objets LigneVente.</p>
 }
 
-// [tag:seance09]
+// [tag:grasp]
 ::Context Stratégie (Vente) ChF23::[html]<p>Quel est l'objet contexte auquel l'algorithme de Stratégie s'applique dans le système POS NextGen (expliqué dans le chapitre F23/A26)?</p>{
 	=<p>Vente</p>#<p>C'est la classe Vente qui est l'objet des stratégies de <em>tarification</em>.</p>
 	~<p>LigneArticle</p>#<p>Quel est l'objet des stratégies de <em>tarification</em>?</p>
@@ -18,7 +18,7 @@ $CATEGORY: $course$/GRASP
 	~<p>FabriqueDeServices</p>#<p>Quel est l'objet des stratégies de <em>tarification</em>?</p>
 }
 
-// [tag:seance09]
+// [tag:grasp]
 ::Quelle phrase résume le mieux l'application des patterns Adaptateur, Fabrique Concrète et Singleton dans l'exemple de ce chapitre?::[html]Quelle phrase résume le mieux l'application des patterns Adaptateur, Fabrique Concrète et Singleton dans l'exemple de ce chapitre?{
 	=Nous traitons le problème des variations des interfaces externes avec des Adaptateurs générés par une Fabrique Concrète Singleton.#Cette phrase résume le mieux l'application des trois patterns dans l'exemple de ce chapitre.
 	~Nous traitons le problème des variations des calculateurs de taxes externes avec des Adaptateurs générés par une Fabrique Concrète Singleton.#Cette phrase n'est pas complète, car le problème concerne également les variations du système de comptabilité et de gestion de stock.
@@ -27,7 +27,7 @@ $CATEGORY: $course$/GRASP
 }
 
 
-// [tag:seance]
+// [tag:grasp] [tag:polymorphisme]
 ::Monopoly - méthodes polymorphes (pratiquer)::[html]<p>Quelles méthodes sont polymorphes dans l'application des GoF dans la conception de Monopoly? </p><p><img src\="https\://www.plantuml.com/plantuml/img/bPFHQi8m58Rl-nGXLzl4ekvg8g9pE2Q32RgxtXpJeC4sAIVfq8aFv7FuOZjDwsZ71hCNINfo_ky_EMb7rW6wF4tOzBuJzXu2krKw0uIKMRTF98seH95Gsta4iLsZoNKyCOb1vX2qfIsfNIrB963js95-bJlv8enUg4_9Ee7VO7ncSfaZPs3PZ1q2HeysgPy5s4qPM3qJrlfrHlmOvTBaU7Fh8uuC9Ox51bmLYLMgT2vnGW0A7OFAZDub6mnWHSS1uOR37uPAnqf8lpnSaeuC7E4LBhpXDuiNi3UCbGQ5aZEvephYogF4DeH580n3ZwWHdiudwfExJby7pD5agCudLvO19M7UFEOlS1Bj_ABbRHe-xGps4byD3LMaLUl7MhhBLhEK9M50wUPPvfLVGrKJ5JTxdM8XyOEkQPwl4YN-8Psnzf3nReI3zrQlqviE_vfvsPy-uxv1nYgdZEP1IMuNb4uOTZbzg7tgNzbty8sFTAGhepjUbT9dKH8bbpntFjbWH9NIJ_G5" alt\="Diagramme de classes logicielles pour Monopoly en PlantUML" /></p>{
 	~%50%<p>Case.atterrirSur()</p>#<p>Cette méthode est implémentée différemment selon la case qui reçoit le message.</p>
 	~%-50%<p>Joueur.tenterAchat()</p>#<p>Joueur n'a pas de sous-classes, alors la méthode ne peut être polymorphe.</p>
@@ -35,15 +35,15 @@ $CATEGORY: $course$/GRASP
 	~%50%<p>CasePropriété.getLoyer()</p>#<p>Chaque sous-classe de CasePropriété implémente cette méthode de façon différente. D'ailleurs, elle est définie "abstraite" dans CasePropriété.</p>
 }
 
-// [tag:seance09]
+// [tag:grasp] [tag:polymorphisme] [tag:protection-des-variations]
 ::Observateur et GRASP context ChF23::[html]<p>L'utilisation du pattern Observateur dans le système POS NextGen (chapitre F23/A26) fait en sorte que la classe Vente ne connaisse pas les classes FrameVente, JFrame, etc. Cependant, Vente peut informer tout de même ces classes de ces changements. Quels sont les deux principes GRASP les plus importants dans cette conception?</p>{
 	~%50%<p>Protection des variations</p>#<p>Le diffuseur n'a pas à connaître la classe spécifique et le nombre des objets avec lesquels il communique lorsqu'il génère un événement. Ces classes peuvent donc varier, sans affecter Vente, pour autant qu'elles implémentent l'interface <em>AuditeurDePropriétés</em>.</p>
 	~%50%<p>Polymorphisme</p>#<p>Lorsque le diffuseur appelle à la méthode <em>événementSurPropriété()</em>, il n'a pas à connaître la classe spécifique. C'est un message polymorphe. </p>
-	~<p>Créateur</p>#<p>Créateur est un principe GRASP qui s'applique lorsqu'on doit instancier des objets. Cela ne s'applique pas dans ce cas.</p>
-	~<p>Fabrication pure</p>#<p>Il est vrai que l'interface <em>AuditeurDePropriétés</em> est une Fabrication Pure, mais ce principe est moins important que les deux autres principes GRASP recherchés par cette question.</p>
+	~%-50%<p>Créateur</p>#<p>Créateur est un principe GRASP qui s'applique lorsqu'on doit instancier des objets. Cela ne s'applique pas dans ce cas.</p>
+	~%-50%<p>Fabrication pure</p>#<p>Il est vrai que l'interface <em>AuditeurDePropriétés</em> est une Fabrication Pure, mais ce principe est moins important que les deux autres principes GRASP recherchés par cette question.</p>
 }
 
-// [tag:seance09]
+// [tag:grasp] [tag:contrôleur]
 ::Contrôleur (GRASP 1-9)::[html]<p>Quel principe GRASP suggère où assigner la responsabilité d'effectuer une opération système?</p>{
 	~<p>Polymorphisme</p>#<p>Incorrect. Le principe GRASP Polymorphisme s'applique lorsqu'il y a un comportement (une responsabilité) qui varie selon le type (classe).</p>
 	~<p>Forte cohésion</p>#<p>Incorrect. Le principe GRASP Forte cohésion suggère d'affecter les responsabilités de sorte que les classes demeurent cohésives. Employez ce principe pour évaluer les différentes solutions.</p>
@@ -56,7 +56,7 @@ $CATEGORY: $course$/GRASP
 	~<p>Fabrication Pure</p>#<p>Incorrect. Le principe GRASP Fabrication Pure est un conseil à suivre lorsque vous n'arrivez pas à assigner une responsabilité à une classe existante sans transgresser les principes de faible couplage et de forte cohésion.</p>
 }
 
-// [tag:seance05]
+// [tag:grasp] [tag:expert]
 ::Expert (GRASP 1-5)::[html]<p>Vous décidez de mettre la méthode <span style\="font-family\: 'courier new', courier, monospace;">getPrix()</span> dans la classe <span style\="font-family\: 'courier new', courier, monospace;">DescriptionArticle</span>, qui possède un attribut <span style\="font-family\: 'courier new', courier, monospace;">prix</span>. Quel est le GRASP justifiant ce choix?</p>{
 	=<p>Expert</p>#<p>Correct. Le GRASP Expert nous conseille d'affecter une responsabilité à l'expert - la classe qui possède les informations nécessaires pour s'en acquitter.</p>
 	~<p>Couplage faible</p>#<p>Incorrect. Il est vrai qu'un effet secondaire du GRASP en question est aussi de réduire le couplage. Mais la bonne réponse est le premier GRASP que vous avez vu dans le livre de Larman.</p>
@@ -64,7 +64,7 @@ $CATEGORY: $course$/GRASP
 	~<p>Cohésion forte</p>#<p>Incorrect. Il est vrai qu'un effet secondaire du GRASP en question est aussi d'augmenter la cohésion. Mais la bonne réponse est le premier GRASP que vous avez vu dans le livre de Larman.</p>
 }
 
-// [tag:seance09]
+// [tag:grasp] [tag:expert]
 ::Expert (GRASP 1-9)::[html]<p>Quel principe GRASP indique qu'il faut donner une responsabilité à une classe qui possède des informations nécessaires pour s'en acquitter?</p>{
 	~<p>Créateur</p>#<p>Incorrect. Le principe GRASP Créateur concerne la responsabilité de la création d'instances de classes.</p>
 	~<p>Contrôleur</p>#<p>Incorrect. Le principe GRASP Contrôleur concerne la décision pour assigner la responsabilité d'effectuer des opérations système.</p>
@@ -73,25 +73,25 @@ $CATEGORY: $course$/GRASP
 	~<p>Polymorphisme</p>#<p>Incorrect. Le principe GRASP Polymorphisme s'applique lorsqu'il y a un comportement (une responsabilité) qui varie selon le type (classe).</p>
 }
 
-// [tag:seance03]
+// [tag:grasp]
 ::GRASP annotation en UML::[html]<p>Quel est le rapport entre les GRASP et l'UML?</p>{
 	=<p>Les GRASP servent comme directives de conception lorsqu'on dessine un aspect dynamique de la conception, avec un diagramme d'interaction dans UML.</p>#<p>Correct. On justifie l'emplacement des méthodes dans un diagramme de séquence ou de communication avec une annotation dans le diagramme faisant référence à un ou plusieurs GRASP.</p>
-	~<p>Les GRASP sont un sous-ensemble de l'UML, définis par un sous-comité dans le contexte de l'élaboration des diagrammes de modélisation pour le langage de modélisation unifié version 2.0 (UML 2).</p>#<p>Incorrect. Les GRASP sont utilisés lors du dessinage en UML, mais ce sont des principes de conception indépendents de l'UML.</p>
-	~<p>Il n'y a aucun rapport entre les GRASP et l'UML.</p>#<p>Incorrect. Les GRASP sont utilisés lors du dessinage de la dynamique d'une conception en UML, pour justifier les choix d'affectation de responsabilités.</p>
-	~<p>L'UML est un sous-ensemble des GRASP.</p>#<p>Incorrect. Les GRASP sont utilisés lors du dessinage de dynamique en UML, mais ce sont des principes de conception indépendents de l'UML.</p>
+	~<p>Les GRASP sont un sous-ensemble de l'UML, définis par un sous-comité dans le contexte de l'élaboration des diagrammes de modélisation pour le langage de modélisation unifié version 2.0 (UML 2).</p>#<p>Incorrect. Les GRASP sont utilisés lors de la proposition de solution en UML, mais ce sont des principes de conception indépendents de l'UML.</p>
+	~<p>Il n'y a aucun rapport entre les GRASP et l'UML.</p>#<p>Incorrect. Les GRASP sont utilisés lors de la proposition de solution de la dynamique d'une conception en UML, pour justifier les choix d'affectation de responsabilités.</p>
+	~<p>L'UML est un sous-ensemble des GRASP.</p>#<p>Incorrect. Les GRASP sont utilisés lors de la proposition de solution en UML, mais ce sont des principes de conception indépendents de l'UML.</p>
 }
 
-// [tag:seance08]
+// [tag:grasp]
 ::Indirection et Fabrication Pure (GRASP 1-9)::[html]<p>Vous remarquez une responsabilité dans une classe qui fait en sorte qu'elle ait un lien de couplage à une autre classe et ce lien n'est pas désiré. Quels principes GRASP vous donnent une solution éventuelle à ce problème?</p>{
-	~<p>Contrôleur</p>#<p>Incorrect. Le principe GRASP Contrôleur concerne la décision pour assigner la responsabilité pour les opérations système.</p>
-	~<p>Expert en information</p>#<p>Incorrect. Le principe GRASP Expert indique qu'il faut affecter une responsabilité a l'expert en information (la classe qui possède des informations pour s'en acquitter).</p>
-	~<p>Polymorphisme</p>#<p>Incorrect. Le principe GRASP Polymorphisme s'applique lorsqu'il y a un comportement (une responsabilité) qui varie selon le type (classe).</p>
-	~%50%<p>Fabrication Pure</p>#<p>Correct. Le principe GRASP Fabrication Pure est un conseil à suivre lorsque vous n'arrivez pas à assigner une responsabilité à une classe existante sans transgresser les principes de faible couplage et de forte cohésion. Par contre, vous devriez d'abord essayer d'assigner la responsabilité à une classe existante. Fabrication Pure s'applique seulement dans les "cas désespéré"...</p>
+	~%-50%<p>Contrôleur</p>#<p>Incorrect. Le principe GRASP Contrôleur concerne la décision pour assigner la responsabilité pour les opérations système.</p>
+	~%-50%<p>Expert en information</p>#<p>Incorrect. Le principe GRASP Expert indique qu'il faut affecter une responsabilité a l'expert en information (la classe qui possède des informations pour s'en acquitter).</p>
+	~%-50%<p>Polymorphisme</p>#<p>Incorrect. Le principe GRASP Polymorphisme s'applique lorsqu'il y a un comportement (une responsabilité) qui varie selon le type (classe).</p>
+	~%50%<p>Fabrication Pure</p>#<p>Correct. Le principe GRASP Fabrication Pure est une directive à suivre lorsque vous n'arrivez pas à assigner une responsabilité à une classe existante sans transgresser les principes de faible couplage et de forte cohésion. Par contre, vous devriez d'abord essayer d'assigner la responsabilité à une classe existante pour diminuer le décalage des représentations. Fabrication Pure s'applique seulement dans les "cas désespérés"...</p>
 	~%50%<p>Indirection</p>#<p>Correct. Le principe GRASP Indirection permet d'affecter une responsabilité à une classe qui sert d'intermédiaire avec les autres composants ou services. Il y a un autre GRASP qui s'applique dans une "situation désespérée", c'est-à-dire lorsque vous ne trouvez pas une autre classe intermédiaire existante appropriée.</p>
-	~<p>Créateur</p>#<p>Incorrect. Le principe GRASP Créateur concerne la responsabilité de la création d'instances de classes.</p>
+	~%-50%<p>Créateur</p>#<p>Incorrect. Le principe GRASP Créateur concerne la responsabilité de la création d'instances de classes.</p>
 }
 
-// [tag:seance08]
+// [tag:grasp]
 ::Polymorphisme::[html]<p>Quel principe GRASP s'applique lorsqu'une responsabilité fait en sorte qu'il y ait un comportement différent, qui varie selon le type (classe) d'un objet impliqué dans la responsabilité?</p>{
 	~<p>Expert en information</p>#<p>Incorrect. Le principe GRASP Expert indique qu'il faut affecter une responsabilité a l'expert en information (la classe qui possède des informations pour s'en acquitter).</p>
 	~<p>Fabrication Pure</p>#<p>Incorrect. Le principe GRASP Fabrication Pure est un conseil à suivre lorsque vous n'arrivez pas à assigner une responsabilité à une classe existante sans transgresser les principes de faible couplage et de forte cohésion.</p>
@@ -100,7 +100,7 @@ $CATEGORY: $course$/GRASP
 	~<p>Créateur</p>#<p>Incorrect. Le principe GRASP Créateur concerne la responsabilité de la création d'instances de classes.</p>
 }
 
-// [tag:seance08]
+// [tag:grasp]
 ::Protection des variations (ouvert-fermé) (GRASP 1-9)::[html]<p>Quel principe GRASP se base le plus sur le principe "ouvert-fermé"?</p>{
 	~<p>Expert en information</p>#<p>Incorrect. Le principe GRASP Expert indique qu'il faut affecter une responsabilité a l'expert en information (la classe qui possède des informations pour s'en acquitter).</p>
 	~<p>Contrôleur</p>#<p>Incorrect. Le principe GRASP Contrôleur concerne la décision pour assigner la responsabilité pour les opérations système.</p>
@@ -111,54 +111,54 @@ $CATEGORY: $course$/GRASP
 	~<p>Créateur</p>#<p>Incorrect. Le principe GRASP Créateur concerne la responsabilité de la création d'instances de classes.</p>
 }
 
-// [tag:seance05]
+// [tag:grasp]
 ::Combien de principes GRASP y a-t-il?::[html]<p>Combien de principes GRASP y a-t-il?</p>{#
 	=%0%5:0#<p>Incorrect. Bien que le livre ne présente que 5 principes au début, au total, il y a neuf (9) principes GRASP.</p>
 	=%100%9:0#<p>Correct. Il y a neuf (9) principes GRASP.</p>
 	=%0%23:0#<p>Incorrect. Il y a neuf (9) principes GRASP. Il y a cependant <a title\="Gang des quatre" href\="http\://fr.wikipedia.org/wiki/Design_Patterns">23 Patterns GoF (Gang des quatre)</a></p>
 }
 
-// [tag:seance05]
+// [tag:grasp] [tag:contrôleur]
 ::Contrôleur et RDCU (GRASP 1-9)::[html]<p>Quel GRASP est toujours appliqué lorsqu'on fait une réalisation de cas d'utilisation?</p>{
 	=<p>Contrôleur</p>#<p>Correct. À la première étape d'une réalisation de cas d'utilisation, on détermine la classe de la couche domaine qui sera responsable de traiter l'opération système. Le principe GRASP Contrôleur aide à déterminer la bonne classe. </p>
 	~<p>Fabrication pure</p>#<p>Incorrect. Si vous avez choisi cette réponse parce que vous considérez un Gestionneur de cas d'utilisation en tant que Fabrication pure, vous avez partiellement raison. Cependant, selon un autre GRASP, on n'est pas obligé d'utiliser toujours un Gestionneur de cas d'utilisation pour traiter une opération système.</p>
 	~<p>Protection des variations</p>#<p>Incorrect. Pour trouver la bonne réponse, il s'agit d'un GRASP qui nous aide à trouver l'objet qui va traiter une opération système, la première méthode à considérer dans une réalisation de cas d'utilisation.</p>
-	~<p>Polymorphisme</p>#<p>Incorrect. Pour trouver la bonne réponse, il s'agit d'un GRASP qui nous aide à trouver l'objet qui va traiter une opération système, la première méthode à considérer dans une réalisation de cas d'utilisation.</p>
+	~<p>Polymorphisme</p>#<p>Incorrect. Pour trouver la bonne réponse, il s'agit d'un GRASP qui nous aide à trouver l'objet qui va traiter une opération système, c'est-à-dire la première méthode à considérer dans une réalisation de cas d'utilisation.</p>
 }
 
-// [tag:seance03]
+// [tag:grasp] [tag:créateur]
 ::Créateur (MDD Monopoly)::[html]<p>Soit le modèle du domaine suivant\:<br><img src\="https\://www.planttext.com/api/plantuml/img/TP1DQiCm48NtEiMWlKDQkYXU14gIJI5Wo0aKPN15zEDgf809lKzp3b-iagEuDJGR2VI-D-zfwAHi9xmmGA7Nc4wlP8X6CvgKWv2drhjeZz9fvo5uOIb9QCCVQe-V4Qt47HA95j-qQYt8nA1d7-g8WAOBFHWq1_J4f1P4i1ckS65m5XgZXnfK6lbLj7UC6zmvwpgd-_BMQ15Gn3lXOhPTc7KccVUfksqdVwESVQIj1U53NycOvGD_ub3f2lWp7rlNENsuLkAC4bR_mRuQxp9kCb1gl6Btrv4y9l9boM-jQbWx6rHQNCRo7_XoiNZz7LYeBOKogwnX5ffzDJIEQFXEkvz3yGRDEu_zCla3" alt\="MDD partiel Monopoly" width\="599" height\="183" class\="img-responsive atto_image_button_text-bottom"><br><br> Selon le GRASP Créateur, quelle classe devrait avoir la responsabilité de créer les objets Case?</p>{
 	=<p>La classe Plateau, puisqu'elle agrège les objets Case.</p>#<p>Correct. Selon Créateur, une classe agrégeant des objets devrait avoir la préférence pour la responsabilité de les créer.</p>
-	~<p>La classe Pion, puisqu'elle utilise étroitement les objets Case.</p>#<p>Incorrect. Selon Créateur, il est vrai que Pion pourrait avoir la responsabilité. Cependant, Larman précise que lorsqu'une autre autre classe a la relation d'agrégation (p.ex. Plateau), c'est elle qui devrait avoir de préférence la responsabilité de créateur.</p>
-	~<p>La classe JeuDeMonopoly, puisqu'elle possède des informations pour initialiser les objets Case.</p>#<p>Incorrect. Selon Créateur, il est vrai que JeuDeMonopoly pourrait avoir la responsabilité. Cependant, Larman précise que lorsqu'une autre autre classe a la relation d'agrégation (p.ex. Plateau), c'est elle qui devrait avoir de préférence la responsabilité de créateur.</p>
+	~<p>La classe Pion, puisqu'elle utilise étroitement les objets Case.</p>#<p>Incorrect. Selon Créateur, il est vrai que Pion pourrait avoir la responsabilité. Cependant, Larman précise que lorsqu'une autre autre classe a la relation d'agrégation (p. ex. Plateau), c'est elle qui devrait avoir de préférence la responsabilité de créateur.</p>
+	~<p>La classe JeuDeMonopoly, puisqu'elle possède des informations pour initialiser les objets Case.</p>#<p>Incorrect. Selon Créateur, il est vrai que JeuDeMonopoly pourrait avoir la responsabilité. Cependant, Larman précise que lorsqu'une autre classe a la relation d'agrégation (p. ex. Plateau), c'est elle qui devrait avoir de préférence la responsabilité de créateur.</p>
 }
 
-// [tag:seance03]
+// [tag:grasp] [tag:créateur]
 ::Créateur (notion)::[html]<p>Quel principe GRASP aide à affecter la responsabilité lorsqu'on décide quelle classe va instancier des objets d'une autre classe?</p>{
 	=<p>Créateur</p>#<p>Créateur est une directive pour décider quelle classe aura la responsabilité de créer des instances d'autres classes.</p>
-	~<p>Expert en information</p>#<p>Expert en information est une directive général pour affecter les responsabilités, mais il y a une autre directive qui est plus appropriée lorsqu'il s'agit de créer des instances.</p>
+	~<p>Expert en information</p>#<p>Expert en information est une directive générale pour affecter les responsabilités, mais il y a une autre directive qui est plus appropriée lorsqu'il s'agit de créer des instances.</p>
 	~<p>Contrôleur</p>#<p>Contrôleur est une directive pour déterminer l'objet en dehors de la couche présentation qui reçoit et coordonne les opérations système. Il y a une autre directive pour prendre une décision de conception lorsqu'il s'agit de créer des instances.</p>
 	~<p>Fabrique</p>#<p>Fabrique est un pattern GoF (Gang des quatre) et non un principe GRASP. Les principes GRASP sont plus généraux que les patterns GoF. Il y a un principe GRASP qui s'applique lorsqu'il s'agit de la responsabilité de créer des instances.</p>
 }
 
-// [tag:seance03]
+// [tag:grasp] [tag:expert]
 ::Expert (notion)::[html]<p>Quel principe GRASP est une directive générale pour la conception d'objets et d'affectation des responsabilités?</p>{
-	=<p>Expert en information </p>#<p>Expert (en information) est un principe général de conception d'objets\: affectez une responsabilité à l'expert - la classe <span>qui possède les informations nécessaire pour s'en acquitter.</span></p>
+	=<p>Expert en information </p>#<p>Expert (en information) est un principe général de conception d'objets\: affectez une responsabilité à l'expert - la classe <span>qui possède les informations nécessaires pour s'en acquitter.</span></p>
 	~<p>Créateur</p>#<p>Créateur est un principe de conception pour déterminer quelle classe devrait avoir la responsabilité d'instancier des objets d'une autre classe.</p>
 	~<p>Contrôleur</p>#<p><span>Contrôleur est une directive pour déterminer l'objet en dehors de la couche présentation qui reçoit et coordonne (« contrôle ») les opérations système.</span></p>
 	~<p>Toutes les réponses.</p>
 }
 
-// [tag:seance04]
+// [tag:grasp] [tag:faible-couplage]
 ::Faible couplage (notion)::[html]<p>Quel principe GRASP a l'objectif principal de minimiser les dépendances dans la conception?</p>{
 	=<p>Faible Couplage</p>#<p>Faible couplage nous dit d'affecter <span>les responsabilités de sorte que le couplage (inutile) demeure faible, afin de minimiser les dépendances.</span></p>
 	~<p>Forte Cohésion</p>#<p>Forte Cohésion <span>est une directive pour conserver les objets cohésifs, compréhensibles et gérables. La conséquence de ce principe est souvent moins de dépendances, mais ce n'est pas l'objectif principal de cette directive.</span></p>
-	~<p>Expert en information</p>#<p>Expert (en information) est une directive pour <span>affecter une responsabilité à l'expert - la classe qui possède les informations nécessaire pour s'en acquitter.</span> La conséquence de ce principe est souvent moins de dépendances, mais ce n'est pas l'objectif principal de cette directive.</p>
-	~<p>Créateur</p>#<p>Créateur est une directive pour détermine quelle classe est la meilleur pour avoir la responsabilité de créer des objets d'une certaine autre classe. La conséquence de ce principe est souvent moins de dépendances, mais ce n'est pas l'objectif principal de cette directive.</p>
+	~<p>Expert en information</p>#<p>Expert (en information) est une directive pour <span>affecter une responsabilité à l'expert - la classe qui possède les informations nécessaires pour s'en acquitter.</span> La conséquence de ce principe est souvent moins de dépendances, mais ce n'est pas l'objectif principal de cette directive.</p>
+	~<p>Créateur</p>#<p>Créateur est une directive pour détermine quelle classe est la meilleure pour avoir la responsabilité de créer des objets d'une certaine autre classe. La conséquence de ce principe est souvent moins de dépendances, mais ce n'est pas l'objectif principal de cette directive.</p>
 	~<p>Contrôleur</p>#<p>Contrôleur est une directive pour affecter la responsabilité de coordonner les opérations système dans la couche domaine. La conséquence de ce principe est souvent moins de dépendances, mais ce n'est pas l'objectif principal de cette directive.</p>
 }
 
-// [tag:seance08]
+// [tag:grasp] [tag:fabrication-pure]
 ::Fabrication pure (notion)::[html]<p>Quel principe GRASP offre une solution lorsqu'on veut affecter une responsabilité, mais toutes les solutions qu'on obtient ne sont pas acceptables sur le plan du couplage et de la cohésion?</p>{
 	~<p>Polymorphisme</p>#<p>Ce principe répond au problème de comment gérer des alternatives dépendantes des types et de comment créer des composants logiciels "enfichables".</p>
 	~<p>Indirection</p>#<p>Ce principe aide à décider où affecter une responsabilité pour éviter le couplage entre deux entités (ou plus). </p>
@@ -166,7 +166,7 @@ $CATEGORY: $course$/GRASP
 	~<p>Protection des variations</p>#<p>Ce principe aide à concevoir des objets, des sous-systèmes ou des systèmes de telle façon que les variations ou l'instabilité de ces éléments n'aient pas d'impact indésirable sur d'autres éléments.</p>
 }
 
-// [tag:seance08]
+// [tag:grasp] [tag:indirection]
 ::Indirection (notion)::[html]<p>Quel principe GRASP permet de maintenir un potentiel de réutilisation d'un ou de plusieurs objets en évitant le couplage direct entre eux?</p>{
 	~<p>Polymorphisme</p>#<p>Ce principe répond au problème de comment gérer des alternatives dépendantes des types et de comment créer des composants logiciels "enfichables".</p>
 	=<p>Indirection</p>#<p>Ce principe aide à décider où affecter une responsabilité pour éviter le couplage entre deux entités (ou plus). </p>
@@ -174,7 +174,7 @@ $CATEGORY: $course$/GRASP
 	~<p>Protection des variations</p>#<p>Ce principe aide à concevoir des objets, des sous-systèmes ou des systèmes de telle façon que les variations ou l'instabilité de ces éléments n'aient pas d'impact indésirable sur d'autres éléments.</p>
 }
 
-// [tag:seance08]
+// [tag:grasp] [tag:polymorphisme]
 ::Polymorphisme (notion) alternatives types::[html]<p>Quel principe GRASP permet de gérer des alternatives (<em>if-then-else</em> ou <em>case</em>) qui dépendent des types?</p>{
 	=<p>Polymorphisme</p>#<p>Ce principe répond au problème de comment gérer des alternatives dépendantes des types et de comment créer des composants logiciels "enfichables".</p>
 	~<p>Indirection</p>#<p>Ce principe aide à décider où affecter une responsabilité pour éviter le couplage entre deux entités (ou plus). </p>
@@ -182,7 +182,7 @@ $CATEGORY: $course$/GRASP
 	~<p>Protection des variations</p>#<p>Ce principe aide à concevoir des objets, des sous-systèmes ou des systèmes de telle façon que les variations ou l'instabilité de ces éléments n'aient pas d'impact indésirable sur d'autres éléments.</p>
 }
 
-// [tag:seance08]
+// [tag:grasp] [tag:polymorphisme]
 ::Polymorphisme (notion) enfichable::[html]<p>Quel principe GRASP permet de créer des composants logiciels "enfichables" ("<em>pluggable"</em>)?</p>{
 	=<p>Polymorphisme</p>#<p>Ce principe répond au problème de comment gérer des alternatives dépendantes des types et de comment créer des composants logiciels "enfichables".</p>
 	~<p>Indirection</p>#<p>Ce principe aide à décider où affecter une responsabilité pour éviter le couplage entre deux entités (ou plus). </p>
@@ -190,15 +190,15 @@ $CATEGORY: $course$/GRASP
 	~<p>Protection des variations</p>#<p>Ce principe aide à concevoir des objets, des sous-systèmes ou des systèmes de telle façon que les variations ou l'instabilité de ces éléments n'aient pas d'impact indésirable sur d'autres éléments.</p>
 }
 
-// [tag:seance08]
+// [tag:grasp] [tag:protection-des-variations]
 ::Protection des variations (masquage info)::[html]<p>Quel principe GRASP exploite le concept de masquage de l'information?</p>{
 	~<p>Polymorphisme</p>#<p>Ce principe répond au problème de comment gérer des alternatives dépendantes des types et de comment créer des composants logiciels "enfichables".</p>
 	~<p>Indirection</p>#<p>Ce principe aide à décider où affecter une responsabilité pour éviter le couplage entre deux entités (ou plus). </p>
 	~<p>Fabrication Pure</p>#<p>Ce principe est une solution à un problème qui arrive lorsque nous devons assigner une responsabilité, mais tous les choix conseillés par des principes Expert, Créateur, etc. nous mènent à des conceptions qui transgressent les principes de Faible Couplage et de Forte Cohésion.</p>
-	=<p>Protection des variations</p>#<p>Ce principe (PV) est basé sur le concept de masquage de l'information. PV aide à concevoir des objets, des sous-systèmes ou des systèmes de telle façon que les variations ou l'instabilité de ces éléments n'aient pas d'impact indésirable sur d'autres éléments. Les parties variables ou instables ne sont pas accessibles aux classes qui devraient être "protégées" des variations.</p>
+	=<p>Protection des variations</p>#<p>Ce principe (PV) est basé sur le concept de masquage de l'information. La PV aide à concevoir des objets, des sous-systèmes ou des systèmes de telle façon que les variations ou l'instabilité de ces éléments n'aient pas d'impact indésirable sur d'autres éléments. Les parties variables ou instables ne sont pas accessibles aux classes qui devraient être "protégées" des variations.</p>
 }
 
-// [tag:seance08]
+// [tag:grasp] [tag:protection-des-variations]
 ::Protection des variations (notion)::[html]<p>Quel principe GRASP permet d'avoir une conception qui minimise l'impact sur les classes clients, malgré la présence de classes instables (leur définition risque d'évoluer)?</p>{
 	~<p>Polymorphisme</p>#<p>Ce principe répond au problème de comment gérer des alternatives dépendantes des types et de comment créer des composants logiciels "enfichables".</p>
 	~<p>Indirection</p>#<p>Ce principe aide à décider où affecter une responsabilité pour éviter le couplage entre deux entités (ou plus). </p>

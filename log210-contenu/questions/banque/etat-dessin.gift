@@ -1,6 +1,6 @@
 $CATEGORY: $course$/État-dessin
 
-// [tag:seance10]
+// [tag:etat-dessin]
 ::Etat Simple::[markdown]Joindre l'image d'un dessin fait à la main (sans outil) d'un diagramme d'état modélisant la dynamique suivante\:
 Il s'agit de l'évolution dans l'état d'un bulletin de notes pour un cours.
 - Le bulletin est intialement vide et l'enseignant ne peut pas saisir des notes.

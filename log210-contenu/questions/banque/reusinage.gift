@@ -1,35 +1,50 @@
 $CATEGORY: $course$/Réusinage
 
 
-// [tag:seance06]
-::Refactoring and GRASP::Appariez l'activité de réusinage (refactoring) avec son principe GRASP {
-    =Remplacer des codes pour les types avec des sous classes -> Polymorphisme
+// [tag:reusinage]
+::Refactoring and GRASP::
+[markdown]
+Appariez l'activité de réusinage (refactoring) avec son principe GRASP {
+    =Remplacer des codes (`switch`, `if-else`) d'une logique sur les types avec des sous-classes avec une implémentation différente pour chaque méthode. -> Polymorphisme
     =Extraire des méthodes d'une classe pour former une nouvelle classe. -> Fabrication pure
     =Renommer une classe. -> Aucun rapport
     =Renommer une variable. -> Aucun rapport
     =Introduire objet de paramètre. -> Aucun rapport
-    =Déplacer fonction. -> Indirection
-    =Extraire fonction. -> Indirection
+    =Déplacer une fonction. -> Indirection
+    =Extraire une fonction. -> Indirection
 }
 
-// [tag:seance11]
-::Cowboy hacking et refactorisation::Appliquer les activités de réusinage fait partie du "Cowboy Hacking" {FALSE}
+// [tag:reusinage]
+::Cowboy hacking et refactorisation::[markdown]Appliquer les activités de réusinage fait partie du *hacking cowboy* {FALSE#Les activités de réusinage sont des «petits pas» réalisés lors de la programmation agile qui permettent d'éviter la dette technique.#Les activités de réusinage sont des «petits pas» réalisés lors de la programmation agile qui permettent d'éviter la dette technique.}
 
-::FURPS et code smell::Un "code smell" concerne quelle qualité du logiciel? {
+// [tag:reusinage] [tag:FURPS]
+::FURPS et code smell::
+[markdown]
+Un "code smell" concerne quelle qualité du logiciel? {
     ~Fonctionnalité
-    ~Facilité d'utilisation
-    ~Fiabilité
+    ~Facilité d'utilisation (*usability*)
+    ~Fiabilité (*reliability*)
     ~Performance
-    =Possibilités de prise en charge
+    =Possibilités de prise en charge (*supportability*)
 }
 
-// [tag:seance06]
-::Refactorisation - activités::[html]<p>Qu'est-ce qui n'est <b>PAS</b> un but ou une activité de la refactorisation?</p>{
-	~%-16.66667%<p>supprimer le code dupliqué</p>
-	~%-16.66667%<p>rendre le code plus facile à lire et à comprendre</p>
-	~%-16.66667%<p>faire en sorte que les méthodes soient plus courtes</p>
-	~%-16.66667%<p>éliminer l'utilisation de constantes littérales codées en dur</p>
-	~%-16.66667%<p>supprimer les commentaires en rendant le code plus descriptif</p>
-	~%50%<p>rendre le code plus rapide</p>#<p>Les changements du code dans une refactorisation ne modifient pas le comportement du code.</p>
-	~%50%<p>corriger les bogues dans le code.</p>#<p>Les changements du code dans une refactorisation ne modifient pas le comportement du code.</p>
+// [tag:reusinage]
+::Refactorisation - activités::
+[markdown]Qu'est-ce qui n'est **pas** un but ou une activité de la refactorisation?{
+	~%-16.66667%supprimer le code dupliqué
+	~%-16.66667%rendre le code plus facile à lire et à comprendre
+	~%-16.66667%faire en sorte que les méthodes soient plus courtes
+	~%-16.66667%éliminer l'utilisation de constantes littérales codées en dur
+	~%-16.66667%supprimer les commentaires en rendant le code plus descriptif
+	~%50%rendre le code plus rapide#Les changements du code dans une refactorisation ne modifient pas le comportement du code.
+	~%50%corriger les bogues dans le code.#Les changements du code dans une refactorisation ne modifient pas le comportement du code.
+}
+
+::Réusiner un contrôleur surchargé::
+[markdown]
+Lorsqu'un contrôleur de façade (par exemple `Register` dans le système NextGen POS du livre de cours) a beaucoup de responsabilités, quel réusinage s'applique pour respecter les principes de forte cohésion?
+{
+    =Le GRASP Fabrication Pure pour proposer plusieurs contrôleurs de session (de cas d'utilisation).
+    ~Le réusinage *Replace Conditional with Polymorphisme* pour proposer plusieurs sous-classes de Register.
+    ~Le réusinage *Introduce Parameter Object* pour réduire le nombre de paramètres dans les opérations système traitées par Register.
 }

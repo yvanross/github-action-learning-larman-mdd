@@ -1,0 +1,7 @@
+@startuml mdd-registre-vente-paiement
+class Registre
+class Vente
+class Paiement
+Registre "1"--"*" Vente: sont capturés dans <
+Vente "1" -- "1" Paiement: est payée par >
+@enduml

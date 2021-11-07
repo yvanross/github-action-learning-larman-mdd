@@ -1,0 +1,22 @@
+@startuml PlanGénéralSéances
+skinparam style strictuml
+skinparam defaulttextalignment center
+rectangle "Contenu (asynchrone)" as async #ddddff {
+  artifact "Exercices"
+  artifact "Capsules\nvidéo"
+  artifact "Lectures" as lectures
+}
+rectangle "Mini-test\nMoodle" as quiz #orange
+rectangle "Séance (synchrone)" as cours #ddffdd {
+  rectangle "Mini-test\n(retour)" as retmt
+  rectangle "Résumé des\nlectures\n(annotations)"
+  rectangle "Exercices\n(retour)"
+  rectangle "Validation de la\ncompréhension\n(Socrative)"
+  rectangle "Discussion"
+  rectangle "Coaching\n(Vérification\nde MDD et\ndesign du lab)"
+}
+
+lectures -u-> quiz
+quiz -d-> lectures
+quiz --> retmt
+@enduml

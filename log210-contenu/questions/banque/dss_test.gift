@@ -1,0 +1,11 @@
+$CATEGORY: $course$/DSSTEST
+
+
+// [tag:dss]
+::DSS opérations système::[html]<p>Combien d'opérations système y a-t-il dans le diagramme de séquence système suivant?</p>
+<p><img src\="https\://www.planttext.com/api/plantuml/img/RP0nRiCm34LtdOB8qWIeBs041OfE7RhK9r0fmcKZKmv53JcIp-6BbIwQD4CN0SBxUlz3zSGoHuqJLBjaybCPhKqvr1lvY7WQjJH9M79HC8rI7P7ONMgWSoD1UgDQuqZFcKS1z0nfC3Pt3xWk4fKBl1EI6OM8vhvT_vBPWpk85J2upXXvZcAEXaircdvG3TWzLUWXhSiKLKcl7ZmUksuZ7ftNHQCrfKVuR1CdjdK9kPGPV5rHWlJ0CkgwfAsp1lYLng_IVElh7zjpkhlrWt-DZ0T_y5zR84cmrLn7kcjYkMtS7y8t" alt\="DSS recette" class\="img-responsive atto_image_button_text-bottom"><br><br></p>{
+	~<p>2 \: température, humidité / confirmation</p>#<p>Incorrect. Les opérations système sont envoyées au système.</p>
+	=<p>3 \: démarrerRecette / ajouterIngrédient(...) / terminerRecette</p>#<p>Correct.</p>
+	~<p>5 \: démarrerRecette / température, humidité / ajouterIngrédient(...) / température / terminerRecette</p>#<p>Incorrect. Les opérations système sont envoyées au système seulement. Les autres messages de retour ne sont pas des opérations système.</p>
+}
+

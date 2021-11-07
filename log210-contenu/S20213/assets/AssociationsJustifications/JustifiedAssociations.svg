@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="369px" preserveAspectRatio="none" style="width:277px;height:369px;" version="1.1" viewBox="0 0 277 369" width="277px" zoomAndPan="magnify"><defs/><g><!--MD5=[032e7484c064e0fca583c8f22cf9e818]
+class CatalogueLivres--><rect codeLine="3" fill="#FEFECE" height="40.1875" id="CatalogueLivres" style="stroke:#A80036;stroke-width:1.5;" width="63" x="7" y="110"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="57" x="10" y="127.457">Catalogue</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="33" x="22" y="142.5508">Livres</text><!--MD5=[e6c689e0fb2094b6e7ddc8286563ae4c]
+class Livre--><rect fill="#FEFECE" height="25.0938" id="Livre" style="stroke:#A80036;stroke-width:1.5;" width="32" x="28.5" y="235"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="26" x="31.5" y="252.457">Livre</text><!--MD5=[386988d0c39d7d616e04269ec528b1b2]
+class Exemplaire--><rect fill="#FEFECE" height="25.0938" id="Exemplaire" style="stroke:#A80036;stroke-width:1.5;" width="68" x="103.5" y="338"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="62" x="106.5" y="355.457">Exemplaire</text><!--MD5=[ccb7afe720e7db2f3c99657b86265671]
+class Bibliothèque--><rect fill="#FEFECE" height="25.0938" id="Bibliothèque" style="stroke:#A80036;stroke-width:1.5;" width="75" x="100" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69" x="103" y="24.457">Bibliothèque</text><!--MD5=[18cc4c69606d473731604386bcf93e26]
+class Membre--><rect fill="#FEFECE" height="25.0938" id="Membre" style="stroke:#A80036;stroke-width:1.5;" width="51" x="200" y="180"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="45" x="203" y="197.457">Membre</text><!--MD5=[a3a78078778e54137462b7eb9e12430f]
+link Livre to Exemplaire--><path codeLine="5" d="M45.44,260.22 C47.01,273.18 51.24,294.07 62.5,308 C73.35,321.43 89.77,331.21 104.48,337.89 " fill="none" id="Livre-Exemplaire" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="70.5258,303.1563,67.3918,294.177,62.7124,297.734,70.5258,303.1563" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="34" x="76.5" y="304.4951">Décrit</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="37.464" y="281.6638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="90.378" y="330.1368">*</text><!--MD5=[ac49e8bec252f94e47d28fb4f750c146]
+link Bibliothèque to CatalogueLivres--><path codeLine="6" d="M111.01,32.01 C97.22,39.06 80.91,49.2 69.5,62 C57.13,75.87 48.83,95.52 43.96,109.96 " fill="none" id="Bibliothèque-CatalogueLivres" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="71.2394,74.9664,79.3659,70.0256,74.9098,66.1926,71.2394,74.9664" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="27" x="83.5" y="76.4951">Offre</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="92.2014" y="53.6317">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="37.5358" y="99.2425">1</text><!--MD5=[d41f7c9423fc107da381db91a14b00de]
+link CatalogueLivres to Livre--><path codeLine="7" d="M28.48,150.23 C21.97,165.2 15.53,186.48 20.5,205 C23.43,215.93 30.02,226.96 35.56,234.9 " fill="none" id="CatalogueLivres-Livre" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="25.9166,197.6584,28.0916,188.3999,22.2342,188.8897,25.9166,197.6584" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="34.5" y="197.9951">Répertorie</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="17.6775" y="171.6879">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="25.841" y="223.9508">*</text><!--MD5=[070fc7041887f9d7a0f2ce10f8b1d962]
+link Bibliothèque to Exemplaire--><path codeLine="8" d="M136.02,32.15 C132.48,61.27 124.01,139.59 126.5,205 C128.38,254.53 133.88,313.4 136.32,337.9 " fill="none" id="Bibliothèque-Exemplaire" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="131.5049,197.6758,134.435,188.6278,128.5571,188.6336,131.5049,197.6758" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="140.5" y="197.9951">Stocke</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="127.1214" y="53.5671">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="129.802" y="326.9508">*</text><!--MD5=[6ff85b1ab7d0fab6fb288d914cc822d7]
+link Membre to Exemplaire--><path codeLine="13" d="M219.58,205.01 C208.81,225.8 185.14,270.9 163.5,308 C157.5,318.28 150.29,329.73 144.98,337.99 " fill="none" id="Membre-Exemplaire" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="206.0537,252.0365,213.0422,245.5858,207.9159,242.71,206.0537,252.0365" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="217.5" y="252.9951">Réserve</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="208.8709" y="226.6317">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="142.0343" y="327.0779">*</text><!--MD5=[34f30eb4416f32c9ef08aae4e7daace8]
+link Bibliothèque to Membre--><path codeLine="14" d="M145.37,32.27 C150.73,40.46 157.84,51.72 163.5,62 C186.82,104.37 210.4,156.89 220.45,179.85 " fill="none" id="Bibliothèque-Membre" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="180.7672,75.6322,179.2852,66.2378,174.0464,68.9031,180.7672,75.6322" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="82" x="187.5" y="76.4951">Offre-service-à</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="139.9814" y="53.4716">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="212.4772" y="169.2649">*</text><!--MD5=[6eb4bbf1160a41b035610747cfaba29c]
+@startuml JustifiedAssociations
+skinparam style strictuml
+hide empty members
+class "Catalogue\nLivres" as CatalogueLivres
+'Livre "*" -[#gray,bold]- "*" Membre : < Lit
+Livre "1" - - "*" Exemplaire : Décrit >
+Bibliothèque "1" - - "1" CatalogueLivres : Offre >
+CatalogueLivres "1" - - "*" Livre : Répertorie >
+Bibliothèque "1" - - "*" Exemplaire : Stocke > 
+'Membre "*" -[#gray,bold]- "1" Bibliothèque : Visite >
+'Membre "*" -[#gray,bold]- "*" Exemplaire : Abime >
+'Bibliothèque "1" -[#gray,bold]- "*" Exemplaire : Achète >
+'Bibliothèque "1" -[#gray,bold]- "*" Exemplaire : Désinfecte >
+Membre "1" - - "*" Exemplaire : Réserve >
+Bibliothèque "1" - - "*" Membre : Offre-service-à >
+@enduml
+
+@startuml JustifiedAssociations
+skinparam style strictuml
+hide empty members
+class "Catalogue\nLivres" as CatalogueLivres
+Livre "1" - - "*" Exemplaire : Décrit >
+Bibliothèque "1" - - "1" CatalogueLivres : Offre >
+CatalogueLivres "1" - - "*" Livre : Répertorie >
+Bibliothèque "1" - - "*" Exemplaire : Stocke > 
+Membre "1" - - "*" Exemplaire : Réserve >
+Bibliothèque "1" - - "*" Membre : Offre-service-à >
+@enduml
+
+PlantUML version 1.2021.4(Sun Apr 04 04:49:39 EDT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

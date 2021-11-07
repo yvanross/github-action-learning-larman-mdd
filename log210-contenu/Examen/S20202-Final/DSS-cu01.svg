@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="352px" preserveAspectRatio="none" style="width:643px;height:352px;background:#FFFFFF;" version="1.1" viewBox="0 0 643 352" width="643px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="319" x="164" y="28.708">DSS CU01 - Commander des items</text><rect fill="#FFFFFF" height="75.3984" style="stroke:#000000;stroke-width:2.0;" width="627" x="10" y="194.5156"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="55" x2="55" y1="119.25" y2="345.1797"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="590" x2="590" y1="119.25" y2="345.1797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="20" y="115.9482">:Membre</text><ellipse cx="55.5" cy="49.9531" fill="#FEFECE" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M55.5,57.9531 L55.5,84.9531 M42.5,65.9531 L68.5,65.9531 M55.5,84.9531 L42.5,99.9531 M55.5,84.9531 L68.5,99.9531 " fill="none" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="73" x="554" y="87.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="561" y="107.9482">:System</text><polygon fill="#A80036" points="578.5,146.3828,588.5,150.3828,578.5,154.3828" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="55.5" x2="584.5" y1="150.3828" y2="150.3828"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="145" x="62.5" y="145.3169">demarrerCommande()</text><line style="stroke:#A80036;stroke-width:1.0;" x1="55.5" x2="65.5" y1="179.5156" y2="175.5156"/><line style="stroke:#A80036;stroke-width:1.0;" x1="55.5" x2="65.5" y1="179.5156" y2="183.5156"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="55.5" x2="589.5" y1="179.5156" y2="179.5156"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="222" x="72.5" y="174.4497">formulaire pour entrer le code UPC</text><path d="M10,194.5156 L88,194.5156 L88,201.5156 L78,211.5156 L10,211.5156 L10,194.5156 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="75.3984" style="stroke:#000000;stroke-width:2.0;" width="627" x="10" y="194.5156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="33" x="25" y="207.5825">loop</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="430" x="103" y="206.7261">[tant que le membre n'a pas entré tous ses Items à commander]</text><polygon fill="#A80036" points="578.5,228.7813,588.5,232.7813,578.5,236.7813" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="55.5" x2="584.5" y1="232.7813" y2="232.7813"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="190" x="62.5" y="227.7153">ajouterItem(upcCode:Integer)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="55.5" x2="65.5" y1="261.9141" y2="257.9141"/><line style="stroke:#A80036;stroke-width:1.0;" x1="55.5" x2="65.5" y1="261.9141" y2="265.9141"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="55.5" x2="589.5" y1="261.9141" y2="261.9141"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="72.5" y="256.8481">nom:String, prix:Real</text><polygon fill="#A80036" points="578.5,294.0469,588.5,298.0469,578.5,302.0469" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="55.5" x2="584.5" y1="298.0469" y2="298.0469"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="140" x="62.5" y="292.981">terminerCommande()</text><line style="stroke:#A80036;stroke-width:1.0;" x1="55.5" x2="65.5" y1="327.1797" y2="323.1797"/><line style="stroke:#A80036;stroke-width:1.0;" x1="55.5" x2="65.5" y1="327.1797" y2="331.1797"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="55.5" x2="589.5" y1="327.1797" y2="327.1797"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="511" x="72.5" y="322.1138">noCommande,dateHeure,[serial:String, UpcCode:Integer, nom:String, prix:Real]</text><!--MD5=[6c7f0bc6ba7fe663d72e6b934ea3e3ce]
+@startuml
+skinparam style strictuml
+    title DSS CU01 - Commander des items
+
+    Actor ":Membre" as E
+    participant ":System" as S
+
+    E -> S: demarrerCommande()
+    E <<- - S: formulaire pour entrer le code UPC
+
+    loop tant que le membre n'a pas entré tous ses Items à commander
+    E -> S: ajouterItem(upcCode:Integer)
+    E <<- - S: nom:String, prix:Real
+    end
+
+    E -> S: terminerCommande()
+    E <<- - S: noCommande,dateHeure,[serial:String, UpcCode:Integer, nom:String, prix:Real]
+@enduml
+
+PlantUML version 1.2021.9beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

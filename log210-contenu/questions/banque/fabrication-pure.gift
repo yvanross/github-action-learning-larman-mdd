@@ -1,0 +1,19 @@
+$CATEGORY: $course$/GRASP/Fabrication Pure
+
+// [tag:grasp] [tag:fabrication-pure]
+::Fabrication pure (réusinage) Vente et StockagePersistant::[markdown]La figure ici représente un réusinage (*refactoring* en anglais) d'une conception. Quel principe GRASP a été appliqué?\n![Diagramme UML d'un réusinage](https\://www.plantuml.com/plantuml/svg/tLB1IiD04BtdAvQSqa1pyEYf5H4FWW6BLvbknxXsCmap4q6a_sE_8p_cf6X8nTuyTG_BuxsPsSURNOW2QrT7TmDh3XuqD5HsZ4-Cp-2ruK1L8jj0BJ3KJlGzejrMEdGbZ5w1AkFIvHkGEkxtdGI22bFtaJWxFeA8In-Hr3WGTq3Vud1GT8LS1-htw2xTLTD411hb5pGxnb-3uks0HwKeYX7Fv_CHws4QSZORAM--aEz2HRXa3JwYPDR-kw24WBNPEzOgr5MZ42Vpfa_dUI11ripThryj3pVByudOjHjp_gVuCsMNx8wIRBd_bDDHFcZZjqQNo19iWQJf9Cvf4lzXxVGEByvaYKFy2wIDVUWl "Diagramme UML d'un réusinage")
+{
+	~Polymorphisme#Ce principe répond au problème de comment gérer des alternatives dépendantes des types et de comment créer des composants logiciels "enfichables".
+	~Indirection#Ce principe aide à décider où affecter une responsabilité pour éviter le couplage entre deux entités (ou plus).
+	=Fabrication Pure#Ce principe est une solution à un problème qui arrive lorsque nous devons assigner une responsabilité (ici, les opérations **insert** et **update** dans une base de données), mais tous les choix conseillés par des principes Expert, Créateur, etc. nous mènent à une conception qui transgresse les principes de Faible Couplage et de Forte Cohésion. Avant le réusinage, Vente a trop de responsabilités (insert/update). Dans le réusinage, la classe StockagePersistant a été proposée comme une Fabrication Pure pour prendre ces responsabilités. La cohésion finale est meilleure pour les deux classes Vente et StockagePersistant. En plus, StockagePersistant pourrait servir pour d'autres classes.
+	~Protection des variations#Ce principe aide à concevoir des objets, des sous-systèmes ou des systèmes de telle façon que les variations ou l'instabilité de ces éléments n'aient pas d'impact indésirable sur d'autres éléments.
+}
+
+// [tag:grasp] [tag:fabrication-pure]
+::Fabrication pure (réusinage) Dé et Cornet::[markdown]La figure ici représente un réusinage (*refactoring* en anglais) d'une conception. Quel principe GRASP a été appliqué?\n![Diagramme UML d'un réusinage](https\://www.plantuml.com/plantuml/svg/jLAnJiCm4Dtp5ISp590oaB43Ag8i4MpGXJAuyIbOn4vqTYfLLVw7V4T-33Tn8aUYAWiUBElTU_VypbuPoydMge2rv3bnfH3UNfv1B6eDrBMraPhd24balgIkk6E0iOS2tKuoEocZJoaGK5Ns00hL3ib4X9dbEdSqzh3dsWQj61mZS2ihk370qhB6cXXm0sc8hxks1pUeBNh9QUrvuVYmX2Tj9TA4nt4ydNVaMY1Ttqn8ZdRJ2ptMz7iAyVkLkxr0_H43IzZWDjRkWOckDIFQp59Lr7sRlyLApkPA_YcOzteiIQFjxOPZO7UnxMjfUJ4VLpAVrntpRQUgcrZcFOEAz-xdYMPBjsnClmHWWo6B5Y4rj85Vw5vpJhAbOqa22KKpYjtphL0Bzrz_0000 "Diagramme UML d'un réusinage")
+ {
+	~Polymorphisme#Ce principe répond au problème de comment gérer des alternatives dépendantes des types et de comment créer des composants logiciels "enfichables".
+	~Créateur#Ce principe aide à décider quelle classe aura la responsabilité d'instancier des objets d'une autre classe.
+	=Fabrication Pure#Ce principe est une solution à un problème qui arrive lorsque nous devons assigner une responsabilité (ici, le fait que Joueur ait à gérer les dés), mais tous les choix conseillés par des principes Expert, Créateur, etc. nous mènent à une conception qui transgresse les principes de Faible Couplage et de Forte Cohésion. Avant le réusinage, Joueur a trop de responsabilités (il doit brasser chaque dé et calculer le total). Dans le réusinage, la classe Cornet a été proposée comme une Fabrication Pure pour prendre ces responsabilités. La cohésion finale est meilleure pour les deux classes Joueur et Cornet. En plus, Cornet pourrait servir pour d'autres applications où il faut lancer les dés (il peut y en avoir plus de deux selon le diagramme de classe).
+	~Contrôleur#Ce principe aide à décider quelle classe hors de la couche présentation recevra une opération système.
+}

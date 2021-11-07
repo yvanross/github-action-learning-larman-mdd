@@ -1,23 +1,23 @@
 $CATEGORY: $course$/FURPS
 
 
-// [tag:seance06]
-::Faites la mise en correspondance entre l'exigence et sa catégorie \:::[html]Faites la mise en correspondance entre l'exigence et sa catégorie \:{
+// [tag:furps]
+::Appariez l'exigence à sa catégorie::[markdown]Appariez l'exigence à sa catégorie \:{
 	=Journalisation de toutes les erreurs en mémoire persistante -> Fonctionnalité
 	=Possibilité de personnaliser les fonctionnalités du système par un ensemble de règles arbitraires. -> Fonctionnalité
 	=Toute utilisation implique une authentification -> Fonctionnalité
 	=Le client doit voir le système sur un grand écran et donc le texte doit être lisible à un mètre de distance. -> Convivialité (Usability)
 	=Les couleurs associées aux formes courantes de daltonisme doivent être évitées. -> Convivialité (Usability)
 	=Une fonctionnalité primaire doit être lancée en deux gestes ou moins. -> Convivialité (Usability)
-	=En cas d'indisponibilité des systèmes connectés, il faut une solution locale qui permette de réaliser quand même la vente. -> Fiabilité (Reliability)
+	=En cas d'indisponibilité des systèmes connectés, il faut une solution locale permettant de réaliser quand même la vente. -> Fiabilité (Reliability)
 	=L'autorisation bancaire d'un paiement doit se faire en moins d'une minute dans 90 % des cas. -> Performance
 	=Il y a des règles personnalisables intégrées à différents points d'un scénario (début d'une transaction, fin d'une transaction, etc.). -> Possibilités de prises en charge (Supportability)
-	=Les différents clients veulent des configurations de réseau précises pour leur système, tels des clients légers ou des clients lourds ou encore des couches physiques à deux niveaux ou à N niveaux. Ils souhaitent que ces configurations puissent évoluer à mesure que leurs besoins en termes de performance et leurs règles d'affaires changent. -> Possibilités de prises en charge (Supportability)
+	=Les différents clients veulent des configurations de réseau précises pour leur système, tels des clients légers ou des clients lourds ou encore des couches physiques à deux niveaux ou à *N* niveaux. Ils souhaitent que ces configurations puissent évoluer à mesure que leurs besoins sur le plan de la performance et leurs règles d'affaires changent. -> Possibilités de prises en charge (Supportability)
 	=Le système doit fournir une interface utilisateur dans plusieurs langues. -> Possibilités de prises en charge (Supportability)
 }
 
-// [tag:seance06]
-::Dans le Processus Unifié, les exigences concernant les fonctionnalités d'un logiciel sont spécifiées dans quel artefact?::[html]Dans le Processus Unifié, les exigences concernant les fonctionnalités d'un logiciel sont spécifiées dans quel artefact?{
+// [tag:furps]
+::Dans le Processus Unifié, les exigences concernant les fonctionnalités d'un logiciel sont spécifiées dans quel artefact?::[markdown]Dans le Processus Unifié, les exigences concernant les fonctionnalités d'un logiciel sont spécifiées dans quel artefact?{
 	=Cas d'utilisation (Use cases)#Les cas d'utilisation documentent les scénarios typiques de l'utilisation d'un système, et donc concernent avant tout les besoins fonctionnels (comportementaux).
 	~Contrats d'opération#Les contrats d'opération spécifient les détails des opérations système. Le niveau de modélisation est plus bas que les fonctionnalités du logiciel.
 	~Diagrammes de séquence système#Les diagrammes de séquence système modélisent les opérations système avec les arguments et les informations de retour. Le niveau de modélisation est plus bas que les fonctionnalités du logiciel.
@@ -25,21 +25,32 @@ $CATEGORY: $course$/FURPS
 	~Glossaire#Le glossaire contient des définitions des termes importants dans le domaine du logiciel à développer.
 }
 
-// [tag:seance06]
-::Exigences motivant basculement sur services locaux et mise en cache::[html]<p>Quels types d'exigences sont la motivation principale pour le basculement sur les services locaux et la mise en cache locale du système NextGen POS?</p>{
-	~%-25%<p>Fonctionnalités</p>
-	~%-25%<p>Facilité d'utilisation (<em>Usability</em>)</p>
-	~%50%<p>Fiabilité (<em>Reliability</em>)</p>#<p>Le basculement sur les services locaux est une façon de rendre le système plus fiable, puisque les pannes de services externes pourraient être tolérées.</p>
-	~%50%<p>Performance</p>#<p>La mise en cache locale a été suggérée par l'architecte du projet pour améliorer la performance, puisque chaque demande de prix prend plus de temps et de ressources si elle va toujours à la base de données à distant. </p>
-	~%-25%<p>Possibilités de prise en charge (<em>Supportability</em>)</p>
+// [tag:furps]
+::Exigences motivant basculement sur services locaux et mise en cache::[markdown]Quels types d'exigences sont la motivation principale pour le basculement sur les services locaux et la mise en cache locale du système NextGen POS?{
+	~%-25%Fonctionnalités
+	~%-25%Facilité d'utilisation (*Usability*)
+	~%50%Fiabilité (*Reliability*)#Le basculement sur les services locaux est une façon de rendre le système plus fiable, puisque les pannes de services externes pourraient être tolérées.
+	~%50%Performance#La mise en cache locale a été suggérée par l'architecte du projet pour améliorer la performance, puisque chaque demande de prix prend plus de temps et de ressources si elle va toujours à la base de données à distant. 
+	~%-25%Possibilités de prise en charge (*Supportability*)
 }
 
-// [tag:seance06]
+// [tag:furps]
 ::Indiquer les caractéristiques désirables d'un design\:::Indiquer les caractéristiques désirables d'un design\:{
 	=complexité minimale (simplicité) -> désirable
 	=facilité de maintenance -> désirable
 	=couplage fort -> indésirable
+	=cohésion faible -> indésirable
 	=extensibilité -> désirable
 	=réutilisabilité -> désirable
 	=portabilité -> désirable
+}
+
+
+// [tag:furps]
+::Réduire écart des représentations::[markdown]Quel type d'exigence est appuyé par le principe de réduire l'écart de représentations (utiliser un MDD et une conception qui s'en inspire)?{
+	~Fonctionnalités#Réduire l'écart des représentations n'est pas relié au fonctionnement du logiciel. Ça facilite la compréhension d'une solution par rapport à un problème.
+	~Facilité d'utilisation (*Usability*)#Réduire l'écart des représentations n'affecte pas la facilité d'utiliser un logiciel. Ça facilite la compréhension d'une solution par rapport à un problème.
+	~Fiabilité (*Reliability*)#Réduire l'écart des représentations n'a pas d'impact sur la performance. Ça facilite la compréhension d'une solution par rapport à un problème.
+	~Performance#Réduire l'écart des représentations n'affecte pas la performance. Ça facilite la compréhension d'une solution par rapport à un problème.
+	=Possibilités de prise en charge (*Supportability*)#Réduire l'écart des représentations facilite la compréhension d'une solution par rapport à un problème, ce qui rend un logiciel plus facile à étendre, à déboguer, à maintenir, etc.
 }

@@ -1,0 +1,73 @@
+$CATEGORY: $course$/Fiabilité/Basculement-services-locaux
+
+// [tag:adaptateur-produits]
+::Pourquoi adaptateur local pour produits n'est pas un adaptateur::
+[markdown]
+Pourquoi l'adaptateur local pour les produits n'est-il pas un vrai adaptateur? {
+    =Parce qu'il n'utilise pas un autre service (il implémente lui-même le service local).
+    ~Parce qu'un vrai adaptateur doit fonctionner avec un service à distant#Un service local peut être adapté par un adaptateur.
+}
+
+// [tag:adaptateur-produits]
+::Service adapté adaptateur::
+[markdown]
+Quel service est "adapté" par les adaptateurs pour les produits? {
+    =`getDescription()` (`getSpecification()` en anglais)
+    ~`créerLigneArticles()` (`makeLineItem()` en anglais)
+    ~`saisirArticle()` (`enterItem()` en anglais)
+}
+
+
+// [tag:adaptateur-produits]
+::Pourquoi référence à l'interface dans l'adaptateur produits::
+[markdown]
+Dans la figure A35.1/F30.1, pourquoi y a-t-il une association de LocalProducts (ProduitsLocal) à IProductsAdapter (IAdaptateurProduits)? {
+    =l'adaptateur local se sert d'un autre adaptateur de produits pour obtenir des informations
+    ~selon la définition de l'Adaptateur dans la référence GoF, un adaptateur doit toujours contenir une association sur l'interface qu'il implémente.
+}
+
+// [tag:adaptateur-produits]
+::Redondance de l'information::
+[markdown]
+Dans la réalisation de basculement sur les services locaux pour `getDescription()` envoyé au CatalogueProduits/ProductCatalog, combien de copies d'une description de produits peut-il y avoir? {
+    ~3#Il y a la copie dans la Map, dans le fichier indexé de l'adaptateur local, dans le service distant et sur les étagères (prix affiché) 
+    ~2#Il y a la copie dans la Map, dans le fichier indexé de l'adaptateur local, dans le service distant et sur les étagères (prix affiché) 
+    =4#Il y a la copie dans la Map, dans le fichier indexé de l'adaptateur local, dans le service distant et sur les étagères (prix affiché) 
+    ~1#Il y a la copie dans la Map, dans le fichier indexé de l'adaptateur local, dans le service distant et sur les étagères (prix affiché) 
+}
+
+// [tag:adaptateur-comptabilité]
+::Service adapté adaptateur::
+[markdown]
+Quel service est "adapté" par les adaptateurs de comptabilité? {
+    =`postReceivable()` et `postSale()` (`enregistrerAccord()` et `enregistrerVente()` en français)
+    ~`makePayment()` (`créerPaiement()` en français)
+    ~`completeSaleHandling()` (`terminerVente()` en français)
+}
+
+// [tag:adaptateur-comptabilité]
+::Pourquoi 2 références à l'interface dans l'adaptateur comptabilité::
+[markdown]
+Dans la figure A35.13/F30.13, pourquoi y a-t-il deux associations de AccountingRedirectionProxy (ProxyRedirectionCompta) à IAccountingAdapter (IAdaptateurCompta)? {
+    =l'adaptateur de redirection se sert de deux autres adaptateurs, un pour le service principal de comptabilité (SAP) et l'autre comme service redondant en cas de panne du premier.
+    ~selon la définition de l'Adaptateur dans la référence GoF, un adaptateur doit toujours contenir au moins une association sur l'interface qu'il implémente.
+}
+
+// [tag:adaptateur-comptabilité]
+::Synchronisation des services de comptabilité::
+[markdown]
+Dans la figure A35.13/F30.13, comment les informations dans le service redondant de comptabilité (LocalAccounting/ComptaLocal) et le système principal (SAPAccounting/ComptaSAP) se synchronisent-elles? {
+    =Les données stockées dans le système local (redondant) sont transmises vers SAP ultérieurement.
+    ~Les données stockées dans SAP sont copiées dans le système local (redondant).#Ça serait une quantité importante d'informations dans le système de comptabilité SAP à transmettre dans le système local. En plus, c'est le système SAP qui est le système idéal. Le système local (redondant) est comme un pneu de secours qui permet de continuer sans perde le stockage de l'information de comptabilité.
+    ~Les informations n'ont pas besoin d'être synchronisées.#Les données stockées localement (en cas de panne) devront être envoyées au système SAP ultérieurement, sinon elles seront perdues.
+}
+
+// [tag:adaptateur-comptabilité] [tag:adaptateur-produits]
+::Synchronisation des services de comptabilité::
+[markdown]
+Concernant l'application des patterns GOF dans le chapitre A35/F30 du livre, appariez les éléments\: {
+    =Utilise(nt) une mise en cache -> service redondant de spécification de produits
+    =Utilise(nt) le pattern Proxy/Procuration -> service redondant de comptabilité
+    =Utilise(nt) le pattern Adapter/Adaptateur -> services redondants de spécification de produits et de comptabilité    
+    =Utilise(nt) un service local -> services redondants de spécification de produits et de comptabilité    
+}

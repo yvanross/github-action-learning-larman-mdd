@@ -1,0 +1,9 @@
+$CATEGORY: $course$/GRASP
+
+// [tag:forte-cohesion] [tag:faible-couplage]
+::Faible Couplage et Forte Cohésion (évaluative) (GRASP 1-5)::[html]<p>Selon le principe Créateur, vous trouvez que deux classes différentes pourraient avoir la même responsabilité de créer une instance (objet) d'une classe. Quel(s) principe(s) GRASP existe(nt) pour vous aider à décider laquelle est la meilleure des classes pour avoir cette responsabilité?</p>{
+	~%-50%<p>Expert en information</p>#<p>Incorrect. Normalement, ce principe ne vous aide pas à choisir entre deux classes lorsque la responsabilité est de créer une instance (objet) d'une classe.</p>
+	~%50%<p>Faible Couplage</p>#<p>Correct. Affecter les responsabilités de sorte que le couplage (inutile) demeure faible. Employez ce principe pour évaluer les différentes solutions.</p>
+	~%50%<p>Forte Cohésion</p>#<p>Correct. Affecter les responsabilités de sorte que les classes demeurent cohésives. Employez ce principe pour évaluer les différentes solutions.</p>
+	~%-50%<p>Contrôleur</p>#<p>Incorrect. Le principe GRASP Contrôleur concerne la décision pour assigner la responsabilité pour les opérations système.</p>
+}

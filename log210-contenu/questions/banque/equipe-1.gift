@@ -1,0 +1,9 @@
+$CATEGORY: $course$/Equipe
+
+// [tag:equipe]
+::label::[markdown]Here's a *question*? {
+    ~wrong 1
+    =correct
+    ~wrong 2
+}
+

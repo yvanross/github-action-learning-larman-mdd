@@ -1,0 +1,14 @@
+::Contrôleur responsabilités (MVC)::Qu'est-ce qui n'est pas une responsabilité pour un contrôleur dans le pattern MVC?
+{
+    ~Favoriser la séparation entre la vue et le modèle
+    =Reconnaître des gestes des utilisateurs#Ceci est la responsabilité d'une autre partie de MVC (laquelle?)
+    ~Actualiser une vue selon les exigences
+    ~Actualiser le modèle selon les exigences
+}
+
+::Synonyme Vue::Qu'est-ce qu'un synonyme pour les vues dans le pattern MVC? {
+    =la couche présentation
+    ~les cas d'utilisation
+    ~les acteurs
+    ~les façades
+}

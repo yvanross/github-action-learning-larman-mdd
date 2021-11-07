@@ -1,6 +1,6 @@
 $CATEGORY: $course$/TDD
 
-// [tag:seance06]
+// [tag:tdd]
 ::TDD éléments::[markdown]Appariez chaque énoncé avec son appartenance au *test-driven development* (TDD) {
     =écrire un test qui échoue -> partie essentielle
     =écrire un test qui passe -> partie essentielle
@@ -9,17 +9,28 @@ $CATEGORY: $course$/TDD
     =faire des petits pas -> partie essentielle
     =utiliser un framework automatique de tests -> partie facultative    
     =utiliser un environnement de développement avec les fonctionnalités automatisant des réusinages -> partie facultative
-    =faire des kata -> partie facultative
+    =faire des katas -> partie facultative
     =travailler à deux (peer programming) -> partie facultative
 }
 
-// [tag:seance06]
-::TDD 3 regles::[html]Identifier les règles TDD.{
-=Vous n'êtes pas autorisé à écrire du code de production tant que vous n'avez pas écrit un test unitaire qui a échoué. -> TDD
-=Vous n'êtes pas autorisé à écrire plus de tests unitaires que ce qui est suffisant pour échouer et ne pas compiler échoue. -> TDD
-=Vous n'êtes pas autorisé à écrire plus de code de production que ce qui est suffisant pour réussir le test qui échoue actuellement. -> TDD
-=Vous devez réusiner votre code immédiatement lorsque votre test passe -> Non TDD
-=Vous devez réusiner votre test immédiatement lorsque votre test passe -> Non TDD
-=Vous êtes autorisé à écrire du code de production vous pourrez écrire le test unitaire plus tard -> Non TDD
-=Vous n'êtes pas autorisé à écrire les test unitaires avant les test d'intégrations -> Non TDD
+// [tag:tdd]
+// ::TDD 3 regles::[html]Identifier les règles TDD.{
+// =Vous n'êtes pas censé écrire du code de production tant que vous n'avez pas écrit un test unitaire qui ne passe pas. -> TDD
+// =Vous n'êtes pas censé écrire plus de code de production que ce qui est suffisant pour passer les tests actuellement. -> TDD
+// =Vous devez réusiner votre code immédiatement lorsque votre test passe. -> Non TDD
+// =Vous devez réusiner votre test immédiatement lorsque votre test passe. -> Non TDD
+// =Vous pouvez écrire du code de production et vous pourrez écrire le test unitaire plus tard -> Non TDD
+// =Vous n'êtes pas censé écrire les tests unitaires avant les tests d'intégrations -> Non TDD
+// }
+
+// =Vous n'êtes pas censé écrire plus de tests unitaires que ce qui est suffisant pour échouer et ne pas compiler échoue. -> TDD
+
+::Partie importante du TDD::
+[markdown]
+Selon la recherche présentée dans les notes de cours, quel aspect du Développement piloté par les tests (Test-driven development) est réellement important pour la qualité du logiciel? {
+    =garder les cycles rouge-vert courts et stables
+    ~écrire les tests en premier
+    ~écrire les tests après
+    ~faire les réusinages seulement lorsqu'un projet et dans l'état vert
+    ~faire les « katas » régulièrement
 }

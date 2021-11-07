@@ -1,9 +1,9 @@
 @startuml diagram name
 skinparam style strictuml
 hide empty members
-title LOG210: 2020 été Qualités et Indicateurs BCAPG
+title LOG210: 2021 été Qualités et Indicateurs BCAPG
 class "BCAPG" as BCAPG
-BCAPG "1" - "12" Qualité : définit >
+BCAPG "1" -- "12" Qualité : définit >
 abstract class "Q12 Apprentissage continue" as Q12 #lightgreen extends Qualité
 class "i1 Identifier ses\nbesoins en formation" as Q12i1 #lightblue implements Q12
 abstract class "Q2 Analyse de problèmes" as Q2 #lightgreen extends Qualité

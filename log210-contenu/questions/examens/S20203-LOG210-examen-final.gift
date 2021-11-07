@@ -1,21 +1,25 @@
 $CATEGORY: $course$/Final
 
+
 // [tag:Final]
-::Etat - Classe Activé::[html]<h1>Diagramme d'état</h1><p>Le système d'alarme démarre désactivé.&nbsp; Il peut être activé par l'opérateur en rentrant un code valide, seulement si la porte est fermée.&nbsp; Une fois activé, le système est désactivé lorsque l'opérateur entre un code valide. Si le système est activé et que la porte s'ouvre, alors l'alarme sonne jusqu'à ce que l'opérateur désactive l'alarme avec un code valide.&nbsp;</p><p>Identifiez la ou les méthodes de la classe <b>Activé</b> et la ou les conditions, si applicable,&nbsp;issue du diagramme d'état représentant le fonctionnement d'un système d'alarme de garage.</p><p><br></p><p><br></p>{
+::Etat - Classe Activé::[html]<h1>Diagramme d'état</h1>
+<p>Le système d'alarme démarre désactivé.&nbsp; Il peut être activé par l'opérateur en rentrant un code valide, seulement si la porte est fermée.&nbsp; Une fois activé, le système est désactivé lorsque l'opérateur entre un code valide. Si le système est activé et que la porte s'ouvre, alors l'alarme sonne jusqu'à ce que l'opérateur désactive l'alarme avec un code valide.&nbsp;</p>
+<p>Identifiez la ou les méthodes de la classe <b>Activé</b> et la ou les conditions, si applicable,&nbsp;issue du diagramme d'état représentant le fonctionnement d'un système d'alarme de garage.</p>{
 	~%-50%<p>désactivé</p>
 	~%-50%<p>activé</p>
 	~%-50%<p>sonnant</p>
 	~%-50%<p>activé [codeValide &amp; porteFermé]</p>
 	~%50%<p>désactivé [codeValide]</p>
 	~%-50%<p>désactivé [porteFermé]</p>
-	~%-50%<p>activé [codeValide]<br></p>
-	~%-50%<p>activé [porteFerme]<br></p>
-	~%-50%<p>sonnant [codeValide]<br></p>
-	~%-50%<p>sonnant [porteFermé]<br></p>
+	~%-50%<p>activé [codeValide]</p>
+	~%-50%<p>activé [porteFerme]</p>
+	~%-50%<p>sonnant [codeValide]</p>
+	~%-50%<p>sonnant [porteFermé]</p>
 	~%50%<p>ouvrirPorte</p>
-	~%-50%<p>&nbsp;ouvrirPorte [codeValide]<br></p>
-	~%-50%<p>ouvrirPorte [porteFermé]<br></p>
+	~%-50%<p>ouvrirPorte [codeValide]</p>
+	~%-50%<p>ouvrirPorte [porteFermé]</p>
 }
+
 // [tag:Final]
 ::"Élément d'un diagramme d'activité"::[html]<p>Associé l'élément et sa description</p>{
 	=<p><img src\="https\://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5KeBgdCIGMIHPd9O1cm4Yw7rBmK80y0"/>.&nbsp;</p> -> Début du diagramme d'activité
@@ -319,6 +323,7 @@ $CATEGORY: $course$/Final
 	~<p>Bridge</p>#<p>Incorrect.</p>
 	~<p>Observateur</p>#<p>Incorrect.</p>
 }
+
 ::Patron Observateur::[html]<p>Une abstraction comporte deux aspects et l’un dépend de l’autre. Un changement d’état dans un objet engendre des changements d’état dans d’autres objets, et on ne sait pas a priori lesquels. Un objet devrait pouvoir avertir d’autres objets des événements importants, sans un couplage fort avec ces derniers (sans les connaître concrètement).</p>{
 	=<p>Observateur</p>#<p>Correct! </p>
 	~<p>État (State)</p>#<p>Incorrect.</p>
