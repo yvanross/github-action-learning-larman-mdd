@@ -1,0 +1,38 @@
+@startuml 
+title MDD Mise en plateau d'une caisse enregistreuse
+skinparaMagasin style strictuml
+
+class  Magasin <<Role d'une organisation>>  {
+  string nom
+  string adressee
+  string info()
+}
+
+class  Caisse <<Equipement, conteneur>>  {
+
+}
+
+class  MiseEnPlateau <<Transaction>>  {
+  float montant
+  Date date
+  Heure  heure
+}
+
+class PlateauArgent << objet physique>>  {
+  string identifiant
+}
+
+class Caissier <<Role>>  {
+  string identifiant
+  string motDePasse
+}
+
+Caisse "1" -down- "0..1" MiseEnPlateau : Catpurée-dans <
+MiseEnPlateau "0..1" -up- "1" Caissier : Effectue <
+MiseEnPlateau "0..1" -up- "1" PlateauArgent: Enregistre-mise-de <
+
+Magasin "1" -- "*" PlateauArgent: Possède >
+Magasin "1" -- "*" PlateauArgent: Possède >
+Magasin "1" -- "*" Cassier: EMiseEnPlateauloie >
+Magasin "1" -- "*" Caisse: Contient >
+@enduml

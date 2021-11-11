@@ -27,6 +27,7 @@
         "@types/node": "^14.11.8",
         "collections": "^5.1.12",
         "french-verbs-list": "0.0.2",
+        "jest-runner": "^27.3.1",
         "line-reader": "^0.4.0",
         "nodejs": "0.0.0"
     },
@@ -35,6 +36,7 @@
         "act": "0.0.6",
         "chai": "^4.2.0",
         "jest-config": "^26.5.3",
+        "plantuml-parser": "^0.1.0",
         "prettier": "^2.1.2",
         "sorted-set": "^0.3.0",
         "ts-jest": "^26.4.1",
