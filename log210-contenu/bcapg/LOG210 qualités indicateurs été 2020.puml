@@ -1,0 +1,30 @@
+@startuml diagram name
+skinparam style strictuml
+hide empty members
+title LOG210: 2020 été Qualités et Indicateurs BCAPG
+class "BCAPG" as BCAPG
+BCAPG "1" - "12" Qualité : définit >
+abstract class "Q12 Apprentissage continue" as Q12 #lightgreen extends Qualité
+class "i1 Identifier ses\nbesoins en formation" as Q12i1 #lightblue implements Q12
+abstract class "Q3 Investigation" as Q3 #lightgreen extends Qualité
+class "LOG210 2020 été" as LOG210
+class "i1 Planifier" as Q3i1 #lightblue implements Q3
+class "i2 Appliquer\nles méthodologies" as Q3i2 #lightblue implements Q3
+class "i3 Interpréter\nles résultats" as Q3i3 #lightblue implements Q3
+
+class "Activité" as activité
+
+class "Lab0" as lab0 #yellow extends activité
+class "Lab3 Planification" as lab3Plan #yellow extends activité
+class "Lab3 RDCU" as lab3RDCU #yellow extends activité
+class "Lab2 Rétroaction" as lab2Feedback #yellow extends activité
+
+LOG210 "1" *-- "*" activité : propose >
+
+'mapping
+lab0 "*" -- "1" Q12i1 : mesure >
+lab3Plan "*" -- "1" Q3i1 : mesure >
+lab3RDCU "*" -- "1" Q3i2 : mesure >
+lab2Feedback "*" -- "1" Q3i3 : mesure >
+@enduml
+

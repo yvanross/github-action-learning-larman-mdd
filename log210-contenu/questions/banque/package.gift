@@ -1,0 +1,78 @@
+$CATEGORY: $course$/Conception de packages
+
+// // [tag:package] [tag:protection-des-variations]
+// ::Limiter dépendances avec fabrications::
+// [markdown]
+// Quel est le problème avec le couplage entre les packages dans la figure suivante\: \n ![Image avec packages](https\://www.plantuml.com/plantuml/img/LOqn3i8m34Ltdy8dw16G43CIOc1YCUbNiHf7KHA62d6WdeEBuO52ktYmt_EhewOiHOnhco9y5WtjOP7kseDXkKrii1jAfInXb05yGMge_2Jc4ALMFcDGDq4l-a4dKPY3QsxPxG_bFVVQDhmN_8caW9Lnb9nHhcantVZMksxtRz3Qtbm-)  {
+// 	=Les implémentations de Paiements (classes concrètes) devraient être masquées des packages Ventes et Persistance pour respecter le principe GRASP de Protection des variations.
+// 	~Le couplage est dans le mauvais sens. Le package Paiements devrait dépendre de Ventes et de Persistance. 
+// 	~Il manque les classes PaiementParChèque et PaiementEnEspèces dans le package Paiements.
+// 	~Il devrait y avoir une dépendance cyclique entre les packages. Il manque les liens de couplage de Paiements vers Ventes et vers Persistance.
+// }
+
+// // [tag:package]
+// ::Limiter dépendances avec fabrications (objets de domaine)::
+// [markdown]
+// Quel est la *solution* à ce problème avec le couplage entre les packages dans la figure suivante\: \n ![Problème conception packages](https\://www.plantuml.com/plantuml/img/LOqn3i8m34Ltdy8dw16G43CIOc1YCUbNiHf7KHA62d6WdeEBuO52ktYmt_EhewOiHOnhco9y5WtjOP7kseDXkKrii1jAfInXb05yGMge_2Jc4ALMFcDGDq4l-a4dKPY3QsxPxG_bFVVQDhmN_8caW9Lnb9nHhcantVZMksxtRz3Qtbm-){
+// 	=Introduire un nouveau package CréationObjetsDuDomaine avec les interfaces et les fabriques. Ainsi, Ventes et Persistance ignorent les détails de Paiements.
+// 	~Factoriser Ventes et Persistance dans un même package. Ainsi on élimine un lien de couplage entre packages. 
+// 	~On doit calculer la <em>cohésion relationnelle</em> de chaque package pour décider s'il devrait y avoir de la dépendance cyclique. 
+// 	~On applique le patron MVC pour régler le problème de couplage dans le mauvais sens.
+// }
+
+// [tag:package]
+::Principes d'organisation de packages::
+[markdown]
+Quels sont les principes d'organisation de packages présentés dans les lectures?{
+	~%16.66667%Organiser les packages en partitions verticales et horizontales fonctionnellement cohésives
+	~%16.66667%Packager une famille d'interfaces
+	~%16.66667%Créer un package par tâche et par groupe de classes instables
+	~%16.66667%Factoriser les types indépendants
+	~%16.66667%Utiliser les Fabrications pour limiter la dépendance aux packages concrets
+	~%16.66667%Pas de cycles dans les packages
+	~%-25%Packager les classes par cas d'utilisation
+	~%-25%Pas de couplage dans les packages
+	~%-25%Pas de polymorphisme dans les packages 
+}
+
+// [tag:package]
+::Caractéristiques package stable::
+[markdown]
+Quelles sont les caractéristiques d'un package stable?{
+	~%25%Il contient uniquement ou essentiellement des interfaces et des classes abstraites.
+	~%25%Il est indépendant des autres packages, ne dépend que de packages stables ou encapsule ses dépendances de sorte que les dépendants ne soient pas affectés par ses modifications.
+	~%25%Il contient du code relativement stable, car il a été testé et optimisé avant livraison.
+	~%25%Il est expressément conçu pour changer lentement.
+	~%-50%Il est dans une hiérarchie nommée `internal`.#Cette convention est justement pour indiquer que de telles packages sont instables, comme une variable avec visibilité `private`.
+}
+
+// CPF - je ne suis pas sûr ici -- j'avais compris qu'on cherche une CR qui est plus important
+// // [tag:package]
+// ::Valeur faible de CR::
+// [markdown]
+// Que signifie une valeur faible de cohésion relationnelle?{
+// 	~%33.33333%Il y a peu de liens entre les types du package. Le package est possiblement mal organisé.
+// 	~%33.33333%Le package pourrait consister principalement des classes utilitaires, sans lien.
+// 	~%33.33333%Il existe quelques agrégats de sous-ensembles à CR élevé, mais le CR du package est diminué à cause des autres classes principalement sans lien.
+// 	~%-33.33333%Le package contient des entités avec beaucoup de couplage entre eux.
+// }
+
+// [tag:package]
+::Responsabilité et stabilité::
+[markdown]
+Un package *responsable* est un package sur lequel peu de classes dépendent. {
+	FALSE#Les packages les plus responsables doivent être les plus stables, puisque les autres entités dépendent beaucoup d'eux.#Les packages les plus responsables doivent être les plus stables, puisque les autres entités dépendent beaucoup d'eux.}
+
+// [tag:package] [tag:typescript]
+::Packages et TypeScript::
+[markdown]
+TypeScript n'a pas de notion de package comme en Java ou en C\#. {TRUE#En effet, TypeScript est basé sur Javascript et il n'y a pas de notion explicite de package.#En effet, TypeScript est basé sur Javascript et il n'y a pas de notion explicite de package.}
+
+// [tag:package] [tag:typescript]
+::Packages et TypeScript::
+[markdown]
+TypeScript permet d'importer deux classes ayant le même nom (p.ex. `List` dans le même programme). {
+	~Oui, mais on doit renommer une des classes dans le fichier où elle est exportée.#Si on renomme la classe dans sa définition extérieure, on évite le problème, mais nous n'avons pas toujours cette possibilité surtout lorsqu'on réutilise du code provenant d'autres développeurs.
+	=Oui, mais on doit renommer une des classes dans le fichier où elle est importée (avec le mot clé `as`)#Voir l'exemple dans les notes de cours.
+	~Non, le compilateur TypeScript va indiquer une erreur sur la deuxième importation.#Il est vrai que si on ne change pas le nom d'une des classes, ça sera un problème.
+}

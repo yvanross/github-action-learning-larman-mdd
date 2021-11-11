@@ -1,0 +1,15 @@
+@startuml
+﻿skinparam style strictuml
+title CU01 - Ajouter un livre à échanger
+actor ":Client" as c
+participant ":Système" as s
+c->s : démarrerAjoutLivre()
+
+loop reste des livres
+c->s : ajouterLivre(isbn : CodeISBN, condition:CodeCondition)
+s-->c : description
+end loop
+
+c->s: terminerAjoutLivre()
+s-->c: liste de livres du client
+@enduml

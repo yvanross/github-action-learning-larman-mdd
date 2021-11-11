@@ -1,0 +1,13 @@
+@startuml StaticObserver
+skinparam style strictuml
+skinparam BackgroundColor transparent
+hide empty members
+class "Subject" as S {
+    attach()
+}
+interface "Observer" as O <<interface>> {
+    notify()
+}
+class "Concrete\nObserver" implements O
+S -right- O
+@enduml

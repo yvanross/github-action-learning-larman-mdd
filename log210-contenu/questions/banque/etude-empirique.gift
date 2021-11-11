@@ -1,0 +1,30 @@
+$CATEGORY: mgl843/EtudeEmpirique
+
+
+// [tag:mgl843-etudeEmpirique]
+::Choisir les réponses pour les types d'études empiriques selon le facteur ...::[markdown]Choisir les réponses pour les types d'études empiriques. Est-ce que chaque étude permet un **Contrôle sur l'exécution**?{
+	=Sondage -> non
+	=Étude de cas -> non
+	=Expérience -> oui
+}
+
+// [tag:mgl843-etudeEmpirique]
+::Choisir les réponses pour les types d'études empiriques selon le facteur ...::[markdown]Choisir les réponses pour les types d'études empiriques. Est-ce que chaque étude permet un **Contrôle sur les mesures**?{
+	=Sondage -> non
+	=Étude de cas -> oui
+	=Expérience -> oui
+}
+
+// [tag:mgl843-etudeEmpirique]
+::Choisir les réponses pour les types d'études empiriques selon le facteur ...::[markdown]Choisir les réponses pour les types d'études empiriques. Indiquer relativement le **Coût de l’investigation**\:{
+	=Sondage -> bas
+	=Étude de cas -> moyen
+	=Expérience -> haut
+}
+
+// [tag:mgl843-etudeEmpirique]
+::Choisir les réponses pour les types d'études empiriques selon le facteur ...::[markdown]Choisir les réponses pour les types d'études empiriques. Indiquer la **Facilité de réplication**\:{
+	=Sondage -> facile
+	=Étude de cas -> moyennement facile
+	=Expérience -> difficile
+}

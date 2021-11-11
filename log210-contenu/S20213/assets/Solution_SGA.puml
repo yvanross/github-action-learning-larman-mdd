@@ -1,0 +1,48 @@
+@startuml SGA
+skinparam style strictuml
+hide methods
+hide empty members
+title Modèle du domaine SGA
+set namespaceSeparator ::
+class "Université" as SGB::U {
+}
+class "Enseignant" as SGB::En {
+}
+class "Étudiant" as SGB::Et {
+}
+class "Cours" as SGB::Cours {
+}
+class "CatalogueCours" as SGB::CatalogueCours {
+}
+class "GroupeCours" as SGB::GC {
+}
+class "CoursEnLigne" as CoursSGA {
+}
+class "Question" as Question {
+}
+class "Questionnaire" as Questionnaire {
+}
+class "Devoir" as Devoir {
+}
+class "RemiseDevoir" as RDevoir {
+}
+class "RemiseQuestionnaire" as RQuestionnaire {
+}
+
+SGB::U "1" -- "1" SGB::CatalogueCours : Offre >
+SGB::U "1" -- "1..*" SGB::Et : Forme >
+SGB::U "1" -- "1..*" SGB::En : Emploie >
+SGB::CatalogueCours "1" -- "1..*" SGB::Cours : Répertoirie >
+SGB::Cours "1" -- "1..*" SGB::GC : Décrit >
+SGB::En "1" -- "1..*" SGB::GC : Enseigne >
+SGB::Et "1..*" -- "1..*" SGB::GC : S'inscrit-dans >
+SGB::GC "1" -- "0..1" CoursSGA : Est-supporté-par >
+CoursSGA "1" *-- "0..*" Devoir : Contient >
+CoursSGA "1" *-- "0..*" Question : Contient >
+CoursSGA "1" *-- "0..*" Questionnaire : Contient >
+Questionnaire "1" -- "1..*" Question : Contient >
+RDevoir "*" -- "1" Devoir : Est-faite-pour >
+RQuestionnaire "*" -- "1" Questionnaire : Est-faite-pour >
+SGB::Et "1" -- "*" RDevoir : Remet >
+SGB::Et "1" -- "*" RQuestionnaire : Remet >
+@enduml

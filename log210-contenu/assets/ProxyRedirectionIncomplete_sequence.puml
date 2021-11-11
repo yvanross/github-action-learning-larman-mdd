@@ -1,0 +1,14 @@
+@startuml Proxy Redirection
+skinparam style strictuml
+skinparam BackgroundColor transparent
+participant ":Register" as r
+participant "accounting:Accounting\nRedirection\nProxy" as p
+participant "externalAccounting:SAP\nAccounting\nAdapter" as sap
+participant "localAccounting:Local\nAccounting" as local
+-> r : makePayment(...)
+r -> r : completeSaleHandling(...)
+r -> p : postSale(currentSale)
+note over p,sap
+Complétez ce diagramme selon la Figure F30.13/A35.13
+end note
+@enduml

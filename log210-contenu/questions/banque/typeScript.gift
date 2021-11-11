@@ -1,0 +1,539 @@
+$CATEGORY: $course$/TypeScript
+
+// [tag:TypeScript] [tag:arrow-function]
+::ArrowFunction equivalent classic function::[markdown]
+Quel est l'équivalent de\n```\nfunction bonjour(qui\: string) \{\n    return console.log("Bonjour " + qui);\n\}\n```\n?
+{
+	=`const bonjour \= (qui\: string) \=> console.log("Bonjour " + qui)`
+	~`const bonjour \= (qui\: string) \=> return console.log("Bonjour " + qui)`
+	~`const bonjour \= qui\: string \=> console.log("Bonjour " + qui)`
+	~`(qui\: string) \=> console.log("Bonjour " + qui)`
+}
+
+// [tag:ts-reflection] [tag:TypeScript]
+::TypeOf::
+[markdown]
+Quelle est la valeur de retour de `typeof (new Voiture())`? {
+	=`"object"`#Les types en TypeScript sont "effacés" au temps d'exécution, car c'est du JavaScript. "object" est donc le résultat.
+	~`"Voiture"`#Les types en TypeScript sont "effacés" au temps d'exécution, car c'est du JavaScript. "object" est donc le résultat.
+	~`Voiture`#Les types en TypeScript sont "effacés" au temps d'exécution, car c'est du JavaScript. "object" est donc le résultat.
+}
+
+// [tag:TypeScript] [tag:ts-node]
+::ts-node::[markdown]
+Quelle commande peut exécuter du TypeScript directement? {
+	=`ts-node`
+	~`tsc`
+	~`npm start`
+}
+
+// [tag:TypeScript] [tag:ts-map]
+::map::[markdown]
+Complétez le programme suivant pour qu'il produise le message `[ 67, 46, 14, 6 ]`\:\n```\nconst valeurs \= [65, 44, 12, 4];\nconsole.log(valeurs.map( __________ ));\n```\n
+{
+    =`v \=> v + 2`
+    ~`v + 2`
+    ~`v - 2`
+    ~`v \=> v - 2`
+}
+
+// [tag:TypeScript] [tag:ts-tableau-associatif]
+::tableau associatif::[markdown]
+Qu'est-ce qu'affiche le programme suivant? \:\n```\nlet maMap \= new Map<number, string>();\nmaMap.set(77,'Poisson');\nmaMap.set(22,'Citron');\nconsole.log(maMap.get(77));\nconsole.log(maMap.has(22));\n```\n{
+	=\n```\nPoisson\ntrue\n```
+	~\n```\nPoisson\nCitron\n```
+	~\n```\ntrue\nCitron\n```
+	~\n```\nPoisson\nundefined\n```
+}
+
+// Plusieurs questions provenant de https://learntypescript.dev/
+
+// [tag:TypeScript]
+::TS est un surensemble de JS::
+[markdown]
+Le programme suivant est valide en TypeScript \n```const prénom \= "Marie";\nconst nom \= "Tremblay";
+const nomComplet \= `$\{prénom\} $\{nom\}`;\n```{TRUE#TypeScript est un surensemble de JavaScript. Alors un programme en JavaScript brut est un code TypeScript valide.#TypeScript est un surensemble de JavaScript. Alors un programme en JavaScript brut est un code TypeScript valide.}
+
+// [tag:TypeScript]
+::TypeScript et navigateurs::
+[markdown]
+Le code TypeScript s'exécute-t-il directement dans le navigateur.{FALSE#TypeScript doit être transpilé en JavaScript avant de pouvoir être exécuté dans un navigateur.#TypeScript doit être transpilé en JavaScript avant de pouvoir être exécuté dans un navigateur.}
+
+// [tag:TypeScript]
+::TypeScript et intellisense::
+[markdown]
+L'un des avantages de TypeScript est de permettre aux éditeurs de fournir un *intellisense* précis. {TRUE#Par exemple, en connaissant le type des éléments dans le code, l'éditeur peut proposer des éléments (propriétés, méthodes, fonctions, etc.) associés à ce type.#Par exemple, en sachant le type des éléments dans le code, l'éditeur peut proposer des éléments (propriétés, méthodes, fonctions, etc.) associés à ce type.}
+
+// [tag:TypeScript]
+::TypeScript et vérification de type::
+[markdown]
+Le type TypeScript vérifie notre code, mais quand ce processus de vérification de type peut-il avoir lieu?
+{~%50%Pendant que nous écrivons notre code#Les éditeurs de code peuvent utiliser TypeScript pour taper vérifier notre code pendant qu'il est écrit
+ ~%50%Pendant le processus de construction des projets#Le vérificateur de type TypeScript peut être invoqué pendant le processus de "build"
+ ~%-50%À l'exécution#TypeScript n'existe pas au moment de l'exécution, car le code exécuté est du JavaScript (transpilé de TypeScript)}
+
+// [tag:TypeScript]
+::Date en JavaScript::
+[markdown]
+Il existe un type Date en JavaScript.
+{FALSE#Malheureusement, il n'y a pas de type Date en JavaScript.#Malheureusement, il n'y a pas de type Date en JavaScript.}
+
+// [tag:TypeScript]
+::Date en TypeScript::
+[markdown]
+Il existe un type Date en TypeScript.
+{TRUE#Nous pouvons utiliser le type Date pour les variables de date dans TypeScript.#Nous pouvons utiliser le type Date pour les variables de date dans TypeScript.}
+
+// [tag:TypeScript]
+::Type déduit affectation::
+[markdown]
+Dans l'exemple suivant en TypeScript, on doit spécifier le type `number` pour la variable `montant`\:\n```let montant\: number \= 1000;\n```\n {FALSE#TypeScript peut déduire le type de l'affectation de valeur dans la déclaration.#TypeScript peut déduire le type de l'affectation de valeur dans la déclaration.} 
+
+// [tag:TypeScript]
+::Type déduit paramètre::
+[markdown]
+Dans l'exemple suivant en TypeScript, on doit spécifier le type `string` pour le paramètre `message`\:\n```function logMessage(message\: string) \{\n    ...\n
+\}\n```\n
+{TRUE
+#TypeScript ne peut pas déduire le type du paramètre de message et une spécification de type est donc nécessaire.
+#TypeScript ne peut pas déduire le type du paramètre de message et une spécification de type est donc nécessaire.
+} 
+
+// [tag:TypeScript]
+::Type paramètre sans spécification::
+[markdown]
+Quel est le type du paramètre `message` dans la fonction suivante?\n```function outputMessage(message) \{\n  console.log(message);\n
+\}\n```\n
+{=`any`
+~`string`
+####Puisque TypeScript ne peut pas déduire le type de message, il sera donc de type `any`.}
+
+// [tag:TypeScript]
+::Type Date::
+[markdown]
+TypeScript détectera-t-il un problème avec les éléments suivants? Si oui, quel est le problème?\n```const today \= new Date();
+console.log(today.getWeekDay());\n```\n
+{
+	~Oui, le constructeur `Date` ne peut pas être appelé sans paramètres.
+	=Oui, la méthode `getWeekDay` n'existe pas dans le type `Date`.
+	~Non, il n'y a aucun problème avec le code.
+	####Le constructeur `Date` peut être appelé sans paramètre, mais le type Date ne possède pas de méthode `getWeekDay`.
+}
+
+// [tag:TypeScript]
+::Type de retour::
+[markdown]
+Quel est le type de retour dans la fonction ci-dessous?\n```fonction logMessage(message \: string) \{\n  return console.log(message);\n\}\n```\n
+{
+	~`null`
+	=`void`
+	~`undefined`
+	~`string`
+	~`never`
+####Puisque `console.log` renvoie `void`, `logMessage` renverra également `void`.
+}
+
+// [tag:TypeScript]
+::Instancier tableau Date::
+[markdown]
+Indiquer si l'annotation de type est correcte pour créer un tableau de dates.
+{
+	=`date[]` -> incorrecte
+	=`Array<date>` -> incorrecte
+	=`Date[]` -> correcte
+	=`Tableau<Date>` -> correcte
+	####Le type correct pour une date est `Date`. Ainsi, un tableau de dates peut être créé en utilisant la notation entre crochets (`Date[]`) ou en utilisant le type générique `Array` (`Array<Date>`).
+}
+
+
+// [tag:TypeScript] [tag:tableau]
+::Type déduit tableau::
+[markdown]
+Qu'est-ce que TypeScript déduira du type de la variable `gens` dans la déclaration ci-dessous?\n```\nlet gens \= ["Jean", "Morris", "Sabina"]```\n{
+	=`string[]`
+	~`any[]`
+	~`Array<'Jean' | 'Morris' | 'Sabina'>`
+	####La variable est affectée à un tableau où tous les éléments sont de type `string`. Ainsi, TypeScript déduit que la variable est un tableau où tous les éléments sont de type `string`.
+}
+
+// [tag:TypeScript]
+::Type rest ...::
+[markdown]
+Soit la fonction ci-dessous qui prend un nombre variable de paramètres de message et les envoie à la console. Comment spécifier le type du paramètre *rest* (...) `messages` afin que seuls les types de `string` puissent être transmis?\n```\nfonction outputMessages(...messages) \{\n messages.forEach(message \=> console.log(message));\n\}\n```\n{
+	~`...messages \: any`
+	~`...messages \: any[]`
+	~`...messages \: string`
+	=`...messages \: string[]`
+	####L'utilisation de `any` ne restreindrait pas les paramètres à être de type `string`. Un paramètre *rest* doit être de type tableau afin que plusieurs paramètres y soient acceptés.
+}
+
+// [tag:TypeScript] [tag:type-unknown]
+::Type unknown::
+[markdown]
+Considérez la fonction ci-dessous qui appelle une fonction dans une bibliothèque tierce qui renvoie le résultat d'un calcul.
+Le code n'est pas fortement typé, car `thirdPartyCalculation` renvoie une valeur de type `any`. Est-il possible d'utiliser le type `unknown` pour rendre le code plus fortement typé?\n```function doWork() \{\n  const result \= thirdPartyCalculation();\n  return result + 1;\n\}\n```\n
+{
+    ~Non, car nous ne pouvons pas modifier le code tiers.
+    =Oui\:\n```\nfunction doWork() \{\n  const result\: unknown \= thirdPartyCalculation();\n  if (typeof result \=\=\= "number") \{\n    return result + 1;\n  \}\n  return undefined;\n\}\n```\n
+    ####Il n'est pas nécessaire de toucher au code tiers pour utiliser le type `unknown`.
+}
+
+// [tag:TypeScript] [tag:type-never]
+::Type never::
+[markdown]
+Quel est le type de la variable `invalide` dans la fonction ci-dessous ? \n```\nfunction outputMessage(message \: string) \{\n  if (typeof message \=\=\= "string") \{\n    console.log(message);\n  \} else \{\n    let invalide \= message;\n    console.error(invalide);\n  \}\n\}\n```\n
+{
+	=`never`
+	~`unknown`
+	~`any`
+	####La branche `else` ne doit jamais être atteinte, donc `invalide` sera de type `never`.
+}
+
+// [tag:TypeScript] [tag:types]
+::Type (point à deux dimensions)::
+[markdown]
+Soit une variable qui contiendra un point à deux dimensions. Quelle est l'annotation de type la plus appropriée pour cela?
+{
+	~`any`#Le type `any` n'est pas approprié, car aucune vérification de type n'aura lieu sur la variable. 
+	~`number[]`#`number[]` n'est pas idéal, car le tableau acceptera plus de 2 valeurs numériques
+	~`[number]`#`[number]` ne fonctionnera pas, car il n'acceptera qu'une seule valeur numérique.
+	=`[number, number]`#`[number, number]` est le plus approprié, car il accepte 2 nombres.
+}
+
+// [tag:TypeScript] [tag:types]
+::Type variables de type point::
+[markdown]
+Soit une variable `point` déclarée comme suit\:\n```\nconst point \= \{ x\: 32, y\: 77 \};\n```\nLes affectations suivantes généreront-elles des erreurs de type?\n```\npoint.x \= 40;\npoint.y \= 80;\npoint.z \= 10;\n```
+{
+	~Aucune erreur de type ne sera générée.
+	~Les 3 affectations généreront des erreurs de type, car le point est une constante.
+	=Seule la dernière affectation générera une erreur de type.
+	####`point` aura le type `\{x \: nombre, y \: nombre\}`. Ainsi, les 2 premières affectations respectent ce type, mais pas la dernière.
+}
+
+// [tag:TypeScript] [tag:types]
+::Type d'objet::
+[markdown]
+Nous avons déclaré une variable `person` en tant qu'objet avec les propriétés `firstName` et `level` comme suit\:\n```\nlet person \: \{ firstName \: string, level \: "high" | "Medium" | "low" \};\n```\nNous voulons utiliser ce type à plusieurs endroits dans notre base de code. Quelle est la meilleure façon de procéder?
+{
+	=Créez l'alias de type suivant. Nous pouvons ensuite utiliser Person dans les annotations de type pour les variables qui nécessitent ce type.\n```\ntype Person \= \{\n  firstName \: string,\n  level \: "high" | "Medium" | "low"\n\};```
+	~Continuez à utiliser les éléments suivants comme annotation de type \:\n```\n\{ firstName \: string, niveau \: "high" | "Medium" | "low" \};\n```
+	~Créez l'interface suivante. Nous pouvons ensuite utiliser Person dans les annotations de type pour les variables qui nécessitent ce type.\n```\ninterface Person \{\n  firstName \: string;\n  level \: string;\n\};\n```\n
+	####Continuer à utiliser l'annotation de type d'objet n'est pas très maintenable. Créer une interface est une bonne idée, mais nous avons déclaré la propriété `level` avec un type plus large que nécessaire (`string` permet plus de choses que dans le type d'objet de l'énoncé). L'option d'alias de type répond le mieux aux exigences.
+}
+
+// [tag:TypeScript] [tag:types]
+::Type optional field::[markdown]
+Nous devons créer un type pour représenter des informations sur une personne contenant son prénom, son nom et un âge facultatif. Quels types pourrions-nous utiliser pour représenter cette structure?
+{
+	~%-50%```\ntype Person \= \{\n  firstName\: string;\n  surname\: string;\n  age\: number;\n\}\n```\n
+	~%-50%```\ninterface Person \= \{\n  firstName\: string;\n  surname\: string;\n  age\: number;\n\}\n```\n
+	~%50%```\ntype Person \= \{\n  firstName\: string;\n  surname\: string;\n  age?\: number;\n\}\n```\n
+	~%50%```\ninterface Person \= \{\n  firstName\: string;\n  surname\: string;\n  age?\: number;\n\}\n```\n
+	####Une interface ou un alias de type peut être utilisé, mais l'annotation de type sur l'âge doit être précédée d'un `?` pour signaler qu'il est facultatif.
+}
+
+::Type littéral numérique::[markdown]
+Nous devons créer un type pour représenter un niveau numérique pouvant contenir des valeurs comprises entre 1 et 5. Quel type pouvons-nous utiliser pour mieux représenter cela?
+{
+	~`type Level \= number;`
+	~`interface Level \= 1 | 2 | 3 | 4 | 5;`
+	=`type Level \= 1 | 2 | 3 | 4 | 5;`
+	####Un type d'union est le meilleur type pour représenter cela qui contient des valeurs spécifiques entre 1 et 5. Le type de nombre est plus large que nécessaire. Les interfaces ne peuvent pas être utilisées pour créer un type d'union. Cependant, un alias de type peut être utilisé pour créer un type d'union.
+}
+
+// [tag:TypeScript] [tag:types]
+::Enum::[markdown]
+Une erreur de type se produira-t-elle sur l'une des affectations de `level` ci-dessous\:\n```enum Status \{\n  Open,\n  InProgress,\n  Complete\n\}\nlet level\: Status;\nlevel \= 4;\nlevel \= "4";\n```
+{
+	~Oui, les deux affectations généreront des erreurs de type
+	~Non, les deux affectations ne généreront aucune erreur de type
+	=Seulement la deuxième affectation générera une erreur de type
+	####Les énumérations numériques peuvent avoir n'importe quel nombre. Ainsi, l'affectation de chaîne générera une erreur de type, mais une affectation à un nombre est acceptable.
+}
+
+// [tag:TypeScript] [tag:types] [tag:types-union]
+::Propriété facultative n'accepte pas null::[markdown]
+Soit le type suivant\:\n```\ntype Product \= \{\n  name\: string;\n  datePeremption\: Date;\n\}\n```\nCependant, une date `datePeremption` ne s'applique pas à tous les produits. Nous voulons donc autoriser que cela soit `null` ou une date. Quel type représente le mieux cela?
+{
+	=```\ntype Product \= \{\n  name\: string;\n  datePeremption\: Date | null;\n\}\n```
+	~```\ntype Product \= \{\n  name\: string;\n  datePeremption?\: Date;\n\}\n```
+	####Un type union peut être utilisé pour représenter une date ou une valeur `null`. Rendre une propriété facultative signifie qu'elle peut être `undefined` ou non fournie du tout, ce qui n'est pas l'exigence. De plus, rendre une propriété facultative ne lui permet pas d'accepter des valeurs `null`.
+}
+
+// [tag:TypeScript] [tag:types] [tag:types-intersection]
+::Intersection de types avec &::[markdown]
+Les types Chien et Pomme sont-ils structurellement équivalents?\n```\ntype Animal \= \{\n    name\: string;\n\}\ntype Chien \= \nAnimal & \{ size\: "petit" | "gros" \}\ninterface Fruit \{\n    name\: string;\n\}\ninterface Pomme extends Fruit \{\n    size\: "petit" | "gros"\n\}\n```
+{
+	=Oui
+	~Non
+	####L'intersection (&) de deux types est structurellement identique à une interface étendant un type dans cet exemple.
+}
+
+// [tag:TypeScript] [tag:classes]
+::champs type déduits dans une class::
+[markdown]
+Quels sont les types des champs `a` et `b` dans la classe suivante?\n```\nclass Calculator \{\n  a \= 0;\n  b \= 0;\n\}\n```
+{
+	~Cette syntaxe n'est pas valide, car les champs de classe nécessitent une annotation de type.
+	=`a` et `b` sont tous deux de type `number`.
+	~`a` et `b` sont tous deux de type any.
+	####a et b sont déduits comme étant des `number` à partir de leur valeur initialisée.
+}
+
+// [tag:TypeScript] [tag:classes] [tag:types] [tag:method]
+::Type de retour déduit d'une méthode::
+[markdown]
+Quel est le type de retour de la méthode `add` dans la classe suivante?\n```\nclass Calculator \{\n  static add(a\: number, b\: number) \{\n    return a + b;\n  \}\n\}\n```
+{
+	=number
+	~any
+	####le type de la valeur de retour est déduit de l'expression `a + b` qui est `number`
+}
+
+// [tag:TypeScript] [tag:classes] [tag:types] [tag:method]
+::Type de retour déduit d'une méthode::
+[markdown]
+Quel est le problème avec le code suivant?
+\n```\nclass Calculator \{\n  constructor (private a \= 0, private b \= 0) \{\}\n  add() \{\n    return this.a + this.b;\n  \}\n\}\nconst calc \= new Calculator();\ncalc.a \= 1;\ncalc.b \= 2;\ncalc.add();\n```
+{
+	~Il n'y a aucun problème avec le code.
+	Il ne devrait pas y avoir de mot-clé `private` devant les paramètres du constructeur, car ce n'est pas une syntaxe valide.
+	~Les valeurs de paramètre par défaut ne sont pas autorisées sur les paramètres du constructeur.
+	=Les champs `a` et `b` ne sont pas accessibles par les consommateurs, car ce sont des champs privés.
+	####La syntaxe est valide et les paramètres par défaut sont autorisés sur les paramètres du constructeur. Le problème est que `a` et `b` sont déclarés avec un modificateur d'accès `private`, ils ne sont donc pas accessibles par les consommateurs.
+}
+
+// [tag:TypeScript] [tag:classes] [tag:types]
+::Type de retour déduit d'une méthode::
+[markdown]
+Qu'est-ce qui sera affiché sur la console après l'exécution du code suivant? Des erreurs de type se produiront-elles?
+\n```\nabstract class Animal \{\n  constructor (public name\: string) \{\}\n  protected log(message\: string) \{\n    console.log(message);\n  \}\n\}\nclass Dog extends Animal \{\n  bark() \{\n    this.log(this.name + " Bark");\n  \}\n\}\nconst dog \= new Dog("Fudge");\ndog.bark();\n```
+{
+	=**Fudge Bark** sera affiché sur la console sans qu'aucune erreur de type ne se produise.
+	~**undefined Bark** sera envoyé à la console. Une erreur de type se produira sur `this.name` dans la classe `Dog`.
+	~Rien ne sera envoyé à la console. Une erreur de type se produira sur `this.name` et `this.log` dans la classe `Dog`.
+	####La classe Dog hérite du champ de nom et de la méthode de journalisation de la classe Animal afin qu'aucune erreur de type ne se produise.
+}
+
+// [tag:TypeScript] [tag:classes] [tag:types]
+::Type de any::
+[markdown]
+Le code suivant générera-t-il une erreur de type?
+\n```\nclass Logger \{\n  static log(message\: any)\: void\n  static log(message\: string, category\: string)\: void\n  static log(message\: any, category?\: string)\: void \{\n    console.log(message, category);\n  \}\n\}\nLogger.log(\{name\: "Bob"\});\n```
+{
+	~Oui
+	=Non
+	####Aucune erreur de type ne sera générée, car une variante de `log` a un paramètre `message` qui accepte le type `any`. L'objet `\{nom \: 'Bob'\}` fait partie du type `any`.
+}
+
+// [tag:TypeScript] [tag:types] [tag:generics] [tag:ReadOnly] [tag:Required] [tag:Partial]
+::Generics - ReadOnly/Required/Partial::
+[markdown]
+Soit le type suivant pour un commentaire\:\n```\ntype Comment \= \{\n  comment\: string;\n  email\: string;\n\}\n```\n
+Quel type générique peut-on utiliser avec `Comment` pour créer un type équivalent au type ci-dessous\:
+\n```\ntype ReadonlyComment \= \{\n  readonly comment\: string;\n  readonly email\: string;\n\}\n```
+{
+	=`Readonly<Comment>`
+	~`Required<Comment>`
+	~`Partial<Comment>`
+	####Le type `Required` rend toutes les propriétés requises et le type `Partial` rend toutes les propriétés facultatives. C'est le type `Readonly` qui rend toutes les propriétés en lecture seule.
+}
+
+// [tag:TypeScript] [tag:types] [tag:generics]
+::Generics - ordre des définitions ::
+[markdown]
+La fonction ci-dessous compte les occurrences d'un élément dans un tableau\:\n```\nfunction countDisinct(itemToCount, array) \{\n  return array.filter(item \=> item \=\=\= itemToCount).length\n\}\n```\nComment rendre cela fortement typé?
+{
+	~Il est déjà fortement typé, car TypeScript peut déduire les types des paramètres de la fonction et la valeur de retour.
+	=```\nfunction countDisinct<ItemType>(itemToCount\: ItemType, array\: ItemType\[\]) \{\n  return array.filter(item \=> item \=\=\= itemToCount).length\n\}\n```
+	~```\nfunction countDisinct(itemToCount\: ItemType, array\: ItemType\[\])<ItemType> \{\n  return array.filter(item \=> item \=\=\= itemToCount).length\n\}\n``` 
+	####Il faut des annotations de type sur les paramètres de fonction, car TypeScript ne peut pas en déduire le type. Les paramètres génériques viennent avant les parenthèses de la fonction et non après celles-ci.
+}
+
+// [tag:TypeScript] [tag:types] [tag:generics]
+::Generics - type de retour ::
+[markdown]
+Nous devons créer une fonction pour supprimer les occurrences d'un élément dans un tableau. Il doit être fortement typé et fonctionner avec des tableaux contenant n'importe quel type primitif. Voici une tentative\:\n```\nfunction remove<ItemType>(itemToRemove\: ItemType, array\: Array<ItemType>)\: ItemType \{\n  return array.filter(item \=> item !\=\= itemToRemove);\n\}\n```\n
+Quelle est l'erreur dans le code?
+{
+	~Nous devrions utiliser `ItemType[]` plutôt que d'utiliser le type de tableau générique `Array<ItemType>` pour le deuxième paramètre.
+	~Les paramètres génériques doivent venir après les parenthèses de la signature de la fonction\:\n```\nfunction remove(itemToRemove\: ItemType, array\: Array<ItemType>)<ItemType>\: ItemType \{\n  return array.filter(item \=> item !\=\= itemToRemove);\n\}\n```
+	=Le type de retour est mal spécifié. Il doit être `ItemType[]` ou `Array<ItemType>`. Alternativement, on peut ne pas définir le type de retour pour permettre à TypeScript de le déduire.
+	####Le type de retour est mal spécifié. TypeScript peut le déduire, alors on peut ne pas le spécifier.
+}
+
+// [tag:TypeScript] [tag:types] [tag:generics] [tag:ts-interface]
+::Generics - interface champ typé ::
+[markdown]
+Soit l'interface suivante qui représente un utilisateur\:\n```\ninterface User \{\n  id\: any;\n  name\: string;\n  email\: string\n\}\n```\n
+Comment améliorer ce code en supprimant le type `any` de la propriété `id` en permettant au client de l'interface de fournir le type de `id`?{
+	~```\ninterface User \{\n  id\: string | number;\n  name\: string;\n  email\: string\n\}\n```
+	~```\ninterface <UserIdType>User \{\n  id\: UserIdType;\n  name\: string;\n  email\: string\n\}\n```	
+	=```\ninterface User<UserIdType> \{\n  id\: UserIdType;\n  name\: string;\n  email\: string\n\}\n```
+	####L'interface doit avoir un paramètre générique pour permettre au consommateur de fournir le type de `id`. Le paramètre de type générique doit venir après le nom de l'interface.
+}
+
+// [tag:TypeScript] [tag:types] [tag:generics]
+::Generics - return value ::
+[markdown]
+Il faudra étendre la classe de liste générique suivante\:
+\n```\nclass List<ItemType> \{\n  private items\: ItemType\[\] \= \[\];    \n  add(item\: ItemType) \{\n      this.items.push(item);\n  \}\n\}\n```\n
+Il faut ajouter une méthode appelée `getNth` qui renvoie l'élément du tableau à la *nième* position de la liste. Comment mettre cela en œuvre?
+{
+	=```\ngetNth(n\: number) \{\n  return this.items\[n\];\n\}\n```
+	~```\ngetNth(n\: number)\: ItemType\[\] \{\n  return this.items\[n\];\n\}\n```
+	~```\ngetNth(n\: ItemType) \{\n  return this.items\[n\];\n\}\n```
+	####Le paramètre de fonction doit être de type `number`. Le type de retour doit être `ItemType` ou nous pouvons laisser TypeScript le déduire.
+}
+
+// [tag:TypeScript] [tag:types] [tag:generics]
+::Generics - contraintes ::
+[markdown]
+Nous avons une fonction ci-dessous qui affiche la propriété `name` d'un objet dans la console. Comment pouvons-nous utiliser des génériques pour rendre cela plus fortement typé?
+\n```\nfunction logName(object\: any) \{\n  console.log("My name is " + object.name);\n\}\n```
+{
+	~```\nfunction logName<T>(object\: T) \{\n  console.log("My name is " + object.name);\n\}\n```
+	~Il n'est pas possible de rendre la fonction plus fortement typée.
+	=```\nfunction logName<T extends \{name\: string\}>(object\: T) \{\n  console.log("My name is " + object.name);\n\}\n```
+	####Un paramètre générique avec une contrainte contenant une propriété `name` peut être utilisé pour rendre la fonction plus fortement typée.
+}
+
+// https://learntypescript.dev/07/l9-quiz
+// [tag:TypeScript] [tag:types] [tag:non-null-operator]
+::Non-null assertion operator  ::
+[markdown]
+Considérez le code ci-dessous\:
+\n```\ntype Person \= \{\n  name\: string;\n  address?\: \{\n    line1\: string;\n    line2\: string;\n    state\: string;\n    zipcode\: string;\n  \}\n\}\nfunction validatePersonAddress(person\: Person) \{\n  if (person.address \=\=\= undefined) \{\n    throw 'Invalid address' \n  \}\n\}\nfunction logZipcode(person\: Person) \{\n  validatePersonAddress(person);\n  console.log(person.address.zipcode);\n\}\n```\n
+Une erreur de type est générée sur l'instruction `console.log`, car TypeScript pense que `person.address` pourrait être `undefined`. Comment résoudre ce problème?
+{
+	=Utilisez l'opérateur d'assertion non nul dans l'instruction console.log\:
+	\n```\nconsole.log(person.address!.zipcode);\n```
+	~Rendre `address` une propriété obligatoire dans le type `Person`.
+	~Désactivez le mode strict.
+	~Utilisez l'assertion de type suivante dans l'instruction `console.log`\:
+	\n```\nconsole.log((person.address as any).zipcode);\n```
+	####Rendre obligatoire `address` peut avoir un impact et causer des erreurs dans d'autres codes. La désactivation du mode strict rendra tout le code moins fortement typé. L'utilisation d'une assertion de type pour changer le type `address` en `any` n'entraînera aucune vérification de type sur ce bout de code. La meilleure solution est d'utiliser l'opérateur d'assertion non nul puisque nous savons que `address` ne peut pas être `undefined`.
+}
+
+// [tag:TypeScript] [tag:types] [tag:type-narrowing]
+::Types limités ::
+[markdown]
+Quel est le type de `level` dans l'instruction `console.log` ci-dessous\:
+\n```\ntype Level \= "low" | "medium" | "high";\nfunction logLevel(level\: Level) \{\n  if (level \=\=\= "high") \{\n    console.warn(level);\n  \} \n\}\n```\n
+{
+	~`string`
+	=`'high'`
+	~`Level`
+	####Le type est limité à `'high'`
+}
+
+// [tag:TypeScript] [tag:types] [tag:typeof-keyword] [tag:type-guard]
+::typeof as type guard ::
+[markdown]
+Considérez le code ci-dessous\:
+\n```\nfunction convert(amount\: number | string) \{\n  if (/* TODO\: check if type is number */) \{\n    return amount;\n  \} else \{\n    return Number(amount);\n  \}\n\}\n```\n
+Quel type de garde peut-on utiliser pour vérifier que `amount` est un nombre (`number`)?
+{
+	~\n```\namount instanceof number\n```
+	=\n```\ntypeof amount \=\=\= 'number'\n```
+}
+
+// [tag:TypeScript] [tag:types] [tag:instanceof-keyword] [tag:in-keyword] [tag:type-guard]
+::instanceof and in as type guard ::
+[markdown]
+Considérez le code ci-dessous\:
+\n```\nclass Dog \{\n  woff() \{\n    console.log("woff")\n  \}\n\}\nclass Cat \{\n  meow() \{\n    console.log("meow")\n  \}\n\}\nfunction speak(animal\: Dog | Cat) \{\n  if (/* TODO\: check if type is Dog */) \{\n    animal.woff();\n  \} else \{\n    animal.meow();\n  \}\n\}\n```\n
+Quelles protections de type (*type guards*) peut-on utiliser pour vérifier que `animal` est de type `Dog`? {
+	~%50%\n```\nanimal instanceof Dog\n```
+	~%-50%\n```\ntypeof animal \=\=\= 'Dog'\n```
+	~%50%\n```\n'woff' in animal\n```
+	####La protection de type `instanceof` est un bon choix, car le code vérifie une instance de classe. La protection de type `in` fonctionne également dans ce cas, car le membre `woff` peut faire la distinction entre les types `Dog` et `Cat`.
+}
+
+// [tag:TypeScript] [tag:types] [tag:is-keyword] [tag:type-guard]
+::is keyword with type guard ::
+[markdown]
+Considérez le code ci-dessous\:
+\n```\ninterface Product \{\n  name\: string;\n  price\: number;\n  getPrice\: () \=> number;\n\}\ninterface DiscountedProduct \{\n  name\: string;\n  price\: number;\n  getPrice\: () \=> number;\n  getDiscountedPrice\: () \=> number;\n\}\nfunction getPrice(product\: Product | DiscountedProduct) \{\n  if (isDiscountedProduct(product)) \{\n    return product.getDiscountedPrice();\n  \} else \{\n    return product.getPrice();\n  \}\n\}\n```\n
+Que pourrait être une implémentation de la fonction de protection de type `isDiscountedProduct`?{
+	=\n```\nfunction isDiscountedProduct(\n  product\: Product | DiscountedProduct\n)\: product is DiscountedProduct \{\n  return product.price > 10;\n\}\n\n```
+	~\n```\nfunction isDiscountedProduct(\n  product\: Product | DiscountedProduct\n)\: asserts product is DiscountedProduct \{\n  return product.price > 10;\n\}\n\n```
+	~\n```\nfunction isDiscountedProduct(\n  product\: Product | DiscountedProduct\n)\: asserts product is DiscountedProduct \{\n  if (product.price <\= 10) \{\n    throw new Error("Not a discounted product");\n  \}\n\}\n\n```
+	####La protection de type est une condition. Donc la fonction de protection de type doit utiliser un prédicat de type plutôt qu'une signature d'assertion.
+}
+
+// [tag:TypeScript] [tag:types] [tag:is-keyword] [tag:type-guard] [tag:type-assertion]
+::is keyword with type assertion type guard ::
+[markdown]
+Considérez le code ci-dessous\:
+\n```\ninterface Product \{\n  name\: string;\n  price\: number;\n  getPrice\: () \=> number;\n\}\ninterface DiscountedProduct \{\n  name\: string;\n  price\: number;\n  getPrice\: () \=> number;\n  getDiscountedPrice\: () \=> number;\n\}\nfunction getDiscountedPrice(product\: Product | DiscountedProduct) \{\n  assertDiscountedProduct(product);\n  return product.getDiscountedPrice();\n\}\n```\n
+Que pourrait être une implémentation de la fonction de protection de type `assertDiscountedProduct`? {
+	~\n```\nfunction assertDiscountedProduct(product\: Product | DiscountedProduct)\: product is DiscountedProduct \{\n  return product.price > 10;\n\}\n\n```
+	=\n```\nfunction assertDiscountedProduct(product\: Product | DiscountedProduct)\: asserts product is DiscountedProduct \{\n  if (product.price <\= 10) \{\n    throw new Error("Not a discounted product");\n  \};\n\}\n\n```
+	####La protection de type (*type guard*) est une assertion, donc la fonction *type guard* doit utiliser une signature d'assertion plutôt qu'un prédicat de type
+}
+
+// [tag:TypeScript] [tag:types] [tag:discriminated-union-pattern]
+::discriminated union pattern::
+[markdown]
+Considérez le code ci-dessous\:
+\n```\ntype Button \=\n  | \{ kind\: "round"; renderIcon\: () \=> void \}\n  | \{ kind\: "normal"; renderText\: () \=> void \};\nfunction render(button\: Button) \{\n  if (button.kind \=\=\= "round") \{\n    button.renderIcon();\n  \} else \{\n    button.renderText();\n  \}\n\}\n```\n
+Une erreur de type se produira-t-elle sur le code ci-dessus?
+{
+	~Oui, car `renderIcon` et `renderText` n'existent pas dans le type `Button`.
+	=Aucune erreur de type ne se produira.
+	####Aucune erreur de type ne se produira, car TypeScript peut restreindre le type de `button` de manière appropriée avant que les méthodes ne soient appelées à l'aide du *discriminated union pattern*.
+}
+
+// https://learntypescript.dev/08/l5-quiz
+// [tag:TypeScript] [tag:types] [tag:mapped-types] [tag:querying-types] [tag:typeof-keyword] [tag:type-keyword]
+::querying types::
+[markdown]
+Considérez le code ci-dessous\:
+\n```\ntype SavingAction \= \{\n  type\: "saving";\n  payload\: string[];\n\}\nconst savingAction\: SavingAction \= \{\n  type\: "saving",\n  payload\: ["Apple", "Banana", "Strawberry"]\n\}\ntype SavedAction \= \{\n  type\: "saved";\n\}\nconst savedAction\: SavedAction \= \{\n  type\: "saved"\n\}\ntype Actions \= SavingAction | SavedAction;\n```\n
+Comment supprimer les annotations de type des variables `savingAction` et `savedAction` tout en conservant un typage fort?{
+	~\n```\nconst savingAction \= \{\n  type\: "saving",\n  payload\: ["Apple", "Banana", "Strawberry"]\n\}\nconst savedAction \= \{\n  type\: "saved"\n\}\ntype Actions \= any;\n\n```
+	~\n```\nconst savingAction \= \{\n  type\: "saving",\n  payload\: ["Apple", "Banana", "Strawberry"]\n\}\nconst savedAction \= \{\n  type\: "saved"\n\}\ntype Actions \= savingAction | savedAction;\n\n```
+	=\n```\nconst savingAction \= \{\n  type\: "saving",\n  payload\: ["Apple", "Banana", "Strawberry"]\n\}\nconst savedAction \= \{\n  type\: "saved"\n\}\ntype Actions \= typeof savingAction | typeof savedAction;\n\n```
+	####Utiliser `any` ne permet aucune vérification de type. La syntaxe correcte pour extraire le type d'un objet est `typeof objectName`.
+}
+
+// https://learntypescript.dev/08/l5-quiz
+// [tag:TypeScript] [tag:types] [tag:mapped-types] [tag:querying-types] [tag:keyof-keyword]
+::querying types keyof::
+[markdown]
+Quel type est structurellement identique aux `PersonKeys` ci-dessous?
+\n```\ntype Person \= \{\n  firstName\: string;\n  surname\: string;\n  greet\: () \=> void;\n\}\ntype PersonKeys \= keyof Person;\n```\n
+{
+	=\n```\n'firstName' | 'surname' | 'greet'\n```
+	~\n```\n'firstName' | 'surname'\n```
+	~\n```\n'greet'\n```
+	####`keyof` extrait toutes les clés d'un objet, y compris les propriétés et les méthodes.
+}
+
+
+// [tag:TypeScript] [tag:types] [tag:mapped-types] [tag:querying-types] [tag:in-keyword]
+::querying types mapped type with in keyword::
+[markdown]
+Structurellement, quel type est équivalent au type ci-dessous?
+\n```\ntype Votes \= \{\n    [K in "apple" | "banana" | "strawberry"]\: number\n\}\n```
+{
+	=```\n\{\n  apple\: number;\n  banana\: number;\n  strawberry\: number;\n\}\n```
+	~```\n["apple", "banana", "strawberry"];\n```
+	~```\nstring[]\n```
+	####Il s'agit d'un type mappé qui crée un objet avec les clés de l'union littérale de chaîne.
+}
+
+// [tag:TypeScript] [tag:types] [tag:mapped-types] [tag:querying-types] [tag:readonly-keyword] [tag:questionmark-operator]
+::querying types mapped type with in keyword::
+[markdown]
+Considérez le code ci-dessous\:
+\n```\ntype Person \= \{\n  readonly name\: string;\n  readonly age\: number;\n\}\n```
+Quel serait un type mappé générique qui supprime tous les modificateurs `readonly` d'un type d'objet comme ci-dessus?
+{
+	=```\ntype Writable<T> \= \{\n    [P in keyof T]-?\: T[P];\n\}\n```
+	~```\ntype Writable<T> \= \{\n    -readonly [P in keyof T]\: T[P];\n\}\n```
+	~```\ntype Writable<T> \= \{\n    [P in keyof T]-readonly\: T[P];\n\}\n```
+	####Le modificateur `readonly` est placé avant la clé. `?` est le modificateur pour une clé étant facultative.
+}

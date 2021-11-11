@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="206px" preserveAspectRatio="none" style="width:732px;height:206px;background:#00000000;" version="1.1" viewBox="0 0 732 206" width="732px" zoomAndPan="magnify"><defs/><g><!--MD5=[31cac18646e2de67913a9109915bf7f5]
+class IAC--><rect codeLine="3" fill="#FEFECE" height="66.7422" id="IAC" style="stroke:#A80036;stroke-width:1.5;" width="279" x="321" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="67" x="427" y="23.1387">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="171" x="375" y="37.1074">IAdaptateurCalculateurTaxes</text><line style="stroke:#A80036;stroke-width:1.5;" x1="322" x2="599" y1="44.9375" y2="44.9375"/><line style="stroke:#A80036;stroke-width:1.5;" x1="322" x2="599" y1="52.9375" y2="52.9375"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="267" x="327" y="67.1479">getTaxes(Vente) : Liste&lt;TaxesLignesArticles&gt;</text><!--MD5=[259ef957471479b339753950fd3c07cc]
+class AdaptateurTaxMaster--><rect codeLine="6" fill="#FEFECE" height="52.7734" id="AdaptateurTaxMaster" style="stroke:#A80036;stroke-width:1.5;" width="279" x="7" y="140.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="128" x="82.5" y="156.6387">AdaptateurTaxMaster</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="285" y1="164.4688" y2="164.4688"/><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="285" y1="172.4688" y2="172.4688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="267" x="13" y="186.6792">getTaxes(Vente) : Liste&lt;TaxesLignesArticles&gt;</text><!--MD5=[2f65cc8178d63a4c206c61a91c971d9f]
+class AdaptateurGoodAsGoldTaxPro--><rect codeLine="9" fill="#FEFECE" height="52.7734" id="AdaptateurGoodAsGoldTaxPro" style="stroke:#A80036;stroke-width:1.5;" width="279" x="321" y="140.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="182" x="369.5" y="156.6387">AdaptateurGoodAsGoldTaxPro</text><line style="stroke:#A80036;stroke-width:1.5;" x1="322" x2="599" y1="164.4688" y2="164.4688"/><line style="stroke:#A80036;stroke-width:1.5;" x1="322" x2="599" y1="172.4688" y2="172.4688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="267" x="327" y="186.6792">getTaxes(Vente) : Liste&lt;TaxesLignesArticles&gt;</text><!--MD5=[ef319a5e7164225b239413a3e2a97866]
+class Adaptateur???--><rect codeLine="12" fill="#FEFECE" height="65.5781" id="Adaptateur???" style="stroke:#A80036;stroke-width:1.5;" width="90" x="635.5" y="134"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="84" x="638.5" y="150.1387">Adaptateur???</text><line style="stroke:#A80036;stroke-width:1.5;" x1="636.5" x2="724.5" y1="157.9688" y2="157.9688"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="9" x="641.5" y="172.1792">...</text><line style="stroke:#A80036;stroke-width:1.5;" x1="636.5" x2="724.5" y1="178.7734" y2="178.7734"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="17" x="641.5" y="192.9839">...()</text><!--MD5=[aee38456bd831a454e8e1046ec9f3804]
+reverse link IAC to AdaptateurTaxMaster--><path d="M359.501,81.546 C310.788,100.8604 253.797,123.4573 211.029,140.4144 " fill="none" id="IAC-backto-AdaptateurTaxMaster" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="357.238,74.913,378.41,74.048,362.399,87.927,357.238,74.913" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[55f6855b990c5e0f65cbbc7542958520]
+reverse link IAC to AdaptateurGoodAsGoldTaxPro--><path d="M460.5,94.251 C460.5,110.1393 460.5,126.873 460.5,140.1799 " fill="none" id="IAC-backto-AdaptateurGoodAsGoldTaxPro" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="453.5,94.211,460.5,74.211,467.5,94.211,453.5,94.211" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f25c8448a2a7c35b8132acb02f7b1c30]
+reverse link IAC to Adaptateur???--><path d="M535.859,84.146 C569.001,102.9015 606.815,124.3008 635.465,140.5145 " fill="none" id="IAC-backto-Adaptateur???" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="531.974,89.991,518.015,74.048,538.869,77.806,531.974,89.991" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[cbf04febc89e5b4f8dec72d82ed09790]
+@startuml
+skinparam style strictuml
+skinparam BackgroundColor transparent
+class "IAdaptateurCalculateurTaxes" as IAC <<interface>> {
+    getTaxes(Vente) : Liste<TaxesLignesArticles>
+}
+class AdaptateurTaxMaster implements IAC {
+    getTaxes(Vente) : Liste<TaxesLignesArticles>
+}
+class AdaptateurGoodAsGoldTaxPro implements IAC {
+    getTaxes(Vente) : Liste<TaxesLignesArticles>
+}
+class Adaptateur??? implements IAC {
+    ...
+    ...()
+}
+@enduml
+
+PlantUML version 1.2021.2(Sun Mar 07 11:10:27 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

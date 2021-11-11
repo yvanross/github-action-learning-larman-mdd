@@ -1,0 +1,32 @@
+@startuml AssociationsJustifications
+skinparam style strictuml
+hide empty members
+class "Catalogue\nLivres" as CatalogueLivres
+Livre "*" -[#gray,bold]- "*" Membre : < Lit
+Livre "1" -- "*" Exemplaire : Décrit >
+Bibliothèque "1" -- "1" CatalogueLivres : Offre >
+CatalogueLivres "1" -- "*" Livre : Répertorie >
+Bibliothèque "1" -- "*" Exemplaire : Stocke > 
+Membre "*" -[#gray,bold]- "1" Bibliothèque : Visite >
+Membre "*" -[#gray,bold]- "*" Exemplaire : Abime >
+Bibliothèque "1" -[#gray,bold]- "*" Exemplaire : Achète >
+Bibliothèque "1" -[#gray,bold]- "*" Exemplaire : Désinfecte >
+Membre "1" -- "*" Exemplaire : Réserve >
+@enduml
+
+@startuml JustifiedAssociations
+skinparam style strictuml
+hide empty members
+class "Catalogue\nLivres" as CatalogueLivres
+'Livre "*" -[#gray,bold]- "*" Membre : < Lit
+Livre "1" -- "*" Exemplaire : Décrit >
+Bibliothèque "1" -- "1" CatalogueLivres : Offre >
+CatalogueLivres "1" -- "*" Livre : Répertorie >
+Bibliothèque "1" -- "*" Exemplaire : Stocke > 
+'Membre "*" -[#gray,bold]- "1" Bibliothèque : Visite >
+'Membre "*" -[#gray,bold]- "*" Exemplaire : Abime >
+'Bibliothèque "1" -[#gray,bold]- "*" Exemplaire : Achète >
+'Bibliothèque "1" -[#gray,bold]- "*" Exemplaire : Désinfecte >
+Membre "1" -- "*" Exemplaire : Réserve >
+Bibliothèque "1" -- "*" Membre : Offre-service-à >
+@enduml

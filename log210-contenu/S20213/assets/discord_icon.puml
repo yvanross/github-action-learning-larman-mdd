@@ -1,0 +1,14 @@
+@startuml
+hide empty members
+skinparam PackageBorderThickness 0
+skinparam cloudbackgroundcolor green|white
+skinparam style strictuml
+cloud "LOG210" {
+agent "Étudiants" as e
+agent "Correcteurs" as c
+agent "Professeurs" as p
+}
+e -- c
+e -- p
+p - c
+@enduml

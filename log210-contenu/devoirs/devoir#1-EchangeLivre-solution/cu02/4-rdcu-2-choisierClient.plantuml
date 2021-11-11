@@ -1,0 +1,14 @@
+@startuml
+skinparam Style strictuml
+participant ":ControleurPropositionÉchange" as ctrl
+participant ":Bdd" as bdd
+participant ":Map<nom,:Client>" as mcl 
+
+note left of ctrl: Controleur de session
+-> ctrl: choisirClient(idClient)
+note left of bdd: Expert\nctrl->bdd\nbdd offre service a plusieurs Client
+ctrl -> bdd: e = getClient(idClient)
+note left of mcl: Expert\nBdd->idClient\nbdd->map<Client>
+bdd -> mcl: e = get(idClient)
+
+@enduml

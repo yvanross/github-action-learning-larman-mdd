@@ -1,0 +1,10 @@
+@startuml terminerAjoutLivre
+skinparam Style strictuml
+participant ":ControleurAjoutLivre" as ctrl
+participant "c:Client" as cl
+
+note left of ctrl: Controleur de session
+-> ctrl: terminerAjoutLivre()
+note left of cl: Expert\nCtrl a visibilité sur Client authentifié\nClient->list<Livre>
+ctrl -> cl: ll = getLivres()
+@enduml

@@ -1,0 +1,202 @@
+$CATEGORY: $course$/Mdd
+
+
+// [tag:mdd]
+::MDD Justification d'association (matching)::[html]<p>Décidez si chaque énoncé justifie une association entre deux classes conceptuelles dans le modèle du domaine\:</p>{
+	=<p>il y a un besoin de conserver la mémoire de leur relation.</p> -> oui
+	=<p>une association dans la vraie vie. Si une classe conceptuelle est logiquement associée à une autre classe conceptuelle dans la vraie vie, alors on met une association entre les deux classes dans le modèle du domaine.</p> -> non
+	=<p>le fait qu'il s'agisse d'une association dérivée de la liste des associations courantes.</p> -> oui
+}
+
+
+// [tag:mdd]
+::Multiple responsabilités::[html]<p>Parmi les classes suivantes, lequelles ont de multiples responsabilités?</p><p><img src\="https\://www.plantuml.com/plantuml/svg/VL4nRiCm3DprYepnuWTqIj4ixL1uoD2LbPb8XImP96MuCF8WlyCVAo4tYDiXa-v4tfqEEh00IUw2iG6OTs-Onyb05eTH_DaZxUkwheoFRCaJhgnTvZw0lGt5ayBA4B8KS3M_TWqIfnXnDnb6-TYFJpvAPHZoW1UWjcnR1tJvgpijSz0Cbo9EngQkJxmcWBMKh2ka1me5O1pIDz9HavOPMM_EwkAsXjhhY2z0WZmP1_oEe-WyhWTXbmPK05yf2r9PBCO1Xplz9BNwLn2YHthM2iBJJNvN5cJ1hx9jxoPbQaBcaxAjuQlgGH8zUkNL732s-ca_" alt\="Diagrammes de classes en UML " width\="412" height\="312" /></p>{
+	~%20%<p>Jeu</p>#<p>Cette classe a deux sortes de responsabilités\: authentifier, inscrire (pour démarrer un jeu) et déplacer, tirer et rester (des actions du jeu)</p>
+	~%20%<p>Personne</p>#<p>Cette classe a deux sortes de responsabilités\: setX (pour modifier les informations) et sauvegarder, charger (la persistance de l'objet).</p>
+	~<p>Téléphone</p>#<p>Cette classe a une responsabilité\: toutes les opérations que l'on peut faire avec un téléphone</p>
+	~%20%<p>JeuDeCartes</p>#<p>Cette classe a deux sortes de responsabilités\: hasNext, next et remove (responsabilités d'itération dans un jeu de cartes) et ajouterCarte, enleverCarte et brasser (actions spécifiques pour un jeu de cartes).</p>
+	~%20%<p>PanierAchats</p>#<p>Cette classe a plusieurs sortes de responsabilités\: ajouter, enlever (des opérations sur un panier), encasser (action d'achat) et sauvegarderPourPlusTard (action de persistance).</p>
+	~%20%<p>Iterator</p>#<p>Cette interface possède deux sortes de responsabilités\: hasNext et next (des opérations pour parcourir une collection d'objets) et remove (pour enlever un objet d'une collection).</p>
+}
+
+// [tag:mdd]
+::Règle des 100%::[html]<p>Quelle est la définition de la règle des 100%?</p>{
+	=<p>100% de la définition de la super-classe conceptuelle doivent être applicables à la sous-classe. La sous-classe doit se conformer à 100% à la définition de la super-classe, incluant les attributs et les associations.</p>
+	~<p>100% de la définition de la super-classe conceptuelle doivent être applicables à la super-classe logicielle. La sous-classe logicielle doit se conformer à 100% à la définition de la super-classe conceptuelle, incluant les attributs et les associations.</p>
+	~<p>100% des classes conceptuelles doivent être réalisées par les classes logicielles.</p>
+	~<p>100% des classes logicielles appartiennent à l'ensemble des classes conceptuelles.</p>
+}
+
+
+// [tag:mdd]
+::Association multiple vs classe d'association vs attribut dérivé::[html]<p>Association multiple vs classe d'association vs attribut dérivé<br></p>{
+	=<p>Classe d'association</p> -> Permet d'associer des attributs à une association
+	=<p>Association multiple</p> -> Nécessite l'utilisation des rôle pour clarifier la responsabilité de l'association
+	=<p>Attribut dérivé</p> -> Calculé à partir des associations
+}
+
+// [tag:mdd]
+::Multiplicité::[html]<p>Quels sont les exemples d'expression de la multiplicité valides\:</p>{
+	~%20%<p>*</p>
+	~%20%<p>1..*</p>
+	~%20%<p>1..40</p>
+	~%20%<p>5</p>
+	~%20%<p>3,5,8</p>
+	~<p>0..*</p>
+}
+
+// [tag:mdd]
+::Roles::[html]<p>Les extrémités des associations sont appelées rôles. Ceux-ci peuvent avoir les caractéristiques optionnelles suivantes\:</p>{
+	~%33.33333%<p>Nom</p>
+	~%33.33333%<p>Expression de la multiplicité</p>
+	~%33.33333%<p>navigabilité</p>
+	~<p>Verbe description</p>
+}
+
+// [tag:mdd]
+::Classe de description::[html]<p>Ajouter une classe de description&nbsp; (par exemple\: DescriptionProduit) lorsque\:</p>{
+	~%33.33333%<p>Il est nécessaire de disposer de la description d'un produit ou d'un service, indépendamment de l'existence actuelle de ces produits ou de ces services.</p>
+	~%33.33333%<p>La suppression d'instance d'une entité qu'elle décrit (Article par exemple) entraine la perte d'une information qui doit être mémorisée mais a été incorrectement associée à l'entité en question.</p>
+	~%33.33333%<p>Elle réduit la redondance ou la duplication des informations.</p>
+	~<p>Pour créer une association entre une transaction et un produit ou un service.</p>
+}
+
+// [tag:mdd]
+::MDD attribut nom étudiant::[html]<p>Il existe une classe conceptuelle "Étudiant" dans le modèle du domaine. Comment modéliser correctement le prénom d'un étudiant?</p>{
+	=<p>Comme un attribut "prenom" dans la même classe.</p>#<p>Correct. En général, si on pense une entité en termes alphanumériques dans le monde réel, il s'agit d'un attribut d'une classe conceptuelle.</p>
+	~<p>Comme une classe conceptuelle "Prenom", avec une association entre "Étudiant" et "Prénom" ayant la relation "possède".</p>#<p>Incorrect. "Prénom" ne serait pas une bonne classe conceptuelle puisqu'un prenom est composé de lettres. En général, si on pense une entité en termes alphanumériques dans le monde réel, il s'agit d'un attribut d'une classe conceptuelle.</p>
+	~<p>Comme une classe conceptuelle "String", avec une association entre "Étudiant" et "String" ayant la relation "est-nommé-par".</p>#<p>Incorrect. "String" serait un concept lié à l'implémentation (la solution) et donc ne sera pas une bonne classe conceptuelle. Les classes conceptuelles devraient modéliser le domaine de l'application et pas la solution.</p>
+}
+
+// [tag:mdd]
+::Considérer une analyse de logiciel pour les ressources humaines d'une ...::Considérer une analyse de logiciel pour les ressources humaines d'une université. Dans ce logiciel les cours qu'enseignent les professeurs ne sont pas importants. Indiquer les classes à inclure dans le modèle du domaine (MDD) pour ce logiciel.{
+	=Étudiant -> pas dans le MDD
+	=Université -> dans le MDD
+	=Cours -> pas dans le MDD
+	=Professeur -> dans le MDD
+	=Devoir -> pas dans le MDD
+}
+
+// [tag:mdd]
+::+Sous-classes conceptuelles::[html]<p>Soit la partie suivante d'un MDD pour un système d'inscription pour les cours universitaire. Pourquoi cette modélisation n'est-elle pas probablement utile?</p><p><img src\="https\://www.plantuml.com/plantuml/img/AyxEp2j8B4hCLIWkgSn91P95cSabfRavN1cPAQaAgRa59PKAkQab6VafnQX2kKcfHSLSXpjBIbCo4_DA56ngT1NWFD_4ukJIdCmy1LmAt0wlpCtCoym30000" alt\="Image PlantUML" width\="372" height\="81" /></p>{
+	~%25%<p>Les sous-classes n'ont pas d'attributs supplémentaires pertinents.</p>
+	~%25%<p>Les sous-classes n'ont pas d'associations supplémentaires pertinents.</p>
+	~%25%<p>Les sous-classes ne sont pas être gérées différemment que la super-classe. </p>
+	~%25%<p>Les sous-classes n'ont pas de comportement différent de celui de la super-classe en ce qui concerne le domaine du logiciel.</p>
+	~%-20%<p>L'utilisation de sous-classes est toujours une mauvaise idée dans un MDD.</p>
+}
+
+// [tag:mdd]
+::+Règle "est-un"::[html]<p>Quelle est la définition de la règle «est-un»?</p>{
+	=<p>Tous les membres de l'ensemble d'une sous-classe doivent être membres de l'ensemble de leur super-classe.</p>
+	~<p>Tous les membres de l'ensemble d'une super-classe doivent être membres de l'ensemble de leur sous-classe.</p>
+	~<p>Une Super-classe <em>est une</em> Sous-classe.</p>
+	~<p>Un objet d'une classe logicielle <em>est un</em> objet d'une classe conceptuelle.</p>
+}
+
+// [tag:mdd]
+::+Règle des 100%::[html]<p>Quelle est la définition de la règle des 100%?</p>{
+	=<p>100% de la définition de la super-classe conceptuelle doivent être applicables à la sous-classe. La sous-classe doit se conformer à 100% à la définition de la super-classe, incluant les attributs et les associations.</p>
+	~<p>100% de la définition de la super-classe conceptuelle doivent être applicables à la super-classe logicielle. La sous-classe logicielle doit se conformer à 100% à la définition de la super-classe conceptuelle, incluant les attributs et les associations.</p>
+	~<p>100% des classes conceptuelles doivent être réalisées par les classes logicielles.</p>
+	~<p>100% des classes logicielles appartiennent à l'ensemble des classes conceptuelles.</p>
+}
+
+// [tag:mdd]
+::+Sous-classes conceptuelles matching::[html]<p>Soit la partie suivante d'un MDD pour un système d'inscription pour les cours universitaires. Décidez si (oui ou non) chaque énoncé s'applique comme raison pour laquelle la modélisation ne serait pas utile?</p><p><img src\="https\://www.plantuml.com/plantuml/png/TOsnhSCm34HxJS45lC4lNFqkGz0I4HCMAOEa2WDP8ADa3YyM8KMG56aEkBjtkDa3BRhKv1lhZeO22-RjQgrhoQqsWp1K7nLfV50UHwMXnlcrNxaGaEnnW52ihVXt90kPf_CUlJ1gmDzjck1jB-YvLrRuIVoV3s5bJJDf6OTF" alt\="Image PlantUML" /></p>{
+	=<p>Les sous-classes n'ont pas d'attributs supplémentaires pertinents.</p> -> oui
+	=<p>Les sous-classes n'ont pas d'associations supplémentaires pertinentes.</p> -> oui
+	=<p>Les sous-classes ne sont pas être gérées différemment que la superclasse.</p> -> oui
+	=<p>Les sous-classes n'ont pas de comportements différents de celui de la superclasse en ce qui concerne le domaine du logiciel.</p> -> oui
+	=<p>L'utilisation de sous-classes est toujours une mauvaise idée dans un MDD.</p> -> non
+}
+
+// [tag:mdd]
+::+Avantage de la représentation de la composition::[html]<p>Est-ce que chaque énoncé est un avantage de la représentation de la composition ou pas?</p>{
+	=<p>Une composition rend plus claires les obligations du domaine relatives à l'existence d'une partie indépendante du tout. </p> -> un avantage de la représentation de la conception
+	=<p>Il peut être plus facile d'identifier le contrôleur d'une opération système, grâce au principe GRASP Contrôleur. </p> -> pas un avantage de la représentation de la conception
+	=<p>Il peut être plus facile d'identifier le créateur (le composite) des parties, grâce au principe GRASP Créateur. </p> -> un avantage de la représentation de la conception
+	=<p>Une opération qui s'applique au tout, comme une duplication ou une suppression, se propage souvent aux parties. </p> -> un avantage de la représentation de la conception
+	=<p>Une opération qui s'applique à une partie se propage à toutes les parties. </p> -> pas un avantage de la représentation de la conception
+}
+
+// [tag:mdd]
+::+Classe d'association::[html]<p>Quelle sorte de classe est « Inscription » dans le diagramme suivant?</p><p><img src\="https\://www.plantuml.com/plantuml/img/TOqn3i8m34NtdCBg18X4i7PbGCmzGTG6Qj4uKUmC5U80t8Axz6945O9AYCNoyDv_V4MADbaFBEFWoatOIlQ3wh5pu7oK4RoJFdIisi4om_IGtA4bWPkYuA66faXqKVStS4mXHtS8EN51oWm9dcVX1pqHjmcZOA3_w3TOxOpPLA0rLFlvMwPgS2mQvqNHqnFKwcDkb-GQZ5cMNm00" alt\="Diagramme PlantUML" width\="292" height\="376" /></p>{
+	~<p>Classe abstraite</p>#<p>Une classe abstraite en UML est indiquée avec un nom en <em>italique</em>.</p>
+	=<p>Classe d'association</p>#<p>Une classe d'association décrit une association (éphémère) entre deux classes. </p>
+	~<p>Classe d'agrégation</p>#<p>L'agrégation en UML est indiquée par la présence d'un losange. </p>
+	~<p>Classe hiérarchique</p>#<p>Il n'y a rien dans ce diagramme pour indiquer que cette classe est hiérarchique.</p>
+}
+
+// [tag:mdd]
+::+Justification de sous-classes::[html]<p>Dans le diagramme suivant, quelle serait la justification des sous classes de Paiement?</p><p><img src\="https\://www.plantuml.com/plantuml/img/TP1B2i8m48RtESNGfP25soA2L9U2A_VJTBJ19gt9L2ZgVUevSZ53fJvnav3lVp0JVz2sGOS6F7SLnTDfnQsfHAaB0Z8DTs38vEJy9-AoBhpOacM2P9g0bCErGKqcGaZ1XNuVA-S2yrYBYa5LwFtBSXQcjeo3ULrR6xcuYgSykyJEyRMoAz-4Nf7_OrXaBjmApN_a3Rgi3Fsn9V6TW6Jo73z3nxIaKKaXhcnPxpH9zM0IJwJ4R-tx9umeXGQxS1iYTm00" alt\="Image PlantUML" width\="570" height\="514" /></p>{
+	~<p>Des sous-classes ont des attributs supplémentaires pertinents.</p>#<p>Aucune des sous-classes de Paiement ne spécifie des attributs supplémentaires.</p>
+	~%50%<p>Des sous-classes ont des associations supplémentaires pertinents.</p>#<p>En effet. Il y a des associations à CarteDeCrédit et à Chèque et elles sont propres à les sous-classes de Paiement respectives.</p>
+	~%50%<p>Par rapport à la super-classe Paiement, des sous-classes doivent être gérées différemment et cette distinction est pertinente.</p>#<p>En effet. Des paiements par carte de crédit et à chèque doivent être traités différemment.</p>
+	~<p>Des sous-classes représentent des entités animées qui ont un comportement différent de celui de Paiement et cette différence est pertinente.</p>#<p>Les paiements ne sont pas des entités animés (humain, animal ou robot).</p>
+}
+
+// [tag:mdd]
+::MDD attribut nom étudiant::[html]<p>Il existe une classe conceptuelle "Étudiant" dans le modèle du domaine. Comment modéliser correctement le nom d'un étudiant?</p>{
+	=<p>Comme un attribut "nom" dans la même classe.</p>#<p>Correct. En général, si on pense une entité en termes alphanumériques dans le monde réel, il s'agit d'un attribut d'une classe conceptuelle.</p>
+	~<p>Comme une classe conceptuelle "Nom", avec une association entre "Étudiant" et "Nom" ayant la relation "possède".</p>#<p>Incorrect. "Nom" ne serait pas une bonne classe conceptuelle puisqu'un nom est composé de lettres. En général, si on pense une entité en termes alphanumériques dans le monde réel, il s'agit d'un attribut d'une classe conceptuelle.</p>
+	~<p>Comme une classe conceptuelle "String", avec une association entre "Étudiant" et "String" ayant la relation "est-nommé-par".</p>#<p>Incorrect. "String" serait un concept lié à l'implémentation (la solution) et donc ne sera pas une bonne classe conceptuelle. Les classes conceptuelles devraient modéliser le domaine de l'application et pas la solution.</p>
+}
+
+// [tag:mdd]
+::MDD classe conceptuelle::[html]<p>Qu'est-ce qu'une classe conceptuelle?</p>{
+	=<p>C'est une abstraction d'un concept important dans le cadre du problème que résoudra le logiciel à développer.</p>#<p>Correct. Une classe conceptuelle modélise un concept important dans le domaine de l'application à développer.</p>
+	~<p>Une classe logicielle, décrit dans un diagramme de classe en UML.</p>#<p>Incorrect. Une classe logicielle modélise un élément de la solution, tandis qu'une classe conceptuelle modélise un élément du domaine de l'application du logiciel.</p>
+	~<p>C'est une classe dans la conception du logiciel.</p>#<p>Incorrect. Une classe conceptuelle fait partie de l'analyse (du domaine de l'application). La conception comprend les classes logicielles pouvant être inspirées des classes conceptuelles, mais ces classes sont distinctes.</p>
+	~<p>C'est une classe ayant la responsabilité de lier deux concepts du problème.</p>#<p>Incorrect. Une classe conceptuelle EST une abstraction d'un concept du problème.</p>
+}
+
+// [tag:mdd]
+::MDD comment trouver des classes::[html]<p>Selon Larman, laquelle des réponses ne fait-elle pas partie des moyens pour trouver des classes conceptuelles?</p>{
+	~<p>Identifier les noms dans les cas d'utilisation.</p>#<p>Incorrect. Bien que c'est une méthode simple, l'identification des noms dans les cas d'utilisation est un moyen recommandé par Larman.</p>
+	~<p>Réutiliser un modèle du domaine existant.</p>#<p>Incorrect. Selon Larman, on devrait toujours réutiliser un modèle du domaine existant, si possible.</p>
+	~<p>Trouver des classes conceptuelles à partir des catégories typiques.</p>#<p>Incorrect. Les catégories typiques sont très utiles pour trouver des classes conceptuelles dans le modèle du domaine.</p>
+	=<p>Réutiliser les noms des classes logicielles, s'il existe une version antérieure du logiciel.</p>#<p>Correct. Ce n'est pas un moyen proposé par Larman. D'ailleurs, toutes les classes logicielles ne représentent pas nécessairement les concepts importants dans le modèle du domaine.</p>
+}
+
+// [tag:mdd]
+::MDD éléments::[html]<p>Qu'est-ce qui ne fait pas partie du modèle du domaine?</p>{
+	=<p>Les méthodes dans les classes conceptuelles.</p>#<p>Correct. Les classes conceptuelles n'ont pas de responsabilités et donc n'ont pas de méthodes. Ce sont les classes logicielles qui ont des méthodes.</p>
+	~<p>Les attributs dans les classes conceptuelles.</p>#<p>Incorrect. Le modèle du domaine comprend les classes conceptuelles qui, elles, sont modélisées avec les attributs.</p>
+	~<p>Les classes conceptuelles.</p>#<p>Incorrect. Le modèle du domaine comprend les classes conceptuelles.</p>
+	~<p>Les associations entre les classes conceptuelles.</p>#<p>Incorrect. Le modèle du domaine comprend les associations entre les classes conceptuelles.</p>
+}
+
+// [tag:mdd]
+::MDD pourquoi faire?::[html]<p>Pourquoi fait-on un modèle du domaine?</p>{
+	~<p>Un modèle du domaine comprend tous les concepts importants dans le contexte du problème que le logiciel va résoudre. Il est primordial d'avoir une compréhension presque parfaite du problème au début d'un projet.</p>#<p>Incorrect. Il n'est pas primordial d'avoir une compréhension presque parfaite du problème au début du projet. En fait, si le projet est complexe, la compréhension du problème sera loin d'être parfaite au début.</p>
+	~<p>Un modèle du domaine est la base de toutes les classes logicielles qui vont exister dans la solution.</p>#<p>Incorrect. Le modèle du domaine est la base de CERTAINES classes logicielles dans la solution, mais pas TOUTES.</p>
+	~<p>Un modèle du domaine est fait pour respecter le processus unifié.</p>#<p>Incorrect. Un modèle du domaine est fait pour bien comprendre le problème. La compréhension du problème est plus importante que le suivi d'un processus quelconque.</p>
+	=<p>Dans le développement de logiciel orienté-objet, si on commence avec un modèle du problème en termes de classes et d'objets, cela favorise une solution claire en termes de classes et d'objets logiciels.</p>#<p>Correct. Le modèle du domaine est aussi un dictionnaire visuel du domaine de l'application.</p>
+}
+
+// [tag:mdd]
+::MDD triangle sur association::[html]<p>À quoi sert le triangle que l'on met sur le nom d'une association dans le modèle du domaine?</p>{
+	=<p>C'est pour indiquer le sens de la lecture du nom de l'association entre deux classes.</p>#<p>Correct. Ce triangle est nécessaire quand le sens n'est pas de gauche à droite ou de haut en bas.</p>
+	~<p>C'est pour indiquer le sens de la navigabilité dans un diagramme de classe dans l'UML.</p>#<p>Incorrect. Le triangle est lié au texte (le nom) de l'association.</p>
+	~<p>C'est pour indiquer le sens de l'agrégation dans un diagramme de classe dans l'UML.</p>#<p>Incorrect. Le triangle est lié au texte (le nom) de l'association.</p>
+	~<p>Cela signifie qu'une association a plus d'importance.</p>#<p>Incorrect. Le triangle est lié au texte (le nom) de l'association.</p>
+}
+
+// question: 10356801  name: Décalage de représentation
+::Décalage de représentation::[html]<p>Qu'est-ce qui est entendu par le "décalage des représentations"? (en anglais to lower the representational gap)</p>{
+	~<p>C'est l'écart entre deux valeurs d'un attribut dérivé dans une classe logicielle.</p>
+	~<p>C'est l'écart entre deux couches logicielles dans un modèle en couches.</p>
+	=<p>C'est l'écart entre deux modèles, celui du problème et celui de la solution logicielle.</p>
+	~<p>C'est l'écart entre deux version d'une interface de programmation (application programming interface, API)</p>
+}
+
+
+// question: 10356802  name: Lors d'une analyse selon Larman, quelle classe ne serait pas une classe ...
+::Lors d'une analyse selon Larman, quelle classe ne serait pas une classe ...::Lors d'une analyse selon Larman, quelle classe ne serait pas une classe conceptuelle?{
+	=String#String est une classe logicielle (dans un design ou une implémentation) qui n'est pas normalement reliée à un concept d'un domaine d'application. 
+	~Étudiant
+	~Université
+	~Cours
+	~Devoir
+}

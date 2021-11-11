@@ -1,0 +1,14 @@
+@startuml
+skinparam style strictuml
+
+participant ":OrderEntryWindow" as OEW
+participant ":Order" as O
+participant "MacallanLine:OrderLine" as OL
+participant "MacallanStock:StockItem" as SI
+participant ":DeliveryItem" as DI 
+participant ":ReorderItem" as RI 
+
+OEW -> O: prepare()
+
+
+@enduml

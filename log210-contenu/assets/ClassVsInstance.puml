@@ -1,0 +1,11 @@
+@startuml Class vs. Instance
+skinparam style strictuml
+skinparam backgroundcolor transparent
+hide empty members
+class "Vente" as c
+note right : Classe
+class ":Vente" as i
+note right : Instance
+class "v:Vente" as n
+note right : Instance\nnommée
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+skinparam style strictuml
+skinparam defaultfontname Verdana
+skinparam BackgroundColor transparent
+skinparam sequence {
+    MessageAlign center
+}
+actor ":Joueur" as c
+participant ":Système" as s
+c->s : démarrerJeu(nom : String)
+@enduml

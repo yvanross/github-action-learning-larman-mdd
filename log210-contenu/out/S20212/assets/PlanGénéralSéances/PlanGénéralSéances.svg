@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="367px" preserveAspectRatio="none" style="width:917px;height:367px;" version="1.1" viewBox="0 0 917 367" width="917px" zoomAndPan="magnify"><defs/><g><!--MD5=[2391ed7191baa33cf30809d71cef9619]
+cluster async--><rect fill="#DDDDFF" height="110" style="stroke:#000000;stroke-width:1.5;" width="367" x="7" y="93.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="156" x="112.5" y="110.0332">Contenu (asynchrone)</text><!--MD5=[7bd83e83b58c508facb4f3ae8c4e8dca]
+cluster cours--><rect fill="#DDFFDD" height="275" style="stroke:#000000;stroke-width:1.5;" width="513" x="398" y="86"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="140" x="584.5" y="102.5332">Séance (synchrone)</text><!--MD5=[6ca0813c3295fd61d9bc93338cc77948]
+entity Exercices--><rect fill="#FEFECE" height="40.6094" style="stroke:#000000;stroke-width:1.5;" width="90" x="268" y="138"/><polygon fill="#FEFECE" points="341,143,341,157,353,157,353,149,347,143,341,143" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="347" x2="347" y1="143" y2="149"/><line style="stroke:#000000;stroke-width:1.5;" x1="353" x2="347" y1="149" y2="149"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="278" y="165.5332">Exercices</text><!--MD5=[bbcb933e22132be61f50ef16c2ed683e]
+entity Capsules\nvidéo--><rect fill="#FEFECE" height="58.2188" style="stroke:#000000;stroke-width:1.5;" width="89" x="143.5" y="129.5"/><polygon fill="#FEFECE" points="215.5,134.5,215.5,148.5,227.5,148.5,227.5,140.5,221.5,134.5,215.5,134.5" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="221.5" x2="221.5" y1="134.5" y2="140.5"/><line style="stroke:#000000;stroke-width:1.5;" x1="227.5" x2="221.5" y1="140.5" y2="140.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="153.5" y="157.0332">Capsules</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="166" y="174.6426">vidéo</text><!--MD5=[b1582a166c1381133ad75415b94df130]
+entity lectures--><rect fill="#FEFECE" height="40.6094" style="stroke:#000000;stroke-width:1.5;" width="85" x="23.5" y="138"/><polygon fill="#FEFECE" points="91.5,143,91.5,157,103.5,157,103.5,149,97.5,143,91.5,143" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="97.5" x2="97.5" y1="143" y2="149"/><line style="stroke:#000000;stroke-width:1.5;" x1="103.5" x2="97.5" y1="149" y2="149"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="33.5" y="165.5332">Lectures</text><!--MD5=[4280cc879f7288617334f18e841553ff]
+entity retmt--><rect fill="#FEFECE" height="55.2188" style="stroke:#000000;stroke-width:1.5;" width="73" x="414.5" y="131"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="424.5" y="155.5332">Mini-test</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="427" y="173.1426">(retour)</text><!--MD5=[af606b596660174eec6bb5f884a68212]
+entity Résumé des\nlectures\n(annotations)--><rect fill="#FEFECE" height="72.8281" style="stroke:#000000;stroke-width:1.5;" width="104" x="523" y="122"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="535.5" y="146.5332">Résumé des</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="550" y="164.1426">lectures</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="533" y="181.752">(annotations)</text><!--MD5=[0d9b4ac8f6cadaffb72cda0195f5b710]
+entity Exercices\n(retour)--><rect fill="#FEFECE" height="55.2188" style="stroke:#000000;stroke-width:1.5;" width="80" x="662" y="131"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="672" y="155.5332">Exercices</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="678" y="173.1426">(retour)</text><!--MD5=[6b6e902d1f8539520f6bcafeedb07364]
+entity Validation de la\ncompréhension\n(Socrative)--><rect fill="#FEFECE" height="72.8281" style="stroke:#000000;stroke-width:1.5;" width="117" x="777.5" y="122"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="787.5" y="146.5332">Validation de la</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="787.5" y="164.1426">compréhension</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="801.5" y="181.752">(Socrative)</text><!--MD5=[62d5e4be3904778e2bc926563cc14777]
+entity Discussion--><rect fill="#FEFECE" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="88" x="531" y="281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="541" y="305.5332">Discussion</text><!--MD5=[f1a429d32b1f98180977910ceed00f7e]
+entity Coaching\n(Vérification\nde MDD et\ndesign du lab)--><rect fill="#FEFECE" height="90.4375" style="stroke:#000000;stroke-width:1.5;" width="110" x="654" y="255"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="679" y="279.5332">Coaching</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="671.5" y="297.1426">(Vérification</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="675.5" y="314.752">de MDD et</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="664" y="332.3613">design du lab)</text><!--MD5=[508ff2fca34d479fb760f8e925c1b700]
+entity quiz--><rect fill="#FFA500" height="55.2188" style="stroke:#000000;stroke-width:1.5;" width="73" x="29.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="39.5" y="31.5332">Mini-test</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46" x="43" y="49.1426">Moodle</text><!--MD5=[65cff188df74dab1bb235ca821463f6c]
+reverse link quiz to lectures--><path d="M54.63,67.51 C52.33,89.88 52.91,119.01 56.35,137.98 " fill="none" id="quiz-backto-lectures" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="55.23,62.27,50.2284,70.7544,54.659,67.2373,58.1761,71.6679,55.23,62.27" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f09ecb83d77f4b1c4459e4986dc53347]
+link quiz to lectures--><path d="M77.4,62.27 C80.31,83.35 80.2,112.5 77.07,132.97 " fill="none" id="quiz-to-lectures" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="76.21,137.98,81.6699,129.7831,77.0528,133.0515,73.7843,128.4345,76.21,137.98" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c936cadde8cac4f62e38a67d882627c5]
+link quiz to retmt--><path d="M102.68,37.57 C173.71,42.06 327.18,54.26 374,78 C396.12,89.21 415.51,109.33 429.29,126.52 " fill="none" id="quiz-to-retmt" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="432.68,130.82,430.245,121.2769,429.5827,126.8949,423.9648,126.2326,432.68,130.82" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8fd32b0fe394af1439bab9a49ba004ad]
+link Résumé des\nlectures\n(annotations) to Exercices\n(retour)--><!--MD5=[828ef29eddb238119a6469cf6d8fc716]
+link Exercices\n(retour) to Validation de la\ncompréhension\n(Socrative)--><!--MD5=[809828e5f452405c01a86cf4f6893912]
+link Résumé des\nlectures\n(annotations) to Discussion--><!--MD5=[e23a38b52b040bc3cd74a8f45c869a31]
+link Discussion to Coaching\n(Vérification\nde MDD et\ndesign du lab)--><!--MD5=[1d025afc97347149df2722b47ba9d09e]
+@startuml PlanGénéralSéances
+skinparam style strictuml
+skinparam defaulttextalignment center
+rectangle "Contenu (asynchrone)" as async #ddddff {
+  artifact "Exercices"
+  artifact "Capsules\nvidéo"
+  artifact "Lectures" as lectures
+}
+rectangle "Mini-test\nMoodle" as quiz #orange
+rectangle "Séance (synchrone)" as cours #ddffdd {
+  rectangle "Mini-test\n(retour)" as retmt
+  rectangle "Résumé des\nlectures\n(annotations)"
+  rectangle "Exercices\n(retour)"
+  rectangle "Validation de la\ncompréhension\n(Socrative)"
+  rectangle "Discussion"
+  rectangle "Coaching\n(Vérification\nde MDD et\ndesign du lab)"
+}
+
+lectures -u-> quiz
+quiz -d-> lectures
+quiz - -> retmt
+@enduml
+
+PlantUML version 1.2021.4(Sun Apr 04 04:49:39 EDT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

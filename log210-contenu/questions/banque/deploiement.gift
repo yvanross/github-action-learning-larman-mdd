@@ -1,0 +1,49 @@
+$CATEGORY: $course$/Déploiement
+
+
+// [tag:deploiement]
+::Classifiez les éléments du diagramme suivant (déploiement)::[markdown]
+Classifiez les éléments du diagramme suivant\:\n![F31.1_deploiement](https\://www.plantuml.com/plantuml/svg/XPDHRzem4CVVyobEl4DXe3v459Mohcng1IjiUwaK6USA7iQEx4jfXVZkEoSGA6oT7op7v_lz_xwBhpq9H_bAmvTsgz5AKioqLRX2Gv76PmAouDHyGP0gXvAKDP5VAfC99rRWwKqZpqx9m3YAt0Yvd3kRctHWjNL0JXZFeS0rDaMe9KbyXmOvTJn8aXe83xHGSWdThjIApy7QkYNR2vgz7cmYuC5crREG1BM7jqSb5tS_lWwAqmrynG8YiWmsi1j5pZRQVgXfFfOiKxjvB_w5injdrnvTzoBl5Ucpyfi9krL8ErC_o7z6hM5ir-Xkqpb2-xBPJ98diu7Hv0eUCOMX8BWrX2vpoYFSAvE_GWUsXHhpNmgnSd5kiTID-vcG2uHFZLOm-gGt87NEEGDk2C4LT4hS6cSLaTTxV3XBWNx2ZgTs9TdUPG5bpzz-FZ1iaXiOMlAP9LPi7bdLI0DhI2XJcUOjaFkzol_xpWPRP1qsri9LFiF6hfvXhgpNpuHYwF_ENbhjGzr3xquBtsasgoQci_yMDlvtRogCzGmOJTxTwW0OMqzpXvFlzz0wbkQSL92O2O-xYXT_30VgUHt-SZicHELBgQVrenvoPDGVNmodqt6q_orFJnJ1QpGflzO_ "F31.1_deploiement")
+{
+	=« client workstation » \: GenericPC -> nœud physique
+	=« server » \: Dell PowerEdge 3600 -> nœud physique
+	=« server » \: Dell PowerEdge 3400 -> nœud physique
+	=« browser » \: WebBrowser -> nœud d'environnement d'exécution
+	=« OS » \: Red Hat Enterprise Linux 4 -> nœud d'environnement d'exécution
+	=« web server cluster » \: Apache 2.1 -> nœud d'environnement d'exécution
+	=« database » \: PostgreSQL 10 -> nœud d'environnement d'exécution
+	=webstore.war -> artefact
+	=MyRichGUIClient.exe -> artefact
+}
+
+// [tag:deploiement]
+::Utilisation diagramme de  déploiement::[markdown]
+Quel diagramme est utilisé pour montrer l'affectation de fichiers exécutables à des nœuds de traitement?{
+	=diagramme de déploiement
+	~diagramme d'activités
+	~diagramme de séquence
+	~diagramme de communication
+	~diagramme de composants
+}
+
+// [tag:deploiement]
+::Dans le diagramme suivant, quels sont les nœuds d'environnement d'exécution (ENN, execution environment nodes)?::[markdown]
+Dans le diagramme suivant, quels sont les nœuds d'environnement d'exécution (ENN, execution environment nodes)?\n![](https\://www.plantuml.com/plantuml/svg/ZP0zJyCm48Rt_8fJzw8MeWwegWgbOgb480CBYp-EnCBOqTq58w7-Tn8h2XtP_F6yVbxVdaMHz9--yFWk8178DQs0TOH6N0n5Y1PXiTqUlCCWa29z39dnQhTx2xUF692SgGuBK0oT-Pa3cc9Yf4ozehwdEEmofOlpJDL8NnFqWDv35HFIqJO8DvlLAkEssy3ViqzrXb_GGgi4ZXAGEdBC22SN-kzoSG4drC3P0CRtB9FfhbEcHRY-McT1ukBylqhbNAcyi5WbIYl67AaYIqDOFvzWFS7ZVmiDo-LeIZminhCz1ZiC_XS0 "Diagramme de déploiement UML (tiré du livre &quot;UML2 et les design patterns&quot; de Craig Larman)"){
+	~%-33.33333%« client workstation » \: GenericPC#Cela est un nœud physique.
+	~%-33.33333%« server » \: Dell PowerEdge 3600#Cela est un nœud physique.
+	~%-33.33333%« server » \: Dell PowerEdge 3400#Cela est un nœud physique.
+	~%25%« browser » \: WebBrowser#Ce nœud est un navigateur Web, qui est modélisé comme un nœud d'environnement d'exécution (ENN, execution environment node).
+	~%25%« OS » \: Red Hat Enterprise Linux 4#Ce nœud est un système d'exploitation, qui est modélisé comme un nœud d'environnement d'exécution (ENN, execution environment node).
+	~%25%« web server cluster » \: Apache 2.1#Ce nœud est un exemple de machine virtuelle (grappe), qui est modélisé comme un nœud d'environnement d'exécution (ENN, execution environment node).
+	~%25%« database » \: PostgreSQL 10#Ce nœud est un exemple de système de base de données (PostgreSQL), qui est modélisé comme un nœud d'environnement d'exécution (ENN, execution environment node).
+}
+
+// [tag:deploiement]
+::Architecture physique::[markdown]
+Un diagramme de déploiement sert à présenter... {
+	=l'architecture physique d'un système
+	~l'architecture logique d'un système (en couches)
+	~le séquencement des messages entre les composants d'un système
+	~le séquencement des activités dans un processus d'affaires
+}
+

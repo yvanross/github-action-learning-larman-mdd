@@ -1,0 +1,7 @@
+
+**/desktop.ini
+**/assets/*.pdf
+**/*.wmf
+**/*.emf
+export/
+seances/export/

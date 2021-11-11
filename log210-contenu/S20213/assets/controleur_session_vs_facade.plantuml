@@ -1,0 +1,18 @@
+@startuml controleur_session_vs_facade
+left to right direction
+skinparam style strictuml
+skinparam BackgroundColor transparent
+hide empty members
+rectangle "Couche présentation" as cp {
+    class Routeur
+}
+rectangle "Couche domaine" as cd {
+    class "Registre" as R <<controleur de façade>>
+    class "Gestionnaire\nTraiter\nVente" as GTV <<controleur de session>>
+    note right : Fabrication pure\n(classe qui n'est\npas dans le MDD)
+    GTV -> R
+}
+cp -[#hidden]- cd
+Routeur -> GTV
+Routeur -> R
+@enduml

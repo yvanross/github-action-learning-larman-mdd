@@ -1,0 +1,16 @@
+@startuml total_responsability
+class Vente {
+    -id: int
+    -date: Date
+}
+class LigneArticle {
+    -quantité: int
+}
+class DescriptionProduit {
+    -id: ProductID
+    -description : String
+    -prix: BigDecimal
+}
+Vente "1" -right-> "*" LigneArticle
+LigneArticle "*" -right-> "1" DescriptionProduit
+@enduml

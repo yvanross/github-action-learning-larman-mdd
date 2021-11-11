@@ -1,0 +1,10 @@
+@startuml ClassesDescription
+skinparam style strictuml
+hide empty members
+class Member
+class DescriptionMembres {
+    nom : String
+    dateNaissance : Date
+}
+
+@enduml

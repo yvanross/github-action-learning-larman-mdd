@@ -1,0 +1,16 @@
+$CATEGORY: $course$/FaireSoiMême
+
+::Faire soi-même getTotal Vente plutôt que Caisse::[markdown]Pourquoi une classe Vente aura-t-elle une responsabilité `getTotal()` tandis que dans la vraie vie c'est un Registre (Caisse) qui calcule le total d'une vente?
+{
+    =Il s'agit du pattern **faire soi-même**# "Je fais les choses qui sont normalement faites à l'objet réel dont je suis une abstraction."
+    ~C'est une erreur de conception. Registre (Caisse) devrait avoir cette responsabilité.
+}
+
+::Faire soi-même définition::[markdown]Parmi tous les exemples suivants de classe logicielle, qu'est-ce qui **N'EST PAS** le pattern **Faire soi-même**?
+{
+    =Paiement a une méthode `getID()`.#Dans la vraie vie, c'est l'objet Paiement qui aurait normalement cette responsabilité. Le pattern **faire soi-même** fait exception. Par exemple, dans la vraie vie, un Paiement n'aurait pas la responsabilité de s'autoriser (c'est le service d'autorisation de la compagnie de carte de crédit qui fait ça). Pourtant **faire soi-même** permettrait d'assigner la responsabilité `autoriser()` à la classe logicielle Paiement.
+    ~Dé a une méthode `brasser()`.#Dans la vraie vie, c'est un être humain qui brasse (lance) un dé. Pourtant, si Dé a cette responsabilité, il s'agit du pattern **Faire soi-même**. Cela peut réduire le couplage et augmenter la cohésion en donnant une responsabilité (une action normalement fait *sur* l'objet par un autre) à l'objet lui-même. 
+    ~Paragraphe a une méthode `vérifieOrthographe()`.#Dans la vraie vie c'est un autre objet (un traitement de texte, un être humain, etc.) qui aurait cette responsabilité. **Faire soi-même** peut réduire le couplage et augmenter la cohésion en donnant une responsabilité (une action normalement fait *sur* l'objet par un autre) à l'objet lui-même.
+    ~Cercle a une méthode `dessiner()`.#Dans la vraie vie, c'est un autre objet (un être humain, etc.) qui aurait cette responsabilité. **Faire soi-même** peut réduire le couplage et augmenter la cohésion en donnant une responsabilité (une action normalement fait *sur* l'objet par un autre) à l'objet lui-même.
+}
+

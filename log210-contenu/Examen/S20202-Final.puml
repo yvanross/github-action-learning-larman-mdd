@@ -1,0 +1,138 @@
+<!-- 3.a mdd----------------------------------------------->
+
+@startuml mdd-cu01 Ajouter un Item à la vente
+    title MDD CU01 - Ajouter un Item à la vente
+
+    class MagasinEnLigne <<Organisation>>{
+
+    }
+    class Membre as "Membre" <<Role>> {
+        string nomUtilisateur
+        string motDePasse
+
+    }
+    class Item as "Item" <<Objet physique>>{
+         serial: String
+    }
+
+    class ID as "ItemDescription" <<Description d'entité>>{
+        upcCode: Integer
+        nom: String
+        prix: Real
+    }
+
+    class Commande <<Transaction>> {
+      noCommande: Integer 
+      dateHeure: DateTime
+    }
+
+    Class CommandeItem <<Transaction>> {
+      quantite: Integer
+    }
+
+    MagasinEnLigne "1" -- "*" ID: gère >
+    MagasinEnLigne "1" -- "*" Membre: offe un service au membre >
+    Membre "1" -- "*" Commande: effectue >
+    Commande "1" -- "*" CommandeItem: contient >
+    CommandeItem "*" -- "1" Item: est pour >
+    Item "*" -- "1" ID: sont décrit par >
+    
+    
+@enduml
+
+<!--3.a DSS------------------------------------------------------------------------------ -->
+
+@startuml DSS-cu01
+    skinparam style strictuml
+    title DSS CU01 - Commander des items
+
+    Actor ":Membre" as E
+    participant ":System" as S
+
+    E -> S: demarrerCommande()
+    E <<-- S: formulaire pour entrer le code UPC
+
+    loop tant que le membre n'a pas entré tous ses Items à commander
+    E -> S: ajouterItem(upcCode:Integer)
+    E <<-- S: nom:String, prix:Real
+    end
+
+    E -> S: terminerCommande()
+    E <<-- S: noCommande,dateHeure,[serial:String, UpcCode:Integer, nom:String, prix:Real]
+
+@enduml
+
+<!---3.a -----------Solution----------------------------------->
+
+@startuml MDD CU01 - Ajouter un Item à la vente (solution)
+    title MDD CU01 - Ajouter un Item à la vente (solution)
+
+    class MagasinEnLigne <<Organisation>>{
+
+    }
+    class Membre as "Membre" <<Role>> {
+        string nomUtilisateur
+        string motDePasse
+
+    }
+    class Item as "Item" <<Objet physique>>{
+         serial: String
+    }
+
+    class ID as "ItemDescription" <<Description d'entité>>{
+        UpcCode: Integer
+        nom: String
+        prix: Real
+    }
+
+    class Commande <<Transaction>> {
+      noCommande: Integer 
+      date: DateTime
+    }
+
+
+    MagasinEnLigne "1" -- "*" ID: gère >
+    MagasinEnLigne "1" -- "*" Membre: offe un service au membre >
+    Membre "1" -- "*" Commande: effectue >
+    Commande "1" -- "*" Item: est pour >
+    Item "*" -- "1" ID: sont décrit par >
+    
+    
+@enduml
+
+<!----5 enonce--------------------------------------------->
+
+
+@startuml  5a1
+skinparam style strictuml
+-> Membre: demarrerCommande()
+Membre -> Commande**: Create()
+@enduml
+
+@startuml 5a2
+skinparam style strictuml
+-> ControleurCommande: demarrerCommande()
+ControleurCommande -> Commande**: Create()
+@enduml
+
+@startuml  5b1
+skinparam style strictuml
+x -> Commande**: Create()
+x -> Commande: ajouterMembre(m:Membre)
+@enduml
+
+@startuml  5b2
+skinparam style strictuml
+x -> Commande**: Create(m:Membre)
+@enduml
+
+@startuml 5b3
+skinparam style strictuml
+x -> Commande**: Create()
+x -> Membre: ajouterCommande(commande:Commande)
+@enduml
+
+
+<!----7  --------------------------------------------->
+
+

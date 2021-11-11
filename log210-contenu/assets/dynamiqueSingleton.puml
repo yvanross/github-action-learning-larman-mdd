@@ -1,0 +1,15 @@
+@startuml
+skinparam style strictuml
+participant  ":Registre" as R
+participant "FabriqueDeService" as F <<class>>\n<<Singleton>> 
+participant "f:FabriqueDeService" as f
+note left of R: Controleur de facade équipement
+-> R: initialiser()
+note right of R: expert en information\nLa fabrique contrète gère \nl'instance de la fabrique de service
+R -> F: <<static>>\nf = getInstance() 
+opt instance == null
+note right of F: Createur\n La classe FabriqueDeService \n**possède** l'instance f:Fabrique de service
+F -> f**: create()
+end
+
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+skinparam style strictuml
+hide empty description
+left to right direction
+[*] --> Standing
+Standing --> Prone : lieDown
+Prone --> Standing : standUp
+Standing --> Kneeling : kneel
+Kneeling --> Standing : standUp
+Standing --> Fallen : takeDamage [dmg > 8]
+Standing --> Fallen : trip
+Fallen --> Standing : standUp
+Prone --> Kneeling : riseToKneeling
+Kneeling --> Prone : lieDown
+Fallen --> Prone : waitTurn
+Fallen --> Prone : crawl
+@enduml

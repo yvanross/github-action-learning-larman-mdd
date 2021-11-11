@@ -1,0 +1,67 @@
+$CATEGORY: mgl843/DSL (Langages dédiés)
+
+// [tag:mgl843-dsl]
+::Définition::Qu'est-ce qu'un DSL?{
+	=C'est un langage de programmation informatique d'une expressivité limitée focalisée sur un domaine particulier#Oui, un DSL est une langage dédié pour un domaine spécifique.
+	~C'est un langage de programmation informatique à usage général.#Non, un DSL est un langage limité à un domaine spécifique.
+	~C'est l'ensemble des techniques mises en place pour un transport numérique de l'information sur une ligne de raccordement filaire téléphonique#En effet, c'est le sens de DSL ("Digital subscriber line"), mais cela n'est pas un sujet relié à la conception de logiciels.
+}
+
+
+// [tag:mgl843-dsl]
+::DSL interne::Un DSL écrit dans un langage de programmation standard s'appelle un _____.{
+	=DSL interne#C'est correct.
+	~DSL externe#Non. Un DSL externe s'écrit dans un autre langage et nécessite des outils spéciaux.
+}
+
+
+// [tag:mgl843-dsl]
+::Exemple fluent interface::[html]<p>L'exemple suivant en Java démontre l'utilisation de _____</p>\n<pre>CalendarBuilder builder \= new CalendarBuilder();<br />builder<br />  .add("Séance 01")<br />    .on  (2009, 11, 8) <br />    .from("09\:00") <br />    .to  ("16\:00") <br />    .at  ("ÉTS, A-1600");</pre>{
+	~[moodle]DSL externe#[moodle]Un DSL externe s'écrit dans un langage autre que le langage de programmation
+	=[moodle]Fluent interface#[moodle]La conception d'interface (API) permettant une excellente lisibilité.
+}
+
+
+// [tag:mgl843-dsl]
+::Exemples::[html]<p>Quels sont les exemples de DSL?</p>{
+	~%25%[moodle]CSS (Cascading Style Sheets)#[moodle]C'est un exemple de DSL externe
+	~%25%[moodle]SQL#[moodle]C'est un exemple de DSL externe
+	~%25%[moodle]Expression rationnelle (Regular expression)#[moodle]C'est un exemple de DSL externe
+	~%-25%[moodle]Java#[moodle]Java est un langage général de programmation.
+	~%-25%[moodle]C\##[moodle]C\# est un langage général de programmation.
+	~%25%[moodle]Une API expressive (Fluent Interface) écrite dans C\##[moodle]C'est un exemple de DSL interne
+}
+
+
+// [tag:mgl843-dsl]
+::Histoire::[html]<p>Depuis quand existent les DSL ?</p>{
+	=[moodle]Les années 1950#[moodle]Selon Fowler, le langage Lisp (créé en 1958) contient des DSL internes. Selon d'autres (page Wiki), le langage FORTRAN, créé en 1956, était un langage dédié au calcul scientifique.
+	~[moodle]Les années 1970#[moodle]Selon Fowler, Unix (invénté dans les années 1970) utilise des DSL pour les scripts, p.ex. awk, shell, etc., mais les DSL sont plus vieux que ça probablement.
+	~[moodle]Les années 2000#[moodle]On peut considérer les CSS (Cascading Style Sheets) inventés dans les années 2000 comme un langage dédié. Cependant, les langages dédiés sont plus vieux que cela.
+}
+
+
+// [tag:mgl843-dsl]
+::Public::Un DSL est utilisé principalement par les gens d'affaires pour définir des règles ou des flux de travaux complexes.{FALSE#Bien que les gens d'affaires puissent lire le DSL, ce sont les développeurs qui l'utilise pour définir des choses complexes.#En effet, puisque ce sont les développeurs qui l'utilisent pour définir des choses complexes. Cependant, les gens d'affaires peuvent souvent comprendre ce qui est écrit dans un DSL.}
+
+
+// [tag:mgl843-dsl]
+$CATEGORY: top/DSL (Langages dédiés)/Possibilités (variantes)
+
+
+// [tag:mgl843-dsl]
+::Portée limitée 2::Il n'est pas possible de faire un projet entier avec un DSL.{TRUE#Un DSL ayant une portée limitée, il n'est pas utilisé pour faire tout un projet.#Un DSL ayant une portée limitée, il n'est pas utilisé pour faire tout un projet.}
+
+
+// [tag:mgl843-dsl]
+::Portée limitée 1::Il est possible de faire un projet entier avec un DSL.{FALSE#Un DSL ayant une portée limitée, il n'est pas utilisé pour faire tout un projet.#Un DSL ayant une portée limitée, il n'est pas utilisé pour faire tout un projet.}
+
+
+
+// [tag:mgl843-dsl]
+::Histoire::[html]<p>Depuis quand existent les DSL?</p>{
+	=[moodle]Les années 1950#[moodle]Selon Fowler, le langage Lisp (créé en 1958) contient des DSL internes. Selon d'autres (page Wiki), le langage FORTRAN, créé en 1956, était un langage dédié au calcul scientifique.
+	~[moodle]Les années 1970#[moodle]Selon Fowler, Unix (invénté dans les années 1970) utilise des DSL pour les scripts, p. ex. awk, shell, etc., mais les DSL sont plus vieux que ça probablement.
+	~[moodle]Les années 2000#[moodle]On peut considérer les CSS (Cascading Style Sheets) inventés dans les années 2000 comme un langage dédié. Cependant, les langages dédiés sont plus vieux que cela.
+}
+

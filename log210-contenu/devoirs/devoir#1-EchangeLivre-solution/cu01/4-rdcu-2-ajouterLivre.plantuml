@@ -1,0 +1,32 @@
+@startuml ajouterLivre
+skinparam Style strictuml
+participant ":ControleurAjoutLivre" as ctrl
+participant ":map<isbn,DescriptionLivre>" as mdl 
+participant "cl:Client" as cl
+participant "livre:Livre" as l
+participant "listLivreClient:List<:Livre>" as llc
+participant ":Bdd" as bdd 
+participant "llBdd:List<:Livre>" as llbdd
+
+note left of ctrl: Controleur de session
+-> ctrl: ajouterLivre(isbn:string, condition:string)
+
+note left of mdl: Expert\nctrl->map\nctrl->isbn\nmap -> isbn 
+ctrl -> mdl: descriptionLivre = get(isbn)
+
+note left of cl: Expert\nctrl->descriptionLivre et condition\nClient est créateur de Livre
+ctrl -> cl: livre=creerLivre(descriptionLivre,condition)
+
+note left of l: Createur(PUCE)\nClient possède le livre\nclient possède descriptionLivre et condition
+cl -> l **: livre = create(descriptionLivre,condition)
+
+note left of llc: Expert\nClient->livre\nClient->listLivreClient
+cl -> llc: add(livre)
+
+note left of bdd: Expert\nCtrl->Bdd\nBdd -> list<Livre>
+ctrl -> bdd: addLivre(livre)
+
+note left of llbdd: Expert\nBdd->list<Livre>
+bdd -> llbdd: add(livre)
+
+@enduml

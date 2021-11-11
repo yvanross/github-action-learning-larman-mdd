@@ -1,0 +1,42 @@
+$CATEGORY: $course$/GRASP/Indirection
+
+// [tag:indirection] [tag:contrôleur] [tag:grasp]
+::Indirection et couches::
+[markdown]
+Quel élément est un exemple de **GRASP Indirection** pour éviter le couplage direct des classes de la couche présentation aux classes de la couche domaine? {
+    =
+    Contrôleur de session (ou de cas d'utilisation)
+    #
+    Le contrôleur de session est une Fabrication Pure (une entité fabriquée qui ne correspond à aucune classe du modèle du domaine) pour gérer uniquement les opérations système. Puisque cette classe est entre la couche présentation et les classes (la couche) domaine, c'est une indirection.\n
+    ![controleur_session_vs_facade](https\://www.plantuml.com/plantuml/svg/RP71QW8n48RlUOh17jeUV84Y8bNqrCiYNcgHCHdNuEvacqaAKleyfS_XYtMY2xMqEGJ2pFpp_rycaZ2ct3PW0wSO6ifn8oJY0s_UPBD3YuvCGxi4AK3qzJw1yv5iqWuZ1yyTHcn1qh4XlQEtHUwgyeZsKCUGsKr34oAaY2nQ8avcxnq1jLqwGaljbgAO8erSgzXW6hBT4tJnz2NQZMNb0530Tl1kG8zjK0Iga9FwDX__3BlGecUwZBbVOuEAQg-EByKAHgCV1g2-TdZwrF3ZyVNCWgJOO5G6Qrv6z8dYcbVgxwApMAx-AFL0UoKEYNgI3p37hI8xHuCk5ysxyoQ2r-o1RtNTMa4AEAK66knfDhi_ovH5mp5K6bjv39zl5AOZVXbgJjCZAGtQT_sip8JOwHTz0m00 "controleur_session_vs_facade")
+    ~
+    Contrôleur de façade
+    #
+    Le contrôleur de façade est une classe qui représente le système global, un «objet racine», un équipement ou un sous-système. Puisqu'il s'agit d'une classe inspirée d'une classe conceptuelle (du MDD), ce n'est pas une vraie indirection.\n
+    ![controleur_session_vs_facade](https\://www.plantuml.com/plantuml/svg/RP71QW8n48RlUOh17jeUV84Y8bNqrCiYNcgHCHdNuEvacqaAKleyfS_XYtMY2xMqEGJ2pFpp_rycaZ2ct3PW0wSO6ifn8oJY0s_UPBD3YuvCGxi4AK3qzJw1yv5iqWuZ1yyTHcn1qh4XlQEtHUwgyeZsKCUGsKr34oAaY2nQ8avcxnq1jLqwGaljbgAO8erSgzXW6hBT4tJnz2NQZMNb0530Tl1kG8zjK0Iga9FwDX__3BlGecUwZBbVOuEAQg-EByKAHgCV1g2-TdZwrF3ZyVNCWgJOO5G6Qrv6z8dYcbVgxwApMAx-AFL0UoKEYNgI3p37hI8xHuCk5ysxyoQ2r-o1RtNTMa4AEAK66knfDhi_ovH5mp5K6bjv39zl5AOZVXbgJjCZAGtQT_sip8JOwHTz0m00 "controleur_session_vs_facade")    ~
+    Routeur (node express)
+    #
+    La classe Routeur fait partie de la couche présentation. Elle reçoit la requête HTTP et la décortique afin d'interagir avec la couche domaine. Elle n'existe pas pour séparer les couches, mais pour réagir aux événements HTTP.
+}
+
+// [tag:indirection] [tag:gof] [tag:adaptateur]
+::Indirection et Adaptateur GoF::
+[markdown]
+Dans le patron GoF Adaptateur, quel élément joue le rôle d'une **GRASP Indirection**? \n ![GoF_AdapterObject_class](https\://www.plantuml.com/plantuml/svg/VL3DJiCm3BxxANo4Gr-WGcXJ9Oux02_W9cuNBJ_5SOIcgUzEADqe876n8d-_pYuhYPRW8PzSd4WeODQpvph5cLz8J-OqIYhHTiadGHMAkK8STSEoF53n-fIY7YWmxiNHV_uRA2RbcwvBHHmB7lWTuEWi8uT9pnWuz2mPN5IMWGpZAyd8YXT0l51VdSdeZC_yLZZhtJtCO3pbZ7jBKzMW2vFdK5ldhNJB_oo2uiQZOXgkkhPTAK3BWh5vn9U9ZHkS-LPpjCiXFq9vYVXBdW6kX8UcDBUABQuPiDfqtjN2rMM6zTb8ZV_g3xiQMl_o0m00 "GoF_AdapterObject_class")
+{
+    =Adapter
+    #
+    La classe (concrète) Adapter permet à la classe Client d'ignorer d'une certaine manière les détails du système externe (Adaptee). Ainsi, c'est une indirection entre Client et Adaptee. 
+    ~
+    Target
+    #
+    Le type interface Target n'est pas une classe concrète, alors la vraie classe jouant le rôle d'indirection est une classe qui implémente ce type interface.
+    ~
+    Adaptee
+    #
+    Adaptee est la classe à laquelle on ne veut pas avoir de lien direct à partir de Client. Ce n'est pas la classe qui joue le rôle d'indirection.
+    ~
+    Client
+    #
+    Client est la classe qui ne devrait pas connaître les détails de la classe Adaptee. Ce n'est pas la classe qui joue le rôle d'indirection.
+}

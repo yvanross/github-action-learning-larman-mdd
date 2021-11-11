@@ -1,0 +1,23 @@
+@startuml Exercice Solution Classe de Communication
+skinparam style strictuml
+skinparam backgroundcolor transparent
+class OrderEntryWindow
+class Order {
+    prepare()
+}
+class OrderLine {
+    prepare()
+}
+class StockItem {
+    check() : boolean
+    remove()
+    needToReorder(): boolean
+}
+class ReorderItem
+class DeliveryItem
+OrderEntryWindow -> Order
+Order *--> "*" OrderLine
+OrderLine --> StockItem
+StockItem ..> ReorderItem : <<creates>>
+OrderLine ..> DeliveryItem : <<creates>>
+@enduml

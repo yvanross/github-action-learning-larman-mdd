@@ -1,0 +1,66 @@
+$CATEGORY: $course$/Mdd Affinement
+
+
+// [tag:mdd-affinement]
+::+Avantage de la représentation de la composition::[html]<p>Décidez (oui ou non) si chaque énoncé est un avantage de la représentation de la composition dans un modèle du domaine.</p>{
+	=<p>Une composition rend plus claires les obligations du domaine relatives à l'existence d'une partie indépendante du tout. </p> -> oui
+	=<p>Il peut être plus facile d'identifier le contrôleur d'une opération système, grâce au principe GRASP Contrôleur. </p> -> non
+	=<p>Il peut être plus facile d'identifier le créateur (le composite) des parties, grâce au principe GRASP Créateur. </p> -> oui
+	=<p>Une opération qui s'applique au tout, comme une duplication ou une suppression, se propage souvent aux parties. </p> -> oui
+	=<p>Une opération qui s'applique à une partie se propage à toutes les parties. </p> -> non
+}
+
+
+// [tag:mdd-affinement]
+::+Classe d'association::[html]<p>Quelle sorte de classe est « Inscription » dans le diagramme suivant?</p><p><img src\="https\://www.plantuml.com/plantuml/img/TOqn3i8m34NtdCBg18X4i7PbGCmzGTG6Qj4uKUmC5U80t8Axz6945O9AYCNoyDv_V4MADbaFBEFWoatOIlQ3wh5pu7oK4RoJFdIisi4om_IGtA4bWPkYuA66faXqKVStS4mXHtS8EN51oWm9dcVX1pqHjmcZOA3_w3TOxOpPLA0rLFlvMwPgS2mQvqNHqnFKwcDkb-GQZ5cMNm00" alt\="Diagramme PlantUML" /></p>{
+	~<p>Classe abstraite</p>#<p>Une classe abstraite en UML est indiquée avec un nom en <em>italique</em>.</p>
+	=<p>Classe d'association</p>#<p>Une classe d'association décrit une association (éphémère) entre deux classes. </p>
+	~<p>Classe d'agrégation</p>#<p>L'agrégation en UML est indiquée par la présence d'un losange. </p>
+	~<p>Classe hiérarchique</p>#<p>Il n'y a rien dans ce diagramme pour indiquer que cette classe est hiérarchique.</p>
+}
+
+// [tag:mdd-affinement]
+::+Justification de sous-classes (pratiquer)::[html]<p>Dans le diagramme suivant, quelle serait la justification des sous-classes de Paiement?</p><p><img src\="https\://www.plantuml.com/plantuml/png/TL2zJiCm4Dxz5AUCI1bO8uIAGWU6IXK34yl5FXghiHti2r84l4_w77unJgbI2bKNd_pzt7rtgyGOUN2TIdlhUupee46ztyKmUAD35o9mH9-48izdgiHZH_96gsT_Qmq1kPv7SEGQYkaln6qmIR5bSMs2oPDKCu093gqdw2M6fKwzo1I2uhQ0ifpB5Yqv0Q62vppjn7Mli96vg1bqXodzIZwL2vvn5c-2zuAhRtMYxxwav_9R-tNgywGfNH4yr34VZEKhz1PZtURfVI3rtm75pIb-BNlH8orC1Kz6bFRDKldgzH4jyOEqkcnyVeO5gYJ0c0z7ougyaTl_0000" alt\="Image PlantUML"></p>{
+	~<p>Des sous-classes ont des attributs supplémentaires pertinents.</p>#<p>Aucune des sous-classes de Paiement ne spécifie des attributs supplémentaires.</p>
+	~%50%<p>Des sous-classes ont des associations supplémentaires pertinents.</p>#<p>En effet. Il y a des associations à CarteDeCrédit et à Chèque et elles sont propres à les sous-classes de Paiement respectives.</p>
+	~%50%<p>Par rapport à la superclasse Paiement, des sous-classes doivent être gérées différemment et cette distinction est pertinente.</p>#<p>En effet. Des paiements par carte de crédit et à chèque doivent être traités différemment.</p>
+	~<p>Des sous-classes représentent des entités animées qui ont un comportement différent de celui de Paiement et cette différence est pertinente.</p>#<p>Les paiements ne sont pas des entités animées (humain, animal ou robot).</p>
+}
+
+// [tag:mdd-affinement]
+::+Règle des 100%::[html]<p>Quelle est la définition de la règle&nbsp;des 100 % concernant les modèles du domaine?</p>{
+	=<p>100% de la définition de la superclasse conceptuelle doivent être applicables à la sous-classe. La sous-classe doit se conformer à 100% à la définition de la superclasse, incluant les attributs et les associations.</p>
+	~<p>100% de la définition de la superclasse conceptuelle doivent être applicables à la superclasse logicielle. La sous-classe logicielle doit se conformer à 100% à la définition de la superclasse conceptuelle, incluant les attributs et les associations.</p>
+	~<p>100% des classes conceptuelles doivent être réalisées par les classes logicielles.</p>
+	~<p>100% des classes logicielles appartiennent à l'ensemble des classes conceptuelles.</p>
+}
+
+// [tag:mdd-affinement]
+::+Sous-classes conceptuelles::[html]<p>Soit la partie suivante d'un MDD pour un système d'inscription pour les cours universitaires. Pourquoi cette modélisation n'est-elle pas probablement utile?</p><p><img src\="https\://www.plantuml.com/plantuml/png/TOsnhSCm34HxJS45lC4lNFqkGz0I4HCMAOEa2WDP8ADa3YyM8KMG56aEkBjtkDa3BRhKv1lhZeO22-RjQgrhoQqsWp1K7nLfV50UHwMXnlcrNxaGaEnnW52ihVXt90kPf_CUlJ1gmDzjck1jB-YvLrRuIVoV3s5bJJDf6OTF" alt\="Image PlantUML"></p>{
+	~%25%<p>Les sous-classes n'ont pas d'attributs supplémentaires pertinents.</p>
+	~%25%<p>Les sous-classes n'ont pas d'associations supplémentaires pertinentes.</p>
+	~%25%<p>Les sous-classes ne sont pas être gérées différemment que la superclasse.&nbsp;</p>
+	~%25%<p>Les sous-classes n'ont pas de comportements différents de celui de la superclasse en ce qui concerne le domaine du logiciel.</p>
+	~%-20%<p>L'utilisation de sous-classes est toujours une mauvaise idée dans un MDD.</p>
+}
+
+ 
+
+
+// [tag:mdd-affinement]
+::+Compréhension générale Ch. F26::[html]<p>Quel est le sujet qui n'a pas été présenté dans le chapitre F26/A32?</p>{
+	~<p>Utilisation des généralisations dans le modèle du domaine</p>
+	~<p>Utilisation des spécialisations dans le modèle du domaine</p>
+	=<p>Utilisation du polymorphisme dynamique dans le modèle du domaine</p>
+	~<p>Utilisation des classes d'association dans le modèle du domaine</p>
+	~<p>Utilisation des intervalles de temps, de la composition et des packages</p>
+	~<p><span style\="line-height\: 1.231;">Identification du moment où il est bon de représenter une sous-classe</span></p>
+}
+
+// [tag:mdd-affinement]
+::Modification MDD LigneTaxes chF23::[html]<p>Lors de la conception du calcul de la méthode getTaxes(), pourquoi la nouvelle classe conceptuelle LigneTaxes (TaxLineItem) a-t-elle été ajoutée au modèle du domaine?</p>{
+	=<p>... puisqu'il peut y avoir plusieurs sortes de taxes liées à une vente.</p>#<p>En effet, il peut y avoir une taxe d'État, une taxe fédérale, etc., chacune avec un pourcentage différent.</p>
+	~<p>... puisqu'il peut y avoir une taxe par LigneArticle (SalesLineItem).</p>#<p>Ceci est vrai, mais ce n'est pas la raison de modifier le modèle du domaine. </p>
+	~<p>... puisqu'il peut y avoir des articles hors taxe.</p>#<p>Ceci est vrai, mais ce n'est pas la raison de modifier le modèle du domaine.</p>
+	~<p>Aucune de ces réponses.</p>#<p>Il peut y avoir une taxe d'État, une taxe fédérale, etc. </p>
+}

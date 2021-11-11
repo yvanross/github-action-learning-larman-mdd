@@ -1,0 +1,11 @@
+$CATEGORY: $course$/Complexité
+
+// [tag:complexite]
+::La complexité circonstancielle est de mieux en mieux gérée grâce aux innovations ...::La complexité circonstancielle est de mieux en mieux gérée grâce aux innovations technologiques.{TRUE}
+
+// [tag:complexite]
+::Les outils de développement comme Eclipse répondent principalement aux ...::Les outils de développement comme Eclipse, IntelliJ, PyCharm ou VSCode répondent principalement aux difficultés dues à la complexité inhérente.{FALSE}
+
+::Complexité environnementale::L'existence de plusieurs versions d'Android avec les politiques différentes pour les autorisations d'exécution est un exemple de complexité inhérente. {FALSE#Il s'agit de la complexité environnementale#Il s'agit de la complexité environnementale}
+
+::Complexité inhérente::Un logiciel contient un moteur de règles pour supporter toutes les politiques d'une entreprise en ce qui concerne les congés et les vacances selon la convention collective avec les employés. Ceci est un exemple de complexité circonstancielle.{FALSE#Les politiques que le logiciel doit supporter sont une source de complexité inhérente (provenant du problème)#Les politiques que le logiciel doit supporter sont une source de complexité inhérente (provenant du problème)}

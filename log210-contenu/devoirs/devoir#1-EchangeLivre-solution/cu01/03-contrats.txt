@@ -1,0 +1,27 @@
+CU01-Contrat-demarrerAjoutLivre
+Opération : demarrerAjoutLivre()
+Préconditions :
+    - Une instance c de Client existe
+Postconditions: 
+    - Aucune
+ 
+CU01-Contrat-ajouterLivre
+Opération : ajouterLivre(isbn : CodeISBN, condition : CodeCondition)
+Préconditions :
+    - Une instance c de Client existe
+    - Une instance bdd de BureauDeveloppementDurable existe
+
+Postconditions:
+    - Une instance l de Livre a été créée
+    - l.identifiant a été initialisé à une valeur unique
+    - l.condition est devenu égale au paramètre condition
+    - Une association entre l :Livre et DescriptionLivre aété créée sur la vase de correspondance avec le paramètre isbn.
+    - Une association entre l :Livre et bdd a été créée
+    - Une association entre l :Livre et c :client a été créée
+ 
+CU01-Contrat-terminerAjoutLivre
+Opération : terminerAjoutLivre()
+Préconditions : 
+ - Une instance c de Client existe
+Postconditions: 
+    - Aucune

@@ -1,0 +1,34 @@
+@startuml OutilsLOG210g01
+'left to right direction
+skinparam style strictuml
+skinparam BackgroundColor transparent
+skinparam DefaultTextAlignment center
+rectangle "<img:http://www.tavistockcollege.org/wp-content/uploads/2016/03/gsuite-logo.png{scale=0.1}>GSuite" <<compte ETSMTL.NET>> as google #lightgreen {
+    rectangle "Google Disque" {
+        artifact "Annotations\nnotes de cours"
+        artifact "Enregistrements\nZoom"
+    }
+    rectangle "Google Classroom" {
+        artifact "Exercices\n(rétroactions)"
+    }
+}
+rectangle "<img:https://tracker.moodle.org/secure/attachment/56206/Moodle-Icon-1024-corners.png{scale=0.05}>Moodle" <<compte etsmtl.ca>> as moodle #orange{
+    rectangle "ENAQuiz (Moodle)" {
+        artifact "Examen final"
+    }
+    rectangle "ENA (Moodle)" {
+        artifact "Mini-test"
+    } 
+}
+rectangle "<img:https://github.githubassets.com/images/modules/logos_page/Octocat.png{scale=0.1}>GitHub Classroom" <<compte GitHub.com>> as gh #pink {
+    artifact "Énoncé Lab 1\n(équipe)"
+    artifact "Énoncé Lab 0\n(individuel)"
+}
+rectangle "<img:https://discord.com/assets/28174a34e77bb5e5310ced9f95cb480b.png{scale=0.3}>Discord" <<compte Discord.com>> as discord #7289DA
+
+
+google -[hidden]left- moodle
+moodle -[hidden]down- discord
+google -[hidden]down- gh
+discord -[hidden]r- gh
+@enduml

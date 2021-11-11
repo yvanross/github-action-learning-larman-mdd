@@ -1,0 +1,62 @@
+@startuml
+
+[*] --> Débranché
+state Branché {
+Débranché --> Éteint: brancher
+Éteint --> Allumé: power
+Allumé --> Éteint: power
+Allumé --> Connecté: connecterSource
+Connecté --> Allumé: deconnecterSource
+Connecté --> Éteint: power
+}
+Branché --> Débranché: débrancher
+
+@enduml
+
+
+@startuml
+
+class Projecteur{
+  debrancher()
+  power()
+  connecterSource()
+  deconnecterSource()
+  brancher()
+  getState():IEtatProjecteur
+  setState(IEtatProjecteur)
+}
+
+Interface IEtatProjecteur{
+  debrancher(Projecteur projecteur)
+  power(Projecteur projecteur)
+  connecterSource(Projecteur projecteur)
+  deconnecterSource(Projecteur projecteur)
+  brancher(Projecteur projecteur)
+}
+class Débranché extends IEtatProjecteur{
+brancher(Projecteur projecteur)
+}
+
+class Branché extends IEtatProjecteur  {
+  debrancher(Projecteur projecteur)
+  power(Projecteur projecteur)
+  connecterSource(Projecteur projecteur)
+  deconnecterSource(Projecteur projecteur)
+}
+class  Éteint extends Branché {
+power(Projecteur projecteur)
+}
+
+class Allumé extends Branché {
+power(Projecteur projecteur)
+connecterSource(Projecteur projecteur)
+}
+
+class Connecté extends Branché{
+deconnecterSource(Projecteur projecteur)
+power(Projecteur projecteur)
+}
+
+Projecteur -right- IEtatProjecteur
+
+@enduml

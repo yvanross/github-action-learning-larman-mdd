@@ -1,0 +1,32 @@
+@startuml MDD-1
+class Client
+class Hotel 
+class Commis 
+class Reservation {
+  dateArrive: DateTime 
+  dateDepart: DateTime 
+}
+class Categorie
+
+Hotel "1" -- "*" Commis: emploie >
+Reservation "1" -- "1" Client: est pour >
+Commis "1" -- Reservation : effectue >
+Categorie "1" -- "*" Chambre : sont décrit par <
+Reservation "1" -- "1" Chambre: est pour >
+Hotel "1" -- "*" Categorie: gère ???? >
+
+
+@enduml
+
+@startuml DSS
+title: Reserver une chambre
+actor ":Commis" as C
+participant ":Systeme" as S
+
+C -> S: demarrerNouvelleReservation()
+S --> C: [categorie], demander dateArrive, dateDepart
+
+C-> S: reserverUneChambre(categorie:string, dateArrive:string, dateDepart:string)
+S --> C: detail reservation ???
+
+@enduml

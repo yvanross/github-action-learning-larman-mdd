@@ -1,0 +1,25 @@
+@startuml sequence_flow_problems
+skinparam style strictuml
+skinparam BackgroundColor transparent
+skinparam sequenceMessageAlign center
+skinparam handwritten true
+participant ":Avion" as A
+participant ":Base" as B
+participant ":Camion" as C
+participant ":Dragon" as D
+participant "e:Étoile" as E
+
+-> A : m1
+A -> C : m2
+
+create E
+C -->> E : e = create
+note over E: **A)** la flèche -> n'est pas correcte
+A -> B : add(e)
+note right : **B)** :Avion n'a pas le contrôle pour envoyer ce message
+C -> D : add(e)
+note right : **C)** :Camion n'a pas le contrôle pour\nenvoyer ce message
+<<-- A : "ok"
+note right : **D)** :Avion n'a pas le contrôle pour renvoyer ce message
+note over A, C : **E)** toute ces réponses
+@enduml

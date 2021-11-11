@@ -1,0 +1,28 @@
+$CATEGORY: $course$/ID en objet
+
+::Transformer ID en Objet (forces qui font sa raison d'être)::[markdown]Qu'est-ce qui ne fait pas partie des forces de conception pour lesquelles le pattern **Transformer ID en objets** existe?
+{
+    ~Les opérations système ne peuvent pas avoir des arguments de type d’objet (du domaine).
+    ~On doit passer dans une opération système des identifiants (uniques) de type primitif pour respecter la séparation de la couche présentation et la couche domaine.
+    =Passer des objets du domaine comme arguments dans une opération système consomme plus de mémoire et nuit à la performance du système. Il est plus rapide de passer des identifiants de types primitifs et de les transformer plus tard en objets.#Le pattern **Transformer ID en objets** existe puisqu'on évite que la couche présentation accède à la couche domaine et il est nécessaire de passer les identifiants des objets dans les opérations système. On ne sépare pas les couches de présentation et de domaine pour les raisons de performance. Le but est de faciliter la compréhensibilité du code et de faciliter sa maintenabilité.
+}
+
+::Transformer ID en objet couches::[markdown]Le pattern **Transformer ID en objets** s'applique dans la couche présentation.
+{FALSE
+#La couche présentation n'est pas censée manipuler directement les objets du domaine pour respecter le principe de la séparation des couches. Alors, elle doit passer des identifiants des objets du domaine aux contrôleurs (qui sont les objets dans la couche domaine) dans une opération système avec des arguments de type primitif. Les arguments identifiant des objets doivent être *transformés en objets* par la couche domaine (ou couche application).
+#La couche présentation n'est pas censée manipuler directement les objets du domaine pour respecter le principe de la séparation des couches. Alors, elle doit passer des identifiants des objets du domaine aux contrôleurs (qui sont les objets dans la couche domaine) dans une opération système avec des arguments de type primitif. Les arguments identifiant des objets doivent être *transformés en objets* par la couche domaine (ou couche application).
+}
+
+::Transformer ID en objet aide avec Expert::[markdown]Quel principe GRASP va de pair avec **Transformer ID en objets** pour effectuer la transformation?
+{
+    =Expert#L'Expert sera la classe qui est la plus apte à repérer des objets à partir de leur identifiant (unique). Par exemple, transformer un code universel en objet Étudiant prendra un *expert* qui connaît tous les objets en question. Université, qui agrège tous les objets Étudiant, pourrait être un expert pour transformer l'identifiant en objet, avec une méthode `findÉtudiant(codeUniversel\:String)`.
+    ~Contrôleur#Il est vrai que l'objet Contrôleur reçoit une opération système qui pourrait avoir un identifiant à transformer en objet. Quel principe GRASP vous aide à trouver la classe qui peut s'acquitter de cette transformation?  
+    ~Créateur#Créateur vous dit comment décider qui va instancier un objet *qui n'existe pas encore (dans le domaine)*. Le pattern **Transformer ID en objets** est une solution pour *repérer un objet existant à partir de son identifiant*. Alors, quel pattern vous aide à trouver la bonne classe qui peut s'acquitter de cette transformation?
+}
+
+::Transformer ID en objets (reconnaître)::[markdown]Soit une méthode `Plateau.getCase(nom\:String)\:Case` qui rend l'objet Case en mémoire correspondant au nom spécifié dans l'argument. De quel(s) principe(s) ou pattern(s) vu(s) dans la matière du cours s'agit-il?
+{
+    ~%50%Le pattern **Transformer ID en objets**#Le nom (String) est censé être unique (comme une clé) et Plateau pourrait trouver l'objet Case correspondant à ce nom.
+    ~%50%Le principe GRASP Expert#Plateau est en effet l'expert (l'objet qui a les informations nécessaires pour s'acquitter de la responsabilité de trouver l'objet Case correspondant à l'argument `nom\:String`).
+    ~%-50%Le principe GRASP Créateur#Créateur vous aide à trouver quelle classe va créer des objets. Dans l'énoncé tous les objets sont déjà en mémoire.
+}

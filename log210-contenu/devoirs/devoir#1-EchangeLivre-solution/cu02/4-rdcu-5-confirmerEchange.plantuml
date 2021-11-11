@@ -1,0 +1,8 @@
+@startuml
+skinparam Style strictuml
+participant ":ControleurPropositionÉchange" as ctrl
+participant "p:ProportionEchange" as pe 
+note left of ctrl: Controleur de session
+-> ctrl: confirmerEchange()
+
+@enduml

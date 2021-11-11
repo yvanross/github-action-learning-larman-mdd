@@ -1,0 +1,28 @@
+@startuml RegistreCréePaiement
+title Le Registre crée un Paiement
+skinparam BackgroundColor transparent
+skinparam style strictuml
+skinparam SequenceMessageAlignment center
+participant ": Registre" as r
+participant "p : Paiement" as p
+participant ": Vente" as v
+-> r : créerPaiement()
+create p
+r -> p : create()
+r -> v : ajouterPaiement(p)
+@enduml
+
+@startuml VenteCréePaiement
+title La Vente crée un Paiement
+skinparam BackgroundColor transparent
+skinparam style strictuml
+skinparam SequenceMessageAlignment center
+participant ": Registre" as r
+participant ": Vente" as v
+participant ": Paiement" as p
+-> r : créerPaiement()
+r -> v : créerPaiement()
+create p
+v -> p : create()
+@enduml
+

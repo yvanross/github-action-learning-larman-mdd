@@ -1,0 +1,11 @@
+@startuml terminerProposition
+skinparam Style strictuml
+participant ":ControleurPropositionEchange" as ctrl
+participant "pe:PropositionEchange" as pe
+
+note left of ctrl: Controleur de session
+-> ctrl: choisirClient(idClient)
+note right of ctrl: Expert\nctrl->pe
+ctrl -> pe: terminer()
+
+@enduml

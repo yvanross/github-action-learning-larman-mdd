@@ -1,0 +1,8 @@
+@startuml DynamicObserver
+skinparam style strictuml
+participant ":Subject" as S
+participant ":Concrete\nObserver" as O
+S <- O : attach()
+-> S : setSomething()
+S -> O : notify()
+@enduml

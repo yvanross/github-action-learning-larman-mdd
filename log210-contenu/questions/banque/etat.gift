@@ -1,0 +1,215 @@
+$CATEGORY: $course$/Diagramme d'état
+
+// [tag:diagramme-etats]
+::Exemple - quels sont les états et transitions (matching)::[markdown]Classifiez les éléments du diagramme suivant\:\n![diagrammes d'états en PlantUML](https\://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKXAJCvEByelpKjnpi_9Br8eAKhCAmPAfUQLS1N3LHLd9ARabsVcfIka9UOKft95QyKgwEhQAJXnEIa0AMS5AuLoBcSG4oHZfL010000 "diagrammes d'états en PlantUML"){
+	=B -> état
+	=C -> état
+	=w -> transition
+	=x -> transition
+}
+
+
+// [tag:diagramme-etats]
+::Machines à états - application (matching)::[markdown]Indiquez si chaque énoncé est un contexte auquel les machines à états s'appliquent en général?{
+	=Pour la modélisation du comportement des objets tels que les équipements physiques contrôlés par des logiciels (téléphone, voiture, four à micro-ondes).  -> oui
+	=Pour la modélisation des séquences d'opérations définies -- p. ex. le fait qu'une requête TCP "close" est normalement acceptée quand le gestionnaire de protocole n'est pas dans un état "fermé". -> oui
+	=Pour la modélisation de transactions et objets métier qui ne réagissent pas aux événements. -> non
+	=Pour la modélisation d'objets physiques qui ne sont pas automatisés, comme un simple marteau, un tournevis, etc. -> non
+}
+
+
+// [tag:diagramme-etats]
+::État définition::
+[markdown]
+Un(e) __________________ est la condition d'un objet à un moment donné -- il y demeure jusqu'à l'arrivée d'un nouvel événement.{
+	~événement#Un événement est une occurrence d'un fait significatif ou remarquable. 
+	=état#Un état est la condition d'un objet à un moment donné -- il y demeure jusqu'à l'arrivée d'un nouvel événement.
+	~transition#Une transition est une relation entre deux états qui indique que l'objet change d'état lorsqu'un événement se produit. 
+	~Aucune de ces réponses.
+}
+
+
+// [tag:diagramme-etats]
+::Événement définition::[markdown]Un(e) __________________ est une occurrence d'un fait significatif ou remarquable. {
+	=événement#Un événement est une occurrence d'un fait significatif ou remarquable. 
+	~état#Un état est la condition d'un objet à un moment donné -- il y demeure jusqu'à l'arrivée d'un nouvel événement.
+	~transition#Une transition est une relation entre deux états qui indique que l'objet change d'état lorsqu'un événement se produit. 
+	~Aucune de ces réponses.
+}
+
+
+// [tag:diagramme-etats]
+::Machines à états - application (pratiquer)::
+[markdown]
+Quelles sont les deux manières dont les machines à états s'appliquent en règle générale?{
+	~%50%Pour la modélisation du comportement des objets tels que les équipements physiques contrôlés par des logiciels (téléphone, voiture, four à micro-ondes). 
+	~%50%Pour la modélisation des séquences d'opérations définies -- p. ex. le fait qu'une requête TCP "close" est normalement acceptée quand le gestionnaire de protocole n'est pas dans un état "fermé".
+	~%-50%Pour la modélisation de transactions et objets métier qui ne réagissent pas aux événements.
+	~%-50%Pour la modélisation d'objets physiques qui ne sont pas automatisés, comme un simple marteau, un tournevis, etc.
+}
+
+
+// [tag:diagramme-etats]
+::Transition définition::
+[markdown]
+Un(e) __________________ est une relation entre deux états qui indique que l'objet change d'état lorsqu'un événement se produit. {
+	~événement#Un événement est une occurrence d'un fait significatif ou remarquable. 
+	~état#Un état est la condition d'un objet à un moment donné -- il y demeure jusqu'à l'arrivée d'un nouvel événement.
+	=transition#Une transition est une relation entre deux états qui indique que l'objet change d'état lorsqu'un événement se produit. 
+	~Aucune de ces réponses.
+}
+
+
+// [tag:diagramme-etats]
+::Exemple - quels sont les états (pratiquer)::
+[markdown]
+Donnez le nom d'un SEUL état (n'importe lequel) du diagramme suivant\:\n![diagrammes d'états en PlantUML](https\://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKXAJCvEByelpKjnpi_9Br8eAKhCAmPAfUQLS1N3LHLd9ARabsVcfIka9UOKft95QyKgwEhQAJXnEIa0AMS5AuLoBcSG4oHZfL010000 "diagrammes d'états en PlantUML"){
+	=%100%B#<em>B</em> et <em>C</em> sont les états.\n<em>w</em> et <em>x</em> sont les transitions.
+	=%100%C#<em>B</em> et <em>C</em> sont les états.\n<em>w</em> et <em>x</em> sont les transitions.
+	=%0%w#<em>B</em> et <em>C</em> sont les états.\n<em>w</em> et <em>x</em> sont les transitions.
+	=%0%x#<em>B</em> et <em>C</em> sont les états.\n<em>w</em> et <em>x</em> sont les transitions.
+}
+
+
+// [tag:diagramme-etats]
+::Exemple - quels sont les transitions (pratiquer)::[markdown]Donnez le nom d'une SEULE transition (n'importe laquelle) du diagramme suivant\:\n![diagrammes d'états en PlantUML](https\://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKXAJCvEByelpKjnpi_9Br8eAKhCAmPAfUQLS1N3LHLd9ARabsVcfIka9UOKft95QyKgwEhQAJXnEIa0AMS5AuLoBcSG4oHZfL010000 "diagrammes d'états en PlantUML"){
+	=%0%B#<em>B</em> et <em>C</em> sont les états.\n<em>w</em> et <em>x</em> sont les transitions.
+	=%0%C#<em>B</em> et <em>C</em> sont les états.\n<em>w</em> et <em>x</em> sont les transitions.
+	=%100%w#<em>B</em> et <em>C</em> sont les états.\n<em>w</em> et <em>x</em> sont les transitions.
+	=%100%x#<em>B</em> et <em>C</em> sont les états.\n<em>w</em> et <em>x</em> sont les transitions.
+}
+
+
+
+///
+
+// // [tag:etat]
+// ::Événement définition::[markdown]Un(e) __________________ est une occurrence d'un fait significatif ou remarquable. {
+// 	=événement#Un événement est une occurrence d'un fait significatif ou remarquable. 
+// 	~état#Un état est la condition d'un objet à un moment donné -- il y demeure jusqu'à l'arrivée d'un nouvel événement.
+// 	~transition#Une transition est une relation entre deux états qui indique que l'objet change d'état lorsqu'un événement se produit. 
+// 	~Aucune de ces réponses.
+// }
+
+// // [tag:etat]
+// ::Machines à états - application (pratiquer)::[markdown]Quelles sont les deux manières dont les machines à états s'appliquent en règle générale?{
+// 	~%50%Pour la modélisation du comportement des objets tels que les équipements physiques contrôlés par des logiciels (téléphone, voiture, four à micro-ondes). 
+// 	~%50%Pour la modélisation des séquences d'opérations définies -- p. ex. le fait qu'une requête TCP "close" est normalement acceptée quand le gestionnaire de protocole n'est pas dans un état "fermé".
+// 	~Pour la modélisation de transactions et objets métier qui ne réagissent pas aux événements.
+// 	~Pour la modélisation d'objets physiques qui ne sont pas automatisés, comme un simple marteau, un tournevis, etc.
+// }
+
+// // [tag:etat]
+// ::Etat - Classe Activé::[markdown]Identifiez la ou les méthodes de la classe **Activé** et la ou les conditions si applicable issue du diagramme d'état représentant le fonctionnement d'un système d'alarme de garage.Le système d'alarme démarre désactivé.  Il peut être activé par l'opérateur en rentrant un code valide, seulement si la porte est fermée.  Une fois activé, le système est désactivé lorsque l'opérateur entre un code valide. Si le système est activé et que la porte s'ouvre, alors l'alarme sonne jusqu'à ce que l'opérateur désactive l'alarme avec un code valide. 
+// {
+// 	~%-50%désactivé
+// 	~%-50%activé
+// 	~%-50%sonnant
+// 	~%-50%activé [codeValide &amp; porteFermé]
+// 	~%50%désactivé [codeValide]
+// 	~%-50%désactivé [porteFermé]
+// 	~%-50%activé [codeValide]
+// 	~%-50%activé [porteFerme]
+// 	~%-50%sonnant [codeValide]
+// 	~%-50%sonnant [porteFermé]
+// 	~%50%ouvrirPorte
+// 	~%-50% ouvrirPorte [codeValide]
+// 	~%-50%ouvrirPorte [porteFermé]
+// }
+
+// // [tag:etat]
+// ::Exemple - quels sont les états::[markdown]Donnez le nom d'un SEUL état (n'importe lequel) du diagramme suivant\:![diagrammes d'états en PlantUML](https\://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKXAJCvEByelpKjnpi_9Br8eAKhCAmPAfUQLS1N3LHLd9ARabsVcfIka9UOKft95QyKgwEhQAJXnEIa0AMS5AuLoBcSG4oHZfL010000 "diagrammes d'états en PlantUML"){
+// 	=%100%B#*B* et *C* sont les états. *w* et *x* sont les transitions.
+// 	=%100%C#*B* et *C* sont les états. *w* et *x* sont les transitions.
+// 	=%0%w#*B* et *C* sont les états. *w* et *x* sont les transitions.
+// 	=%0%x#*B* et *C* sont les états. *w* et *x* sont les transitions.
+// }
+
+// // [tag:etat]
+// ::Exemple - quels sont les transitions::[markdown]Donnez le nom d'une SEULE transition (n'importe laquelle) du diagramme suivant\:![diagrammes d'états en PlantUML](https\://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKXAJCvEByelpKjnpi_9Br8eAKhCAmPAfUQLS1N3LHLd9ARabsVcfIka9UOKft95QyKgwEhQAJXnEIa0AMS5AuLoBcSG4oHZfL010000 "diagrammes d'états en PlantUML"){
+// 	=%0%B#*B* et *C* sont les états. *w* et *x* sont les transitions.
+// 	=%0%C#*B* et *C* sont les états. *w* et *x* sont les transitions.
+// 	=%100%w#*B* et *C* sont les états. *w* et *x* sont les transitions.
+// 	=%100%x#*B* et *C* sont les états. *w* et *x* sont les transitions.
+// }
+
+// // [tag:etat]
+// ::Machines à états - application (matching)::[markdown]Indiquez si chaque énoncé est un contexte auquel les machines à états s'appliquent en général? {
+// 	=Pour la modélisation du comportement des objets tels que les équipements physiques contrôlés par des logiciels (téléphone, voiture, four à micro-ondes).  -> oui
+// 	=Pour la modélisation des séquences d'opérations définies -- p. ex. le fait qu'une requête TCP "close" est normalement acceptée quand le gestionnaire de protocole n'est pas dans un état "fermé". -> oui
+// 	=Pour la modélisation de transactions et objets métier qui ne réagissent pas aux événements. -> non
+// 	=Pour la modélisation d'objets physiques qui ne sont pas automatisés, comme un simple marteau, un tournevis, etc. -> non
+// }
+
+// // [tag:etat]
+// ::Exemple - quels sont les états et transitions (matching)::[markdown]Classifiez les éléments du diagramme suivant\: \n 
+// ![diagrammes d'états en PlantUML](https\://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKXAJCvEByelpKjnpi_9Br8eAKhCAmPAfUQLS1N3LHLd9ARabsVcfIka9UOKft95QyKgwEhQAJXnEIa0AMS5AuLoBcSG4oHZfL010000 "diagrammes d'états en PlantUML"){
+// 	=B -> état
+// 	=C -> état
+// 	=w -> transition
+// 	=x -> transition
+// }
+
+// // [tag:etat]
+// ::Exemple - quels sont les transitions (pratiquer)::[markdown]Donnez le nom d'une SEULE transition (n'importe laquelle) du diagramme suivant\: \n
+// ![diagrammes d'états en PlantUML](https\://www.plantuml.com/plantuml/svg/AyxEp2j8B4hCLKXAJCvEByelpKjnpi_9Br8eAKhCAmPAfUQLS1N3LHLd9ARabsVcfIka9UOKft95QyKgwEhQAJXnEIa0AMS5AuLoBcSG4oHZfL010000 "diagrammes d'états en PlantUML"){
+// 	=%0%B#*B* et *C* sont les états.\n*w* et *x* sont les transitions.
+// 	=%0%C#*B* et *C* sont les états.\n*w* et *x* sont les transitions.
+// 	=%100%w#*B* et *C* sont les états.\n*w* et *x* sont les transitions.
+// 	=%100%x#*B* et *C* sont les états.\n*w* et *x* sont les transitions.
+// }
+
+// // [tag:etat]
+// ::Etat - Classe Désactivé::[markdown]Identifiez la ou les opérations de la classe **Désactivé**  et la ou les condition si applicable issue du diagramme d'état représentant le fonctionnement d'un système d'alarme de garage.Le système d'alarme démarre désactivé.  Il peut être activé par l'opérateur en rentrant un code valide, seulement si la porte est fermée.  Une fois activé, le système est désactivé lorsque l'opérateur entre un code valide. Si le système est activé et que la porte s'ouvre, alors l'alarme sonne jusqu'à ce que l'opérateur désactive l'alarme avec un code valide. 
+// {
+// 	~désactivé
+// 	~activé
+// 	~sonnant
+// 	~%100%activé [codeValide &amp; porteFermé]
+// 	~désactivé [codeValide]
+// 	~désactivé [porteFermé]
+// 	~activé [codeValide]
+// 	~activé [porteFerme]
+// 	~sonnant [codeValide]
+// 	~sonnant [porteFermé]
+// 	~ouvrirPorte
+// 	~ ouvrirPorte [codeValide]
+// 	~ouvrirPorte [porteFermé]
+// }
+
+// // [tag:etat]
+// ::Etat - Classe abstraite::
+// [markdown]
+// Identifiez la ou les méthodes de la classe abstraite EtatAlarme issue du diagramme d'état représentant le fonctionnement d'un système d'alarme de garage. Le système d'alarme démarre désactivé.  Il peut être activé par l'opérateur en rentrant un code valide, seulement si la porte est fermée.  Une fois activé, le système est désactivé lorsque l'opérateur entre un code valide. Si le système est activé et que la porte s'ouvre, alors l'alarme sonne jusqu'à ce que l'opérateur désactive l'alarme avec un code valide. 
+// {
+// 	~%33.33333%désactivé
+// 	~%33.33333%activé
+// 	~%-33.33333%sonnant
+// 	~%33.33333%ouvrirPorte
+// }
+
+// // [tag:etat]
+// ::Etat - choix état::[markdown]Identifiez les états nécessaires pour la réalisation d'un diagramme d'état représentant le fonctionnement d'un système d'alarme de garage.Le système d'alarme démarre désactivé.  Il peut être activé par l'opérateur en rentrant un code valide, seulement si la porte est fermée.  Une fois activé, le système est désactivé lorsque l'opérateur entre un code valide. Si le système est activé et que la porte s'ouvre, alors l'alarme sonne jusqu'à ce que l'opérateur désactive l'alarme avec un code valide. 
+// {
+// 	~%33.33333%désactivé
+// 	~%33.33333%activé
+// 	~%33.33333%sonnant
+// 	~%-33.33333%activé [codeValide &amp; porteFermé]
+// 	~%-33.33333%désactivé [codeValide]
+// 	~%-33.33333%désactivé [porteFermé]
+// 	~%-33.33333%activé [codeValide]
+// 	~%-33.33333%activé [porteFerme]
+// 	~%-33.33333%sonnant [codeValide]
+// 	~%-33.33333%sonnant [porteFermé]
+// 	~%-33.33333%ouvrirPorte
+// 	~%-33.33333% ouvrirPorte [codeValide]
+// 	~%-33.33333%ouvrirPorte [porteFermé]
+// }
+
+// // [tag:etat]
+// ::État définition::[markdown]Un(e) __________________ est la condition d'un objet à un moment donné -- il y demeure jusqu'à l'arrivée d'un nouvel événement.{
+// 	~événement#Un événement est une occurence d'un fait signifactif ou remarquable. 
+// 	=état#Un état est la condition d'un objet à un moment donné -- il y demeure jusqu'à l'arrivée d'un nouvel événement.
+// 	~transition#Une transition est une relation entre deux états qui indique que l'objet change d'état lorsqu'un événement se produit. 
+// 	~Aucune de ces réponses.
+// }

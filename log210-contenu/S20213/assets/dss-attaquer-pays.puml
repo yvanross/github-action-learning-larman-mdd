@@ -1,0 +1,14 @@
+@startuml
+skinparam sequenceMessageAlign center
+skinparam style strictuml
+title DSS pour <i>Attaquer un pays</i>
+actor ":Joueur" as c
+participant ":Système" as s
+c->s : démarrerAttaque(paysAttaquant : String,\npaysDéfenseur : String)
+loop pas terminé
+c->s : annoncerAttaque(nbRégimentsAttaquant : int)
+c->s : annoncerDéfense(nbRégimentsDéfendant : int)
+c<<--s : résultats des deux lancers, régiments perdus \nde l'attaquant et du défenseur le cas échéant
+end loop
+c->s : terminerAttaque()
+@enduml

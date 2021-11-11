@@ -1,0 +1,6 @@
+Ajouter quiz contrat avec list et Map
+
+analyse -> conceptioon
+complexité
+dcl interface et classe abstraite
+dettes techniques

@@ -1,0 +1,77 @@
+$CATEGORY: $course$/DSS
+
+
+// [tag:dss]
+::DSS opérations système::[html]<p>Combien d'opérations système y a-t-il dans le diagramme de séquence système suivant?</p>
+<p><img src\="https\://www.planttext.com/api/plantuml/img/RP0nRiCm34LtdOB8qWIeBs041OfE7RhK9r0fmcKZKmv53JcIp-6BbIwQD4CN0SBxUlz3zSGoHuqJLBjaybCPhKqvr1lvY7WQjJH9M79HC8rI7P7ONMgWSoD1UgDQuqZFcKS1z0nfC3Pt3xWk4fKBl1EI6OM8vhvT_vBPWpk85J2upXXvZcAEXaircdvG3TWzLUWXhSiKLKcl7ZmUksuZ7ftNHQCrfKVuR1CdjdK9kPGPV5rHWlJ0CkgwfAsp1lYLng_IVElh7zjpkhlrWt-DZ0T_y5zR84cmrLn7kcjYkMtS7y8t" alt\="DSS recette" class\="img-responsive atto_image_button_text-bottom"><br><br></p>{
+	~<p>2 \: température, humidité / confirmation</p>#<p>Incorrect. Les opérations système sont envoyées au système.</p>
+	=<p>3 \: démarrerRecette / ajouterIngrédient(...) / terminerRecette</p>#<p>Correct.</p>
+	~<p>5 \: démarrerRecette / température, humidité / ajouterIngrédient(...) / température / terminerRecette</p>#<p>Incorrect. Les opérations système sont envoyées au système seulement. Les autres messages de retour ne sont pas des opérations système.</p>
+}
+
+// [tag:dss]
+::DSS sens de "\:"::[html]<p><img src\="https\://www.planttext.com/api/plantuml/img/NOmn2i9G38RtTuhGtGjqKCJPgOjhZA64lkRLbtHmS_CgUexUn9CO7AG8uOVmVNmsY4vOSGJpM-ROAkJpc9Fzo1bfw6kPzK8bbmfUKIqGgw-iZgypA_6HpR3dVPPUWSBXcbmysXqjByKg1Ku9oQFKj8SieJI01fGYv48oeNgWxcQ-F4V-GakqsHgqyBu_rhVx-zC7" alt\="DSS notation acteur et système" width\="197" height\="177" style\="line-height\: 1.231;" class\="img-responsive atto_image_button_text-bottom"></p><p><span style\="line-height\: 1.231;">Dans un DSS, que signifie le deux-points "\:" dans la notation, p. ex. "\:Client" et "\:Système"?</span></p>
+<p>&nbsp;</p>{
+	=<p>C'est une notation UML qui indique une instance anonyme (sans nom) de quelque chose. Par exemple, c'est une instance anonyme de Client et de Système.</p>#<p>Correct. Le DSS reflète la dynamique décrite dans un scénario principal d'un cas d'utilisation. Alors, il s'agit des "instances" de Client et de Système dans une telle situation, plutôt que des classes généralisées.</p>
+	~<p>C'est une notation de Larman qui indique que l'élément provient des cas d'utilisation. Par exemple, Client et Système sont mentionnés dans un cas d'utilisation.</p>#<p>Incorrect. Il est vrai que la modélisation avec DSS est particulière à Larman et que Client et Système proviennent d'un cas d'utilisation. Mais le deux-points est une notation de l'UML.</p>
+	~<p>C'est une notation de Booch qui indique que l'élément est une boîte noire et sera décomposé plus tard.</p>#<p>Incorrect. Il est vrai que Système est une boîte noire dans un DSS. Par contre, le deux-points signifie autre chose. Il fait partie de la notation UML dans le contexte des diagrammes avec des objets.</p>
+}
+
+
+// [tag:dss]
+::Notation de création d'instance (séquence)::[html]<p>Selon le chapitre sur les diagrammes d'interaction UML, quelle est la bonne notation pour montrér la création d'une instance de Paiement par la classe Vente dans un diagramme de séquence?</p>{
+	~<p><img src\="https\://www.plantuml.com/plantuml/img/POqz3i8m34RtdCBgmiG5Eh1m0IPsDt5RgwqT9QRjyR5087v6l_VqUUH4qAjQftl8M8mZPnI3fhsI63M05TOVSq6cnUr3vb0d5WzmWJfYqerbW1xdIX-cmpWDHM-IpZfh0IierPMlX5W8ZNneXUC9ChJm9E7Wv-kNKw7DqJTxbt_f7G00" alt\="[Image sur plantUML]" /></p>#<p>Cette notation manque la ligne pointillée sur la flèche du message "create". La ligne pointillée signifie que le message est asynchrone. Dans le cas d'une création d'instance, ce n'est pas vraiment un appel synchrone de méthode, alors "create" une un message asynchrone.</p>
+	=<p><img src\="https\://www.plantuml.com/plantuml/img/POez3i8m34RtdCBgmjGBT63X0apiRkAsLbixIapByR5087ucVtxlJPm81bNhzHRgp9Anu0frmgGxomW3BfK-J8zn7ejU9PrqqG9MKAeh4Wj-Z2Dd58EckpYY1h32zcFEoBIwVSWSOY4qyh51snuXGmTF50x-lcAdGhkZR_Ok_z8x" alt\="[Image sur plantUML]" /></p>#<p>Cette notation est la bonne. L'objet créé est décalé verticalement et il y a une ligne pointillée sur la flèche du message "create", puisque c'est une opération asynchrone (création d'instance n'est pas un appel synchrone de méthode).</p>
+	~<p><img src\="https\://www.plantuml.com/plantuml/img/POex3eD030NxFOL5GyK5ADBa0gdIcyM01TYhNGSuVgn4YVAf_3mp4_S4WwfrUeGoioJCk4APiDUTPOG1bq8VfiCuZrblqfzrqGoMKOeh4Wj-Z2Cd58EglJgY2h30zcCkoBIwVSWKwfW9ZNnjq3GdID324uNQtrVjL6XtzCtUvLzw1m00" alt\="[Image sur plantUML]" /></p>#<p>Cette notation n'est pas correcte, puisque l'objet créé n'est pas décalé verticalement. Dans les diagrammes de séquence, le temps avance du haut en bas. Un objet qui est instancié n'existe pas avant, donc on doit décaler son existence dans le temps (vers le bas, à la hauteur de la flèche du message "create" du diagramme) pour mieux indiquer le moment de sa création.</p>
+	~<p><img src\="https\://www.plantuml.com/plantuml/img/POez3i8m34RtdCBgqeaBT63X0apiRkAsLbixIapByR5087ucVtxlJPm81bNhzHRgp9Anu0frmgGxomW3BfK-J8zn7ejU9PrqqG9MKAeh4Wj-Z2Dd58EckpYY1h32zcFEoBIwVSWSsbW8ZNnjS3X2XWwU9BJ-lcAdGhkZR_Ok_z8x" alt\="[Image sur plantUML]" /></p>#<p>Cette notation n'est pas correcte pour plusieurs raisons. D'abord l'objet créé n'est pas décalé verticalement. Dans les diagrammes de séquence, le temps avance du haut en bas. Un objet qui est instancié n'existe pas avant, donc on doit décaler son existence dans le temps (vers le bas, à la hauteur de la flèche du message "create" du diagramme) pour mieux indiquer le moment de sa création. Deuxièmement, le message "create" est un message asynchrone (ce n'est pas un appel synchrone de méthode). Alors, la ligne d'un message asynchrone est pointillée.</p>
+}
+
+
+// [tag:dss]
+::DSS sens de "\:"::[html]<p><img src\="https\://www.planttext.com/api/plantuml/img/NOmn2i9G38RtTuhGtGjqKCJPgOjhZA64lkRLbtHmS_CgUexUn9CO7AG8uOVmVNmsY4vOSGJpM-ROAkJpc9Fzo1bfw6kPzK8bbmfUKIqGgw-iZgypA_6HpR3dVPPUWSBXcbmysXqjByKg1Ku9oQFKj8SieJI01fGYv48oeNgWxcQ-F4V-GakqsHgqyBu_rhVx-zC7" alt\="DSS notation acteur et système" style\="line-height\: 1.231;" class\="img-responsive atto_image_button_text-bottom"></p><p><span style\="line-height\: 1.231;">Dans un DSS, que signifie le deux-points "\:" dans la notation, p. ex. "\:Client" et "\:Système"?</span></p><p>&nbsp;</p>{
+	=<p>C'est une notation UML qui indique une instance anonyme (sans nom) de quelque chose. Par exemple, c'est une instance anonyme de Client et de Système.</p>#<p>Correct. Le DSS reflète la dynamique décrite dans un scénario principal d'un cas d'utilisation. Alors, il s'agit des "instances" de Client et de Système dans une telle situation, plutôt que des classes généralisées.</p>
+	~<p>C'est une notation de Larman qui indique que l'élément provient des cas d'utilisation. Par exemple, Client et Système sont mentionnés dans un cas d'utilisation.</p>#<p>Incorrect. Il est vrai que la modélisation avec DSS est particulière à Larman et que Client et Système proviennent d'un cas d'utilisation. Mais le deux-points est une notation de l'UML.</p>
+	~<p>C'est une notation de Booch qui indique que l'élément est une boîte noire et sera décomposé plus tard.</p>#<p>Incorrect. Il est vrai que Système est une boîte noire dans un DSS. Par contre, le deux-points signifie autre chose. Il fait partie de la notation UML dans le contexte des diagrammes avec des objets.</p>
+}
+
+// [tag:dss]
+::Syntaxe des messages (pratiquer)::[html]<p>Indiquer les messages avec une syntaxe valide pour le diagramme suivant\:</p><p><img src\="https\://www.plantuml.com/plantuml/img/TSyz3i8m38RXFQUmieF404C7L1WG4mi7YDp4RQEwCKfSVZWz7Oi4NfzNihwwA6QTHZR58nDirbjJXfXkc7641ltGPPbIyCAIGJEcCXCbNLI1MfnOJvBqWYF1cVXE6Zt-RgxnFV_P_K5zCK4Z71PUUWpoYAc35hcGwMCWQ4MqaQUnrS72QW-sEbgem3duEkTCJIdC2py0" alt\="PlantUML image" /></p>{
+	~%20%<p>getCours</p>#<p>Ce message, bien que simple, est valide en UML.  </p>
+	~%20%<p>getCours(sigle)</p>#<p>Ce message est valide en UML.</p>
+	~%20%<p>getCours(sigle \: SigleCours)</p>#<p>Ce message est valide. </p>
+	~<p>getCours(SigleCours sigle)</p>#<p>Ce message n'est pas valide, puisque la syntaxe pour le paramètre n'est pas bonne. En UML, la syntaxe d'un message est <span style\="font-family\: 'courier new', courier, monospace;">retour \= message (paramètre \: typeParamètre) \: typeRetour</span></p>
+	~%20%<p>c \= getCours(sigle)</p>#<p>Ce message est valide en UML.</p>
+	~%20%<p>c \= getCours(sigle) \: Cours</p>#<p>Ce message est valide en UML.</p>
+	~%-20%<p>Cours c \= getCours(sigle)</p>#<p>Ce message n'est pas valide, puisque la syntaxe pour le type de retour n'est pas bonne. En UML, la syntaxe d'un message est <span style\="font-family\: 'courier new', courier, monospace;">retour \= message (paramètre \: typeParamètre) \: typeRetour</span></p>
+}
+
+
+
+// [tag:dss]
+::DSS dépendance sur d'autres artefacts::[html]<p>Quel artefact doit exister avant de pouvoir faire un DSS?</p>{
+	~<p>Le glossaire.</p>#<p>Incorrect. Bien que ce document soit utile, le DSS dépend plus d'un autre artefact.</p>
+	=<p>Le document des cas d'utilisation.</p>#<p>Correct. On dessine un DSS pour le scénario principal de chaque cas d'utilisation, ainsi que pour les scénarios alternatifs qui sont fréquents ou complexes.</p>
+	~<p>Le modèle du domaine.</p>#<p>Incorrect. Le modèle du domaine est important pour la modélisation orientée objet du problème, mais c'est un autre artefact dont le DSS dépend.</p>
+	~<p>Le document de vision.</p>#<p>Incorrect. Le document de vision résume des informations provenant des cas d'utilisation et le document des spécifications supplémentaires. Cependant, le DSS dépend directement sur un autre artefact plus détaillé.</p>
+}
+
+// [tag:dss]
+::DSS message de retour::[html]<p>Une opération système doit toujours être suivie par un message de retour.</p>{
+	~<p>Vrai.</p>#<p>Incorrect. Un message de retour est facultatif lorsqu'aucune information n'est retournée suite à une opération système.</p>
+	=<p>Faux.</p>#<p>Correct. Un message de retour est nécessaire seulement si des informations sont retournées après une opération système.</p>
+}
+
+// [tag:dss]
+::DSS nommer les opérations système::[html]<p><img src\="https\://www.planttext.com/api/plantuml/img/NOmn2i9G38RtTuhGtGjqKCJPgOjhZA64lkRLbtHmS_CgUexUn9CO7AG8uOVmVNmsY4vOSGJpM-ROAkJpc9Fzo1bfw6kPzK8bbmfUKIqGgw-iZgypA_6HpR3dVPPUWSBXcbmysXqjByKg1Ku9oQFKj8SieJI01fGYv48oeNgWxcQ-F4V-GakqsHgqyBu_rhVx-zC7" alt\="opération système" width\="197" height\="177" class\="img-responsive atto_image_button_text-bottom"><br> Quel est le meilleur nom pour cette opération système (?).</p>{
+	~<p>résultat(cote)</p>#<p>Incorrect. Une opération système devrait commencer avec un verbe (ajouter..., saisir..., terminer..., effectuer...).</p>
+	=<p>saisirRésultat(cote)</p>#<p>Correct. Ce nom réflète bien l'intention de l'opération à un niveau abstrait, sans impliquer la technologie utilisée.</p>
+	~<p>taperRésultat(cote)</p>#<p>Incorrect. Bien que ça commence avec un verbe (taper), ce nom implique que le système doit fonctionner avec un clavier. Le meilleur nom utilise un verbe plus abstrait.</p>
+	~<p>saisir(cote)</p>#<p>Incorrect. Il est vrai que ce verbe (saisir) est abstrait et n'implique aucune technologie. Mais malheureusement il n'est pas assez détaillé pour indiquer l'intention de l'opératon (saisir quoi?). Si jamais il y avait une autre information à saisir dans le DSS (p.ex. un nom), il peut y avoir de la confusion concernant l'intention des deux opérations avec le même nom (saisir).</p>
+}
+
+// [tag:dss]
+::DSS opérations système::[html]<p>Combien d'opérations système y a-t-il dans le diagramme de séquence système suivant?</p><p><img src\="https\://www.planttext.com/api/plantuml/img/RP0nRiCm34LtdOB8qWIeBs041OfE7RhK9r0fmcKZKmv53JcIp-6BbIwQD4CN0SBxUlz3zSGoHuqJLBjaybCPhKqvr1lvY7WQjJH9M79HC8rI7P7ONMgWSoD1UgDQuqZFcKS1z0nfC3Pt3xWk4fKBl1EI6OM8vhvT_vBPWpk85J2upXXvZcAEXaircdvG3TWzLUWXhSiKLKcl7ZmUksuZ7ftNHQCrfKVuR1CdjdK9kPGPV5rHWlJ0CkgwfAsp1lYLng_IVElh7zjpkhlrWt-DZ0T_y5zR84cmrLn7kcjYkMtS7y8t" alt\="DSS recette" width\="350" height\="311" class\="img-responsive atto_image_button_text-bottom"><br><br></p>{
+	~<p>2 \: température, humidité / confirmation</p>#<p>Incorrect. Les opérations système sont envoyées au système.</p>
+	=<p>3 \: démarrerRecette / ajouterIngrédient(...) / terminerRecette</p>#<p>Correct.</p>
+	~<p>5 \: démarrerRecette / température, humidité / ajouterIngrédient(...) / température / terminerRecette</p>#<p>Incorrect. Les opérations système sont envoyées au système seulement. Les autres messages de retour ne sont pas des opérations système.</p>
+}
